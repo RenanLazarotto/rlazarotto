@@ -12,7 +12,18 @@ module.exports = {
       white: colors.white,
       gray: colors.zinc,
       black: colors.black,
-      purple: colors.purple,
+      purple: {
+        '50': "#C78FFF",
+        '100': "#B273F0",
+        '200': "#A05EE0",
+        '300': "#914FD1",
+        '400': "#7E42B8",
+        '500': "#663399",
+        '600': "#52297A",
+        '700': "#3D1F5C",
+        '800': "#29143D",
+        '900': "#140A1F",
+      },
       blue: colors.sky,
       yellow: colors.amber,
     },
@@ -21,7 +32,7 @@ module.exports = {
         'br-blue': '#000084',
         'br-green': '#008400',
         'br-yellow': '#FFFF00',
-        'firehawk-purple': '#9400D3'
+        'firehawk-purple': '#663399'
       },
       fontFamily: {
         'sans': [
@@ -31,7 +42,7 @@ module.exports = {
       }
     },
     fill: {
-      purple:  colors.purple
+      purple: colors.purple
     }
   },
   plugins: [],

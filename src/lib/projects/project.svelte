@@ -23,7 +23,7 @@
             <p class="mb-1">Tecnologias:</p>
             <div class="flex flex-wrap items-center gap-1">
                 {#each stack as item}
-                    <div class="py-1 px-2 rounded text-xs font-bold bg-purple-800 text-purple-200 dark:bg-purple-200 dark:text-purple-800">
+                    <div class="py-1 px-2 rounded text-xs font-bold bg-purple-500 text-purple-50 dark:bg-purple-100 dark:text-purple-500">
                         {item}
                     </div>
                 {/each}
