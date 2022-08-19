@@ -1,27 +1,10 @@
 <script>
-    import GraduationCap from "phosphor-svelte/lib/GraduationCap/GraduationCap.svelte";
-    import Briefcase from "phosphor-svelte/lib/Briefcase/Briefcase.svelte";
-    import Stack from "phosphor-svelte/lib/Stack/Stack.svelte";
-
-    export let type;
     export let text;
-    let component = null;
-
-    switch (type) {
-        case "formacao":
-            component = GraduationCap;
-            break;
-        case "experiencias":
-            component = Briefcase;
-            break;
-        case "tecnologias":
-            component = Stack;
-            break;
-    }
+    export let component;
 </script>
 
-<div class="flex items-center justify-center md:justify-start">
-    <div class="bg-purple-200 rounded-full m-2">
+<div class="flex items-center justify-start mb-2">
+    <div class="bg-purple-200 rounded-full my-2 mr-2">
         <svelte:component
             this={component}
             class="text-purple-600 text-5xl p-3"

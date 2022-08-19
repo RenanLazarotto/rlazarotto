@@ -13,11 +13,11 @@
         xmlns='http://www.w3.org/2000/svg'
         width={width}
         height={height}
-        class='p-2 bg-[#1572B6] rounded'
+        class='p-2 bg-[#EE672F] rounded'
     >
         <path
-            d='M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z'
+            d='M12 24l-4.455-2.572v-12l2.97-1.715v12.001l1.485.902 1.485-.902V7.713l2.971 1.715v12L12 24zM22.391 6v12l-2.969 1.714V7.713L12 3.43 4.574 7.713v12.001L1.609 18V6L12 0l10.391 6z'
         />
     </svg>
-    <div class='text-center font-medium pl-2'>CSS</div>
+    <div class='text-center font-medium pl-2'>Magento</div>
 </div>

@@ -10,35 +10,36 @@
     export let descricao;
 </script>
 
-<div class="flex flex-col md:flex-row">
-    <div class="hidden md:flex flex-col items-center justify-center w-1/6">
-        <div class="flex items-center">
-            <CalendarBlank class="mr-1 text-purple-700" />
-            {dataInicial} – {dataFinal}
+<div class="mx-2 rounded border border-gray-300 p-2.5 border-l-8 border-l-purple-600 shadow-lg">
+    <div class="flex justify-between pb-3">
+        <div class="w-4/6">
+            <h3 class="font-bold text-lg">
+                {cargo}
+            </h3>
+            <p class="text-sm font-medium">{empresa}</p>
         </div>
-        <div class="flex items-center text-xs">
-            <MapPin class="mr-1 text-purple-700" />
-            {localizacao}
-        </div>
-    </div>
-    <div class="md:w-5/6 md:border-l-2 border-purple-300 pl-2 py-4">
-        <h3
-            class="font-bold mb-3 text-lg border-b-2 border-purple-300 md:border-0 text-center md:text-left"
-        >
-            {cargo} - {empresa}
-        </h3>
-        <div class="md:hidden mb-3 flex justify-around text-xs">
-            <div class="flex justify-center items-center">
+
+        <div class="w-2/6 flex flex-col justify-around text-xs text-gray-600">
+            <div class="flex items-center">
                 <CalendarBlank class="mr-1 text-purple-700" />
-                {dataInicial} – {dataFinal}
+                {dataInicial} até {dataFinal}
             </div>
-            <div class="flex justify-center items-center">
+            <div class="flex items-center">
                 <MapPin class="mr-1 text-purple-700" />
                 {localizacao}
             </div>
         </div>
-        {#each descricao as linha}
-            <p class="text-sm mb-2 text-justify">{linha}</p>
-        {/each}
     </div>
+
+    {#each descricao as linha}
+        {#if Array.isArray(linha)}
+            <ul class="list-disc list-inside">
+                {#each linha as li}
+                    <li class="text-sm text-justify">{li}</li>
+                {/each}
+            </ul>
+        {:else}
+            <p class="text-sm mb-2 text-justify">{linha}</p>
+        {/if}
+    {/each}
 </div>

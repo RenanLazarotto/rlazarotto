@@ -1,3 +1,19 @@
+import Bash from "$lib/icons/bash.svelte";
+import Bootstrap from "$lib/icons/bootstrap.svelte";
+import CodeIgniter from "$lib/icons/codeigniter.svelte";
+import CSS from "$lib/icons/css.svelte";
+import JavaScript from "$lib/icons/javascript.svelte";
+import Laravel from "$lib/icons/laravel.svelte";
+import Linux from "$lib/icons/linux.svelte";
+import PHP from "$lib/icons/php.svelte";
+import Python from "$lib/icons/python.svelte";
+import RabbitMQ from "$lib/icons/rabbitmq.svelte";
+import Redis from "$lib/icons/redis.svelte";
+import Svelte from "$lib/icons/svelte.svelte";
+import Symfony from "$lib/icons/symfony.svelte";
+import Tailwind from "$lib/icons/tailwind.svelte";
+import Windows from "$lib/icons/windows.svelte";
+
 export function load() {
     return {
         education: [
@@ -5,11 +21,11 @@ export function load() {
                 dataInicial: '2013',
                 dataFinal: '2016',
                 localizacao: 'Curitiba, Paraná',
-                cargo: 'Gestão em TI e Comunicação empresarial',
+                cargo: 'Gestão em TI',
                 empresa: 'Faculdade Dom Bosco',
                 descricao: [
                     "Formação focada em dispositivos móveis pela Faculdade Dom Bosco, concluída em 2016.",
-                    "Conteúdos abrangidos: desenvolvimento para dispositivos móveis Android e iOS, bancos de dados MySQL, programação em Java, PHP e HTML.",
+                    "Conteúdos abrangidos: desenvolvimento para dispositivos móveis Android e iOS, bancos de dados MySQL, programação em Java, PHP e HTML."
                 ]
             }
         ],
@@ -21,7 +37,18 @@ export function load() {
                 cargo: 'Desenvolvedor Backend Pleno',
                 empresa: 'PROCOB',
                 descricao: [
-                    'Fui feito de trouxa durante quase 2 anos.'
+                    'Atuei no desenvolvimento do sistema interno da empresa, atualizando as APIs usadas pelos sistemas que os clientes tem acesso, efetuando correções e o desenvolvimento de novas integrações e funcionalidades.',
+                    'Fui responsável pelo gerenciamento de alguns servidores, incluindo servidores de filas (RabbitMQ), desenvolvimento, homologação, produção e de repositório (GitLab CE), desenvolvimento de crawlers (webscraping), filas de mensagens e aplicações CLI para gerenciá-las.',
+                    'Tecnologias utilizadas:',
+                    [
+                        'Linux (Ubuntu)',
+                        'PHP (5.6+)',
+                        'Python',
+                        'CI/CD (GitLab)',
+                        'RabbitMQ',
+                        'Symfony (2.8+)',
+                        'MySQL'
+                    ]
                 ]
             },
             {
@@ -97,7 +124,29 @@ export function load() {
                 ]
             }
         ],
-        open: false
+        stack: {
+            'Back-end': [
+                CodeIgniter,
+                Laravel,
+                PHP,
+                Python,
+                RabbitMQ,
+                Redis,
+                Symfony,
+            ],
+            'Front-end': [
+                Bootstrap,
+                CSS,
+                JavaScript,
+                Svelte,
+                Tailwind
+            ],
+            'Sistemas e outros': [
+                Bash,
+                Linux,
+                Windows,
+            ]
+        }
     };
 }
 /*
