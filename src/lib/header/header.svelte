@@ -25,12 +25,12 @@ import Code from "phosphor-svelte/lib/Code/Code.svelte";
     <nav class="md:ml-auto flex items-center gap-x-1 font-medium">
         <a
             href="https://github.com/RenanLazarotto"
-            class="hover:text-purple-600 dark:text-white dark:hover:text-purple-400 hover:bg-purple-50 px-1 rounded-md transition-colors"
+            class="rounded-md px-2 py-1 transition-colors hover:text-purple-600 hover:bg-purple-100 dark:text-white dark:hover:text-purple-400 dark:hover:bg-gray-700"
             >github</a
         >
         <a
             href="/curriculo"
-            class="hover:text-purple-600 dark:text-white dark:hover:text-purple-400 hover:bg-purple-50 px-1 rounded-md transition-colors"
+            class="rounded-md px-2 py-1 transition-colors hover:text-purple-600 hover:bg-purple-100 dark:text-white dark:hover:text-purple-400 dark:hover:bg-gray-700"
             >curriculo</a
         >
         <ToggleDarkmode />

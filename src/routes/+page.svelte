@@ -127,7 +127,7 @@
         <LinkButton
             href="mailto:renanlazarotto@gmail.com?subject=Contato via site"
             text="Enviar um e-mail"
-            classes="p-4 rounded flex items-center justify-center bg-purple-50 hover:bg-purple-100 title-font font-medium text-purple-700 md:w-1/2 mx-auto"
+            classes="p-4 rounded flex items-center justify-center bg-purple-50 hover:bg-purple-100 title-font font-medium text-purple-700 md:w-1/2 mx-auto dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-purple-300 dark:hover:text-purple-400"
             icon={At}
             iconClass="w-8 h-8 mr-6"
         />

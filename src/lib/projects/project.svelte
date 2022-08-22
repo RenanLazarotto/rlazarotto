@@ -9,7 +9,7 @@
 </script>
 
 <div
-    class="border border-gray-300 dark:border-purple-500 rounded-md p-4 flex flex-col justify-between w-full"
+    class="border border-gray-300 dark:border-gray-700 rounded-md p-4 flex flex-col justify-between w-full"
 >
     <div class="mb-4">
         <div class="flex items-center justify-between mb-2">

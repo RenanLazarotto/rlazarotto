@@ -4,7 +4,7 @@
 </script>
 
 <div
-    class='border border-gray-300 rounded-md flex items-center shadow shadow-gray-200 p-1'
+    class='border border-gray-300 rounded-md flex items-center shadow shadow-gray-200 p-1 dark:border-gray-700 dark:shadow-gray-800'
 >
     <svg
         role='img'
