@@ -1,10 +1,11 @@
 <script>
     import Link from "$lib/common/link.svelte";
+import Paragraph from "$lib/common/paragraph.svelte";
 
     export let openSource;
     export let title;
     export let description;
-    export let repoUrl;
+    export let repoUrl = "";
     export let stack;
 </script>
 
@@ -18,7 +19,10 @@
                 <Link href={repoUrl} text="Código fonte" />
             {/if}
         </div>
-        <p>{description}</p>
+        {#each description as line}
+        <Paragraph>{line}</Paragraph>
+
+        {/each}
     </div>
     {#if stack.length > 0}
         <div>

@@ -27,11 +27,13 @@
 
 <button
     on:click={toggle}
-    class="rounded-md px-2 py-1 transition-colors hover:bg-purple-100 dark:hover:bg-gray-700"
+    class="inline-flex items-center text-xs font-bold text-purple-600 hover:text-purple-800 dark:text-white hover:bg-purple-200 dark:hover:bg-gray-700 p-2 rounded transition-colors duration-300"
 >
     {#if $isDarkMode}
-        <Sun class="text-yellow-400 mr-1" weight="duotone" />
+        <Sun class="text-base text-yellow-400 mr-1" weight="duotone" />
+        modo claro
     {:else}
-        <Moon class="text-purple-600 mr-1" weight="duotone" />
+        <Moon class="text-base text-purple-600 mr-1" weight="duotone" />
+        modo escuro
     {/if}
 </button>
