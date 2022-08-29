@@ -1,37 +1,38 @@
 <script>
     import Link from "$lib/common/link.svelte";
-import Paragraph from "$lib/common/paragraph.svelte";
+    import ArrowSquareOut from "phosphor-svelte/lib/ArrowSquareOut/ArrowSquareOut.svelte";
 
-    export let openSource;
+    export let year;
     export let title;
-    export let description;
-    export let repoUrl = "";
+    export let at;
     export let stack;
+    export let links;
 </script>
 
-<div
-    class="border border-gray-300 dark:border-gray-700 rounded-md p-4 flex flex-col justify-between w-full"
->
-    <div class="mb-4">
-        <div class="flex items-center justify-between mb-2">
-            <p class="font-bold text-xl">{title}</p>
-            {#if openSource}
-                <Link href={repoUrl} text="Código fonte" />
-            {/if}
-        </div>
-        {#each description as line}
-        <Paragraph>{line}</Paragraph>
-
+<tr class="hover:bg-purple-100 dark:hover:bg-gray-800">
+    <td
+        class="font-medium text-center text-purple-600 dark:text-purple-400 py-3 px-2 rounded-l"
+        >{year}</td
+    >
+    <td class="font-bold py-3 px-2">{title}</td>
+    <td class="text-gray-400 dark:text-gray-500 py-3 px-2">{at}</td>
+    <td class="text-gray-400 dark:text-gray-500 py-3 px-2">
+        <ul class="inline-flex gap-x-1 text-xs py-3 px-2">
+            {#each stack as tech, i}
+                <li>
+                    {tech}
+                    {#if i < stack.length -1}
+                    ╌
+                    {/if}
+                </li>
+            {/each}
+        </ul>
+    </td>
+    <td class="rounded-r py-3 px-2">
+        {#each links as link}
+            <Link href={link}>
+                <ArrowSquareOut weight="duotone" />
+            </Link>
         {/each}
-    </div>
-    {#if stack.length > 0}
-        <div>
-            <p class="mb-1">Tecnologias:</p>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-1">
-                {#each stack as item}
-                    <svelte:component this={item} width="32" height="32"/>
-                {/each}
-            </div>
-        </div>
-    {/if}
-</div>
+    </td>
+</tr>

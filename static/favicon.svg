@@ -1,16 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#f5f5f5" viewBox="0 0 256 256">
-    <style>
-		line, polyline {
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 16 16">
+	<style id="style14">
+		path {
 			stroke: #663399;
 		}
 		@media ( prefers-color-scheme: dark ) {
-			line, polyline {
+			path {
 				stroke: #FBBF5D;
 			}
 		}
 	</style>
-    <rect width="256" height="256" fill="none"></rect>
-    <polyline points="64 88 16 128 64 168" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-    <polyline points="192 88 240 128 192 168" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-    <line x1="160" y1="40" x2="96" y2="216" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+	<path style="stroke-width:0.7" d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" id="path16" />
+	<path style="stroke-width:0.7" d="M 9.7546838,3.0241363 A 0.35411828,0.39168811 0 1 0 9.0777356,2.7938666 L 6.2453162,12.975864 a 0.35411828,0.39168811 0 0 0 0.6769482,0.230269 z M 5.7723021,4.9814295 a 0.35405243,0.39161527 0 0 1 0,0.5545272 L 3.5438961,8 5.7723021,10.464043 A 0.3544999,0.39211022 0 0 1 5.2709639,11.018571 L 2.7925969,8.2772636 a 0.35405243,0.39161527 0 0 1 0,-0.5545272 l 2.478367,-2.7413069 a 0.35405243,0.39161527 0 0 1 0.5013382,0 z m 4.4553959,0 a 0.35405243,0.39161527 0 0 0 0,0.5545272 L 12.456104,8 10.227698,10.464043 a 0.35449983,0.39211014 0 0 0 0.501338,0.554528 l 2.478367,-2.7413074 a 0.35405243,0.39161527 0 0 0 0,-0.5545272 L 10.729036,4.9814295 a 0.35405243,0.39161527 0 0 0 -0.501338,0 z" id="path18" />
 </svg>
