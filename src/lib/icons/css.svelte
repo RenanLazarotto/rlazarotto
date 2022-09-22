@@ -1,23 +1,17 @@
 <script>
-    export let width = 48;
-    export let height = 48;
+    export let width = 24;
+    export let height = 24;
 </script>
 
-<div
-    class='border border-gray-300 rounded-md flex items-center shadow shadow-gray-200 p-1 dark:border-gray-700 dark:shadow-gray-800'
+<svg
+    role="img"
+    fill="#1572B6"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+    {width}
+    {height}
 >
-    <svg
-        role='img'
-        fill='white'
-        viewBox='0 0 24 24'
-        xmlns='http://www.w3.org/2000/svg'
-        width={width}
-        height={height}
-        class='p-2 bg-[#1572B6] rounded'
-    >
-        <path
-            d='M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z'
-        />
-    </svg>
-    <div class='text-center font-medium pl-2'>CSS</div>
-</div>
+    <path
+        d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"
+    />
+</svg>

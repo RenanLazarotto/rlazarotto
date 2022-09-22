@@ -24,7 +24,7 @@
 
 <button
     on:click={toggle}
-    class="inline-flex items-center text-xs font-bold text-purple-600 hover:text-purple-800 dark:text-white hover:bg-purple-200 dark:hover:bg-gray-700 p-2 rounded transition-colors duration-300"
+    class="text-xs font-bold text-purple-600 hover:text-purple-900 dark:text-yellow-500 dark:hover:text-yellow-300 transition-colors duration-300 px-2"
 >
     {#if $isDarkMode}
         <svg
@@ -32,7 +32,7 @@
             width="16"
             height="16"
             fill="currentColor"
-            class="text-base text-yellow-400"
+            class="text-base"
             viewBox="0 0 16 16"
         >
             <path
@@ -45,7 +45,7 @@
             width="16"
             height="16"
             fill="currentColor"
-            class="text-base text-purple-600"
+            class="text-base"
             viewBox="0 0 16 16"
         >
             <path

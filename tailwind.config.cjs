@@ -12,9 +12,9 @@ module.exports = {
       white: colors.white,
       gray: colors.slate,
       black: colors.black,
-      purple: colors.purple,
-      green: colors.emerald,
+      blue: colors.blue,
       yellow: colors.amber,
+      purple: colors.purple
     },
     extend: {
       fontFamily: {

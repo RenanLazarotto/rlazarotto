@@ -48,26 +48,107 @@ export function load() {
             }
         ],
         stack: [
-            CodeIgniter,
-            Laravel,
-            PHP,
-            Python,
-            RabbitMQ,
-            Redis,
-            Symfony,
-            Bootstrap,
-            CSS,
-            JavaScript,
-            Svelte,
-            Tailwind,
-            Bash,
-            Linux,
-            Windows
+            {
+                icon: PHP,
+                name: "PHP",
+                knowledge: 100,
+                link: "https://www.php.net/"
+            },
+            {
+                icon: JavaScript,
+                name: "JavaScript",
+                knowledge: 85,
+                link: ""
+            },
+            {
+                icon: Python,
+                name: "Python",
+                knowledge: 40,
+                link: "https://www.python.org/"
+            },
+            {
+                icon: CSS,
+                name: "CSS",
+                knowledge: 70,
+                link: ""
+            },
+            {
+                icon: Symfony,
+                name: "Symfony",
+                knowledge: 100,
+                link: "https://symfony.com/"
+            },
+            {
+                icon: Laravel,
+                name: "Laravel",
+                knowledge: 40,
+                link: "https://laravel.com/"
+            },
+            {
+                icon: CodeIgniter,
+                name: "CodeIgniter",
+                knowledge: 25,
+                link: "https://codeigniter.com/"
+            },
+            {
+                icon: Magento,
+                name: "Magento",
+                knowledge: 20,
+                link: "https://business.adobe.com/br/products/magento/open-source.html"
+            },
+            {
+                icon: Bootstrap,
+                name: "Bootstrap",
+                knowledge: 85,
+                link: "https://getbootstrap.com/"
+            },
+            {
+                icon: Tailwind,
+                name: "Tailwind",
+                knowledge: 65,
+                link: "https://tailwindcss.com/"
+            },
+            {
+                icon: Svelte,
+                name: "Svelte",
+                knowledge: 40,
+                link: "https://kit.svelte.dev/"
+            },
+            {
+                icon: RabbitMQ,
+                name: "RabbitMQ",
+                knowledge: 45,
+                link: "https://www.rabbitmq.com/"
+            },
+            {
+                icon: Redis,
+                name: "Redis",
+                knowledge: 45,
+                link: "https://redis.io/"
+            },
+            {
+                icon: Bash,
+                name: "Bash",
+                knowledge: 30,
+                link: ""
+            },
+            {
+                icon: Linux,
+                name: "Linux",
+                knowledge: 75,
+                link: ""
+            },
+            {
+                icon: Windows,
+                name: "Windows",
+                knowledge: 50,
+                link: "https://www.microsoft.com/pt-br/windows"
+            }
         ],
         jobs: [
             {
                 key: 'hammer',
-                startDate: new Date(2022, 8),
+                startDate: new Date(2022, 7),
                 endDate: 'Atualmente',
                 location: 'Colombo, Paraná (Remoto)',
                 title: 'Desenvolvedor PHP',
@@ -80,8 +161,8 @@ export function load() {
             },
             {
                 key: 'procob',
-                startDate: new Date(2020, 12),
-                endDate: new Date(2022, 6),
+                startDate: new Date(2020, 11),
+                endDate: new Date(2022, 5),
                 location: 'Pinhais, Paraná',
                 title: 'Desenvolvedor Backend Pleno',
                 company: 'Procob',
@@ -106,8 +187,8 @@ export function load() {
             },
             {
                 key: 'dealersites',
-                startDate: new Date(2020, 4),
-                endDate: new Date(2020, 7),
+                startDate: new Date(2020, 3),
+                endDate: new Date(2020, 6),
                 location: 'Colombo, Paraná (Remoto)',
                 title: 'Desenvolvedor Backend',
                 company: 'DealerSites',
@@ -119,8 +200,8 @@ export function load() {
             },
             {
                 key: 'digitalhub',
-                startDate: new Date(2019, 5),
-                endDate: new Date(2020, 1),
+                startDate: new Date(2019, 4),
+                endDate: new Date(2020, 0),
                 location: 'Curitiba, Paraná',
                 title: 'Desenvolvedor Backend/Magento 2',
                 company: 'DigitalHub',
@@ -133,8 +214,8 @@ export function load() {
             },
             {
                 key: 'crediok',
-                startDate: new Date(2018, 5),
-                endDate: new Date(2019, 3),
+                startDate: new Date(2018, 4),
+                endDate: new Date(2019, 2),
                 location: 'Curitiba, Paraná',
                 title: 'Analista de Suporte',
                 company: 'CrediOK',
@@ -149,8 +230,8 @@ export function load() {
             },
             {
                 key: 'centralserver',
-                startDate: new Date(2017, 2),
-                endDate: new Date(2017, 4),
+                startDate: new Date(2017, 1),
+                endDate: new Date(2017, 3),
                 location: 'Curitiba, Paraná',
                 title: 'Administrador de sistemas',
                 company: 'CentralServer',
@@ -163,8 +244,8 @@ export function load() {
             },
             {
                 key: 'quality',
-                startDate: new Date(2015, 6),
-                endDate: new Date(2017, 1),
+                startDate: new Date(2015, 5),
+                endDate: new Date(2017, 0),
                 location: 'Curitiba, Paraná',
                 title: 'Suporte Técnico N2',
                 company: 'Quality',
@@ -177,11 +258,11 @@ export function load() {
             },
             {
                 key: 'novageracao',
-                startDate: new Date(2014, 10),
-                endDate: new Date(2015, 5),
+                startDate: new Date(2014, 9),
+                endDate: new Date(2015, 4),
                 location: 'Curitiba, Paraná',
                 title: 'Analista de TI Jr.',
-                company: 'Distribuidora Nova Geração',
+                company: 'Dist. Nova Geração',
                 companyUrl: 'https://www.distribuidoranovageracao.com.br/',
                 description: [
                     'Prestei suporte técnico aos usuários internamente',
@@ -190,12 +271,12 @@ export function load() {
             },
             {
                 key: 'dombosco',
-                startDate: new Date(2012, 10),
-                endDate: new Date(2016, 14),
+                startDate: new Date(2012, 9),
+                endDate: new Date(2016, 5),
                 location: 'Curitiba, Paraná',
                 title: 'Monitor de informática',
                 company: 'Colégio Dom Bosco',
-                companyUrl: 'https://www.distribuidoranovageracao.com.br/',
+                companyUrl: 'https://dombosco-colegio-batel-curitiba.escolaseb.com.br/pt/',
                 description: [
                     'Fiz a monitoria do laboratório de informática da escola, gerenciando aproximadamente 30 computadores',
                     'Auxiliava os professores em sala com equipamentos de informática',
