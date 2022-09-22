@@ -3,8 +3,8 @@
   import DeviceMobile from "phosphor-svelte/lib/DeviceMobile/DeviceMobile.svelte";
   import LinkSimpleHorizontal from "phosphor-svelte/lib/LinkSimpleHorizontal/LinkSimpleHorizontal.svelte";
 
-  import Entry from "$lib/content/resume/entry.svelte";
-  import Link from "$lib/content/link.svelte";
+  import Entry from "$lib/components/resume/entry.svelte";
+  import Link from "$lib/components/link.svelte";
 
   import ThemeToggle from "$lib/header/theme-toggle.svelte";
   import Section from "$lib/section.svelte";
