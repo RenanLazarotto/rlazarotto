@@ -15,7 +15,7 @@
     <title>renan.lazarotto</title>
 </svelte:head>
 
-<div class="pt-32 mx-auto w-11/12 sm:w-5/6 text-gray-300">
+<div class="pt-24 mx-auto w-11/12 sm:w-5/6 text-gray-300">
     <Hero />
 
     <AboutMe />
