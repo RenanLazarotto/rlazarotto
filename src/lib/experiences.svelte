@@ -1,8 +1,7 @@
 <script>
     import MapPin from "phosphor-svelte/lib/MapPin/MapPin.svelte";
 
-    const activeClasses =
-        "text-purple-500 dark:text-purple-500 border-l-purple-600 dark:border-l-purple-500 hover:border-l-purple-600 dark:hover:border-l-purple-500";
+    const activeClasses = "text-purple-500 border-b-purple-500 sm:border-l-purple-500 hover:border-b-purple-500 sm:hover:border-l-purple-500";
 
     export let jobs = [];
 
@@ -41,23 +40,24 @@
 
 <section class="mb-20">
     <div class="flex items-center gap-x-2 mt-3 mb-9">
-        <span
-            class="h-px block relative w-8 bg-purple-600 dark:bg-purple-500"
-        />
-        <p id="experiences" class="font-bold text-2xl">Experiências profissionais</p>
-        <span
-            class="h-px block relative w-32 bg-purple-600 dark:bg-purple-500"
-        />
+        <span class="h-px block relative w-8 bg-purple-500" />
+        <p
+            id="experiences"
+            class="font-bold text-lg sm:text-2xl whitespace-nowrap"
+        >
+            Experiências profissionais
+        </p>
+        <span class="h-px block relative w-32 bg-purple-500" />
     </div>
-    <div class="flex items-start gap-2 mx-4">
+    <div class="sm:flex items-start gap-2">
         <ul
-            class="flex flex-col flex-wrap text-sm text-center font-medium w-1/5"
+            class="flex sm:flex-col overflow-x-auto text-sm text-center font-medium sm:w-1/5"
             role="tablist"
         >
             {#each jobs as li, i}
                 <li class="flex text-center" role="presentation">
                     <button
-                        class="block flex-1 px-4 py-2 border-l-2 border-gray-100 dark:border-gray-800 hover:border-purple-300 dark:hover:border-gray-700 hover:bg-purple-100 dark:hover:bg-gray-800 hover:text-purple-500 dark:hover:text-purple-600 {i ===
+                        class="whitespace-nowrap flex-1 px-4 py-2 mb-1 sm:mb-0 border-b-2 sm:border-l-2 md:border-b-0 border-gray-800 hover:border-gray-700 hover:bg-gray-800 hover:text-purple-600 {i ===
                         0
                             ? activeClasses
                             : ''}"
@@ -75,12 +75,12 @@
         </ul>
         {#each jobs as job, i}
             <div
-                class="transition-opacity {i == 0 ? '' : 'hidden'} w-4/5"
+                class="transition-opacity {i == 0 ? '' : 'hidden'} sm:w-4/5"
                 id={`${job.key}-tab`}
                 role="tabpanel"
                 aria-labelledby={`${job.key}-button`}
             >
-                <p class="text-lg">
+                <p class="text-md sm:text-lg mb-2">
                     {job.title}
                     <a
                         href={job.companyUrl}
@@ -101,7 +101,7 @@
                     <div class="flex items-center">
                         <MapPin
                             weight="duotone"
-                            class="text-purple-600 dark:text-purple-400 mr-1"
+                            class="text-purple-400 mr-1"
                         />
                         {job.location}
                     </div>

@@ -1,6 +1,5 @@
 <script>
     import HeaderLink from "$lib/header/header-link.svelte";
-    import ThemeToggle from "$lib/header/theme-toggle.svelte";
 
     // Shows the header by default
     let showHeader = true;
@@ -74,6 +73,5 @@
         <HeaderLink href="#stack" >tecnologias</HeaderLink>
         <HeaderLink href="#contact" >contato</HeaderLink>
         <HeaderLink href="/curriculo">currículo</HeaderLink>
-        <ThemeToggle />
     </nav>
 </header>

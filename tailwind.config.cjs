@@ -4,7 +4,6 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   mode: 'jit',
   content: ['./src/**/*.svelte', './lib/**/*.svelte', './src/app.html'],
-  darkMode: 'class',
   theme: {
     colors: {
       transparent: 'transparent',
@@ -19,7 +18,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'sans': [
-          'Inter',
+          'Rubik',
           ...defaultTheme.fontFamily.sans
         ]
       }
