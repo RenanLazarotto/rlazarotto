@@ -79,7 +79,8 @@ export function load() {
                     'Fiz correções nos módulos já existentes para Magento 2',
                     'Desenvolvi módulos de integração com transportadoras para obter o valor de frete para os produtos',
                     'Desenvolvi um hotsite para um dos clientes, com landing page e painel administrativo desenvolvidos em Symfony 4',
-                    'Fiz uma reescrita na lógica de uma página de checkout que precisava de correções']
+                    'Fiz uma reescrita na lógica de uma página de checkout que precisava de correções'
+                ]
             },
             {
                 key: 'crediok',
@@ -178,13 +179,3 @@ export function load() {
         }
     };
 }
-/*
-{
-    startDate: '',
-    endDate: '',
-    location: '',
-    title: '',
-    company: '',
-    description: []
-}
-*/

@@ -3,11 +3,8 @@
   import DeviceMobile from "phosphor-svelte/lib/DeviceMobile/DeviceMobile.svelte";
   import LinkSimpleHorizontal from "phosphor-svelte/lib/LinkSimpleHorizontal/LinkSimpleHorizontal.svelte";
 
-  import Entry from "$lib/components/resume/entry.svelte";
   import Link from "$lib/components/link.svelte";
-
-  import ThemeToggle from "$lib/header/theme-toggle.svelte";
-  import Section from "$lib/section.svelte";
+  import MapPin from "phosphor-svelte/lib/MapPin/MapPin.svelte";
 
   export let data;
 </script>
@@ -23,7 +20,6 @@
       <h1 class="text-4xl text-center lg:text-left md:text-5xl font-bold">
         Renan Lazarotto
       </h1>
-      <ThemeToggle />
     </div>
 
     <div
@@ -60,11 +56,11 @@
   </section>
 
   <!-- Resumo -->
-  <Section>
+  <section class="mb-6 text-justify">
     Programador PHP com experiência em desenvolvimento de aplicações Web, APIs e
     DevOps. Também sou técnico de suporte com vivência em atendimento ao usuário
     <i>in loco</i> e remotamente.
-  </Section>
+  </section>
 
   <div class="flex gap-x-4">
     <div class="w-8/12">
@@ -77,7 +73,43 @@
           Experiências
         </h2>
         {#each data.jobs as job}
-          <Entry {...job} />
+          <div class="mb-4">
+            <p class="text-lg">
+              {job.title}
+              <a
+                href={job.companyUrl}
+                class="font-bold text-responsive"
+                target="_blank"
+              >
+                @ {job.company}
+              </a>
+            </p>
+            <div class="text-sm flex gap-x-4 mb-4">
+              <div>
+                {job.startDate.toLocaleString("pt-BR", { year: "numeric" })} - {job.endDate.toLocaleString(
+                  "pt-BR",
+                  { year: "numeric" }
+                )}
+              </div>
+              <div class="flex items-center">
+                <MapPin
+                  weight="duotone"
+                  class="text-purple-600 dark:text-purple-400 mr-1"
+                />
+                {location}
+              </div>
+            </div>
+
+            {#if Array.isArray(job.description)}
+              <ul class="list-disc list-inside">
+                {#each job.description as li}
+                  <li class="my-1">{li}</li>
+                {/each}
+              </ul>
+            {:else}
+              <p>{job.description}</p>
+            {/if}
+          </div>
         {/each}
       </section>
     </div>
@@ -90,10 +122,12 @@
           Tecnologias
         </h2>
         {#each Object.entries(data.stack) as [title, items]}
-          <p class="leading-relaxed text-lg my-2 font-medium">{title}:</p>
-          <p class="text-xs">
-            {items.join(" -- ")}
-          </p>
+          <p class="leading-relaxed text-lg mb-2 font-medium">{title}:</p>
+          <ul class="list-disc list-inside">
+            {#each items as item}
+              <li>{item}</li>
+            {/each}
+          </ul>
         {/each}
       </section>
 
@@ -106,7 +140,41 @@
         </h2>
 
         {#each data.education as entry}
-          <Entry {...entry} />
+          <div class="mb-4">
+            <p class="text-lg">
+              {entry.title}
+              <a
+                href={entry.companyUrl}
+                class="font-bold text-responsive"
+                target="_blank"
+              >
+                @ {entry.company}
+              </a>
+            </p>
+            <div class="text-sm flex gap-x-4 mb-4">
+              <div>
+                {entry.startDate.toLocaleString("pt-BR", { year: "numeric" })} -
+                {entry.endDate.toLocaleString("pt-BR", { year: "numeric" })}
+              </div>
+              <div class="flex items-center">
+                <MapPin
+                  weight="duotone"
+                  class="text-purple-600 dark:text-purple-400 mr-1"
+                />
+                {entry.location}
+              </div>
+            </div>
+
+            {#if Array.isArray(entry.description)}
+              <ul class="list-disc list-inside">
+                {#each entry.description as li}
+                  <li class="my-1">{li}</li>
+                {/each}
+              </ul>
+            {:else}
+              <p>{entry.description}</p>
+            {/if}
+          </div>
         {/each}
       </section>
     </div>
