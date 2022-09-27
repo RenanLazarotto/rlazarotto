@@ -96,7 +96,7 @@
                   weight="duotone"
                   class="text-purple-600 dark:text-purple-400 mr-1"
                 />
-                {location}
+                {job.location}
               </div>
             </div>
 
