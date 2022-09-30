@@ -1,7 +1,9 @@
 <script>
-    import MapPin from "phosphor-svelte/lib/MapPin/MapPin.svelte";
+    import Link from "./components/link.svelte";
+    import SectionTitle from "./components/section-title.svelte";
 
-    const activeClasses = "text-purple-500 border-b-purple-500 sm:border-l-purple-500 hover:border-b-purple-500 sm:hover:border-l-purple-500";
+    const activeClasses =
+        "text-purple-500 border-b-purple-500 sm:border-l-purple-500 hover:border-b-purple-500 sm:hover:border-l-purple-500";
 
     export let jobs = [];
 
@@ -38,20 +40,11 @@
     };
 </script>
 
-<section class="mb-20">
-    <div class="flex items-center gap-x-2 mt-3 mb-9">
-        <span class="h-px block relative w-8 bg-purple-500" />
-        <p
-            id="experiences"
-            class="font-bold text-lg sm:text-2xl whitespace-nowrap"
-        >
-            Experiências profissionais
-        </p>
-        <span class="h-px block relative w-32 bg-purple-500" />
-    </div>
+<section class="mb-32">
+    <SectionTitle id="experiences">Experiências</SectionTitle>
     <div class="sm:flex items-start gap-2">
         <ul
-            class="flex sm:flex-col overflow-x-auto text-sm text-center font-medium sm:w-1/5"
+            class="flex sm:flex-col overflow-x-auto text-sm text-center font-medium sm:w-1/5 pb-2"
             role="tablist"
         >
             {#each jobs as li, i}
@@ -80,35 +73,24 @@
                 role="tabpanel"
                 aria-labelledby={`${job.key}-button`}
             >
-                <p class="text-md sm:text-lg mb-2">
+                <p class="text-md sm:text-lg">
                     {job.title}
-                    <a
-                        href={job.companyUrl}
-                        class="font-bold text-responsive"
-                        target="_blank">@ {job.company}</a
-                    >
+                    <Link href={job.companyUrl}>@ {job.company}</Link>
                 </p>
-                <div class="text-sm flex gap-x-4 mb-4">
-                    <div>
-                        {job.startDate.toLocaleString("pt-BR", {
-                            month: "long",
-                            year: "numeric",
-                        })} - {job.endDate.toLocaleString("pt-BR", {
-                            month: "long",
-                            year: "numeric",
-                        })}
-                    </div>
-                    <div class="flex items-center">
-                        <MapPin
-                            weight="duotone"
-                            class="text-purple-400 mr-1"
-                        />
-                        {job.location}
-                    </div>
+                <div class="text-xs text-gray-400 font-medium mb-1">
+                    {job.startDate.toLocaleString("pt-BR", {
+                        month: "long",
+                        year: "numeric",
+                    })} - {job.endDate.toLocaleString("pt-BR", {
+                        month: "long",
+                        year: "numeric",
+                    })}
+                    ::
+                    {job.location}
                 </div>
-                <ul class="list-disc list-inside">
+                <ul class="text-gray-400">
                     {#each job.description as li}
-                        <li class="my-1">{li}</li>
+                        <li class="before:[content:'❖'] before:mr-2">{li}</li>
                     {/each}
                 </ul>
             </div>

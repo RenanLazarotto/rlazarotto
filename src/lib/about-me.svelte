@@ -1,17 +1,10 @@
 <script>
     import Link from "./components/link.svelte";
+    import SectionTitle from "./components/section-title.svelte";
 </script>
 
-<section class="mb-20">
-    <div class="flex items-center gap-x-2 mt-3 mb-9">
-        <span
-            class="h-px block relative w-8 bg-purple-500"
-        />
-        <p id="about" class="font-bold text-lg sm:text-2xl">Sobre mim</p>
-        <span
-            class="h-px block relative w-32 bg-purple-500"
-        />
-    </div>
+<section class="mb-32">
+    <SectionTitle id="about">Sobre mim</SectionTitle>
 
     <div
         class="flex flex-col gap-y-4 text-md md:text-xl leading-relaxed font-light text-justify sm:text-left"

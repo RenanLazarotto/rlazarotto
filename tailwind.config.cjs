@@ -18,7 +18,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'sans': [
-          'Rubik',
+          'Nunito Sans',
           ...defaultTheme.fontFamily.sans
         ]
       }

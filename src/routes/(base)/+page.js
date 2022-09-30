@@ -52,97 +52,81 @@ export function load() {
                 icon: PHP,
                 name: "PHP",
                 knowledge: 100,
-                link: "https://www.php.net/"
             },
             {
                 icon: JavaScript,
                 name: "JavaScript",
                 knowledge: 85,
-                link: ""
             },
             {
                 icon: Python,
                 name: "Python",
                 knowledge: 40,
-                link: "https://www.python.org/"
             },
             {
                 icon: CSS,
                 name: "CSS",
                 knowledge: 70,
-                link: ""
             },
             {
                 icon: Symfony,
                 name: "Symfony",
                 knowledge: 100,
-                link: "https://symfony.com/"
             },
             {
                 icon: Laravel,
                 name: "Laravel",
                 knowledge: 40,
-                link: "https://laravel.com/"
             },
             {
                 icon: CodeIgniter,
                 name: "CodeIgniter",
                 knowledge: 25,
-                link: "https://codeigniter.com/"
             },
             {
                 icon: Magento,
                 name: "Magento",
                 knowledge: 20,
-                link: "https://business.adobe.com/br/products/magento/open-source.html"
             },
             {
                 icon: Bootstrap,
                 name: "Bootstrap",
                 knowledge: 85,
-                link: "https://getbootstrap.com/"
             },
             {
                 icon: Tailwind,
                 name: "Tailwind",
                 knowledge: 65,
-                link: "https://tailwindcss.com/"
             },
             {
                 icon: Svelte,
                 name: "Svelte",
                 knowledge: 40,
-                link: "https://kit.svelte.dev/"
             },
             {
                 icon: RabbitMQ,
                 name: "RabbitMQ",
                 knowledge: 45,
-                link: "https://www.rabbitmq.com/"
             },
             {
                 icon: Redis,
                 name: "Redis",
                 knowledge: 45,
-                link: "https://redis.io/"
             },
             {
                 icon: Bash,
                 name: "Bash",
                 knowledge: 30,
-                link: ""
             },
             {
                 icon: Linux,
                 name: "Linux",
                 knowledge: 75,
-                link: ""
             },
             {
                 icon: Windows,
                 name: "Windows",
                 knowledge: 50,
-                link: "https://www.microsoft.com/pt-br/windows"
             }
         ],
         jobs: [

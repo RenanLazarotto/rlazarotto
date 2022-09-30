@@ -8,11 +8,11 @@
     // Starts at y: 0;
     let previousY = 0;
 
-    $: showHeaderClasses = showHeader ? "top-0" : "-top-20";
+    $: showHeaderClasses = showHeader ? "top-0" : "-top-36 sm:-top-20";
     $: showShadowClasses = showShadow ? "shadow-lg" : "";
 
     $: classes =
-        `bg-gray-900 sm:md-0 py-4 z-50 transition-all duration-500 fixed min-w-full h-20 ${showHeaderClasses} ${showShadowClasses}`.trim();
+        `bg-gray-900 sm:md-0 z-50 transition-all duration-500 fixed min-w-full h-36 sm:h-20 ${showHeaderClasses} ${showShadowClasses}`.trim();
 
     const onScroll = () => {
         let currentY = window.scrollY;
@@ -39,8 +39,8 @@
 <svelte:window on:scroll={onScroll} />
 
 <header class={classes}>
-    <div class="flex justify-between items-center w-11/12 sm:w-5/6 mx-auto">
-        <a href="/" class="flex items-center text-responsive">
+    <div class="py-4 flex flex-col sm:flex-row justify-between items-center w-11/12 sm:w-5/6 mx-auto">
+        <a href="/" class="flex items-center text-responsive mb-4 sm:mb-0">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -63,11 +63,11 @@
             </div>
         </a>
         <nav
-            class="hidden md:ml-auto sm:flex items-center font-medium"
+            class="grid grid-cols-3 sm:flex sm:ml-auto items-center font-medium"
         >
             <a
                 href="#about"
-                class="flex justify-center items-center text-xs px-2 text-responsive"
+                class="flex justify-center items-center text-xs p-2 text-responsive"
             >
                 sobre
             </a>

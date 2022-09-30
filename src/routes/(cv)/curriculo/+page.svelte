@@ -4,7 +4,6 @@
   import LinkSimpleHorizontal from "phosphor-svelte/lib/LinkSimpleHorizontal/LinkSimpleHorizontal.svelte";
 
   import Link from "$lib/components/link.svelte";
-  import MapPin from "phosphor-svelte/lib/MapPin/MapPin.svelte";
 
   export let data;
 </script>
@@ -13,31 +12,26 @@
   <title>renan.lazarotto | currículo</title>
 </svelte:head>
 
-<div class="w-3/4 mx-auto py-5 dark:text-gray-200">
+<div class="mx-auto w-11/12 text-gray-300 text-justify">
   <!-- Informações básicas -->
   <section class="mb-4">
-    <div class="flex justify-between items-center my-8">
-      <h1 class="text-4xl text-center lg:text-left md:text-5xl font-bold">
-        Renan Lazarotto
-      </h1>
-    </div>
+    <h1 class="mt-10 mb-6 text-4xl sm:text-5xl font-bold text-purple-500">
+      Renan Lazarotto
+    </h1>
 
     <div
-      class="text-sm flex flex-col md:flex-row items-center md:justify-start bg-gray-100 dark:bg-gray-800 p-2 rounded gap-y-2 lg:gap-x-4 lg:gap-y-0"
+      class="text-sm flex flex-col sm:flex-row justify-between lg:justify-start py-2 gap-y-2 lg:gap-x-4 lg:gap-y-0"
     >
       <Link ink href="mailto:renanlazarotto@gmail.com">
         <span class="flex items-center">
-          <Envelope
-            class="text-base mr-1 text-purple-600 dark:text-purple-400"
-            weight="duotone"
-          />
+          <Envelope class="text-base mr-1 text-purple-500" weight="duotone" />
           renanlazarotto@gmail.com
         </span>
       </Link>
       <Link href="tel:41998156063">
         <span class="flex items-center">
           <DeviceMobile
-            class="text-base mr-1 text-purple-600 dark:text-purple-400"
+            class="text-base mr-1 text-purple-500"
             weight="duotone"
           />
           +55 (41) 99815-6063
@@ -46,7 +40,7 @@
       <Link href="https://renan.lazarotto.dev.br">
         <span class="flex items-center">
           <LinkSimpleHorizontal
-            class="text-base mr-1 text-purple-600 dark:text-purple-400"
+            class="text-base mr-1 text-purple-500"
             weight="duotone"
           />
           https://renan.lazarotto.dev.br
@@ -56,85 +50,67 @@
   </section>
 
   <!-- Resumo -->
-  <section class="mb-6 text-justify">
+  <section class="mb-6">
     Programador PHP com experiência em desenvolvimento de aplicações Web, APIs e
     DevOps. Também sou técnico de suporte com vivência em atendimento ao usuário
     <i>in loco</i> e remotamente.
   </section>
 
-  <div class="flex gap-x-4">
-    <div class="w-8/12">
+  <div class="flex flex-col sm:flex-row gap-x-4">
+    <div class="sm:w-8/12">
       <!-- Experiências -->
-
-      <section class="mb-6 text-justify">
-        <h2
-          class="text-purple-800 dark:text-purple-400 font-bold uppercase text-xl"
-        >
+      <section class="mb-6">
+        <h2 class="text-purple-500 font-medium uppercase text-xl tracking-widest">
           Experiências
         </h2>
-        {#each data.jobs as job}
+        {#each data.jobs as job, i}
           <div class="mb-4">
             <p class="text-lg">
               {job.title}
-              <a
-                href={job.companyUrl}
-                class="font-bold text-responsive"
-                target="_blank"
-              >
-                @ {job.company}
-              </a>
+              <Link href={job.companyUrl}>@ {job.company}</Link>
             </p>
-            <div class="text-sm flex gap-x-4 mb-4">
-              <div>
-                {job.startDate.toLocaleString("pt-BR", { year: "numeric" })} - {job.endDate.toLocaleString(
-                  "pt-BR",
-                  { year: "numeric" }
-                )}
-              </div>
-              <div class="flex items-center">
-                <MapPin
-                  weight="duotone"
-                  class="text-purple-600 dark:text-purple-400 mr-1"
-                />
-                {job.location}
-              </div>
+            <div class="text-xs text-gray-400 font-medium mb-1">
+              {job.startDate.toLocaleString("pt-BR", { year: "numeric" })} - {job.endDate.toLocaleString(
+                "pt-BR",
+                { year: "numeric" }
+              )}
+              ::
+              {job.location}
             </div>
-
-            {#if Array.isArray(job.description)}
-              <ul class="list-disc list-inside">
-                {#each job.description as li}
-                  <li class="my-1">{li}</li>
-                {/each}
-              </ul>
-            {:else}
-              <p>{job.description}</p>
-            {/if}
+            <ul class="text-gray-400">
+              {#each job.description as li, i}
+                <li class="before:[content:'❖'] before:mr-2">
+                  {li}
+                </li>
+              {/each}
+            </ul>
           </div>
         {/each}
       </section>
     </div>
-    <div class="w-4/12">
+    <div class="sm:w-4/12">
       <!-- Tecnologias -->
       <section class="mb-6">
         <h2
-          class="text-purple-800 dark:text-purple-400 font-bold uppercase text-xl"
+          class="text-purple-500 font-medium uppercase text-xl tracking-widest"
         >
           Tecnologias
         </h2>
         {#each Object.entries(data.stack) as [title, items]}
-          <p class="leading-relaxed text-lg mb-2 font-medium">{title}:</p>
-          <ul class="list-disc list-inside">
+          <p class="leading-relaxed text-lg font-medium">{title}:</p>
+          <ul class="hidden sm:block mb-2 text-gray-400">
             {#each items as item}
-              <li>{item}</li>
+              <li class="before:[content:'❖'] before:mr-2">{item}</li>
             {/each}
           </ul>
+          <p class="text-gray-400 mb-2 sm:hidden">{items.join(", ")}</p>
         {/each}
       </section>
 
       <!-- Formação -->
-      <section class="mb-6 text-justify">
+      <section class="mb-6">
         <h2
-          class="text-purple-800 dark:text-purple-400 font-bold uppercase text-xl"
+          class="text-purple-500 font-medium uppercase text-xl tracking-widest"
         >
           Educação
         </h2>
@@ -143,37 +119,20 @@
           <div class="mb-4">
             <p class="text-lg">
               {entry.title}
-              <a
-                href={entry.companyUrl}
-                class="font-bold text-responsive"
-                target="_blank"
-              >
-                @ {entry.company}
-              </a>
+              <Link href={entry.companyUrl}>@ {entry.company}</Link>
             </p>
-            <div class="text-sm flex gap-x-4 mb-4">
-              <div>
-                {entry.startDate.toLocaleString("pt-BR", { year: "numeric" })} -
-                {entry.endDate.toLocaleString("pt-BR", { year: "numeric" })}
-              </div>
-              <div class="flex items-center">
-                <MapPin
-                  weight="duotone"
-                  class="text-purple-600 dark:text-purple-400 mr-1"
-                />
-                {entry.location}
-              </div>
+            <div class="text-sm text-gray-400 font-medium mb-1">
+              {entry.startDate.toLocaleString("pt-BR", { year: "numeric" })} -
+              {entry.endDate.toLocaleString("pt-BR", { year: "numeric" })}
+              ::
+              {entry.location}
             </div>
 
-            {#if Array.isArray(entry.description)}
-              <ul class="list-disc list-inside">
-                {#each entry.description as li}
-                  <li class="my-1">{li}</li>
-                {/each}
-              </ul>
-            {:else}
-              <p>{entry.description}</p>
-            {/if}
+            <ul class="text-gray-400">
+              {#each entry.description as li}
+                <li class="before:[content:'❖'] before:mr-2">{li}</li>
+              {/each}
+            </ul>
           </div>
         {/each}
       </section>

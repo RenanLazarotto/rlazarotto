@@ -7,7 +7,7 @@ export function load() {
                 company: 'Faculdade Dom Bosco',
                 startDate: new Date(2013, 1),
                 endDate: new Date(2016, 3),
-                location: 'Curitiba, Paraná',
+                location: 'Curitiba, PR',
                 description: [
                     "Formação focada em dispositivos móveis pela Faculdade Dom Bosco, concluída em 2016.",
                     "Conteúdos abrangidos: desenvolvimento para dispositivos móveis Android e iOS, bancos de dados MySQL, programação em Java, PHP e HTML."
@@ -19,12 +19,12 @@ export function load() {
                 key: 'hammer',
                 startDate: new Date(2022, 7),
                 endDate: 'Atualmente',
-                location: 'Colombo, Paraná (Remoto)',
+                location: 'Colombo, PR (Remoto)',
                 title: 'Desenvolvedor PHP',
                 company: 'Hammer Consult',
                 companyUrl: 'https://wlgrupo.com/empresa/hammer/',
                 description: [
-                    'Projeto novo, sem atividades desenvolvidas até o momento'
+                    'Sustentação de projetos existentes'
                 ],
                 techStack: []
             },
@@ -32,7 +32,7 @@ export function load() {
                 key: 'procob',
                 startDate: new Date(2020, 11),
                 endDate: new Date(2022, 5),
-                location: 'Pinhais, Paraná',
+                location: 'Pinhais, PR',
                 title: 'Desenvolvedor Backend Pleno',
                 company: 'Procob',
                 companyUrl: 'https://www.procob.com/',
@@ -58,7 +58,7 @@ export function load() {
                 key: 'dealersites',
                 startDate: new Date(2020, 3),
                 endDate: new Date(2020, 6),
-                location: 'Colombo, Paraná (Remoto)',
+                location: 'Colombo, PR (Remoto)',
                 title: 'Desenvolvedor Backend',
                 company: 'DealerSites',
                 companyUrl: 'https://dealersites.com.br/',
@@ -71,7 +71,7 @@ export function load() {
                 key: 'digitalhub',
                 startDate: new Date(2019, 4),
                 endDate: new Date(2020, 0),
-                location: 'Curitiba, Paraná',
+                location: 'Curitiba, PR',
                 title: 'Desenvolvedor Backend/Magento 2',
                 company: 'DigitalHub',
                 companyUrl: 'https://www.digitalhub.com.br/',
@@ -86,7 +86,7 @@ export function load() {
                 key: 'crediok',
                 startDate: new Date(2018, 4),
                 endDate: new Date(2019, 2),
-                location: 'Curitiba, Paraná',
+                location: 'Curitiba, PR',
                 title: 'Analista de Suporte',
                 company: 'CrediOK',
                 companyUrl: 'https://crediok.com.br/',
@@ -102,7 +102,7 @@ export function load() {
                 key: 'centralserver',
                 startDate: new Date(2017, 1),
                 endDate: new Date(2017, 3),
-                location: 'Curitiba, Paraná',
+                location: 'Curitiba, PR',
                 title: 'Administrador de sistemas',
                 company: 'CentralServer',
                 companyUrl: 'https://www.centralserver.com/br/',
@@ -116,7 +116,7 @@ export function load() {
                 key: 'quality',
                 startDate: new Date(2015, 5),
                 endDate: new Date(2017, 0),
-                location: 'Curitiba, Paraná',
+                location: 'Curitiba, PR',
                 title: 'Suporte Técnico N2',
                 company: 'Quality',
                 companyUrl: 'https://quality.com.br/',
@@ -130,7 +130,7 @@ export function load() {
                 key: 'novageracao',
                 startDate: new Date(2014, 9),
                 endDate: new Date(2015, 4),
-                location: 'Curitiba, Paraná',
+                location: 'Curitiba, PR',
                 title: 'Analista de TI Jr.',
                 company: 'Dist. Nova Geração',
                 companyUrl: 'https://www.distribuidoranovageracao.com.br/',
@@ -143,7 +143,7 @@ export function load() {
                 key: 'dombosco',
                 startDate: new Date(2012, 9),
                 endDate: new Date(2016, 5),
-                location: 'Curitiba, Paraná',
+                location: 'Curitiba, PR',
                 title: 'Monitor de informática',
                 company: 'Colégio Dom Bosco',
                 companyUrl: 'https://dombosco-colegio-batel-curitiba.escolaseb.com.br/pt/',
@@ -155,24 +155,27 @@ export function load() {
             }
         ],
         stack: {
-            'Back-end': [
-                "CodeIgniter",
-                "Laravel",
+            "Linguagens de programação": [
                 "PHP",
-                "Python",
-                "RabbitMQ",
-                "Redis",
-                "Symfony",
-            ],
-            'Front-end': [
-                "Bootstrap",
-                "CSS",
                 "JavaScript",
-                "Svelte",
-                "Tailwind"
-            ],
-            'Sistemas e outros': [
+                "SQL (MySQL/MariaDB)",
+                "HTML",
+                "CSS",
+                "Python",
                 "Bash",
+            ],
+            "Bibliotecas e frameworks": [
+                "Symfony",
+                "Laravel",
+                "CodeIgniter",
+                "Tailwind",
+                "Svelte",
+                "Bootstrap",
+                "RabbitMQ",
+                "Redis"
+            ],
+            "Ferramentas e plataformas": [
+                "Git",
                 "Linux",
                 "Windows",
             ]

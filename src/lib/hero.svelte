@@ -2,7 +2,7 @@
     import Link from "./components/link.svelte";
 </script>
 
-<section class="mb-20">
+<section class="mb-32">
     <p class="text-lg font-medium text-purple-500 sm:mb-6">
         Olá! Eu me chamo
     </p>
