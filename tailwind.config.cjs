@@ -9,17 +9,21 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
       white: colors.white,
-      gray: colors.slate,
+      gray: colors.gray,
       black: colors.black,
       blue: colors.blue,
       yellow: colors.amber,
-      purple: colors.purple
+      purple: colors.violet
     },
     extend: {
       fontFamily: {
         'sans': [
           'Nunito Sans',
           ...defaultTheme.fontFamily.sans
+        ],
+        'mono': [
+          'JetBrains Mono',
+          ...defaultTheme.fontFamily.mono
         ]
       }
     },

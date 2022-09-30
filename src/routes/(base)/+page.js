@@ -136,7 +136,7 @@ export function load() {
                 endDate: 'Atualmente',
                 location: 'Colombo, Paraná (Remoto)',
                 title: 'Desenvolvedor PHP',
-                company: 'Hammer Consult',
+                company: 'Hammer',
                 companyUrl: 'https://wlgrupo.com/empresa/hammer/',
                 description: [
                     'Projeto novo, sem atividades desenvolvidas até o momento'
@@ -246,7 +246,7 @@ export function load() {
                 endDate: new Date(2015, 4),
                 location: 'Curitiba, Paraná',
                 title: 'Analista de TI Jr.',
-                company: 'Dist. Nova Geração',
+                company: 'Nova Geração',
                 companyUrl: 'https://www.distribuidoranovageracao.com.br/',
                 description: [
                     'Prestei suporte técnico aos usuários internamente',
@@ -259,7 +259,7 @@ export function load() {
                 endDate: new Date(2016, 5),
                 location: 'Curitiba, Paraná',
                 title: 'Monitor de informática',
-                company: 'Colégio Dom Bosco',
+                company: 'Dom Bosco',
                 companyUrl: 'https://dombosco-colegio-batel-curitiba.escolaseb.com.br/pt/',
                 description: [
                     'Fiz a monitoria do laboratório de informática da escola, gerenciando aproximadamente 30 computadores',

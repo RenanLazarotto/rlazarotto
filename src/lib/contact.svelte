@@ -2,7 +2,7 @@
     import SectionTitle from "./components/section-title.svelte";
 </script>
 
-<section class="mb-32">
+<section class="mb-24 sm:mb-48">
     <SectionTitle id="contact">Contato</SectionTitle>
     <div
         class="text-md md:text-xl text-justify"

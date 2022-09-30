@@ -5,7 +5,7 @@
     export let stack;
 </script>
 
-<section class="mb-32">
+<section class="mb-24 sm:mb-48">
     <SectionTitle id="stack">Tecnologias</SectionTitle>
     <table class="table-auto min-w-full cursor-default">
         <thead>

@@ -40,13 +40,13 @@
 
 <header class={classes}>
     <div class="py-4 flex flex-col sm:flex-row justify-between items-center w-11/12 sm:w-5/6 mx-auto">
-        <a href="/" class="flex items-center text-responsive mb-4 sm:mb-0">
+        <a href="/" class="flex items-center text-gray-300 hover:text-purple-500 transition-colors duration-300 mb-4 sm:mb-0">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
                 fill="currentColor"
-                class="text-2xl text-purple-600 dark:text-purple-500"
+                class="text-2xl text-yellow-500"
                 viewBox="0 0 16 16"
             >
                 <path
@@ -56,48 +56,48 @@
             <div class="flex items-center flex-col ml-2">
                 <span class="text-xl font-bold "> renan.lazarotto </span>
                 <span
-                    class="ml-3 md:mr-0 text-xs text-gray-400 dark:text-gray-600 font-medium"
+                    class="ml-3 md:mr-0 text-sm text-gray-600 font-semibold font-mono"
                 >
                     web developer
                 </span>
             </div>
         </a>
         <nav
-            class="grid grid-cols-3 sm:flex sm:ml-auto items-center font-medium"
+            class="grid grid-cols-3 sm:flex sm:ml-auto items-center font-semibold"
         >
             <a
                 href="#about"
-                class="flex justify-center items-center text-xs p-2 text-responsive"
+                class="flex justify-center items-center text-sm p-2 text-gray-300 hover:text-purple-500 transition-colors duration-300"
             >
                 sobre
             </a>
             <a
                 href="#experiences"
-                class="flex justify-center items-center text-xs px-2 text-responsive"
+                class="flex justify-center items-center text-sm px-2 text-gray-300 hover:text-purple-500 transition-colors duration-300"
             >
                 experiências
             </a>
             <a
                 href="#projects"
-                class="flex justify-center items-center text-xs px-2 text-responsive"
+                class="flex justify-center items-center text-sm px-2 text-gray-300 hover:text-purple-500 transition-colors duration-300"
             >
                 projetos
             </a>
             <a
                 href="#stack"
-                class="flex justify-center items-center text-xs px-2 text-responsive"
+                class="flex justify-center items-center text-sm px-2 text-gray-300 hover:text-purple-500 transition-colors duration-300"
             >
                 tecnologias
             </a>
             <a
                 href="#contact"
-                class="flex justify-center items-center text-xs px-2 text-responsive"
+                class="flex justify-center items-center text-sm px-2 text-gray-300 hover:text-purple-500 transition-colors duration-300"
             >
                 contato
             </a>
             <a
                 href="/curriculo"
-                class="flex justify-center items-center text-xs px-2 text-responsive"
+                class="flex justify-center items-center text-sm px-2 text-gray-300 hover:text-purple-500 transition-colors duration-300"
             >
                 currículo
             </a>

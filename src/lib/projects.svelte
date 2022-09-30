@@ -6,7 +6,7 @@
     export let projects;
 </script>
 
-<section class="mb-32">
+<section class="mb-24 sm:mb-48">
     <SectionTitle id="projects">Projetos</SectionTitle>
 
     <table class="table-auto min-w-full cursor-default">

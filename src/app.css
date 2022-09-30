@@ -1,13 +1,5 @@
-/* Write your global styles here, in PostCSS syntax */
-
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Nunito+Sans:wght@400;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer components {
-    .text-responsive {
-        @apply text-gray-800 hover:text-purple-500 dark:text-gray-200 dark:hover:text-purple-600 transition-colors duration-300
-    }
-}
