@@ -59,5 +59,5 @@
         </slot>
         <div class="sm:[writing-mode:vertical-rl]">email</div>
     </VerticalLink>
-    <div class="hidden sm:block w-px h-32 bg-purple-600 dark:bg-purple-400" />
+    <div class="hidden sm:block w-px h-32 bg-purple-600 bg-purple-400" />
 </section>

@@ -26,6 +26,19 @@ export function load() {
                 links: []
             },
             {
+                year: '2021',
+                title: 'Robô de Processamento',
+                at: 'Procob',
+                stack: [
+                    'PHP',
+                    'Symfony',
+                    'MySQL',
+                    'RabbitMQ',
+                    'Redis',
+                ],
+                links: []
+            },
+            {
                 year: '2020',
                 title: 'Sistema de Feirão',
                 at: 'DealerSites',
@@ -134,12 +147,11 @@ export function load() {
                 key: 'hammer',
                 startDate: new Date(2022, 7),
                 endDate: 'Atualmente',
-                location: 'Colombo, Paraná (Remoto)',
                 title: 'Desenvolvedor PHP',
                 company: 'Hammer',
                 companyUrl: 'https://wlgrupo.com/empresa/hammer/',
                 description: [
-                    'Projeto novo, sem atividades desenvolvidas até o momento'
+                    'Sustentação de projetos existentes.'
                 ],
                 techStack: []
             },
@@ -147,7 +159,6 @@ export function load() {
                 key: 'procob',
                 startDate: new Date(2020, 11),
                 endDate: new Date(2022, 5),
-                location: 'Pinhais, Paraná',
                 title: 'Desenvolvedor Backend Pleno',
                 company: 'Procob',
                 companyUrl: 'https://www.procob.com/',
@@ -173,7 +184,6 @@ export function load() {
                 key: 'dealersites',
                 startDate: new Date(2020, 3),
                 endDate: new Date(2020, 6),
-                location: 'Colombo, Paraná (Remoto)',
                 title: 'Desenvolvedor Backend',
                 company: 'DealerSites',
                 companyUrl: 'https://dealersites.com.br/',
@@ -186,7 +196,6 @@ export function load() {
                 key: 'digitalhub',
                 startDate: new Date(2019, 4),
                 endDate: new Date(2020, 0),
-                location: 'Curitiba, Paraná',
                 title: 'Desenvolvedor Backend/Magento 2',
                 company: 'DigitalHub',
                 companyUrl: 'https://www.digitalhub.com.br/',
@@ -200,7 +209,6 @@ export function load() {
                 key: 'crediok',
                 startDate: new Date(2018, 4),
                 endDate: new Date(2019, 2),
-                location: 'Curitiba, Paraná',
                 title: 'Analista de Suporte',
                 company: 'CrediOK',
                 companyUrl: 'https://crediok.com.br/',
@@ -216,7 +224,6 @@ export function load() {
                 key: 'centralserver',
                 startDate: new Date(2017, 1),
                 endDate: new Date(2017, 3),
-                location: 'Curitiba, Paraná',
                 title: 'Administrador de sistemas',
                 company: 'CentralServer',
                 companyUrl: 'https://www.centralserver.com/br/',
@@ -230,7 +237,6 @@ export function load() {
                 key: 'quality',
                 startDate: new Date(2015, 5),
                 endDate: new Date(2017, 0),
-                location: 'Curitiba, Paraná',
                 title: 'Suporte Técnico N2',
                 company: 'Quality',
                 companyUrl: 'https://quality.com.br/',
@@ -244,7 +250,6 @@ export function load() {
                 key: 'novageracao',
                 startDate: new Date(2014, 9),
                 endDate: new Date(2015, 4),
-                location: 'Curitiba, Paraná',
                 title: 'Analista de TI Jr.',
                 company: 'Nova Geração',
                 companyUrl: 'https://www.distribuidoranovageracao.com.br/',
@@ -257,7 +262,6 @@ export function load() {
                 key: 'dombosco',
                 startDate: new Date(2012, 9),
                 endDate: new Date(2016, 5),
-                location: 'Curitiba, Paraná',
                 title: 'Monitor de informática',
                 company: 'Dom Bosco',
                 companyUrl: 'https://dombosco-colegio-batel-curitiba.escolaseb.com.br/pt/',

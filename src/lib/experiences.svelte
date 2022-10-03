@@ -3,7 +3,7 @@
     import SectionTitle from "./components/section-title.svelte";
 
     const activeClasses =
-        "text-purple-500 before:[content:'❖'] before:mr-2";
+        "text-purple-500 bg-gray-800 border-b-purple-500";
 
     export let jobs = [];
 
@@ -30,11 +30,13 @@
 
                 target.classList.add("hidden");
                 trigger.classList.remove(...activeClasses.split(" "));
+                trigger.classList.add("border-b-gray-900");
                 trigger.setAttribute("aria-selected", false);
             }
         });
 
         trigger.classList.add(...activeClasses.split(" "));
+        trigger.classList.remove("border-b-gray-900");
         trigger.setAttribute("aria-selected", true);
         target.classList.remove("hidden");
     };
@@ -44,16 +46,16 @@
     <SectionTitle id="experiences">Experiências</SectionTitle>
     <div class="sm:flex items-start gap-2">
         <ul
-            class="flex sm:flex-col overflow-x-auto text-sm font-medium sm:w-1/5 pb-2"
+            class="flex sm:flex-col overflow-x-auto text-sm font-medium sm:w-1/5 pb-2 gap-2"
             role="tablist"
         >
             {#each jobs as li, i}
                 <li class="flex" role="presentation">
                     <button
-                        class="whitespace-nowrap w-full text-left rounded px-4 py-2 mb-1 sm:mb-0 hover:bg-gray-800 hover:text-purple-500 {i ===
+                        class="whitespace-nowrap w-full text-left px-4 py-2 mb-1 sm:mb-0 hover:bg-gray-800 hover:text-purple-500 transition-all duration-300 border-b-2 {i ===
                         0
                             ? activeClasses
-                            : ''}"
+                            : 'border-b-gray-900'}"
                         id={`${li.key}-button`}
                         type="button"
                         role="tab"
@@ -73,11 +75,11 @@
                 role="tabpanel"
                 aria-labelledby={`${job.key}-button`}
             >
-                <p class="text-md sm:text-lg">
+                <p class="text-lg">
                     {job.title}
                     <Link href={job.companyUrl}>@ {job.company}</Link>
                 </p>
-                <div class="text-xs text-gray-400 font-medium mb-1">
+                <div class="text-sm text-gray-400 font-medium mb-1">
                     {job.startDate.toLocaleString("pt-BR", {
                         month: "long",
                         year: "numeric",
@@ -85,12 +87,10 @@
                         month: "long",
                         year: "numeric",
                     })}
-                    ::
-                    {job.location}
                 </div>
-                <ul class="text-gray-400">
+                <ul class="text-gray-400 list-inside">
                     {#each job.description as li}
-                        <li class="before:[content:'❖'] before:mr-2">{li}</li>
+                        <li class="relative pl-3 before:[content:'»'] before:absolute before:left-0">{li}</li>
                     {/each}
                 </ul>
             </div>

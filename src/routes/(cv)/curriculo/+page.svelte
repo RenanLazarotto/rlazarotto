@@ -79,7 +79,7 @@
             </div>
             <ul class="text-gray-400">
               {#each job.description as li, i}
-                <li class="before:[content:'❖'] before:mr-2">
+                <li class="relative pl-3 before:[content:'»'] before:absolute before:left-0">
                   {li}
                 </li>
               {/each}
@@ -100,7 +100,7 @@
           <p class="leading-relaxed text-lg font-medium">{title}:</p>
           <ul class="hidden sm:block mb-2 text-gray-400">
             {#each items as item}
-              <li class="before:[content:'❖'] before:mr-2">{item}</li>
+              <li class="relative pl-3 before:[content:'»'] before:absolute before:left-0">{item}</li>
             {/each}
           </ul>
           <p class="text-gray-400 mb-2 sm:hidden">{items.join(", ")}</p>
@@ -130,7 +130,7 @@
 
             <ul class="text-gray-400">
               {#each entry.description as li}
-                <li class="before:[content:'❖'] before:mr-2">{li}</li>
+                <li class="relative pl-3 before:[content:'»'] before:absolute before:left-0">{li}</li>
               {/each}
             </ul>
           </div>

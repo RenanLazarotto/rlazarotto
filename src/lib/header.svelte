@@ -63,41 +63,42 @@
             </div>
         </a>
         <nav
-            class="grid grid-cols-3 sm:flex sm:ml-auto items-center font-semibold"
+            class="grid grid-cols-3 sm:flex sm:ml-auto items-center justify-end font-semibold"
         >
             <a
                 href="#about"
-                class="flex justify-center items-center text-sm p-2 text-gray-300 hover:text-purple-500 transition-colors duration-300"
+                class="text-sm p-2 text-gray-300 hover:text-purple-500 transition-colors duration-300"
             >
                 sobre
             </a>
             <a
                 href="#experiences"
-                class="flex justify-center items-center text-sm px-2 text-gray-300 hover:text-purple-500 transition-colors duration-300"
+                class="text-sm px-2 text-gray-300 hover:text-purple-500 transition-colors duration-300"
             >
                 experiências
             </a>
             <a
                 href="#projects"
-                class="flex justify-center items-center text-sm px-2 text-gray-300 hover:text-purple-500 transition-colors duration-300"
+                class="text-sm px-2 text-gray-300 hover:text-purple-500 transition-colors duration-300"
             >
                 projetos
             </a>
             <a
                 href="#stack"
-                class="flex justify-center items-center text-sm px-2 text-gray-300 hover:text-purple-500 transition-colors duration-300"
+                class="text-sm px-2 text-gray-300 hover:text-purple-500 transition-colors duration-300"
             >
                 tecnologias
             </a>
             <a
                 href="#contact"
-                class="flex justify-center items-center text-sm px-2 text-gray-300 hover:text-purple-500 transition-colors duration-300"
+                class="text-sm px-2 text-gray-300 hover:text-purple-500 transition-colors duration-300"
             >
                 contato
             </a>
             <a
                 href="/curriculo"
-                class="flex justify-center items-center text-sm px-2 text-gray-300 hover:text-purple-500 transition-colors duration-300"
+                target="_blank"
+                class="text-sm px-2 text-gray-300 hover:text-purple-500 transition-colors duration-300"
             >
                 currículo
             </a>
