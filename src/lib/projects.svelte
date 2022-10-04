@@ -6,7 +6,7 @@
     export let projects;
 </script>
 
-<section class="mb-24 sm:mb-48">
+<section class="mb-24">
     <SectionTitle id="projects">Projetos</SectionTitle>
 
     <table class="table-auto min-w-full cursor-default">
@@ -21,7 +21,7 @@
         </thead>
         <tbody>
             {#each projects as project}
-                <tr class="hover:bg-gray-800">
+                <tr class="hover:bg-gray-800/50">
                     <td
                         class="hidden sm:table-cell justify-center items-center font-medium text-purple-500 py-3 px-2"
                     >
@@ -38,10 +38,10 @@
                             {/if}
                         </div>
                     </td>
-                    <td class="hidden sm:table-cell text-gray-500 py-3 px-2">
+                    <td class="hidden sm:table-cell text-gray-400 py-3 px-2">
                         {project.at}
                     </td>
-                    <td class="text-gray-500 py-3 px-2">
+                    <td class="text-gray-400 py-3 px-2">
                         <ul
                             class="flex sm:inline-flex flex-col sm:flex-row gap-x-1 text-xs py-3 px-2 list-disc sm:list-none list-inside"
                         >

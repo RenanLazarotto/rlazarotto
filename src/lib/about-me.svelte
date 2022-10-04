@@ -3,11 +3,11 @@
     import SectionTitle from "./components/section-title.svelte";
 </script>
 
-<section class="mb-24 sm:mb-48">
+<section class="mb-24">
     <SectionTitle id="about">Sobre mim</SectionTitle>
 
     <div
-        class="text-md md:text-xl leading-relaxed font-light text-justify"
+        class="text-lg text-justify text-gray-300"
     >
         <p class="mb-4">
             Olá! Eu me chamo <b>Renan</b> e eu gosto de desenvolver aplicações
@@ -30,7 +30,7 @@
             Recentemente, iniciei uma nova jornada na <Link
                 href="https://wlgrupo.com/empresa/hammer/"
                 target="_blank">Hammer Consultoria</Link
-            >. Estou ansioso pelos projetos que irei desenolver!
+            >. Estou ansioso pelos projetos que irei desenvolver!
         </p>
     </div>
 </section>

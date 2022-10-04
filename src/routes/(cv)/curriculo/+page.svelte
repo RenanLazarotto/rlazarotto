@@ -37,13 +37,13 @@
           +55 (41) 99815-6063
         </span>
       </Link>
-      <Link href="https://renan.lazarotto.dev.br">
+      <Link href="https://rlazarotto.pages.dev">
         <span class="flex items-center">
           <LinkSimpleHorizontal
             class="text-base mr-1 text-purple-500"
             weight="duotone"
           />
-          https://renan.lazarotto.dev.br
+          https://rlazarotto.pages.dev
         </span>
       </Link>
     </div>

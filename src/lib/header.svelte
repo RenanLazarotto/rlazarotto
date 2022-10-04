@@ -8,11 +8,11 @@
     // Starts at y: 0;
     let previousY = 0;
 
-    $: showHeaderClasses = showHeader ? "top-0" : "-top-36 sm:-top-20";
+    $: showHeaderClasses = showHeader ? "top-0" : "-top-32 sm:-top-20";
     $: showShadowClasses = showShadow ? "shadow-lg" : "";
 
     $: classes =
-        `bg-gray-900 sm:md-0 z-50 transition-all duration-500 fixed min-w-full h-36 sm:h-20 ${showHeaderClasses} ${showShadowClasses}`.trim();
+        `backdrop-blur bg-gray-900/60 sm:md-0 z-50 transition-all duration-500 fixed min-w-full h-32 sm:h-20 ${showHeaderClasses} ${showShadowClasses}`.trim();
 
     const onScroll = () => {
         let currentY = window.scrollY;
@@ -40,7 +40,7 @@
 
 <header class={classes}>
     <div class="py-4 flex flex-col sm:flex-row justify-between items-center w-11/12 sm:w-5/6 mx-auto">
-        <a href="/" class="flex items-center text-gray-300 hover:text-purple-500 transition-colors duration-300 mb-4 sm:mb-0">
+        <a href="/" class="flex items-center text-gray-300 hover:text-purple-500 transition-colors duration-300 mb-2 sm:mb-0">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -67,7 +67,7 @@
         >
             <a
                 href="#about"
-                class="text-sm p-2 text-gray-300 hover:text-purple-500 transition-colors duration-300"
+                class="text-sm px-2 text-gray-300 hover:text-purple-500 transition-colors duration-300"
             >
                 sobre
             </a>

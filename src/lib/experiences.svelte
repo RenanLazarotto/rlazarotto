@@ -3,7 +3,7 @@
     import SectionTitle from "./components/section-title.svelte";
 
     const activeClasses =
-        "text-purple-500 bg-gray-800 border-b-purple-500";
+        "text-purple-500 bg-gray-800/50 border-b-purple-500";
 
     export let jobs = [];
 
@@ -42,7 +42,7 @@
     };
 </script>
 
-<section class="mb-24 sm:mb-48">
+<section class="mb-24">
     <SectionTitle id="experiences">Experiências</SectionTitle>
     <div class="sm:flex items-start gap-2">
         <ul
@@ -50,9 +50,9 @@
             role="tablist"
         >
             {#each jobs as li, i}
-                <li class="flex" role="presentation">
+                <li class="flex font-semibold" role="presentation">
                     <button
-                        class="whitespace-nowrap w-full text-left px-4 py-2 mb-1 sm:mb-0 hover:bg-gray-800 hover:text-purple-500 transition-all duration-300 border-b-2 {i ===
+                        class="whitespace-nowrap w-full text-left px-4 py-2 mb-1 sm:mb-0 hover:bg-gray-800/50 hover:text-purple-500 transition-all duration-300 border-b-2 {i ===
                         0
                             ? activeClasses
                             : 'border-b-gray-900'}"
@@ -88,7 +88,7 @@
                         year: "numeric",
                     })}
                 </div>
-                <ul class="text-gray-400 list-inside">
+                <ul class="text-gray-300 list-inside">
                     {#each job.description as li}
                         <li class="relative pl-3 before:[content:'»'] before:absolute before:left-0">{li}</li>
                     {/each}
