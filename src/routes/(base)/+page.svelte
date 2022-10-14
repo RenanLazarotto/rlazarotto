@@ -1,5 +1,4 @@
 <script>
-
     import Hero from "$lib/hero.svelte";
     import AboutMe from "$lib/about-me.svelte";
     import Experiences from "$lib/experiences.svelte";
@@ -15,7 +14,7 @@
     <title>renan.lazarotto</title>
 </svelte:head>
 
-<div class="pt-40 sm:pt-30 mx-auto w-11/12 sm:w-5/6 text-gray-100">
+<div>
     <Hero />
 
     <AboutMe />
@@ -30,3 +29,20 @@
 
     <SideLinks />
 </div>
+
+<style>
+    div {
+        padding-top: 10rem;
+        margin-left: auto;
+        margin-right: auto;
+        width: 92%;
+        color: rgb(243 244 246);
+    }
+
+    @media (min-width: 640px) {
+        div {
+            padding-top: 8rem;
+            width: 83%;
+        }
+    }
+</style>

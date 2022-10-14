@@ -2,8 +2,41 @@
     export let id;
 </script>
 
-<div class="flex items-center gap-x-2 mt-3 mb-6">
-    <span class="h-px w-8 bg-purple-500" />
-    <p {id} class="font-medium font-mono text-lg sm:text-2xl tracking-widest"><slot /></p>
-    <span class="h-px w-32 bg-purple-500" />
+<div>
+    <span />
+    <p {id}>
+        <slot />
+    </p>
+    <span />
 </div>
+
+<style>
+    div {
+        display: flex;
+        align-items: center;
+        column-gap: 0.5rem;
+        margin-top: 0.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    p {
+        font-weight: 500;
+        font-family: "JetBrains Mono";
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        letter-spacing: 0.1rem;
+    }
+
+    span {
+        height: 1px;
+        background-color: rgb(139 92 246);
+        width: 4rem;
+    }
+
+    @media (min-width: 640px) {
+        p {
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+    }
+</style>
