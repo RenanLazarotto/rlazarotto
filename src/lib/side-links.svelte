@@ -2,9 +2,7 @@
     import VerticalLink from "./components/vertical-link.svelte";
 </script>
 
-<section
-    class="flex gap-x-2 justify-center items-center sm:gap-y-2 sm:gap-x-0 sm:fixed sm:bottom-0 sm:left-auto sm:right-10 sm:flex-col"
->
+<section>
     <VerticalLink href="https://github.com/RenanLazarotto" target="_blank">
         <slot name="icon">
             <svg
@@ -41,6 +39,7 @@
             <div class="sm:[writing-mode:vertical-rl]">linkedin</div>
         </slot>
     </VerticalLink>
+
     <VerticalLink
         href="mailto:renanlazarotto@gmail.com?subject=Contato via site"
     >
@@ -59,5 +58,38 @@
         </slot>
         <div class="sm:[writing-mode:vertical-rl]">email</div>
     </VerticalLink>
-    <div class="hidden sm:block w-px h-32 bg-purple-600 bg-purple-400" />
+
+    <div/>
 </section>
+
+<style>
+    section {
+        display: flex;
+        column-gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section > div {
+        display: none;
+    }
+
+    @media (min-width: 640px) {
+        section {
+            row-gap: 0.5rem;
+            column-gap: 0px;
+            position: fixed;
+            bottom: 0px;
+            left: auto;
+            right: 1.5rem;
+            flex-direction: column;
+        }
+
+        section > div {
+            display: block;
+            width: 1px;
+            height: 7rem;
+            background-color: rgb(167 139 250);
+        }
+    }
+</style>

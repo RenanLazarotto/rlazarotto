@@ -54,7 +54,7 @@
                 />
             </svg>
             <div class="flex items-center flex-col ml-2">
-                <span class="text-xl font-bold "> renan.lazarotto </span>
+                <span class="text-xl font-bold"> renan.lazarotto </span>
                 <span
                     class="ml-3 md:mr-0 text-sm text-gray-600 font-semibold font-mono"
                 >
