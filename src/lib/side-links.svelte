@@ -49,8 +49,9 @@
     }
 
     .vertical {
-        writing-mode: vertical-rl;
+        writing-mode: horizontal-tb;
     }
+
     @media (min-width: 640px) {
         section {
             row-gap: 0.5rem;
@@ -67,6 +68,10 @@
             width: 1px;
             height: 7rem;
             background-color: rgb(167 139 250);
+        }
+
+        .vertical  {
+            writing-mode: vertical-lr;
         }
     }
 </style>

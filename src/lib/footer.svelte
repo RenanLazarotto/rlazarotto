@@ -6,7 +6,7 @@
     <p>
         <Link href="https://github.com/RenanLazarotto/site"
             >Desenvolvido por Renan Lazarotto</Link
-        >, baseado no site de <Link href="https://brittanychiang.com/" target="_blank">
+        >,<br> baseado no site de <Link href="https://brittanychiang.com/" target="_blank">
             Brittany Chiang</Link
         >.
     </p>
@@ -17,6 +17,9 @@
         padding-top: 4rem;
         padding-bottom: 2rem;
         text-align: center;
+        width: 92%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     footer > p {
