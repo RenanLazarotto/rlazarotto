@@ -8,11 +8,11 @@
     // Starts at y: 0;
     let previousY = 0;
 
-    $: showHeaderClasses = showHeader ? "top-0" : "-top-32 sm:-top-20";
-    $: showShadowClasses = showShadow ? "shadow-lg" : "";
+    // Holds the screen width to watch for changes
+    let screenWidth;
 
-    $: classes =
-        `backdrop-blur bg-gray-900/60 sm:md-0 z-50 transition-all duration-500 fixed min-w-full h-32 sm:h-20 ${showHeaderClasses} ${showShadowClasses}`.trim();
+    // Changes the scroll offset based on the screen width
+    $: scrollOffset = screenWidth < 640 ? 128 : 80;
 
     const onScroll = () => {
         let currentY = window.scrollY;
@@ -23,8 +23,6 @@
             showHeader = true;
             showShadow = false;
         } else {
-            // Only shows the header if the current y position
-            // is lower than the previous one
             showHeader = currentY < previousY;
 
             // Shows the shadow all the times
@@ -34,74 +32,190 @@
             previousY = currentY;
         }
     };
+
+    // When a link of the navbar is clicked,
+    // smooth scrolls to the target
+    const onClick = (e) => {
+        e.preventDefault();
+
+        let target = document.getElementById(e.target.dataset.target);
+        let targetPosition = target.getBoundingClientRect().top;
+        let offsetPosition = targetPosition + window.pageYOffset - scrollOffset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth",
+        });
+    };
 </script>
 
-<svelte:window on:scroll={onScroll} />
+<svelte:window on:scroll={onScroll} bind:innerWidth={screenWidth} />
 
-<header class={classes}>
-    <div class="py-4 flex flex-col sm:flex-row justify-between items-center w-11/12 sm:w-5/6 mx-auto">
-        <a href="/" class="flex items-center text-gray-300 hover:text-purple-500 transition-colors duration-300 mb-2 sm:mb-0">
+<header class:hidden={!showHeader} class:shadow={showShadow}>
+    <div>
+        <a href="/" class="logo">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
                 fill="currentColor"
-                class="text-2xl text-yellow-500"
                 viewBox="0 0 16 16"
             >
                 <path
                     d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"
                 />
             </svg>
-            <div class="flex items-center flex-col ml-2">
-                <span class="text-xl font-bold"> renan.lazarotto </span>
-                <span
-                    class="ml-3 md:mr-0 text-sm text-gray-600 font-semibold font-mono"
-                >
-                    web developer
-                </span>
+            <div>
+                <span class="name"> renan.lazarotto </span>
+                <span class="title"> web developer </span>
             </div>
         </a>
-        <nav
-            class="grid grid-cols-3 sm:flex sm:ml-auto items-center justify-end font-semibold"
-        >
-            <a
-                href="#about"
-                class="text-sm px-2 text-gray-300 hover:text-purple-500 transition-colors duration-300"
-            >
-                sobre
-            </a>
-            <a
-                href="#experiences"
-                class="text-sm px-2 text-gray-300 hover:text-purple-500 transition-colors duration-300"
-            >
+        <nav>
+            <a href="#about" on:click={onClick} data-target="about"> sobre </a>
+            <a href="#experiences" on:click={onClick} data-target="experiences">
                 experiências
             </a>
-            <a
-                href="#projects"
-                class="text-sm px-2 text-gray-300 hover:text-purple-500 transition-colors duration-300"
-            >
+            <a href="#projects" on:click={onClick} data-target="projects">
                 projetos
             </a>
-            <a
-                href="#stack"
-                class="text-sm px-2 text-gray-300 hover:text-purple-500 transition-colors duration-300"
-            >
+            <a href="#stack" on:click={onClick} data-target="stack">
                 tecnologias
             </a>
-            <a
-                href="#contact"
-                class="text-sm px-2 text-gray-300 hover:text-purple-500 transition-colors duration-300"
-            >
+            <a href="#contact" on:click={onClick} data-target="contact">
                 contato
             </a>
-            <a
-                href="/curriculo"
-                target="_blank"
-                class="text-sm px-2 text-gray-300 hover:text-purple-500 transition-colors duration-300"
-            >
-                currículo
-            </a>
+            <a href="/curriculo" target="_blank"> currículo </a>
         </nav>
     </div>
 </header>
+
+<style>
+    header {
+        position: fixed;
+        min-width: 100%;
+        height: 8rem;
+        backdrop-filter: blur(8px);
+        background-color: rgb(17 24 39 / 0.6);
+        z-index: 50;
+        transition: all cubic-bezier(0.4, 0, 0.2, 1) 500ms;
+        transform: translateY(0);
+        top: 0;
+        display: block;
+    }
+
+    header.hidden {
+        transform: translateY(-8rem);
+    }
+
+    header.shadow {
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+            0 4px 6px -4px rgb(0 0 0 / 0.1);
+    }
+
+    header > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    a.logo {
+        display: flex;
+        align-items: center;
+        color: rgb(209 213 219);
+        transition-property: color, background-color, border-color,
+            text-decoration-color, fill, stroke;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 300ms;
+        margin-bottom: 0.5rem;
+    }
+    a.logo:hover {
+        color: rgb(139 92 246);
+    }
+
+    a.logo svg {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        color: rgb(245 158 11);
+    }
+
+    a.logo div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-left: 0.5rem;
+    }
+
+    span.name {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        font-weight: 700;
+    }
+
+    span.title {
+        margin-left: 0.75rem;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        color: rgb(75 85 99);
+        font-weight: 600;
+        font-family: "JetBrains Mono", monospace;
+    }
+
+    nav {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        font-weight: 600;
+    }
+
+    nav > a {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        color: rgb(209 213 219);
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        transition-property: color, background-color, border-color,
+            text-decoration-color, fill, stroke;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 300ms;
+    }
+
+    nav > a:hover {
+        color: rgb(139 92 246);
+    }
+
+    @media (min-width: 640px) {
+        header {
+            height: 5rem;
+        }
+
+        header.hidden {
+            transform: translateY(-5rem);
+        }
+
+        header > div {
+            flex-direction: row;
+            width: 83%;
+        }
+
+        a.logo {
+            margin-bottom: 0px;
+        }
+
+        nav {
+            display: flex;
+            margin-left: auto;
+            align-items: center;
+            justify-content: flex-end;
+        }
+    }
+    @media (min-width: 768px) {
+        span.title {
+            margin-right: 0px;
+        }
+    }
+</style>

@@ -165,12 +165,11 @@
 
     .job-details ul {
         color: rgb(209 213 219);
-        list-style-position: inside;
     }
 
     .job-details ul li {
         position: relative;
-        padding-left: 0.75rem;
+        padding-left: 1rem;
     }
 
     .job-details ul li::before {

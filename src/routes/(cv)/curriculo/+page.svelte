@@ -12,37 +12,33 @@
   <title>renan.lazarotto | currículo</title>
 </svelte:head>
 
-<div class="mx-auto w-11/12 text-gray-300 text-justify">
+<div class="container">
   <!-- Informações básicas -->
-  <section class="mb-4">
-    <h1 class="mt-10 mb-6 text-4xl sm:text-5xl font-bold text-purple-500">
-      Renan Lazarotto
-    </h1>
+  <section>
+    <h1>Renan Lazarotto</h1>
 
-    <div
-      class="text-sm flex flex-col sm:flex-row justify-between lg:justify-start py-2 gap-y-2 lg:gap-x-4 lg:gap-y-0"
-    >
-      <Link ink href="mailto:renanlazarotto@gmail.com">
-        <span class="flex items-center">
-          <Envelope class="text-base mr-1 text-purple-500" weight="duotone" />
+    <div class="contact">
+      <Link href="mailto:renanlazarotto@gmail.com">
+        <span>
+          <span class="icon">
+            <Envelope weight="duotone" />
+          </span>
           renanlazarotto@gmail.com
         </span>
       </Link>
       <Link href="tel:41998156063">
-        <span class="flex items-center">
-          <DeviceMobile
-            class="text-base mr-1 text-purple-500"
-            weight="duotone"
-          />
+        <span>
+          <span class="icon">
+            <DeviceMobile weight="duotone" />
+          </span>
           +55 (41) 99815-6063
         </span>
       </Link>
       <Link href="https://rlazarotto.pages.dev">
-        <span class="flex items-center">
-          <LinkSimpleHorizontal
-            class="text-base mr-1 text-purple-500"
-            weight="duotone"
-          />
+        <span>
+          <span class="icon">
+            <LinkSimpleHorizontal weight="duotone" />
+          </span>
           https://rlazarotto.pages.dev
         </span>
       </Link>
@@ -50,26 +46,25 @@
   </section>
 
   <!-- Resumo -->
-  <section class="mb-6">
+  <section class="resume">
     Programador PHP com experiência em desenvolvimento de aplicações Web, APIs e
     DevOps. Também sou técnico de suporte com vivência em atendimento ao usuário
     <i>in loco</i> e remotamente.
   </section>
 
-  <div class="flex flex-col sm:flex-row gap-x-4">
-    <div class="sm:w-8/12">
+  <div class="wrapper">
+    <div class="experiences">
       <!-- Experiências -->
-      <section class="mb-6">
-        <h2 class="text-purple-500 font-medium uppercase text-xl tracking-widest">
-          Experiências
-        </h2>
+      <section>
+        <h2>Experiências</h2>
+
         {#each data.jobs as job, i}
-          <div class="mb-4">
-            <p class="text-lg">
+          <div class="job">
+            <p>
               {job.title}
               <Link href={job.companyUrl}>@ {job.company}</Link>
             </p>
-            <div class="text-xs text-gray-400 font-medium mb-1">
+            <div>
               {job.startDate.toLocaleString("pt-BR", { year: "numeric" })} - {job.endDate.toLocaleString(
                 "pt-BR",
                 { year: "numeric" }
@@ -79,7 +74,7 @@
             </div>
             <ul class="text-gray-400">
               {#each job.description as li, i}
-                <li class="relative pl-3 before:[content:'»'] before:absolute before:left-0">
+                <li>
                   {li}
                 </li>
               {/each}
@@ -88,49 +83,42 @@
         {/each}
       </section>
     </div>
-    <div class="sm:w-4/12">
+    <div class="knowledge">
       <!-- Tecnologias -->
-      <section class="mb-6">
-        <h2
-          class="text-purple-500 font-medium uppercase text-xl tracking-widest"
-        >
-          Tecnologias
-        </h2>
+      <section class="stack">
+        <h2>Tecnologias</h2>
+
         {#each Object.entries(data.stack) as [title, items]}
-          <p class="leading-relaxed text-lg font-medium">{title}:</p>
-          <ul class="hidden sm:block mb-2 text-gray-400">
+          <p class="name">{title}:</p>
+          <ul>
             {#each items as item}
-              <li class="relative pl-3 before:[content:'»'] before:absolute before:left-0">{item}</li>
+              <li>{item}</li>
             {/each}
           </ul>
-          <p class="text-gray-400 mb-2 sm:hidden">{items.join(", ")}</p>
+          <p class="items">{items.join(", ")}</p>
         {/each}
       </section>
 
       <!-- Formação -->
-      <section class="mb-6">
-        <h2
-          class="text-purple-500 font-medium uppercase text-xl tracking-widest"
-        >
-          Educação
-        </h2>
+      <section>
+        <h2>Educação</h2>
 
         {#each data.education as entry}
-          <div class="mb-4">
-            <p class="text-lg">
+          <div class="education">
+            <p>
               {entry.title}
               <Link href={entry.companyUrl}>@ {entry.company}</Link>
             </p>
-            <div class="text-sm text-gray-400 font-medium mb-1">
+            <div>
               {entry.startDate.toLocaleString("pt-BR", { year: "numeric" })} -
               {entry.endDate.toLocaleString("pt-BR", { year: "numeric" })}
               ::
               {entry.location}
             </div>
 
-            <ul class="text-gray-400">
+            <ul>
               {#each entry.description as li}
-                <li class="relative pl-3 before:[content:'»'] before:absolute before:left-0">{li}</li>
+                <li>{li}</li>
               {/each}
             </ul>
           </div>
@@ -139,3 +127,172 @@
     </div>
   </div>
 </div>
+
+<style>
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    color: rgb(209 213 219);
+  }
+  section {
+    margin-bottom: 1rem;
+  }
+
+  section.resume {
+    text-align: justify;
+  }
+
+  section > h1 {
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    color: rgb(139 92 246);
+  }
+
+  div.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    row-gap: 0.5rem;
+  }
+
+  div.contact span {
+    display: flex;
+    align-items: center;
+  }
+
+  div.contact span .icon {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-right: 0.25rem;
+    color: rgb(139 92 246);
+  }
+
+  div.wrapper {
+    display: flex;
+    flex-direction: column;
+    column-gap: 1rem;
+  }
+
+  div.wrapper section > h2 {
+    color: rgb(139 92 246);
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.1em;
+  }
+
+  div.job,
+  div.education {
+    margin-bottom: 1rem;
+  }
+
+  div.job > p,
+  div.education > p {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  div.job > div,
+  div.education > div {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: rgb(156 163 175);
+    font-weight: 500;
+    font-weight: 500;
+  }
+
+  div.job > ul,
+  div.education > ul {
+    color: rgb(156 163 175);
+  }
+
+  div.job > ul li,
+  div.education > ul li {
+    position: relative;
+    padding-left: 1rem;
+    text-align: justify;
+  }
+
+  div.job > ul li::before,
+  div.education > ul li::before {
+    content: "»";
+    position: absolute;
+    left: 0;
+  }
+
+  section.stack p.name {
+    line-height: 1.625;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+  }
+
+  section.stack ul {
+    display: none;
+  }
+
+  section.stack ul li {
+    position: relative;
+    padding-left: 1rem;
+  }
+
+  section.stack ul li::before {
+    content: "»";
+    position: absolute;
+    left: 0;
+  }
+
+  section.stack p.items {
+    color: rgb(156 163 175);
+    margin-bottom: 0.5rem;
+  }
+
+  @media (min-width: 640px) {
+    section > h1 {
+      font-size: 3rem;
+      line-height: 1;
+    }
+
+    div.contact {
+      flex-direction: row;
+    }
+
+    div.wrapper {
+      flex-direction: row;
+    }
+
+    div.experiences {
+      width: 67%;
+    }
+
+    div.knowledge {
+      width: 33%;
+    }
+
+    section.stack ul {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: rgb(156 163 175);
+    }
+
+    section.stack p.items {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    div.contact {
+      justify-content: flex-start;
+      column-gap: 1rem;
+      row-gap: 0px;
+    }
+  }
+</style>

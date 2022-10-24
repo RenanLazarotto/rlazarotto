@@ -6,7 +6,7 @@
     <p>
         <Link href="https://github.com/RenanLazarotto/site"
             >Desenvolvido por Renan Lazarotto</Link
-        >, baseado no site de <Link href="https://brittanychiang.com/">
+        >, baseado no site de <Link href="https://brittanychiang.com/" target="_blank">
             Brittany Chiang</Link
         >.
     </p>

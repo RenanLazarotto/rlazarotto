@@ -7,7 +7,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		%sveltekit.head%
 	</head>
-	<body id="svelte" class="bg-gray-900 overflow-x-hidden" style="background-image: url('/bg.svg')">
+	<style>
+		body {
+			background-color: rgb(17 24 39);
+			overflow-x: hidden;
+		}
+	</style>
+	<body id="svelte" style="background-image: url('/bg.svg')">
 		%sveltekit.body%
 	</body>
 </html>
