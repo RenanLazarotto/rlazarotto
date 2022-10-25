@@ -2,14 +2,18 @@ import Bash from '$lib/icons/bash.svelte';
 import Bootstrap from '$lib/icons/bootstrap.svelte';
 import CodeIgniter from '$lib/icons/codeigniter.svelte';
 import CSS from '$lib/icons/css.svelte';
+import Git from '$lib/icons/git.svelte';
+import HTML5 from '$lib/icons/html5.svelte';
 import JavaScript from '$lib/icons/javascript.svelte';
 import Laravel from '$lib/icons/laravel.svelte';
 import Linux from '$lib/icons/linux.svelte';
 import Magento from '$lib/icons/magento.svelte';
+import MySQL from '$lib/icons/mysql.svelte';
 import PHP from '$lib/icons/php.svelte';
 import Python from '$lib/icons/python.svelte';
 import RabbitMQ from '$lib/icons/rabbitmq.svelte';
 import Redis from '$lib/icons/redis.svelte';
+import Sqlite from '$lib/icons/sqlite.svelte';
 import Svelte from '$lib/icons/svelte.svelte';
 import Symfony from '$lib/icons/symfony.svelte';
 import Tailwind from '$lib/icons/tailwind.svelte';
@@ -60,88 +64,99 @@ export function load() {
                 links: ['https://reports.crediok.com.br/']
             }
         ],
-        stack: [
-            {
-                icon: PHP,
-                name: "PHP",
-                knowledge: 100,
-            },
-            {
-                icon: JavaScript,
-                name: "JavaScript",
-                knowledge: 85,
-            },
-            {
-                icon: Python,
-                name: "Python",
-                knowledge: 40,
-            },
-            {
-                icon: CSS,
-                name: "CSS",
-                knowledge: 70,
-            },
-            {
-                icon: Symfony,
-                name: "Symfony",
-                knowledge: 100,
-            },
-            {
-                icon: Laravel,
-                name: "Laravel",
-                knowledge: 40,
-            },
-            {
-                icon: CodeIgniter,
-                name: "CodeIgniter",
-                knowledge: 25,
-            },
-            {
-                icon: Magento,
-                name: "Magento",
-                knowledge: 20,
-            },
-            {
-                icon: Bootstrap,
-                name: "Bootstrap",
-                knowledge: 85,
-            },
-            {
-                icon: Tailwind,
-                name: "Tailwind",
-                knowledge: 65,
-            },
-            {
-                icon: Svelte,
-                name: "Svelte",
-                knowledge: 40,
-            },
-            {
-                icon: RabbitMQ,
-                name: "RabbitMQ",
-                knowledge: 45,
-            },
-            {
-                icon: Redis,
-                name: "Redis",
-                knowledge: 45,
-            },
-            {
-                icon: Bash,
-                name: "Bash",
-                knowledge: 30,
-            },
-            {
-                icon: Linux,
-                name: "Linux",
-                knowledge: 75,
-            },
-            {
-                icon: Windows,
-                name: "Windows",
-                knowledge: 50,
-            }
-        ],
+        stack: {
+            "Linguagens de programação": [
+                {
+                    icon: PHP,
+                    name: "PHP",
+                },
+                {
+                    icon: JavaScript,
+                    name: "JavaScript",
+                },
+
+                {
+                    icon: Python,
+                    name: "Python",
+                },
+                {
+                    icon: Bash,
+                    name: "Bash",
+                },
+            ],
+            "Backend": [
+                {
+                    icon: Symfony,
+                    name: "Symfony",
+                },
+                {
+                    icon: Laravel,
+                    name: "Laravel",
+                },
+                {
+                    icon: CodeIgniter,
+                    name: "CodeIgniter",
+                },
+                {
+                    icon: RabbitMQ,
+                    name: "RabbitMQ",
+                },
+                {
+                    icon: Redis,
+                    name: "Redis",
+                },
+                {
+                    icon: Magento,
+                    name: "Magento",
+                },
+            ],
+            "Frontend": [
+                {
+                    icon: HTML5,
+                    name: "HTML5",
+                },
+                {
+                    icon: CSS,
+                    name: "CSS",
+                },
+                {
+                    icon: Tailwind,
+                    name: "Tailwind",
+                },
+                {
+                    icon: Svelte,
+                    name: "Svelte",
+                },
+                {
+                    icon: Bootstrap,
+                    name: "Bootstrap",
+                },
+            ],
+            "Bancos de dados": [
+                {
+                    icon: MySQL,
+                    name: "MySQL",
+                },
+                {
+                    icon: Sqlite,
+                    name: "SQLite",
+                },
+            ],
+            "Ferramentas e plataformas": [
+                {
+                    icon: Git,
+                    name: "Git",
+                },
+                {
+                    icon: Linux,
+                    name: "Linux",
+                },
+                {
+                    icon: Windows,
+                    name: "Windows",
+                }
+            ]
+        },
         jobs: [
             {
                 key: 'hammer',

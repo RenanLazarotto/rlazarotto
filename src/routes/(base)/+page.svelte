@@ -35,14 +35,13 @@
         padding-top: 10rem;
         margin-left: auto;
         margin-right: auto;
-        width: 92%;
+        width: 85%;
         color: rgb(243 244 246);
     }
 
-    @media (min-width: 640px) {
+    @media (max-width: 640px) {
         div {
-            padding-top: 8rem;
-            width: 83%;
+            max-width: 800px;
         }
     }
 </style>

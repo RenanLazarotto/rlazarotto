@@ -1,13 +1,25 @@
 <script>
     import SectionTitle from "./components/section-title.svelte";
-    import ProgressBar from "./components/progress-bar.svelte";
 
     export let stack;
 </script>
 
 <section>
     <SectionTitle id="stack">Tecnologias</SectionTitle>
-    <table>
+
+    {#each Object.entries(stack) as [title, items]}
+        <p class="name">{title}:</p>
+        <div class="tech-grid">
+            {#each items as item}
+                <div class="card">
+                    <svelte:component this={item.icon} />
+                    {item.name}
+                </div>
+            {/each}
+        </div>
+    {/each}
+
+    <!-- <table>
         <thead>
             <tr>
                 <th>Nome</th>
@@ -31,7 +43,7 @@
                 </tr>
             {/each}
         </tbody>
-    </table>
+    </table> -->
 </section>
 
 <style>
@@ -39,49 +51,35 @@
         margin-bottom: 6rem;
     }
 
-    table {
-        table-layout: auto;
-        min-width: 100%;
-        cursor: default;
+    div.tech-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 8px;
+        row-gap: 8px;
     }
 
-    thead > tr {
-        color: rgb(107 114 128);
-        font-weight: 700;
-    }
-
-    thead > tr > th {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-        text-align: left;
-    }
-
-    tbody > tr > td {
-        padding: 0.5rem 0.25rem;
-        color: rgb(156 163 175);
-    }
-
-    tbody > tr > td.tech {
-        font-weight: 700;
-    }
-
-    tbody > tr > td.tech > div {
+    div.card {
+        column-gap: 1rem;
+        padding: 1rem;
+        background-color: rgb(31 41 55 / 0.5);
+        text-align: center;
         display: flex;
         align-items: center;
+        border-radius: 4px;
     }
 
-    tbody > tr > td.tech > div > div {
-        display: none;
-    }
-
-    tbody > tr > td.progress {
-        width: 67%;
+    p.name {
+        line-height: 1.625;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        font-weight: 500;
+        padding-top: 1.5rem;
+        padding-bottom: 0.25rem;
     }
 
     @media (min-width: 640px) {
-        tbody > tr > td.tech > div > div {
-            display: block;
-            margin-right: 0.75rem;
+        div.tech-grid {
+            grid-template-columns: repeat(4, 1fr);
         }
     }
 </style>

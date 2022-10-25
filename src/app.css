@@ -9,6 +9,11 @@
     font-family: "Space Grotesk", sans-serif;
 }
 
+body {
+    background-image: url('/bg.svg');
+    background-color: rgb(17 24 39);
+}
+
 /** CSS Resets **/
 a {
     color: inherit;

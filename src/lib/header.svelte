@@ -1,4 +1,7 @@
 <script>
+    import { sidebar } from "$lib/stores";
+    import DotsThree from "phosphor-svelte/lib/DotsThree/DotsThree.svelte";
+
     // Shows the header by default
     let showHeader = true;
 
@@ -47,12 +50,16 @@
             behavior: "smooth",
         });
     };
+
+    const toggleSidebar = () => {
+        sidebar.set(!$sidebar);
+    };
 </script>
 
 <svelte:window on:scroll={onScroll} bind:innerWidth={screenWidth} />
 
 <header class:hidden={!showHeader} class:shadow={showShadow}>
-    <div>
+    <nav>
         <a href="/" class="logo">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +77,7 @@
                 <span class="title"> web developer </span>
             </div>
         </a>
-        <nav>
+        <div>
             <a href="#about" on:click={onClick} data-target="about"> sobre </a>
             <a href="#experiences" on:click={onClick} data-target="experiences">
                 experiências
@@ -85,26 +92,30 @@
                 contato
             </a>
             <a href="/curriculo" target="_blank"> currículo </a>
-        </nav>
-    </div>
+        </div>
+
+        <button on:click={toggleSidebar}>
+            <DotsThree weight="duotone" />
+        </button>
+    </nav>
 </header>
 
 <style>
     header {
+        display: flex;
         position: fixed;
-        min-width: 100%;
-        height: 8rem;
-        backdrop-filter: blur(8px);
-        background-color: rgb(17 24 39 / 0.6);
+        top: 0px;
         z-index: 50;
+        width: 100%;
+        height: 5rem;
+        background-color: rgb(17 24 39 / 0.6);
+        backdrop-filter: blur(8px);
         transition: all cubic-bezier(0.4, 0, 0.2, 1) 500ms;
         transform: translateY(0);
-        top: 0;
-        display: block;
     }
 
     header.hidden {
-        transform: translateY(-8rem);
+        transform: translateY(-5rem);
     }
 
     header.shadow {
@@ -112,105 +123,106 @@
             0 4px 6px -4px rgb(0 0 0 / 0.1);
     }
 
-    header > div {
+    nav {
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         align-items: center;
-        width: 90%;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        margin-left: auto;
-        margin-right: auto;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 1rem;
     }
 
-    a.logo {
+    nav a.logo {
         display: flex;
         align-items: center;
         color: rgb(209 213 219);
-        transition-property: color, background-color, border-color,
-            text-decoration-color, fill, stroke;
+        transition-property: color;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         transition-duration: 300ms;
-        margin-bottom: 0.5rem;
     }
-    a.logo:hover {
+
+    nav a.logo:hover {
         color: rgb(139 92 246);
     }
 
-    a.logo svg {
+    nav a.logo svg {
         font-size: 1.5rem;
         line-height: 2rem;
         color: rgb(245 158 11);
     }
 
-    a.logo div {
+    nav a.logo div {
         display: flex;
         align-items: center;
         flex-direction: column;
         margin-left: 0.5rem;
     }
 
-    span.name {
-        font-size: 1.25rem;
-        line-height: 1.75rem;
+    nav a.logo div span.name {
+        font-size: 1rem;
         font-weight: 700;
     }
 
-    span.title {
-        margin-left: 0.75rem;
-        font-size: 0.875rem;
-        line-height: 1.25rem;
+    nav a.logo div span.title {
+        font-size: 0.7rem;
         color: rgb(75 85 99);
         font-weight: 600;
         font-family: "JetBrains Mono", monospace;
     }
 
-    nav {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        font-weight: 600;
+    nav div {
+        display: none;
     }
 
-    nav > a {
+    nav div > a {
         font-size: 0.875rem;
         line-height: 1.25rem;
         color: rgb(209 213 219);
         padding-left: 0.5rem;
         padding-right: 0.5rem;
-        transition-property: color, background-color, border-color,
-            text-decoration-color, fill, stroke;
+        transition-property: color;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         transition-duration: 300ms;
     }
 
-    nav > a:hover {
+    nav div > a:hover {
         color: rgb(139 92 246);
     }
 
+    nav button {
+        color: rgb(209 213 219);
+        font-size: 2rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        transition: all cubic-bezier(0.4, 0, 0.2, 1) 300ms;
+    }
+
+    nav button:hover {
+        color: rgb(139 92 246);
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+    }
+
     @media (min-width: 640px) {
-        header {
-            height: 5rem;
+        nav button {
+            display: none;
         }
 
-        header.hidden {
-            transform: translateY(-5rem);
-        }
-
-        header > div {
-            flex-direction: row;
-            width: 83%;
-        }
-
-        a.logo {
+        nav a.logo {
             margin-bottom: 0px;
         }
 
-        nav {
+        nav a.logo div span.name {
+            font-size: 1.25rem;
+        }
+
+        nav a.logo div span.title {
+            font-size: 0.85rem;
+        }
+
+        nav div {
             display: flex;
-            margin-left: auto;
             align-items: center;
-            justify-content: flex-end;
         }
     }
     @media (min-width: 768px) {
