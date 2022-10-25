@@ -5,7 +5,7 @@
 </script>
 
 <section>
-    <SectionTitle id="stack">Tecnologias</SectionTitle>
+    <SectionTitle id="stack">Habilidades</SectionTitle>
 
     {#each Object.entries(stack) as [title, items]}
         <p class="name">{title}:</p>
