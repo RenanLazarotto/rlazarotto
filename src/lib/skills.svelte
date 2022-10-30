@@ -5,11 +5,11 @@
 </script>
 
 <section>
-    <SectionTitle id="stack">Tecnologias</SectionTitle>
+    <SectionTitle id="skills">Habilidades</SectionTitle>
 
     {#each Object.entries(stack) as [title, items]}
         <p class="name">{title}:</p>
-        <div class="tech-grid">
+        <div class="skills-grid">
             {#each items as item}
                 <div class="card">
                     <svelte:component this={item.icon} />
@@ -51,7 +51,7 @@
         margin-bottom: 6rem;
     }
 
-    div.tech-grid {
+    div.skills-grid {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         column-gap: 8px;
@@ -78,7 +78,7 @@
     }
 
     @media (min-width: 640px) {
-        div.tech-grid {
+        div.skills-grid {
             grid-template-columns: repeat(4, 1fr);
         }
     }

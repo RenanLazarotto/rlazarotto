@@ -2,12 +2,6 @@
     import { sidebar } from "$lib/stores";
     import X from "phosphor-svelte/lib/X/X.svelte";
 
-    // Holds the screen width to watch for changes
-    let screenWidth;
-
-    // Changes the scroll offset based on the screen width
-    $: scrollOffset = screenWidth < 640 ? 128 : 80;
-
     $: isOpen = $sidebar;
 
     const onClick = (e) => {
@@ -15,7 +9,7 @@
 
         let target = document.getElementById(e.target.dataset.target);
         let targetPosition = target.getBoundingClientRect().top;
-        let offsetPosition = targetPosition + window.pageYOffset - scrollOffset;
+        let offsetPosition = targetPosition + window.pageYOffset - 80;
 
         window.scrollTo({
             top: offsetPosition,
@@ -28,17 +22,10 @@
     const toggleSidebar = () => {
         sidebar.set(!$sidebar);
     };
-
-    const keyPress = (e) => {
-        console.log(e.key);
-        if (e.key == "Escape") {
-            sidebar.set(!$sidebar);
-        }
-    };
 </script>
 
 <div class:show={isOpen} class="sidebar">
-    <nav>
+    <nav class:show={isOpen}>
         <div class="close">
             <button on:click={toggleSidebar}><X weight="duotone" /></button>
         </div>
@@ -63,18 +50,16 @@
 
 <style>
     div.sidebar {
-        height: 100vh;
+        display: flex;
+        justify-content: right;
         width: 100%;
+        height: 100vh;
         overflow: hidden;
         position: fixed;
         right: 0;
         top: 0;
         z-index: 100;
-        transition-property: all;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 300ms;
-        display: flex;
-        justify-content: right;        
+        transition: backdrop-filter cubic-bezier(0.4, 0, 0.2, 1) 250ms;
         transform: translateX(100%);
     }
 
@@ -90,8 +75,15 @@
         height: 100vh;
         background-color: rgba(30 41 59 / 0.8);
         box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+        transition: transform cubic-bezier(0.4, 0, 0.2, 1) 300ms;
+        transform: translateX(100%);
+        visibility: hidden;
     }
 
+    nav.show {
+        transform: translateX(0);
+        visibility: visible;
+    }
 
     nav > div.close {
         display: flex;
@@ -104,7 +96,7 @@
         color: rgb(209 213 219);
         font-size: 1.5rem;
         cursor: pointer;
-        transition: all cubic-bezier(0.4, 0, 0.2, 1) 300ms;
+        transition: color cubic-bezier(0.4, 0, 0.2, 1) 300ms;
     }
 
     nav div.close button:hover {
@@ -120,7 +112,7 @@
     nav div.links a {
         padding: 0.5rem 0.75rem;
         color: rgb(209 213 219);
-        transition-property: all;
+        transition-property: color;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         transition-duration: 300ms;
     }

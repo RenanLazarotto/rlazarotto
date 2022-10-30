@@ -11,12 +11,6 @@
     // Starts at y: 0;
     let previousY = 0;
 
-    // Holds the screen width to watch for changes
-    let screenWidth;
-
-    // Changes the scroll offset based on the screen width
-    $: scrollOffset = screenWidth < 640 ? 128 : 80;
-
     const onScroll = () => {
         let currentY = window.scrollY;
 
@@ -43,7 +37,7 @@
 
         let target = document.getElementById(e.target.dataset.target);
         let targetPosition = target.getBoundingClientRect().top;
-        let offsetPosition = targetPosition + window.pageYOffset - scrollOffset;
+        let offsetPosition = targetPosition + window.pageYOffset - 80;
 
         window.scrollTo({
             top: offsetPosition,
@@ -56,7 +50,7 @@
     };
 </script>
 
-<svelte:window on:scroll={onScroll} bind:innerWidth={screenWidth} />
+<svelte:window on:scroll={onScroll} />
 
 <header class:hidden={!showHeader} class:shadow={showShadow}>
     <nav>
@@ -85,8 +79,8 @@
             <a href="#projects" on:click={onClick} data-target="projects">
                 projetos
             </a>
-            <a href="#stack" on:click={onClick} data-target="stack">
-                tecnologias
+            <a href="#skills" on:click={onClick} data-target="stack">
+                habilidades
             </a>
             <a href="#contact" on:click={onClick} data-target="contact">
                 contato

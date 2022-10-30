@@ -3,7 +3,7 @@
     import AboutMe from "$lib/about-me.svelte";
     import Experiences from "$lib/experiences.svelte";
     import Projects from "$lib/projects.svelte";
-    import TechStack from "$lib/tech-stack.svelte";
+    import Skills from "$lib/skills.svelte";
     import Contact from "$lib/contact.svelte";
     import SideLinks from "$lib/side-links.svelte";
 
@@ -23,7 +23,7 @@
 
     <Projects projects={data.projects} />
 
-    <TechStack stack={data.stack} />
+    <Skills stack={data.stack} />
 
     <Contact />
 
