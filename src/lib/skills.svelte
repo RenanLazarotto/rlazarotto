@@ -18,42 +18,16 @@
             {/each}
         </div>
     {/each}
-
-    <!-- <table>
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th>Conhecimento</th>
-            </tr>
-        </thead>
-        <tbody>
-            {#each stack as tech}
-                <tr>
-                    <td class="tech">
-                        <div>
-                            <div>
-                                <svelte:component this={tech.icon} />
-                            </div>
-                            {tech.name}
-                        </div>
-                    </td>
-                    <td class="progress">
-                        <ProgressBar progress={tech.knowledge} />
-                    </td>
-                </tr>
-            {/each}
-        </tbody>
-    </table> -->
 </section>
 
 <style>
     section {
-        margin-bottom: 6rem;
+        margin-bottom: var(--section-margin);
     }
 
     div.skills-grid {
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         column-gap: 8px;
         row-gap: 8px;
     }
@@ -61,11 +35,12 @@
     div.card {
         column-gap: 1rem;
         padding: 1rem;
-        background-color: rgb(31 41 55 / 0.5);
+        background-color: var(--background-hover);
         text-align: center;
         display: flex;
         align-items: center;
         border-radius: 4px;
+        color: var(--white);
     }
 
     p.name {
@@ -75,6 +50,7 @@
         font-weight: 500;
         padding-top: 1.5rem;
         padding-bottom: 0.25rem;
+        color: var(--accent);
     }
 
     @media (min-width: 640px) {

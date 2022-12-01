@@ -1,21 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;800&family=Nunito+Sans:wght@400;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Nunito+Sans:wght@400;600;700;800&display=swap');
 
+@font-face {
+    font-family: 'Mona Sans';
+    src:
+        url('/fonts/Mona-Sans.woff2') format('woff2 supports variations'),
+        url('/fonts/Mona-Sans.woff2') format('woff2-variations');
+    font-weight: 200 900;
+    font-stretch: 75% 125%;
+}
+
+@font-face {
+    font-family: 'Hubot Sans';
+    src:
+        url('/fonts/Hubot-Sans.woff2') format('woff2 supports variations'),
+        url('/fonts/Hubot-Sans.woff2') format('woff2-variations');
+    font-weight: 200 900;
+    font-stretch: 75% 125%;
+}
+
+:root {
+    --font-base:  "Mona Sans", sans-serif;
+    --font-highlight: "Hubot Sans", sans-serif;
+
+    --font-size: 1.1rem;
+    --line-height: 1.8rem;
+
+    --primary: #673AB7;
+    --accent: #7C4DFF;
+
+    --white: #EEEEEE;
+    --gray: #9E9E9E;
+
+    --background: #111111;
+    --background-transparent: rgba(17, 17, 17, 0.6);
+    --background-hover: #212121;
+    --background-hover-transparent: rgba(33, 33, 33, 0.749);
+
+    --link: #673AB7;
+    --link-muted: #9E9E9E;
+    --link-hover: #7C4DFF;
+    --link-shadow: 0 0 8px #4527A0;
+
+    --section-margin: 8rem;
+}
+
+
 .hidden {
     display: none;
 }
 
 * {
-    font-family: "Space Grotesk", sans-serif;
+    font-family: var(--font-base);
 }
 
 body {
-    background-image: url('/bg.svg');
-    background-color: rgb(17 24 39);
-}
-
-.blur {
-    filter: blur(8px);
+    background-color: var(--background);
 }
 
 /** CSS Resets **/

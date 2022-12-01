@@ -1,6 +1,7 @@
 <script>
     import Link from "./components/link.svelte";
     import ArrowSquareOut from "phosphor-svelte/lib/ArrowSquareOut/ArrowSquareOut.svelte";
+    import FileCode from "phosphor-svelte/lib/FileCode/FileCode.svelte";
     import SectionTitle from "./components/section-title.svelte";
 
     export let projects;
@@ -49,12 +50,29 @@
                             </span>
                         {/each}
                     </td>
-                    <td>
-                        {#each project.links as link}
-                            <Link href={link} target="_blank">
-                                <ArrowSquareOut weight="duotone" />
+                    <td class="links">
+                        {#if project.link !== ""}
+                            <Link
+                                href={project.link}
+                                target="_blank"
+                                muted={true}
+                            >
+                            <span class="inline">
+                                <ArrowSquareOut weight="duotone" /> Acessar
+                            </span>
                             </Link>
-                        {/each}
+                        {/if}
+                        {#if project.repo !== ""}
+                            <Link
+                                href={project.repo}
+                                target="_blank"
+                                muted={true}
+                            >
+                            <span class="inline">
+                                <FileCode /> Repositório
+                            </span>
+                            </Link>
+                        {/if}
                     </td>
                 </tr>
             {/each}
@@ -64,7 +82,7 @@
 
 <style>
     section {
-        margin-bottom: 6rem;
+        margin-bottom: var(--section-margin);
     }
 
     table {
@@ -72,92 +90,115 @@
         min-width: 100%;
         cursor: default;
     }
-    
-    thead > tr {
-        color: rgb(107 114 128);
+
+    thead tr {
+        color: var(--gray);
         font-weight: 700;
     }
 
-    thead > tr > th {
+    thead th {
         padding-left: 0.5rem;
         padding-right: 0.5rem;
+        padding-bottom: 0.5rem;
         text-align: left;
     }
 
-    thead > tr > th.responsive {
+    thead th.responsive {
         display: none;
     }
 
-    tbody tr {
-        border-radius: 1rem;
+    tbody tr td {
+        transition: background-color ease-in-out 150ms;
+        padding: 1rem 0.5rem;
+        color: var(--gray);
     }
 
-    tbody tr:hover {
-        background-color: rgb(31 41 55 / 0.5);
-    }
-
-    tbody > tr > td {
-        padding: 0.5rem 0.25rem;
-        color: rgb(156 163 175);
-    }
-
-    tbody > tr > td.responsive {
+    tbody tr td.responsive {
         display: none;
     }
 
-    tbody > tr > td.title {
-        color: rgb(229 231 235);
+    tbody tr:hover td {
+        background-color: var(--background-hover);
     }
 
-    tbody > tr > td.title > p {
+    tbody tr td:first-child {
+        border-radius: 10px 0 0 10px;
+    }
+
+    tbody tr td:last-child {
+        border-radius: 0 10px 10px 0;
+    }
+
+    td.title {
+        border-radius: 10px 0 0 10px;
+    }
+
+    td.title p {
+        color: var(--white);
         font-weight: 700;
     }
 
-    tbody > tr > td.title > div {
+    td.title div {
         font-size: 0.875rem;
         line-height: 1.25rem;
-        color: rgb(107 114 128);
+        color: var(--gray);
     }
 
-    tbody > tr > td.title > div.responsive {
+    td.title div.responsive {
         display: table-cell;
     }
 
-    tbody > tr > td.title div > span {
+    td.title div > span {
         font-weight: 700;
-        color: rgb(139 92 246);
+        color: var(--accent);
     }
 
-    tbody > tr > td.year {
+    td.year {
         font-weight: 500;
-        color: rgb(139 92 246);
+        color: var(--accent);
     }
 
-    tbody > tr > td.stack {
+    td.stack {
         font-size: 0.75rem;
         line-height: 1rem;
         padding: 0.75rem 0.5rem;
     }
 
-    tbody > tr > td.stack > span {
+    td.stack span {
         display: inline-block;
     }
 
-    tbody > tr > td.stack > span > span.separator {
+    td.stack span.separator {
         margin-left: 0.25rem;
         margin-right: 0.25rem;
     }
 
+    td.links {
+        font-size: 0.75rem;
+        line-height: 1rem;
+        display: table-cell;
+    }
+
+    td.links span.inline {
+        display: flex;
+        align-items: center;
+        column-gap: 0.25rem;
+    }
+
     @media (min-width: 640px) {
-        thead > tr > th.responsive {
+        thead th.responsive {
             display: block;
         }
 
-        tbody > tr > td.responsive {
+        tbody tr td.responsive {
             display: table-cell;
         }
 
-        tbody > tr > td.title > div.responsive {
+        td.title {
+            border-radius: 0;
+        }
+
+        td.title > div.responsive {
             display: none;
         }
     }

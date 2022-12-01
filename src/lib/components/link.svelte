@@ -1,23 +1,27 @@
 <script>
     export let href;
     export let target = "_self";
+    export let muted = false;
 </script>
 
-<a {href} {target}>
+<a {href} {target} class:muted>
     <slot />
 </a>
 
 <style>
     a {
         font-weight: 700;
-        color: rgb(229 231 235);
-        transition-property: color, background-color, border-color,
-            text-decoration-color, fill, stroke;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 300ms;
+        color: var(--link);
+        transition: all ease-in-out 300ms;
+        font-family: var(--font-highlight);
+    }
+
+    a.muted {
+        color: var(--link-muted);
     }
 
     a:hover {
-        color: rgb(124 58 237);
+        color: var(--link-hover);
+        text-shadow: var(--link-shadow)
     }
 </style>

@@ -33,7 +33,7 @@
         line-height: 1.75rem;
         text-align: justify;
 
-        color: rgb(209 213 219);
+        color: var(--white);
     }
 
     p {

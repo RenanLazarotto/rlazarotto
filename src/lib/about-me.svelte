@@ -35,17 +35,16 @@
 
 <style>
     section {
-        margin-bottom: 6rem;
-    }
-
-    p {
-        margin-bottom: 1rem;
+        margin-bottom: var(--section-margin);
     }
 
     div {
-        font-size: 1.125rem;
-        line-height: 1.75rem;
+        font-size: var(--font-size);
+        line-height: var(--line-height);
         text-align: justify;
-        color: rgb(209 213 219);
+        color: var(--white);
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
     }
 </style>

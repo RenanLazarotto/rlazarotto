@@ -133,7 +133,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 90%;
-    color: rgb(209 213 219);
+    color: var(--text-white);
   }
   section {
     margin-bottom: 1rem;
@@ -149,7 +149,7 @@
     font-size: 2.25rem;
     line-height: 2.5rem;
     font-weight: 700;
-    color: rgb(139 92 246);
+    color: var(--text-primary);
   }
 
   div.contact {
@@ -172,7 +172,7 @@
     font-size: 1rem;
     line-height: 1.5rem;
     margin-right: 0.25rem;
-    color: rgb(139 92 246);
+    color: var(--text-primary);
   }
 
   div.wrapper {
@@ -182,7 +182,7 @@
   }
 
   div.wrapper section > h2 {
-    color: rgb(139 92 246);
+    color: var(--text-primary);
     font-weight: 500;
     font-size: 1.25rem;
     line-height: 1.75rem;
@@ -204,7 +204,7 @@
   div.education > div {
     font-size: 0.75rem;
     line-height: 1rem;
-    color: rgb(156 163 175);
+    color: var(--text-gray);
     font-weight: 500;
     font-weight: 500;
   }
@@ -251,7 +251,7 @@
   }
 
   section.stack p.items {
-    color: rgb(156 163 175);
+    color: var(--text-gray);
     margin-bottom: 0.5rem;
   }
 
@@ -280,7 +280,7 @@
     section.stack ul {
       display: block;
       margin-bottom: 0.5rem;
-      color: rgb(156 163 175);
+      color: var(--text-gray);
     }
 
     section.stack p.items {

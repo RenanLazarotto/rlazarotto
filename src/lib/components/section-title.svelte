@@ -14,29 +14,29 @@
     div {
         display: flex;
         align-items: center;
-        column-gap: 0.5rem;
+        column-gap: 1.25rem;
         margin-top: 0.75rem;
         margin-bottom: 1.5rem;
     }
 
     p {
         font-weight: 500;
-        font-family: "JetBrains Mono";
-        font-size: 1.125rem;
-        line-height: 1.75rem;
-        letter-spacing: 0.1rem;
+        font-family: var(--font-highlight);
+        font-size: 1.5rem;
+        line-height: 2rem;
+        text-align: center;
+        color: var(--white);
     }
 
     span {
-        height: 1px;
-        background-color: rgb(139 92 246);
-        width: 4rem;
+        height: 2px;
+        background-color: var(--accent);
     }
 
-    @media (min-width: 640px) {
-        p {
-            font-size: 1.5rem;
-            line-height: 2rem;
-        }
+    div span:first-of-type {
+        flex: 1;
+    }
+    div span:last-of-type {
+        flex: 5;
     }
 </style>

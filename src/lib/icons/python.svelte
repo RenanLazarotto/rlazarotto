@@ -5,7 +5,7 @@
 
 <svg
     role="img"
-    fill="#3776AB"
+    fill="currentColor"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
     {width}

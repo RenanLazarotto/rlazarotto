@@ -39,13 +39,12 @@
 
 <section>
     <SectionTitle id="experiences">Experiências</SectionTitle>
-    <div class="wrapper">
-        <ul class="job-list" role="tablist">
+    <div>
+        <ul class="jobs" role="tablist">
             {#each jobs as li, i}
-                <li class="job" role="presentation">
+                <li role="presentation">
                     <button
                         class:active={i == 0}
-                        class="job-button"
                         id={`${li.key}-button`}
                         type="button"
                         role="tab"
@@ -61,7 +60,7 @@
         {#each jobs as job, i}
             <div
                 class:hidden={i != 0}
-                class="job-details"
+                class="details"
                 id={`${job.key}-tab`}
                 role="tabpanel"
                 aria-labelledby={`${job.key}-button`}
@@ -97,14 +96,14 @@
         outline: none;
     }
     section {
-        margin-bottom: 6rem;
+        margin-bottom: var(--section-margin);
     }
 
-    .wrapper {
+    section > div {
         gap: 0.5rem;
     }
 
-    .job-list {
+    .jobs {
         display: flex;
         overflow-x: auto;
         font-size: 0.875rem;
@@ -115,86 +114,77 @@
         margin-bottom: 0.25rem;
     }
 
-    .job {
-        display: flex;
-        font-weight: 600;
-    }
-
-    .job-button {
+    .jobs li button {
         white-space: nowrap;
         width: 100%;
         text-align: left;
         padding: 0.5rem 1rem;
         margin-bottom: 0.25rem;
-        border-bottom-color: rgb(17 24 39);
-        border-bottom-width: 2px;
-        transition-property: all;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 300ms;
+        transition: all ease-in-out 300ms;
         border-radius: 4px;
+        color: var(--gray);
+        font-weight: 600;
     }
 
-    .job-button.active {
-        color: rgb(139 92 246);
-        background-color: rgb(31 41 55 / 0.5);
-        border-bottom-color: rgb(139 92 246);
+    .jobs li button.active {
+        color: var(--accent);
+        background-color: var(--background-hover);
     }
 
-    .job-button:hover {
-        background-color: rgb(31 41 55 / 0.5);
-        color: rgb(139 92 246);
+    .jobs li button:hover {
+        color: var(--white);
+        text-shadow: 0 0 8px var(--gray);
+        cursor: pointer;
     }
 
-    .job-details {
-        transition-property: opacity;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 300ms;
-    }
-
-    .job-details > p {
+    .details > p {
         font-size: 1.125rem;
         line-height: 1.75rem;
+        color: var(--white);
+        font-weight: 500;
     }
 
-    .job-details div {
+    .details div {
         font-size: 0.875rem;
         line-height: 1.25rem;
-        color: rgb(156 163 175);
+        color: var(--gray);
         font-weight: 500;
         margin-bottom: 0.25rem;
     }
 
-    .job-details ul {
-        color: rgb(209 213 219);
+    .details ul {
+        color: var(--white);
     }
 
-    .job-details ul li {
+    .details ul li {
         position: relative;
         padding-left: 1rem;
+        padding-bottom: 0.5rem;
     }
 
-    .job-details ul li::before {
+    .details ul li::before {
         content: '»';
         position: absolute;
         left: 0;
+        color: var(--accent);
     }
 
     @media (min-width: 640px) {
-        .wrapper {
+        section > div {
             display: flex;
             align-items: flex-start;
         }
 
-        .job-list {
+        .jobs {
             flex-direction: column;
             width: 20%;
         }
 
-        .job-button {
+        .jobs li button {
             margin-bottom: 0;
         }
 
-        .job-details {
+        .details {
             width: 80%;
         }
     }

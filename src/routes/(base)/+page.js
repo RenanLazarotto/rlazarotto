@@ -27,7 +27,8 @@ export function load() {
                 title: 'Portfolio',
                 at: '-',
                 stack: ['Svelte', 'Tailwind'],
-                links: []
+                link: '/',
+                repo: 'https://github.com/RenanLazarotto/site'
             },
             {
                 year: '2021',
@@ -40,28 +41,32 @@ export function load() {
                     'RabbitMQ',
                     'Redis',
                 ],
-                links: []
+                link: '',
+                repo: ''
             },
             {
                 year: '2020',
                 title: 'Sistema de Feirão',
                 at: 'DealerSites',
                 stack: ['Laravel', 'Symfony', 'PHP', 'Bootstrap'],
-                links: ['https://dealersites.com.br/produtos/mydealer#features-feirao']
+                link: 'https://dealersites.com.br/produtos/mydealer#features-feirao',
+                repo: ''
             },
             {
                 year: '2019',
                 title: 'Módulos para Magento 2',
                 at: 'DigitalHub',
                 stack: ['Magento', 'PHP', 'JavaScript'],
-                links: []
+                link: '',
+                repo: ''
             },
             {
                 year: '2018',
                 title: 'Sistema de relatórios',
                 at: 'CrediOK',
                 stack: ['CodeIgniter', 'Symfony', 'Bootstrap', 'JavaScript', 'PHP'],
-                links: ['https://reports.crediok.com.br/']
+                link: 'https://reports.crediok.com.br/',
+                repo: ''
             }
         ],
         stack: {

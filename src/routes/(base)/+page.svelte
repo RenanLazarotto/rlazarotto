@@ -5,7 +5,6 @@
     import Projects from "$lib/projects.svelte";
     import Skills from "$lib/skills.svelte";
     import Contact from "$lib/contact.svelte";
-    import SideLinks from "$lib/side-links.svelte";
 
     export let data;
 </script>
@@ -26,8 +25,6 @@
     <Skills stack={data.stack} />
 
     <Contact />
-
-    <SideLinks />
 </div>
 
 <style>
@@ -36,7 +33,6 @@
         margin-left: auto;
         margin-right: auto;
         width: 85%;
-        color: rgb(243 244 246);
     }
 
     @media (max-width: 640px) {

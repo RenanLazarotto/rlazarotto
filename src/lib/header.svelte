@@ -102,9 +102,9 @@
         z-index: 50;
         width: 100%;
         height: 5rem;
-        background-color: rgb(17 24 39 / 0.6);
-        backdrop-filter: blur(8px);
-        transition: all cubic-bezier(0.4, 0, 0.2, 1) 500ms;
+        background-color: var(--background-transparent);
+        backdrop-filter: blur(16px);
+        transition: all ease-in-out 500ms;
         transform: translateY(0);
     }
 
@@ -113,8 +113,8 @@
     }
 
     header.shadow {
-        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
-            0 4px 6px -4px rgb(0 0 0 / 0.1);
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.2),
+            0 4px 6px -4px rgb(0 0 0 / 0.3);
     }
 
     nav {
@@ -128,20 +128,23 @@
     nav a.logo {
         display: flex;
         align-items: center;
-        color: rgb(209 213 219);
-        transition-property: color;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 300ms;
+        color: var(--white);
+        transition: color ease-in-out 300ms;
     }
 
     nav a.logo:hover {
-        color: rgb(139 92 246);
+        color: var(--link-hover);
     }
 
     nav a.logo svg {
         font-size: 1.5rem;
         line-height: 2rem;
-        color: rgb(245 158 11);
+        color: var(--accent);
+        transition: filter ease-in-out 300ms;
+    }
+
+    nav a.logo:hover svg {
+        filter: drop-shadow(var(--link-shadow));
     }
 
     nav a.logo div {
@@ -156,11 +159,15 @@
         font-weight: 700;
     }
 
+    nav a.logo:hover div span.name {
+        text-shadow: var(--link-shadow);
+    }
+
     nav a.logo div span.title {
         font-size: 0.7rem;
-        color: rgb(75 85 99);
+        color: var(--gray);
         font-weight: 600;
-        font-family: "JetBrains Mono", monospace;
+        font-family: "Hubot Sans";
     }
 
     nav div {
@@ -170,30 +177,30 @@
     nav div > a {
         font-size: 0.875rem;
         line-height: 1.25rem;
-        color: rgb(209 213 219);
+        color: var(--white);
         padding-left: 0.5rem;
         padding-right: 0.5rem;
-        transition-property: color;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 300ms;
+        transition: color ease-in-out 300ms;
+        font-weight: 500;
     }
 
     nav div > a:hover {
-        color: rgb(139 92 246);
+        color: var(--primary);
+        text-shadow: var(--link-shadow);
     }
 
     nav button {
-        color: rgb(209 213 219);
+        color: var(--white);
         font-size: 2rem;
         cursor: pointer;
         display: flex;
         align-items: center;
-        transition: all cubic-bezier(0.4, 0, 0.2, 1) 300ms;
+        transition: all ease-in-out 300ms;
     }
 
     nav button:hover {
-        color: rgb(139 92 246);
-        background-color: rgba(0, 0, 0, 0.2);
+        color: var(--primary);
+        background-color: var(--background-hover);
         border-radius: 4px;
     }
 
