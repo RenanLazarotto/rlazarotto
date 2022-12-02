@@ -36,8 +36,8 @@
         <a href="#projects" on:click={onClick} data-target="projects">
             projetos
         </a>
-        <a href="#stack" on:click={onClick} data-target="stack">
-            tecnologias
+        <a href="#skills" on:click={onClick} data-target="skills">
+            habilidades
         </a>
         <a href="#contact" on:click={onClick} data-target="contact">
             contato
