@@ -105,50 +105,50 @@
 
     .jobs {
         display: flex;
-        overflow-x: auto;
         font-size: 0.875rem;
-        line-height: 1.25rem;
         font-weight: 500;
-        padding-bottom: 0.5rem;
         gap: 0.5rem;
+        line-height: 1.25rem;
         margin-bottom: 0.25rem;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
     }
 
     .jobs li button {
-        white-space: nowrap;
-        width: 100%;
-        text-align: left;
-        padding: 0.5rem 1rem;
-        margin-bottom: 0.25rem;
-        transition: all ease-in-out 300ms;
         border-radius: 4px;
         color: var(--gray);
         font-weight: 600;
+        margin-bottom: 0.25rem;
+        padding: 0.5rem 1rem;
+        text-align: left;
+        transition: all ease-in-out 300ms;
+        white-space: nowrap;
+        width: 100%;
     }
 
     .jobs li button.active {
-        color: var(--accent);
         background-color: var(--background-hover);
+        color: var(--accent);
     }
 
     .jobs li button:hover {
         color: var(--white);
-        text-shadow: 0 0 8px var(--gray);
         cursor: pointer;
+        text-shadow: 0 0 8px var(--gray);
     }
 
     .details > p {
-        font-size: 1.125rem;
-        line-height: 1.75rem;
         color: var(--white);
+        font-size: var(--font-size);
         font-weight: 500;
+        line-height: var(--line-height);
     }
 
     .details div {
-        font-size: 0.875rem;
-        line-height: 1.25rem;
         color: var(--gray);
+        font-size: 0.875rem;
         font-weight: 500;
+        line-height: 1.25rem;
         margin-bottom: 0.25rem;
     }
 
@@ -157,22 +157,22 @@
     }
 
     .details ul li {
-        position: relative;
-        padding-left: 1rem;
         padding-bottom: 0.5rem;
+        padding-left: 1rem;
+        position: relative;
     }
 
     .details ul li::before {
-        content: '»';
-        position: absolute;
-        left: 0;
         color: var(--accent);
+        content: '»';
+        left: 0;
+        position: absolute;
     }
 
     @media (min-width: 640px) {
         section > div {
-            display: flex;
             align-items: flex-start;
+            display: flex;
         }
 
         .jobs {

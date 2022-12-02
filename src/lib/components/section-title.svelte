@@ -12,25 +12,25 @@
 
 <style>
     div {
-        display: flex;
         align-items: center;
         column-gap: 1.25rem;
-        margin-top: 0.75rem;
+        display: flex;
         margin-bottom: 1.5rem;
+        margin-top: 0.75rem;
     }
 
     p {
-        font-weight: 500;
+        color: var(--white);
         font-family: var(--font-highlight);
         font-size: 1.5rem;
+        font-weight: 500;
         line-height: 2rem;
         text-align: center;
-        color: var(--white);
     }
 
     span {
-        height: 2px;
         background-color: var(--accent);
+        height: 2px;
     }
 
     div span:first-of-type {

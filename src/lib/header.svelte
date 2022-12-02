@@ -1,6 +1,6 @@
 <script>
     import { sidebar } from "$lib/stores";
-    import DotsThree from "phosphor-svelte/lib/DotsThree/DotsThree.svelte";
+    import List from "phosphor-svelte/lib/List/List.svelte";
 
     // Shows the header by default
     let showHeader = true;
@@ -79,7 +79,7 @@
             <a href="#projects" on:click={onClick} data-target="projects">
                 projetos
             </a>
-            <a href="#skills" on:click={onClick} data-target="stack">
+            <a href="#skills" on:click={onClick} data-target="skills">
                 habilidades
             </a>
             <a href="#contact" on:click={onClick} data-target="contact">
@@ -89,23 +89,23 @@
         </div>
 
         <button on:click={toggleSidebar}>
-            <DotsThree weight="duotone" />
+            <List weight="duotone" />
         </button>
     </nav>
 </header>
 
 <style>
     header {
+        backdrop-filter: blur(16px);
+        background-color: var(--background-transparent);
         display: flex;
+        height: 5rem;
         position: fixed;
         top: 0px;
-        z-index: 50;
-        width: 100%;
-        height: 5rem;
-        background-color: var(--background-transparent);
-        backdrop-filter: blur(16px);
-        transition: all ease-in-out 500ms;
         transform: translateY(0);
+        transition: all ease-in-out 500ms;
+        width: 100%;
+        z-index: 50;
     }
 
     header.hidden {
@@ -118,17 +118,17 @@
     }
 
     nav {
-        display: flex;
         align-items: center;
+        display: flex;
         justify-content: space-between;
-        width: 100%;
         padding: 0 1rem;
+        width: 100%;
     }
 
     nav a.logo {
-        display: flex;
         align-items: center;
         color: var(--white);
+        display: flex;
         transition: color ease-in-out 300ms;
     }
 
@@ -137,9 +137,9 @@
     }
 
     nav a.logo svg {
+        color: var(--accent);
         font-size: 1.5rem;
         line-height: 2rem;
-        color: var(--accent);
         transition: filter ease-in-out 300ms;
     }
 
@@ -148,14 +148,14 @@
     }
 
     nav a.logo div {
-        display: flex;
         align-items: center;
+        display: flex;
         flex-direction: column;
         margin-left: 0.5rem;
     }
 
     nav a.logo div span.name {
-        font-size: 1rem;
+        font-size: var(--font-size);
         font-weight: 700;
     }
 
@@ -164,10 +164,10 @@
     }
 
     nav a.logo div span.title {
-        font-size: 0.7rem;
         color: var(--gray);
-        font-weight: 600;
-        font-family: "Hubot Sans";
+        font-family: var(--font-highlight);
+        font-size: 0.75rem;
+        font-weight: 500;
     }
 
     nav div {
@@ -175,13 +175,13 @@
     }
 
     nav div > a {
-        font-size: 0.875rem;
-        line-height: 1.25rem;
         color: var(--white);
+        font-size: 0.875rem;
+        font-weight: 500;
+        line-height: 1.25rem;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
         transition: color ease-in-out 300ms;
-        font-weight: 500;
     }
 
     nav div > a:hover {
@@ -190,18 +190,18 @@
     }
 
     nav button {
+        align-items: center;
         color: var(--white);
-        font-size: 2rem;
         cursor: pointer;
         display: flex;
-        align-items: center;
+        font-size: 1.5rem;
         transition: all ease-in-out 300ms;
     }
 
     nav button:hover {
-        color: var(--primary);
         background-color: var(--background-hover);
         border-radius: 4px;
+        color: var(--primary);
     }
 
     @media (min-width: 640px) {
@@ -213,17 +213,9 @@
             margin-bottom: 0px;
         }
 
-        nav a.logo div span.name {
-            font-size: 1.25rem;
-        }
-
-        nav a.logo div span.title {
-            font-size: 0.85rem;
-        }
-
         nav div {
-            display: flex;
             align-items: center;
+            display: flex;
         }
     }
     @media (min-width: 768px) {

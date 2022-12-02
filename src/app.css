@@ -26,6 +26,8 @@
     --font-size: 1.1rem;
     --line-height: 1.8rem;
 
+    --hero-size: 3rem;
+
     --primary: #673AB7;
     --accent: #7C4DFF;
 
@@ -59,13 +61,9 @@ body {
 }
 
 /** CSS Resets **/
-a {
-    color: inherit;
+a, a:visited {
+    color: var(--link);
     text-decoration: none;
-}
-
-a:visited {
-    color: inherit;
 }
 
 button {
@@ -78,6 +76,8 @@ ul {
     list-style: none;
     list-style-position: inside;
     padding: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
 }
 
 p {

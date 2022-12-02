@@ -45,8 +45,8 @@
 
     p.name {
         line-height: 1.625;
-        font-size: 1.125rem;
-        line-height: 1.75rem;
+        font-size: var(--font-size);
+        line-height: var(--line-height);
         font-weight: 500;
         padding-top: 1.5rem;
         padding-bottom: 0.25rem;

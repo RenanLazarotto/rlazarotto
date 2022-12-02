@@ -48,20 +48,20 @@
 
 <style>
     nav {
+        backdrop-filter: blur(4px);
+        background-color: var(--background-hover-transparent);
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
         display: flex;
         flex-direction: column;
-        width: 200px;
         height: 100vh;
         overflow: hidden;
         position: fixed;
         right: -100%;
-        background-color: var(--background-hover-transparent);
         top: 0;
-        z-index: 100;
-        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
         transition: all ease-in-out 300ms;
         visibility: hidden;
-        backdrop-filter: blur(4px);
+        width: 200px;
+        z-index: 100;
     }
 
     nav.show {
@@ -78,8 +78,8 @@
 
     nav > div.close button {
         color: rgb(209 213 219);
-        font-size: 1.5rem;
         cursor: pointer;
+        font-size: 1.5rem;
         transition: color cubic-bezier(0.4, 0, 0.2, 1) 300ms;
     }
 
@@ -88,14 +88,14 @@
     }
 
     nav div.links {
+        align-items: center;
         display: flex;
         flex-direction: column;
-        align-items: center;
     }
 
     nav div.links a {
-        padding: 0.5rem 0.75rem;
         color: rgb(209 213 219);
+        padding: 0.5rem 0.75rem;
         transition: color ease-in-out 300ms;
     }
 

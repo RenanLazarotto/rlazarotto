@@ -10,10 +10,10 @@
 
 <style>
     a {
-        font-weight: 700;
         color: var(--link);
-        transition: all ease-in-out 300ms;
         font-family: var(--font-highlight);
+        font-weight: 700;
+        transition: all ease-in-out 300ms;
     }
 
     a.muted {

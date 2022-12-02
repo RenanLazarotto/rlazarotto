@@ -139,8 +139,8 @@
     }
 
     td.title div {
-        font-size: 0.875rem;
-        line-height: 1.25rem;
+        font-size: 0.75rem;
+        line-height: 1.1rem;
         color: var(--gray);
     }
 

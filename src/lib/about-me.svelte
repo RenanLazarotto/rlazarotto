@@ -39,12 +39,12 @@
     }
 
     div {
-        font-size: var(--font-size);
-        line-height: var(--line-height);
-        text-align: justify;
         color: var(--white);
         display: flex;
         flex-direction: column;
+        font-size: var(--font-size);
+        line-height: var(--line-height);
         row-gap: 1rem;
+        text-align: justify;
     }
 </style>

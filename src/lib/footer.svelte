@@ -39,24 +39,24 @@
 
 <style>
     footer {
-        padding-top: 4rem;
-        padding-bottom: 2rem;
-        text-align: center;
-        width: 92%;
         margin-left: auto;
         margin-right: auto;
+        padding-bottom: 2rem;
+        padding-top: 4rem;
+        text-align: center;
+        width: 92%;
     }
 
     footer > p {
         color: var(--text-muted);
-        margin-bottom: 16px;
         font-size: 0.75rem;
         line-height: 1rem;
+        margin-bottom: 16px;
     }
 
     footer div {
+        column-gap: 16px;
         display: flex;
         justify-content: center;
-        column-gap: 16px;
     }
 </style>

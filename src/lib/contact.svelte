@@ -25,15 +25,14 @@
 
 <style>
     section {
-        margin-bottom: 6rem;
+        margin-bottom: var(--section-margin);
     }
 
     div {
-        font-size: 1.125rem;
-        line-height: 1.75rem;
-        text-align: justify;
-
         color: var(--white);
+        font-size: var(--font-size);
+        line-height: var(--line-height);
+        text-align: justify;
     }
 
     p {

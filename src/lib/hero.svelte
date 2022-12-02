@@ -19,30 +19,30 @@
     }
 
     h1 {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        font-size: 3rem;
-        line-height: 3.25rem;
-        font-weight: 800;
         color: var(--white);
+        font-size: var(--hero-size);
+        font-weight: 800;
+        line-height: 3.25rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
     }
 
     p.subtitle {
-        font-size: 1.125rem;
-        line-height: 1.75rem;
-        margin-bottom: 1.5rem;
-        font-weight: 500;
         color: var(--accent);
+        font-size: var(--font-size);
+        font-weight: 500;
+        line-height: var(--line-height);
+        margin-bottom: 1.5rem;
     }
 
     p {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        font-size: var(--font-size);
-        line-height: var(--line-height);
         color: var(--gray);
-        text-align: justify;
+        font-size: var(--font-size);
         font-weight: 500;
+        line-height: var(--line-height);
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        text-align: justify;
     }
 
     @media (min-width: 640px) {
