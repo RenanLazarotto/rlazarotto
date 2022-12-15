@@ -2,7 +2,7 @@
     import Envelope from "phosphor-svelte/lib/Envelope/Envelope.svelte";
     import GithubLogo from "phosphor-svelte/lib/GithubLogo/GithubLogo.svelte";
     import LinkedinLogo from "phosphor-svelte/lib/LinkedinLogo/LinkedinLogo.svelte";
-    import Link from "./components/link.svelte";
+    import Link from "./link.svelte";
 </script>
 
 <footer>

@@ -22,21 +22,32 @@
     p {
         color: var(--white);
         font-family: var(--font-highlight);
-        font-size: 1.5rem;
+        font-size: 1.75rem;
         font-weight: 500;
         line-height: 2rem;
-        text-align: center;
     }
 
     span {
-        background-color: var(--accent);
         height: 2px;
     }
 
     div span:first-of-type {
         flex: 1;
+        background: rgb(124, 77, 255);
+        background: linear-gradient(
+            90deg,
+            rgba(124, 77, 255, 0) 0%,
+            rgba(124, 77, 255, 1) 100%
+        );
     }
     div span:last-of-type {
-        flex: 5;
+        flex: 1;
+
+        background: rgb(124, 77, 255);
+        background: linear-gradient(
+            90deg,
+            rgba(124, 77, 255, 1) 0%,
+            rgba(124, 77, 255, 0) 100%
+        );
     }
 </style>

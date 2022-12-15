@@ -1,8 +1,8 @@
 <script>
-    import Link from "./components/link.svelte";
+    import Link from "./link.svelte";
     import ArrowSquareOut from "phosphor-svelte/lib/ArrowSquareOut/ArrowSquareOut.svelte";
     import FileCode from "phosphor-svelte/lib/FileCode/FileCode.svelte";
-    import SectionTitle from "./components/section-title.svelte";
+    import SectionTitle from "./section-title.svelte";
 
     export let projects;
 </script>

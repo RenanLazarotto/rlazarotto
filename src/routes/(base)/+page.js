@@ -21,6 +21,44 @@ import Windows from '$lib/icons/windows.svelte';
 
 export function load() {
     return {
+        samePageLinks: [
+            {
+                href: "#about",
+                target: "about",
+                text: "sobre"
+            },
+            {
+                href: "#experiences",
+                target: "experiences",
+                text: "experiências"
+            },
+            {
+                href: "#projects",
+                target: "projects",
+                text: "projetos"
+            },
+            {
+                href: "#skills",
+                target: "skills",
+                text: "habilidades"
+            },
+            {
+                href: "#contact",
+                target: "contact",
+                text: "contato"
+            }
+        ],
+        navLinks: [
+            {
+                href: "/blog",
+                text: "blog"
+            },
+            {
+                href: "/curriculo",
+                target: "_blank",
+                text: "curriculo"
+            }
+        ],
         projects: [
             {
                 year: '2022',

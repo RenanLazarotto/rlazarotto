@@ -1,6 +1,6 @@
 <script>
-    import Link from "./components/link.svelte";
-    import SectionTitle from "./components/section-title.svelte";
+    import Link from "./link.svelte";
+    import SectionTitle from "./section-title.svelte";
 </script>
 
 <section>

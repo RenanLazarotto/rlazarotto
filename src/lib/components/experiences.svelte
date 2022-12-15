@@ -1,6 +1,6 @@
 <script>
-    import Link from "./components/link.svelte";
-    import SectionTitle from "./components/section-title.svelte";
+    import Link from "./link.svelte";
+    import SectionTitle from "./section-title.svelte";
 
     export let jobs = [];
 
@@ -100,7 +100,7 @@
     }
 
     section > div {
-        gap: 0.5rem;
+        gap: 1.5rem;
     }
 
     .jobs {

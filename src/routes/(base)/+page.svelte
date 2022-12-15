@@ -1,38 +1,48 @@
 <script>
-    import Hero from "$lib/hero.svelte";
-    import AboutMe from "$lib/about-me.svelte";
-    import Experiences from "$lib/experiences.svelte";
-    import Projects from "$lib/projects.svelte";
-    import Skills from "$lib/skills.svelte";
-    import Contact from "$lib/contact.svelte";
+    import { onMount } from "svelte";
+    import { url } from "$lib/stores";
+    
+    import Hero from "$lib/components/hero.svelte";
+    import AboutMe from "$lib/components/about-me.svelte";
+    import Experiences from "$lib/components/experiences.svelte";
+    import Projects from "$lib/components/projects.svelte";
+    import Skills from "$lib/components/skills.svelte";
+    import Contact from "$lib/components/contact.svelte";
+    import SEO from "$lib/components/SEO/SEO.svelte";
+    import Header from "$lib/components/header.svelte";
+    import Sidebar from "$lib/components/sidebar.svelte";
 
     export let data;
+
+    onMount(() => {
+        url.set(window.location.href);
+    });
 </script>
 
-<svelte:head>
-    <title>renan.lazarotto</title>
-</svelte:head>
+<SEO
+    pageTitle="Início"
+    description="Página inicial do meu portfolio."
+    url={$url}
+/>
+
+<Header samePageLinks={data.samePageLinks} navLinks={data.navLinks} />
+<Sidebar samePageLinks={data.samePageLinks} navLinks={data.navLinks} />
 
 <div>
     <Hero />
-
     <AboutMe />
-
     <Experiences jobs={data.jobs} />
-
     <Projects projects={data.projects} />
-
     <Skills stack={data.stack} />
-
     <Contact />
 </div>
 
 <style>
     div {
-        padding-top: 10rem;
+        padding-top: 12rem;
         margin-left: auto;
         margin-right: auto;
-        width: 85%;
+        width: 80%;
     }
 
     @media (max-width: 640px) {

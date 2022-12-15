@@ -20,7 +20,7 @@
 }
 
 :root {
-    --font-base:  "Mona Sans", sans-serif;
+    --font-base: "Mona Sans", sans-serif;
     --font-highlight: "Hubot Sans", sans-serif;
 
     --font-size: 1.1rem;
@@ -30,6 +30,7 @@
 
     --primary: #673AB7;
     --accent: #7C4DFF;
+    --shadow: #4527A0;
 
     --white: #EEEEEE;
     --gray: #9E9E9E;
@@ -39,10 +40,10 @@
     --background-hover: #212121;
     --background-hover-transparent: rgba(33, 33, 33, 0.749);
 
-    --link: #673AB7;
-    --link-muted: #9E9E9E;
-    --link-hover: #7C4DFF;
-    --link-shadow: 0 0 8px #4527A0;
+    --link: var(--primary);
+    --link-muted: var(--gray);
+    --link-hover: var(--accent);
+    --link-shadow: 0 0 8px var(--shadow);
 
     --section-margin: 8rem;
 }
@@ -70,6 +71,10 @@ button {
     border: 0;
     background-color: inherit;
     color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
 }
 
 ul {

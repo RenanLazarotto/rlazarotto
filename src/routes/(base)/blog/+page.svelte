@@ -1,0 +1,112 @@
+<script>
+    import { onMount } from "svelte";
+    import { url } from "$lib/stores";
+    import SEO from "$lib/components/SEO/SEO.svelte";
+    import Header from "$lib/components/header.svelte";
+    import Sidebar from "$lib/components/sidebar.svelte";
+
+    export let data;
+
+    onMount(() => {
+        url.set(window.location.href);
+    });
+</script>
+
+<SEO pageTitle="Blog" description="Postagens do meu blog." url={$url} />
+<Header samePageLinks={data.samePageLinks} navLinks={data.navLinks} />
+<Sidebar samePageLinks={data.samePageLinks} navLinks={data.navLinks} />
+
+<section>
+    <h1>Últimas postagens</h1>
+
+    <div class="posts">
+        {#each data.posts as post}
+            <a href={`/blog/post/${post.slug}`}>
+                <div class="post">
+                    <img src={post.image} alt="Imagem de destaque do post" />
+                    <div class="heading">
+                        <h2>{post.title}</h2>
+                        <span
+                            >{post.date.toLocaleString("pt-BR", {
+                                dateStyle: "short",
+                                timeStyle: "short",
+                            })}</span
+                        >
+                    </div>
+                    <div class="content">
+                        {post.resume}
+                    </div>
+                </div>
+            </a>
+        {/each}
+    </div>
+</section>
+
+<style>
+    section {
+        padding-top: 5rem;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+
+    h1 {
+        color: var(--white);
+        text-align: center;
+    }
+
+    .posts {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .posts .post {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.75rem;
+    }
+
+    .post img {
+        border-radius: 0.4rem;
+    }
+
+    .post .heading h2 {
+        color: var(--primary);
+        font-size: 1.2rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    .post .heading h2:hover {
+        color: var(--accent);
+    }
+
+    .post .heading span {
+        display: inline-block;
+        color: var(--gray);
+        font-size: 0.75rem;
+        text-align: center;
+    }
+
+    .post .content {
+        color: var(--white);
+    }
+
+    @media (max-width: 640px) {
+        section {
+            max-width: 800px;
+        }
+
+        .posts {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+    }
+
+    @media (min-width: 640px) and (max-width: 1024px) {
+        .posts {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+</style>

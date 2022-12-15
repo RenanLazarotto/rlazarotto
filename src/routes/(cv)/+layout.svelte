@@ -1,6 +1,7 @@
 <script>
   import "../../app.css";
-  import Footer from "$lib/footer.svelte";
+  import "../../../node_modules/normalize.css/normalize.css";  
+  import Footer from "$lib/components/footer.svelte";
 </script>
 
 <slot />

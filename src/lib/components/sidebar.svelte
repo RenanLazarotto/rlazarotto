@@ -2,6 +2,9 @@
     import { sidebar } from "$lib/stores";
     import X from "phosphor-svelte/lib/X/X.svelte";
 
+    export let samePageLinks = [];
+    export let navLinks = [];
+
     $: isOpen = $sidebar;
 
     const onClick = (e) => {
@@ -29,20 +32,17 @@
         <button on:click={toggleSidebar}><X weight="duotone" /></button>
     </div>
     <div class="links">
-        <a href="#about" on:click={onClick} data-target="about"> sobre </a>
-        <a href="#experiences" on:click={onClick} data-target="experiences">
-            experiências
-        </a>
-        <a href="#projects" on:click={onClick} data-target="projects">
-            projetos
-        </a>
-        <a href="#skills" on:click={onClick} data-target="skills">
-            habilidades
-        </a>
-        <a href="#contact" on:click={onClick} data-target="contact">
-            contato
-        </a>
-        <a href="/curriculo" target="_blank"> currículo </a>
+        {#each samePageLinks as link}
+            <a href={link.href} on:click={onClick} data-target={link.target}>
+                {link.text}
+            </a>
+        {/each}
+
+        {#each navLinks as link}
+            <a href={link.href} target={link.target ?? "_self"}>
+                {link.text}
+            </a>
+        {/each}
     </div>
 </nav>
 
