@@ -2,6 +2,7 @@
     import { onMount } from "svelte";
     import { url } from "$lib/stores";
 
+    import Base from "$lib/layouts/base.svelte";
     import SEO from "$lib/components/SEO/SEO.svelte";
     import Header from "$lib/components/header.svelte";
     import Sidebar from "$lib/components/sidebar.svelte";
@@ -9,53 +10,54 @@
     import "normalize.css";
 
     export let data;
-    
+
     onMount(() => {
         url.set(window.location.href);
     });
 </script>
 
-<SEO pageTitle={data.title} description={data.title} url={$url} />
-<Header samePageLinks={data.samePageLinks} navLinks={data.navLinks} />
-<Sidebar samePageLinks={data.samePageLinks} navLinks={data.navLinks} />
-
-<section>
-    <h1>{data.title}</h1>
-
-    <p>{data.date.toLocaleString("pt-BR", {
-        dateStyle: "short",
-        timeStyle: "short"
-    })}
-    </p>
-
-    <div class="post">
-        <svelte:component this={data.body} />
+<Base>
+    <div slot="header" class="header">
+        <SEO pageTitle={data.title} description={data.title} url={$url} />
+        <Header samePageLinks={data.samePageLinks} navLinks={data.navLinks} />
     </div>
-</section>
+    <div slot="main" class="main">
+        <Sidebar samePageLinks={data.samePageLinks} navLinks={data.navLinks} />
+        <h1>{data.title}</h1>
+
+        <p>
+            {data.date.toLocaleString("pt-BR", {
+                dateStyle: "short",
+                timeStyle: "short",
+            })}
+        </p>
+
+        <div class="post">
+            <svelte:component this={data.body} />
+        </div>
+    </div>
+</Base>
 
 <style>
-    * {
+    div.header {
+        padding-top: 5rem;
+    }
+
+    .main * {
         color: var(--white);
     }
 
-    section {
-        padding-top: 6rem;
-        margin-left: auto;
-        margin-right: auto;
-        width: 85%;
-    }
-
-    section h1 {
+    .main h1 {
         margin-top: 1rem;
         margin-bottom: 0.2rem;
     }
 
-    section p {
+    .main p {
         color: var(--gray);
         padding-bottom: 1rem;
     }
 
-    .post {
+    .main .post {
         display: flex;
         flex-direction: column;
         text-align: justify;
@@ -73,7 +75,7 @@
     .post :global(h6) {
         padding-top: 1rem;
         padding-bottom: 0.2rem;
-    } 
+    }
 
     .post :global(img) {
         display: block;

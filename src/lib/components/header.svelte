@@ -200,11 +200,12 @@
         display: flex;
         font-size: 1.5rem;
         transition: all ease-in-out 300ms;
+        padding: 0.5rem;
     }
 
     nav button:hover {
         background-color: var(--background-hover);
-        border-radius: 4px;
+        border-radius: var(--border-radius);
         color: var(--primary);
     }
 

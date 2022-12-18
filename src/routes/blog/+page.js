@@ -1,5 +1,5 @@
 export async function load() {
-	const postsFiles = import.meta.glob('../../../posts/*.md');
+	const postsFiles = import.meta.glob('../../posts/*.md');
 
 	let posts = await Promise.all(
 		Object.keys(postsFiles).map(async (path) => {

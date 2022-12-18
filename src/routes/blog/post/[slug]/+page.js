@@ -3,15 +3,24 @@ import { error } from '@sveltejs/kit';
 export async function load({ params }) {
     const { slug } = params;
 
-    const post = import(`../../../../../posts/${slug}.md`);
-    const postResult = await post;
+    let post;
 
-    let { default: body, metadata } = postResult;
-
-    if(metadata.draft) {
+    try {
+        post = await import(`../../../../posts/${slug}.md`);
+    } catch (e) {
         throw error(404, {
-            title: '404',
-            message: 'Publicação não encontrada!',
+            title: '404 - Publicação não encontrada',
+            message: 'Ops! Essa publicação não existe!',
+            description: 'Página de erro de publicação não encontrada'
+        });
+    }
+
+    let { default: body, metadata } = post;
+
+    if (metadata.draft) {
+        throw error(404, {
+            title: '404 - Publicação não encontrada',
+            message: 'Ops! Essa publicação não existe!',
             description: 'Página de erro de publicação não encontrada'
         });
     }

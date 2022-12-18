@@ -1,7 +1,9 @@
 <script>
     import { onMount } from "svelte";
     import { url } from "$lib/stores";
-    
+
+    import Base from "$lib/layouts/base.svelte";
+
     import Hero from "$lib/components/hero.svelte";
     import AboutMe from "$lib/components/about-me.svelte";
     import Experiences from "$lib/components/experiences.svelte";
@@ -19,35 +21,30 @@
     });
 </script>
 
-<SEO
-    pageTitle="Início"
-    description="Página inicial do meu portfolio."
-    url={$url}
-/>
+<Base>
+    <div slot="header">
+        <SEO
+            pageTitle="Início"
+            description="Página inicial do meu portfolio."
+            url={$url}
+        />
 
-<Header samePageLinks={data.samePageLinks} navLinks={data.navLinks} />
-<Sidebar samePageLinks={data.samePageLinks} navLinks={data.navLinks} />
+        <Header samePageLinks={data.samePageLinks} navLinks={data.navLinks} />
+    </div>
+    <div slot="main" class="main">
+        <Sidebar samePageLinks={data.samePageLinks} navLinks={data.navLinks} />
 
-<div>
-    <Hero />
-    <AboutMe />
-    <Experiences jobs={data.jobs} />
-    <Projects projects={data.projects} />
-    <Skills stack={data.stack} />
-    <Contact />
-</div>
+        <Hero />
+        <AboutMe />
+        <Experiences jobs={data.jobs} />
+        <Projects projects={data.projects} />
+        <Skills stack={data.stack} />
+        <Contact />
+    </div>
+</Base>
 
 <style>
-    div {
-        padding-top: 12rem;
-        margin-left: auto;
-        margin-right: auto;
-        width: 80%;
-    }
-
-    @media (max-width: 640px) {
-        div {
-            max-width: 800px;
-        }
+    .main {
+        padding-top: 10rem;
     }
 </style>

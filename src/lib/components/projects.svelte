@@ -122,15 +122,15 @@
     }
 
     tbody tr td:first-child {
-        border-radius: 10px 0 0 10px;
+        border-radius: var(--border-radius) 0 0 var(--border-radius);
     }
 
     tbody tr td:last-child {
-        border-radius: 0 10px 10px 0;
+        border-radius: 0 var(--border-radius) var(--border-radius) 0;
     }
 
     td.title {
-        border-radius: 10px 0 0 10px;
+        border-radius: var(--border-radius) 0 0 var(--border-radius);
     }
 
     td.title p {

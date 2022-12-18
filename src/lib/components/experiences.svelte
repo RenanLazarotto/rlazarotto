@@ -115,7 +115,7 @@
     }
 
     .jobs li button {
-        border-radius: 4px;
+        border-radius: var(--border-radius);
         color: var(--gray);
         font-weight: 600;
         margin-bottom: 0.25rem;

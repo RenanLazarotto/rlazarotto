@@ -42,7 +42,7 @@
         margin-left: auto;
         margin-right: auto;
         padding-bottom: 2rem;
-        padding-top: 4rem;
+        padding-top: 2rem;
         text-align: center;
         width: 92%;
     }
