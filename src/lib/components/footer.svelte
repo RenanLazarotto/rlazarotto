@@ -17,7 +17,7 @@
             target="_blank"
             muted={true}
         >
-            <GithubLogo weight="duotone" width="32" height="32" />
+            <GithubLogo weight="duotone" width="24" height="24" />
         </Link>
 
         <Link
@@ -25,33 +25,40 @@
             target="_blank"
             muted={true}
         >
-            <LinkedinLogo weight="duotone" width="32" height="32" />
+            <LinkedinLogo weight="duotone" width="24" height="24" />
         </Link>
 
         <Link
             href="mailto:renanlazarotto@gmail.com?subject=Contato via site"
             muted={true}
         >
-            <Envelope weight="duotone" width="32" height="32" />
+            <Envelope weight="duotone" width="24" height="24" />
         </Link>
     </div>
+    <p>
+        <Link href="/about" muted={true}>Sobre o site</Link>
+    </p>
 </footer>
 
 <style>
     footer {
         margin-left: auto;
         margin-right: auto;
-        padding-bottom: 2rem;
-        padding-top: 2rem;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
         text-align: center;
         width: 92%;
     }
 
-    footer > p {
+    footer p {
         color: var(--text-muted);
         font-size: 0.75rem;
         line-height: 1rem;
-        margin-bottom: 16px;
+        margin-bottom: 0.5rem;
+    }
+
+    footer p:last-of-type {
+        margin-top: 0.5rem;
     }
 
     footer div {

@@ -6,7 +6,7 @@ export async function load({ params }) {
     let post;
 
     try {
-        post = await import(`../../../../posts/${slug}.md`);
+        post = await import(`../../../posts/${slug}.md`);
     } catch (e) {
         throw error(404, {
             title: '404 - Publicação não encontrada',

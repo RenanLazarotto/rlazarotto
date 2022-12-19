@@ -19,7 +19,6 @@ export async function load() {
 	posts.sort((a, b) => b.date - a.date);
 
 	return {
-		samePageLinks: [],
 		navLinks: [
 			{
 				href: "/",

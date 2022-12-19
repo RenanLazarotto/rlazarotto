@@ -17,14 +17,14 @@
 <Base>
     <div slot="header">
         <SEO pageTitle="Blog" description="Postagens do meu blog." url={$url} />
-        <Header samePageLinks={data.samePageLinks} navLinks={data.navLinks} />
+        <Header navLinks={data.navLinks} />
     </div>
     <div slot="main" class="main">
-        <Sidebar samePageLinks={data.samePageLinks} navLinks={data.navLinks} />
+        <Sidebar navLinks={data.navLinks} />
         <h1>Últimas postagens</h1>
         <div class="posts">
             {#each data.posts as post}
-                <a href={`/blog/post/${post.slug}`}>
+                <a href={`/blog/${post.slug}`}>
                     <div class="post">
                         <img
                             src={post.image}

@@ -25,7 +25,7 @@
         <Sidebar samePageLinks={data.samePageLinks} navLinks={data.navLinks} />
         <h1>{data.title}</h1>
 
-        <p>
+        <p> Publicado em 
             {data.date.toLocaleString("pt-BR", {
                 dateStyle: "short",
                 timeStyle: "short",
@@ -55,6 +55,7 @@
     .main p {
         color: var(--gray);
         padding-bottom: 1rem;
+        font-size: 0.8rem;
     }
 
     .main .post {
@@ -64,7 +65,7 @@
     }
 
     .post :global(p) {
-        margin-bottom: 1rem;
+        margin-bottom: 0.8rem;
     }
 
     .post :global(h1),

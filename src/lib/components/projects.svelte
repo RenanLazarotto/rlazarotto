@@ -69,7 +69,7 @@
                                 muted={true}
                             >
                             <span class="inline">
-                                <FileCode /> Repositório
+                                <FileCode weight="duotone" /> Repositório
                             </span>
                             </Link>
                         {/if}
