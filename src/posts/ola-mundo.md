@@ -8,7 +8,7 @@ draft: false
 ---
 
 <script>
-    import Img from '$lib/components/blog/Img.svelte';
+    import Img from '$lib/components/blog/img.svelte';
 </script>
 
 ## Olá, internet!
