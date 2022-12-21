@@ -1,6 +1,5 @@
 <script>
-    import { onMount } from "svelte";
-    import { url } from "$lib/stores";
+    import { page } from "$app/stores";
 
     import Base from "$lib/layouts/base.svelte";
 
@@ -16,9 +15,7 @@
 
     export let data;
 
-    onMount(() => {
-        url.set(window.location.href);
-    });
+    let url = $page.url.href;
 </script>
 
 <Base>
@@ -26,7 +23,7 @@
         <SEO
             pageTitle="Início"
             description="Página inicial do meu portfolio."
-            url={$url}
+            {url}
         />
 
         <Header samePageLinks={data.samePageLinks} navLinks={data.navLinks} />
