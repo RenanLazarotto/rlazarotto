@@ -1,32 +1,31 @@
 <script>
-    export let pathname;
-    export let article;
-    export let pageTitle;
-    export let description;
-    export let imgUrl;
-    export let imgAlt;
-    export let imgWidth;
-    export let imgHeight;
-    export let fbAuthor;
-    export let fbPage;
-    export let datePublished;
-    export let lastUpdated;
+    export let data;
 </script>
 
-<!-- OpenGraph -->
-<meta property="og:site_name" content="renan.lazarotto" />
-<meta property="og:locale" content="pt_BR" />
-<meta property="og:url" content={pathname} />
-<meta property="og:type" content={article ? "article" : "website"} />
-<meta property="og:title" content={pageTitle} />
-<meta property="og:description" content={description} />
-<meta property="og:image" content={imgUrl} />
-<meta property="og:image:width" content={imgWidth} />
-<meta property="og:image:height" content={imgHeight} />
-<meta property="og:image:alt" content={imgAlt} />
-{#if article}
-    <meta property="article:publisher" content={fbPage} />
-    <meta property="article:author" content={fbAuthor} />
-    <meta property="article:published_time" content={datePublished} />
-    <meta property="article:modified_time" content={lastUpdated} />
-{/if}
+<svelte:head>
+    <!-- OpenGraph -->
+    <meta property="og:site_name" content="renan.lazarotto" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:url" content={data.url} />
+    <meta property="og:type" content={data.article ? "article" : "website"} />
+    <meta property="og:title" content={data.pageTitle} />
+    <meta property="og:description" content={data.description} />
+    {#if data.imgUrl}
+        <meta property="og:image" content={data.imgUrl} />
+    {/if}
+    {#if data.imgWidth}
+        <meta property="og:image:width" content={data.imgWidth} />
+    {/if}
+    {#if data.imgHeight}
+        <meta property="og:image:height" content={data.imgHeight} />
+    {/if}
+    {#if data.imgAlt}
+        <meta property="og:image:alt" content={data.imgAlt} />
+    {/if}
+    {#if data.article}
+        <meta property="article:publisher" content={data.publisher} />
+        <meta property="article:author" content={data.author} />
+        <meta property="article:published_time" content={data.datePublished} />
+        <meta property="article:modified_time" content={data.lastUpdated} />
+    {/if}
+</svelte:head>

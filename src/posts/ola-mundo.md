@@ -1,6 +1,7 @@
 ---
-title: Olá, mundo!
-date: 2022-12-06 09:00:00 -03
+title: "Olá, mundo!"
+published: 2022-12-06 09:00:00 -03
+updated: 2022-12-21 16:16:00 -03
 resume: "Iniciando o blog com o tradicional 'Olá, mundo'"
 image: "/assets/images/ola-mundo/hero.png"
 slug: "ola-mundo"

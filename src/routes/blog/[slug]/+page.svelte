@@ -8,6 +8,7 @@
     import Sidebar from "$lib/components/sidebar.svelte";
 
     import "normalize.css";
+    import Img from "$lib/components/blog/img.svelte";
 
     export let data;
 
@@ -18,18 +19,46 @@
 
 <Base>
     <div slot="header" class="header">
-        <SEO pageTitle={data.title} description={data.title} url={$url} />
+        <SEO
+            description={data.resume}
+            pageTitle={data.title}
+            url={$url}
+            article={true}
+            datePublished={data.published.toLocaleString("pt-BR", {
+                dateStyle: "short",
+                timeStyle: "short",
+            })}
+            lastUpdated={data.updated.toLocaleString("pt-BR", {
+                dateStyle: "short",
+                timeStyle: "short",
+            })}
+            imgUrl={data.image}
+            imgAlt={data.title}
+            imgWidth=900
+            imgHeight=500
+        />
         <Header samePageLinks={data.samePageLinks} navLinks={data.navLinks} />
     </div>
     <div slot="main" class="main">
         <Sidebar samePageLinks={data.samePageLinks} navLinks={data.navLinks} />
+        
+        <Img src={data.image} alt={data.title} rounded={true} />
+        
         <h1>{data.title}</h1>
 
-        <p> Publicado em 
-            {data.date.toLocaleString("pt-BR", {
+        <p>
+            Publicado em
+            {data.published.toLocaleString("pt-BR", {
                 dateStyle: "short",
                 timeStyle: "short",
             })}
+            {#if data.updated != ""}
+                - Atualizado em
+                {data.updated.toLocaleString("pt-BR", {
+                    dateStyle: "short",
+                    timeStyle: "short",
+                })}
+            {/if}
         </p>
 
         <div class="post">

@@ -25,9 +25,15 @@ export async function load({ params }) {
         });
     }
 
-    let date = new Date(metadata.date);
+    let publishedDate = new Date(metadata.published);
+    let updatedDate = "";
 
-    metadata.date = date;
+    if(metadata.updated != false) {
+        updatedDate = new Date(metadata.updated)
+    }
+
+    metadata.published = publishedDate;
+    metadata.updated = updatedDate;
 
     if (!body) {
         return {

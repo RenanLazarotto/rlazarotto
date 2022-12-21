@@ -2,10 +2,11 @@
     export let src;
     export let alt;
     export let legend = "";
+    export let rounded = false;
 </script>
 
 <div>
-    <img {src} {alt} loading="lazy" title={alt} />
+    <img {src} {alt} loading="lazy" title={alt} class:rounded />
     {#if legend != ""}
         <p>{legend}</p>
     {/if}
@@ -19,6 +20,10 @@
         display: block;
         max-width: 100%;
         margin: 0 auto 0.5rem;
+    }
+
+    img.rounded {
+        border-radius: var(--border-radius);
     }
 
     p {

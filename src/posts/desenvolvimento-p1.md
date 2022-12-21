@@ -1,6 +1,7 @@
 ---
 title: Desenvolvendo o site - parte 1
-date: 2022-12-21 10:26:00 -03
+published: 2022-12-21 10:26:00 -03
+updated: false
 resume: "O processo de desenvolvimento de um site, em detalhes"
 image: "/assets/images/desenvolvimento/hero.png"
 slug: "desenvolvimento-p1"
@@ -52,7 +53,7 @@ Em pouco tempo, eu já tinha migrado a maior parte do que já estava feito em Re
 
 Pelas condições/repetições terem suas declarações separadas das tags HTML, elas são muito mais legíveis. Outro ponto que foi uma vantagem do Svelte em relação ao React são como as rotas são gerenciadas.
 
-No React, é necessário usar o <Link href="https://reactrouter.com/en/main">react-router</Link> para ter rotas, equanto no Svelte ele segue a estrutura de pastas:
+No React, é necessário usar o <Link href="https://reactrouter.com/en/main" target="_blank">react-router</Link> para ter rotas, equanto no Svelte ele segue a estrutura de pastas:
 
 <Img src="/assets/images/desenvolvimento/rotas-svelte.png" legend="Rotas do Svelte baseadas na estrutura de pastas." atl="Rotas do Svelte baseadas na estrutura de pastas" />
 
