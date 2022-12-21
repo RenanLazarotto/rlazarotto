@@ -1,6 +1,5 @@
 <script>
-    import { onMount } from "svelte";
-    import { url } from "$lib/stores";
+    import { page } from "$app/stores";
 
     import Base from "$lib/layouts/base.svelte";
     import SEO from "$lib/components/SEO/SEO.svelte";
@@ -9,14 +8,12 @@
 
     export let data;
 
-    onMount(() => {
-        url.set(window.location.href);
-    });
+    let url = $page.url.href;
 </script>
 
 <Base>
     <div slot="header">
-        <SEO pageTitle="Blog" description="Postagens do meu blog." url={$url} />
+        <SEO pageTitle="Blog" description="Postagens do meu blog." {url} />
         <Header navLinks={data.navLinks} />
     </div>
     <div slot="main" class="main">

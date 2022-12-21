@@ -3,17 +3,12 @@
     import "../app.css";
 
     import { page } from "$app/stores";
-    import { onMount } from "svelte";
-    import { url } from "$lib/stores";
 
     import SEO from "$lib/components/SEO/SEO.svelte";
+    import Base from "$lib/layouts/base.svelte";
     import Header from "$lib/components/header.svelte";
     import Sidebar from "$lib/components/sidebar.svelte";
-    import Footer from "$lib/components/footer.svelte";
-
-    onMount(() => {
-        url.set(window.location.href);
-    });
+    import Img from "$lib/components/blog/img.svelte";
 
     let navLinks = [
         {
@@ -25,40 +20,38 @@
             text: "blog",
         },
     ];
+
+    let url = $page.url.href;
 </script>
 
-<SEO
-    pageTitle={$page.error.title}
-    description={$page.error.description}
-    url={$url}
-/>
-
-<div class="container">
-    <div class="header">
+<Base>
+    <div slot="header">
+        <SEO
+            pageTitle={$page.error.title ?? "404 - Página não encontrada"}
+            description={$page.error.description ?? "Página não encontrada"}
+            {url}
+        />
         <Header {navLinks} />
     </div>
-    <main>
+    <div slot="main" class="main">
         <Sidebar {navLinks} />
         <div>
-            <h1>{$page.error.message}</h1>
+            <Img
+                src="/assets/images/errors/404.png"
+                alt="404 - Não encontrado"
+            />
+            <h1>{$page.error.message ?? "Ops! Parece que essa página não existe."}</h1>
 
             <nav>
                 <a href="/" alt="Voltar ao início">início</a>
                 <a href="/blog" alt="Voltar ao blog">blog</a>
             </nav>
         </div>
-    </main>
-    <Footer />
-</div>
+    </div>
+</Base>
 
 <style>
-    div.container {
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-        width: 100vw;
-    }
-    div main {
+    .main {
         padding-top: 4rem;
         flex-grow: 1;
         display: flex;
@@ -69,25 +62,25 @@
         margin: auto;
     }
 
-    main h1 {
+    .main h1 {
         color: var(--white);
         text-align: center;
         margin-bottom: 2rem;
     }
 
-    main nav {
+    .main nav {
         display: flex;
         justify-content: center;
         gap: 1rem;
     }
 
-    main nav a {
+    .main nav a {
         padding: 1rem 2rem;
         border-radius: var(--border-radius);
         transition: all ease-in-out 300ms;
     }
 
-    main nav a:hover {
+    .main nav a:hover {
         background-color: var(--background-hover);
     }
 </style>

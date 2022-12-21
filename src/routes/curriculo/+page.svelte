@@ -1,12 +1,23 @@
 <script>
+  import { page } from "$app/stores";
+
   import Link from "$lib/components/link.svelte";
+  import SEO from "$lib/components/SEO/SEO.svelte";
 
   export let data;
+
+  let url = $page.url.href;
 </script>
 
-<svelte:head>
-  <title>renan.lazarotto | currículo</title>
-</svelte:head>
+<SEO
+  pageTitle="Currículo"
+  description="Página com meu currículo profissional."
+  {url}
+  imgUrl="/assets/images/curriculo/hero.png"
+  imgAlt="Imagem representativa de uma pessoa analizando um perfil."
+  imgWidth="900"
+  imgHeight="500"
+/>
 
 <div class="container">
   <!-- Informações básicas -->
@@ -41,7 +52,7 @@
           <div class="job">
             <p>
               {job.title} -
-              <Link href={job.companyUrl}> {job.company}</Link>
+              <Link href={job.companyUrl}>{job.company}</Link>
             </p>
             <div>
               {job.startDate.toLocaleString("pt-BR", {

@@ -1,6 +1,5 @@
 <script>
 	import { config } from "$lib/config";
-    import Img from "../blog/img.svelte";
     import OpenGraph from "./OpenGraph.svelte";
 
 	export let description;

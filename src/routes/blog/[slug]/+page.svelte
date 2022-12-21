@@ -1,20 +1,15 @@
 <script>
-    import { onMount } from "svelte";
-    import { url } from "$lib/stores";
+    import { page } from "$app/stores";
 
     import Base from "$lib/layouts/base.svelte";
     import SEO from "$lib/components/SEO/SEO.svelte";
     import Header from "$lib/components/header.svelte";
     import Sidebar from "$lib/components/sidebar.svelte";
-
-    import "normalize.css";
     import Img from "$lib/components/blog/img.svelte";
 
     export let data;
 
-    onMount(() => {
-        url.set(window.location.href);
-    });
+    let url = $page.url.href;
 </script>
 
 <Base>
@@ -22,7 +17,7 @@
         <SEO
             description={data.resume}
             pageTitle={data.title}
-            url={$url}
+            {url}
             article={true}
             datePublished={data.published.toLocaleString("pt-BR", {
                 dateStyle: "short",
@@ -34,16 +29,16 @@
             })}
             imgUrl={data.image}
             imgAlt={data.title}
-            imgWidth=900
-            imgHeight=500
+            imgWidth="900"
+            imgHeight="500"
         />
         <Header samePageLinks={data.samePageLinks} navLinks={data.navLinks} />
     </div>
     <div slot="main" class="main">
         <Sidebar samePageLinks={data.samePageLinks} navLinks={data.navLinks} />
-        
+
         <Img src={data.image} alt={data.title} rounded={true} />
-        
+
         <h1>{data.title}</h1>
 
         <p>
