@@ -41,10 +41,10 @@ export function load() {
                 link: 'https://mdsvex.pngwn.io'
             },
             {
-                name: 'BGJar',
-                license: 'CC BY 4.0',
-                usedOn: 'Imagem de post genérica usada no post \'Olá, mundo\'!',
-                link: 'https://bgjar.com'
+                name: 'ManyPixels',
+                license: 'ManyPixels',
+                usedOn: 'Ilustrações utilizadas nas imagens dos posts',
+                link: 'https://www.manypixels.co/'
             }
         ]
     };

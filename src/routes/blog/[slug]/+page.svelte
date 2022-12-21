@@ -77,9 +77,4 @@
         padding-top: 1rem;
         padding-bottom: 0.2rem;
     }
-
-    .post :global(img) {
-        display: block;
-        margin: auto;
-    }
 </style>
