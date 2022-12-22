@@ -1,7 +1,7 @@
 <script>
     import { page } from "$app/stores";
 
-    import Base from "$lib/layouts/base.svelte";
+    import BaseLayout from "$lib/layouts/baselayout.svelte";
 
     import Hero from "$lib/components/hero.svelte";
     import AboutMe from "$lib/components/about-me.svelte";
@@ -18,12 +18,16 @@
     let url = $page.url.href;
 </script>
 
-<Base>
+<BaseLayout>
     <div slot="header">
         <SEO
             pageTitle="Início"
             description="Página inicial do meu portfolio."
             {url}
+            imgUrl="/assets/images/pages/home.png"
+            imgAlt="Imagem com formas poligonais e o texto renan.lazarotto no canto superior direito."
+            imgWidth="900"
+            imgHeight="500"
         />
 
         <Header samePageLinks={data.samePageLinks} navLinks={data.navLinks} />
@@ -38,7 +42,7 @@
         <Skills stack={data.stack} />
         <Contact />
     </div>
-</Base>
+</BaseLayout>
 
 <style>
     .main {

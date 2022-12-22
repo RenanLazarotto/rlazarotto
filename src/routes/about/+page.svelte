@@ -1,8 +1,7 @@
 <script>
-    import { onMount } from "svelte";
-    import { url } from "$lib/stores";
+    import { page } from "$app/stores";
 
-    import Base from "$lib/layouts/base.svelte";
+    import BaseLayout from "$lib/layouts/baselayout.svelte";
     import SEO from "$lib/components/SEO/SEO.svelte";
     import Header from "$lib/components/header.svelte";
     import Sidebar from "$lib/components/sidebar.svelte";
@@ -11,17 +10,19 @@
 
     export let data;
 
-    onMount(() => {
-        url.set(window.location.href);
-    });
+    let url = $page.url.href;
 </script>
 
-<Base>
+<BaseLayout>
     <div slot="header">
         <SEO
             pageTitle="Sobre o site"
             description="Página com informações a respeito do site e das ferramentas usadas para criá-lo."
-            url={$url}
+            {url}
+            imgUrl="/assets/images/pages/sobre.png"
+            imgAlt="Imagem representativa de um código-fonte de uma página."
+            imgWidth="900"
+            imgHeight="500"
         />
 
         <Header navLinks={data.navLinks} />
@@ -39,9 +40,7 @@
             precisaria ser feita do zero - e provavelmente eu ainda estaria no
             começo de tudo 😅
         </p>
-        <p>
-            Esses são os projetos que tornaram esse site possível:
-        </p>
+        <p>Esses são os projetos que tornaram esse site possível:</p>
 
         <table>
             <thead>
@@ -53,22 +52,23 @@
             </thead>
             <tbody>
                 {#each data.libraries as library}
-                <tr>
-                    <td class="inline">
-                        <Link href={library.link} target="_blank">
-                            <span class="inline">
-                                {library.name} <ArrowSquareOut weight="duotone" />
-                            </span>
-                        </Link>
-                    </td>
-                    <td>{library.license}</td>
-                    <td>{library.usedOn}</td>
-                </tr>
+                    <tr>
+                        <td class="inline">
+                            <Link href={library.link} target="_blank">
+                                <span class="inline">
+                                    {library.name}
+                                    <ArrowSquareOut weight="duotone" />
+                                </span>
+                            </Link>
+                        </td>
+                        <td>{library.license}</td>
+                        <td>{library.usedOn}</td>
+                    </tr>
                 {/each}
             </tbody>
         </table>
     </div>
-</Base>
+</BaseLayout>
 
 <style>
     .main {
@@ -93,7 +93,7 @@
         margin-bottom: 1rem;
     }
 
-    thead tr {  
+    thead tr {
         color: var(--gray);
         font-weight: 700;
     }

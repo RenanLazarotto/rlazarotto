@@ -3,6 +3,7 @@
 
   import Link from "$lib/components/link.svelte";
   import SEO from "$lib/components/SEO/SEO.svelte";
+  import CvLayout from "$lib/layouts/cvlayout.svelte";
 
   export let data;
 
@@ -13,121 +14,117 @@
   pageTitle="Currículo"
   description="Página com meu currículo profissional."
   {url}
-  imgUrl="/assets/images/curriculo/hero.png"
+  imgUrl="/assets/images/pages/curriculo.png"
   imgAlt="Imagem representativa de uma pessoa analizando um perfil."
   imgWidth="900"
   imgHeight="500"
 />
 
-<div class="container">
-  <!-- Informações básicas -->
-  <section>
-    <h1>Renan Lazarotto</h1>
+<CvLayout>
+  <div slot="top">
+    <!-- Informações básicas -->
+    <section>
+      <h1>Renan Lazarotto</h1>
 
-    <div class="contact">
-      <Link href="mailto:renanlazarotto@gmail.com">
-        renanlazarotto@gmail.com
-      </Link>
-      <Link href="tel:41998156063">+55 (41) 99815-6063</Link>
-      <Link href="https://rlazarotto.pages.dev">
-        https://rlazarotto.pages.dev
-      </Link>
-    </div>
-  </section>
+      <div class="contact">
+        <Link href="mailto:renanlazarotto@gmail.com">
+          renanlazarotto@gmail.com
+        </Link>
+        <Link href="tel:41998156063">+55 (41) 99815-6063</Link>
+        <Link href="https://rlazarotto.pages.dev">
+          https://rlazarotto.pages.dev
+        </Link>
+      </div>
+    </section>
 
-  <!-- Resumo -->
-  <section class="resume">
-    Programador PHP com experiência em desenvolvimento de aplicações Web, APIs e
-    DevOps. Também sou técnico de suporte com vivência em atendimento ao usuário
-    <i>in loco</i> e remotamente.
-  </section>
+    <!-- Resumo -->
+    <section class="resume">
+      Programador PHP com experiência em desenvolvimento de aplicações Web, APIs
+      e DevOps. Também sou técnico de suporte com vivência em atendimento ao
+      usuário
+      <i>in loco</i> e remotamente.
+    </section>
+  </div>
 
-  <div class="wrapper">
-    <div class="experiences">
-      <!-- Experiências -->
-      <section>
-        <h2>Experiências</h2>
+  <div slot="left">
+    <!-- Experiências -->
+    <section>
+      <h2>Experiências</h2>
 
-        {#each data.jobs as job, i}
-          <div class="job">
-            <p>
-              {job.title} -
-              <Link href={job.companyUrl}>{job.company}</Link>
-            </p>
-            <div>
-              {job.startDate.toLocaleString("pt-BR", {
-                month: "long",
-                year: "numeric",
-              })} - {job.endDate.toLocaleString("pt-BR", {
-                month: "long",
-                year: "numeric",
-              })}
-              |
-              {job.location}
-            </div>
-            <ul>
-              {#each job.description as li, i}
-                <li>
-                  {li}
-                </li>
-              {/each}
-            </ul>
+      {#each data.jobs as job, i}
+        <div class="job">
+          <p>
+            {job.title} -
+            <Link href={job.companyUrl}>{job.company}</Link>
+          </p>
+          <div>
+            {job.startDate.toLocaleString("pt-BR", {
+              month: "long",
+              year: "numeric",
+            })} - {job.endDate.toLocaleString("pt-BR", {
+              month: "long",
+              year: "numeric",
+            })}
+            |
+            {job.location}
           </div>
-        {/each}
-      </section>
-    </div>
-    <div class="knowledge">
-      <!-- Tecnologias -->
-      <section class="stack">
-        <h2>Tecnologias</h2>
-
-        {#each Object.entries(data.stack) as [title, items]}
-          <p class="name">{title}:</p>
           <ul>
-            {#each items as item}
-              <li>{item}</li>
+            {#each job.description as li, i}
+              <li>
+                {li}
+              </li>
             {/each}
           </ul>
-          <p class="items">{items.join(", ")}</p>
-        {/each}
-      </section>
-
-      <!-- Formação -->
-      <section>
-        <h2>Educação</h2>
-
-        {#each data.education as entry}
-          <div class="education">
-            <p>
-              {entry.title}
-              <Link href={entry.companyUrl}>@ {entry.company}</Link>
-            </p>
-            <div>
-              {entry.startDate.toLocaleString("pt-BR", { year: "numeric" })} -
-              {entry.endDate.toLocaleString("pt-BR", { year: "numeric" })}
-              ::
-              {entry.location}
-            </div>
-
-            <ul>
-              {#each entry.description as li}
-                <li>{li}</li>
-              {/each}
-            </ul>
-          </div>
-        {/each}
-      </section>
-    </div>
+        </div>
+      {/each}
+    </section>
   </div>
-</div>
+
+  <div slot="right">
+    <!-- Tecnologias -->
+    <section class="stack">
+      <h2>Tecnologias</h2>
+
+      {#each Object.entries(data.stack) as [title, items]}
+        <p class="name">{title}:</p>
+        <ul>
+          {#each items as item}
+            <li>{item}</li>
+          {/each}
+        </ul>
+        <p class="items">{items.join(", ")}</p>
+      {/each}
+    </section>
+
+    <!-- Formação -->
+    <section>
+      <h2>Educação</h2>
+
+      {#each data.education as entry}
+        <div class="education">
+          <p>
+            {entry.title}
+            <Link href={entry.companyUrl}>@ {entry.company}</Link>
+          </p>
+          <div>
+            {entry.startDate.toLocaleString("pt-BR", { year: "numeric" })} -
+            {entry.endDate.toLocaleString("pt-BR", { year: "numeric" })}
+            ::
+            {entry.location}
+          </div>
+
+          <ul>
+            {#each entry.description as li}
+              <li>{li}</li>
+            {/each}
+          </ul>
+        </div>
+      {/each}
+    </section>
+  </div>
+</CvLayout>
 
 <style>
-  .container {
-    color: var(--white);
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-  }
   section {
     margin-bottom: 1rem;
   }
@@ -156,13 +153,7 @@
     row-gap: 0.5rem;
   }
 
-  div.wrapper {
-    column-gap: 1rem;
-    display: flex;
-    flex-direction: column;
-  }
-
-  div.wrapper section > h2 {
+  section > h2 {
     color: var(--primary);
     font-size: 1.25rem;
     font-weight: 500;
@@ -228,18 +219,6 @@
   @media (min-width: 640px) {
     div.contact {
       flex-direction: row;
-    }
-
-    div.wrapper {
-      flex-direction: row;
-    }
-
-    div.experiences {
-      width: 70%;
-    }
-
-    div.knowledge {
-      width: 30%;
     }
 
     section.stack ul {

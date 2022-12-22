@@ -1,7 +1,7 @@
 <script>
     import { page } from "$app/stores";
 
-    import Base from "$lib/layouts/base.svelte";
+    import BaseLayout from "$lib/layouts/baselayout.svelte";
     import SEO from "$lib/components/SEO/SEO.svelte";
     import Header from "$lib/components/header.svelte";
     import Sidebar from "$lib/components/sidebar.svelte";
@@ -11,9 +11,17 @@
     let url = $page.url.href;
 </script>
 
-<Base>
+<BaseLayout>
     <div slot="header">
-        <SEO pageTitle="Blog" description="Postagens do meu blog." {url} />
+        <SEO
+            pageTitle="Blog"
+            description="Confira as últimas postagens do meu blog."
+            {url}
+            imgUrl="/assets/images/pages/blog.png"
+            imgAlt="Imagem representativa de uma pessoa colando anotações."
+            imgWidth="900"
+            imgHeight="500"
+        />
         <Header navLinks={data.navLinks} />
     </div>
     <div slot="main" class="main">
@@ -44,7 +52,7 @@
             {/each}
         </div>
     </div>
-</Base>
+</BaseLayout>
 
 <style>
     .main {

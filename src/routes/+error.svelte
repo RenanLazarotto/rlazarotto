@@ -5,7 +5,7 @@
     import { page } from "$app/stores";
 
     import SEO from "$lib/components/SEO/SEO.svelte";
-    import Base from "$lib/layouts/base.svelte";
+    import BaseLayout from "$lib/layouts/baselayout.svelte";
     import Header from "$lib/components/header.svelte";
     import Sidebar from "$lib/components/sidebar.svelte";
     import Img from "$lib/components/blog/img.svelte";
@@ -24,7 +24,7 @@
     let url = $page.url.href;
 </script>
 
-<Base>
+<BaseLayout hideFooter={true}>
     <div slot="header">
         <SEO
             pageTitle={$page.error.title ?? "404 - Página não encontrada"}
@@ -40,15 +40,17 @@
                 src="/assets/images/errors/404.png"
                 alt="404 - Não encontrado"
             />
-            <h1>{$page.error.message ?? "Ops! Parece que essa página não existe."}</h1>
-
-            <nav>
-                <a href="/" alt="Voltar ao início">início</a>
-                <a href="/blog" alt="Voltar ao blog">blog</a>
-            </nav>
+            {#if $page.error.message == "Not Found"}
+                <h1>Ops! Parece que essa página não existe.</h1>
+            {:else}
+                <h1>
+                    {$page.error.message ??
+                        "Ops! Parece que essa página não existe."}
+                </h1>
+            {/if}
         </div>
     </div>
-</Base>
+</BaseLayout>
 
 <style>
     .main {
@@ -65,22 +67,5 @@
     .main h1 {
         color: var(--white);
         text-align: center;
-        margin-bottom: 2rem;
-    }
-
-    .main nav {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-    }
-
-    .main nav a {
-        padding: 1rem 2rem;
-        border-radius: var(--border-radius);
-        transition: all ease-in-out 300ms;
-    }
-
-    .main nav a:hover {
-        background-color: var(--background-hover);
     }
 </style>

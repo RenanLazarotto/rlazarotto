@@ -1,7 +1,7 @@
 <script>
     import { page } from "$app/stores";
 
-    import Base from "$lib/layouts/base.svelte";
+    import BaseLayout from "$lib/layouts/baselayout.svelte";
     import SEO from "$lib/components/SEO/SEO.svelte";
     import Header from "$lib/components/header.svelte";
     import Sidebar from "$lib/components/sidebar.svelte";
@@ -12,7 +12,7 @@
     let url = $page.url.href;
 </script>
 
-<Base>
+<BaseLayout>
     <div slot="header" class="header">
         <SEO
             description={data.resume}
@@ -60,7 +60,7 @@
             <svelte:component this={data.body} />
         </div>
     </div>
-</Base>
+</BaseLayout>
 
 <style>
     div.header {
