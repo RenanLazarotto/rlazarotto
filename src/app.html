@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="pt">
+<!doctype html>
+<html lang="en" class="bg-neutral-950 text-neutral-200">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-		<link rel="icon" href="/favicon.svg" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		%sveltekit.head%
 	</head>
-	<body id="svelte">
-		<div style="display: contents">
-			%sveltekit.body%
-		</div>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
 	</body>
 </html>

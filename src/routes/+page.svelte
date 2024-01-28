@@ -1,51 +1,54 @@
-<script>
-    import { page } from "$app/stores";
+<section class="sm:col-span-2 mb-8">
+  <p class="text-xl">
+    Desenvolvedor web full stack, curioso por natureza e aficionado pelo Japão.
+    Falo demais e o tempo todo, não me segurei e vim falar na internet também.
+    Se por um algum motivo quiser saber mais, <a
+      href="/sobre"
+      class="text-purple-500 hover:text-purple-400 underline">veja aqui</a
+    >.
+  </p>
+</section>
 
-    import BaseLayout from "$lib/layouts/baselayout.svelte";
+<section>
+  <h2 class="text-xl font-bold">projetos pessoais</h2>
+  <ul class="list-disc list-inside flex flex-col gap-4">
+    <li>
+      projeto - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+      pharetra pharetra sodales.
+    </li>
+    <li>
+      projeto - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+      pharetra pharetra sodales.
+    </li>
+    <li>
+      projeto - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+      pharetra pharetra sodales.
+    </li>
+    <li>
+      projeto - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+      pharetra pharetra sodales.
+    </li>
+  </ul>
+</section>
 
-    import Hero from "$lib/components/hero.svelte";
-    import AboutMe from "$lib/components/about-me.svelte";
-    import Experiences from "$lib/components/experiences.svelte";
-    import Projects from "$lib/components/projects.svelte";
-    import Skills from "$lib/components/skills.svelte";
-    import Contact from "$lib/components/contact.svelte";
-    import SEO from "$lib/components/SEO/SEO.svelte";
-    import Header from "$lib/components/header.svelte";
-    import Sidebar from "$lib/components/sidebar.svelte";
-
-    export let data;
-
-    let url = $page.url.href;
-</script>
-
-<BaseLayout>
-    <div slot="header">
-        <SEO
-            pageTitle="Início"
-            description="Página inicial do meu portfolio."
-            {url}
-            imgUrl="/assets/images/pages/home.png"
-            imgAlt="Imagem com formas poligonais e o texto renan.lazarotto no canto superior direito."
-            imgWidth="900"
-            imgHeight="500"
-        />
-
-        <Header samePageLinks={data.samePageLinks} navLinks={data.navLinks} />
-    </div>
-    <div slot="main" class="main">
-        <Sidebar samePageLinks={data.samePageLinks} navLinks={data.navLinks} />
-
-        <Hero />
-        <AboutMe />
-        <Experiences jobs={data.jobs} />
-        <Projects projects={data.projects} />
-        <Skills stack={data.stack} />
-        <Contact />
-    </div>
-</BaseLayout>
-
-<style>
-    .main {
-        padding-top: 10rem;
-    }
-</style>
+<section>
+  <h2 class="text-xl font-bold">projetos de trabalho</h2>
+  <ul class="list-disc list-inside flex flex-col gap-4">
+    <li>
+      projeto - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+      pharetra pharetra sodales.
+    </li>
+    <li>
+      projeto - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+      pharetra pharetra sodales.
+    </li>
+    <li>
+      projeto - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+      pharetra pharetra sodales.
+    </li>
+    <li>
+      projeto - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+      pharetra pharetra sodales.
+    </li>
+  </ul>
+</section>

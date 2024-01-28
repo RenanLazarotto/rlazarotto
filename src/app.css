@@ -1,93 +1,12 @@
 @font-face {
     font-family: 'Mona Sans';
     src:
-        url('/fonts/Mona-Sans.woff2') format('woff2 supports variations'),
-        url('/fonts/Mona-Sans.woff2') format('woff2-variations');
+      url('/fonts/Mona-Sans.woff2') format('woff2 supports variations'),
+      url('/fonts/Mona-Sans.woff2') format('woff2-variations');
     font-weight: 200 900;
     font-stretch: 75% 125%;
-}
-
-@font-face {
-    font-family: 'Hubot Sans';
-    src:
-        url('/fonts/Hubot-Sans.woff2') format('woff2 supports variations'),
-        url('/fonts/Hubot-Sans.woff2') format('woff2-variations');
-    font-weight: 200 900;
-    font-stretch: 75% 125%;
-}
-
-:root {
-    --font-base: "Mona Sans", sans-serif;
-    --font-highlight: "Hubot Sans", sans-serif;
-
-    --font-size: 1.1rem;
-    --small-font-size: 0.8rem;
-    --line-height: 1.8rem;
-
-    --hero-size: 3rem;
-
-    --primary: #673AB7;
-    --accent: #7C4DFF;
-    --shadow: #4527A0;
-
-    --white: #EEEEEE;
-    --gray: #9E9E9E;
-
-    --background: #111111;
-    --background-transparent: rgba(17, 17, 17, 0.6);
-    --background-hover: #212121;
-    --background-hover-transparent: rgba(33, 33, 33, 0.749);
-
-    --link: var(--primary);
-    --link-muted: var(--gray);
-    --link-hover: var(--accent);
-    --link-shadow: 0 0 8px var(--shadow);
-
-    --section-margin: 8rem;
-    --border-radius: 0.4rem;
-}
-
-
-.hidden {
-    display: none;
-}
-
-* {
-    font-family: var(--font-base);
-}
-
-body {
-    background-color: var(--background);
-}
-
-/** CSS Resets **/
-a, a:visited {
-    color: var(--link);
-    text-decoration: none;
-}
-
-button {
-    border: 0;
-    background-color: inherit;
-    color: inherit;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-}
-
-ul {
-    list-style: none;
-    list-style-position: inside;
-    padding: 0;
-    margin-top: 0.5rem;
-    margin-bottom: 0.75rem;
-}
-
-p {
-    margin: 0;
-}
-
-table {
-    border-collapse: collapse;
-}
+  }
+  
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
