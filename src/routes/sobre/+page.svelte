@@ -1,6 +1,14 @@
-<a href="/" class="text-neutral-500 hover:text-neutral-700 underline col-span-2 text-xs mb-6">🡐 renan lazarotto</a>
+<script lang="ts">
+  import { getContext, onMount } from "svelte";
+  import type { Writable } from "svelte/store";
+
+  const header: Writable<string> = getContext("header");
+
+  onMount(() => {
+    header.set("sobre mim");
+  });
+</script>
 
 <section>
-    <h1 class="font-bold text-3xl">Sobre mim</h1>
-    <p>Olá! Eu me chamo Renan Lazarotto, sou um programador full-stack </p>    
+  <p>Olá! Eu me chamo Renan Lazarotto, sou um programador full-stack</p>
 </section>
