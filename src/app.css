@@ -1,17 +1,83 @@
-@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+@import "open-props/style";
 
-@font-face {
-  font-family: "Mona Sans";
-  src: url("/fonts/Mona-Sans.woff2") format("woff2 supports variations"),
-    url("/fonts/Mona-Sans.woff2") format("woff2-variations");
-  font-weight: 200 900;
-  font-stretch: 75% 125%;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
 
-.material-symbols-rounded {
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+    background-color: var(--gray-11);
+    color: var(--gray-3);
+}
+
+body {
+    font-family: "Inter Variable", sans-serif;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    font-weight: var(--font-weight-5);
+    color: var(--purple-5);
+}
+
+a:hover {
+    color: var(--pink-5);
+}
+
+.article table {
+    width: 100%;
+    border-collapse: collapse;
+    border-style: hidden;
+}
+
+.article table td,
+.article table th {
+    padding: theme(padding.2);
+}
+
+.article table thead {
+    border-bottom: 2px solid theme(colors[neutral].600);
+}
+
+.article table tr + tr {
+    border-top: 1px dotted theme(colors[neutral].600);
+}
+
+.article h3 {
+    margin-top: 2.25rem;
+    margin-bottom: 1.25rem;
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.article p + p,
+.article p + ul {
+    margin-top: 1.25rem;
+}
+
+.article ul {
+    list-style: disc;
+    list-style-position: inside;
+}
+
+.article ul li + li {
+    margin-top: 0.75rem;
 }

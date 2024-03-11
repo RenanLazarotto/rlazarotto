@@ -1,18 +1,45 @@
 <script lang="ts">
-  import { getContext } from "svelte";
-  import type { Writable } from "svelte/store";
+    import Link from "./Link.svelte";
+    import NavLink from "./NavLink.svelte";
 
-  const header: Writable<string> = getContext("header");
+    export let current: string;
 </script>
 
-<header class="flex justify-between items-center mb-8">
-  <h1 class="text-3xl font-bold">{$header}</h1>
-  <nav>
-    <ul class="flex gap-4 text-xl font-medium">
-      <li><a href="/" class="hover:text-purple-500">início</a></li>
-      <li><a href="/sobre" class="hover:text-purple-500">sobre</a></li>
-      <li><a href="/agora" class="hover:text-purple-500">agora</a></li>
-      <li><a href="/agora" class="hover:text-purple-500">blog</a></li>
-    </ul>
-  </nav>
+<header>
+    <div>
+        <Link href="/">
+            <span class="title">Renan Lazarotto</span>
+        </Link>
+        <nav>
+            <NavLink href="/sobre" active={current == "/sobre"}>Sobre</NavLink>
+            <NavLink href="/blog" active={current == "/blog"}>Blog</NavLink>
+            <NavLink href="/usos" active={current == "/usos"}>Usos</NavLink>
+            <NavLink href="/agora" active={current == "/agora"}>Agora</NavLink>
+        </nav>
+    </div>
 </header>
+
+<style>
+    header {
+        padding-top: var(--size-4);
+    }
+
+    div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 var(--size-3);
+    }
+
+    .title {
+        font-size: var(--font-size-5);
+        font-weight: var(--font-weight-6);
+    }
+
+    nav {
+        display: flex;
+        column-gap: var(--size-2);
+    }
+</style>
