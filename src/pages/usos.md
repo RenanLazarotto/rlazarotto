@@ -3,7 +3,6 @@ title: Meus aplicativos padrão
 description: Aplicativos que eu uso no meu dia a dia
 published: 2024-03-03
 updated: 2024-03-03
-icon: ⚙
 ---
 
 | Tipo                           |               App               |

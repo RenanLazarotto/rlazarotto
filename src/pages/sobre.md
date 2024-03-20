@@ -3,7 +3,6 @@ title: Sobre
 description: Um pouco a mais sobre a pessoa por trás da tela
 published: 2024-02-28
 updated: 2024-03-01
-icon: ℹ
 ---
 
 <script lang="ts">

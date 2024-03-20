@@ -34,7 +34,8 @@ async function getPages() {
     return pages;
 }
 
-export async function GET() {
-    const posts = await getPages();
-    return json(posts);
+/** @type {import('./$types').RequestHandler} */
+export async function GET({ url }) {
+    const pages = await getPages();
+    return json(pages);
 }

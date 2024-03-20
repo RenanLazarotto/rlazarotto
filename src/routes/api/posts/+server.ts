@@ -24,7 +24,14 @@ async function getPosts() {
     return posts;
 }
 
-export async function GET() {
+/** @type {import('./$types').RequestHandler} */
+export async function GET({ url }) {
+    const limit = Number(url.searchParams.get("limit") ?? 0);
     const posts = await getPosts();
+
+    if (limit > 0) {
+        return json(posts.slice(0, limit));
+    }
+
     return json(posts);
 }

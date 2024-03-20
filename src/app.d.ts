@@ -26,7 +26,6 @@ declare global {
             description?: string;
             published: Date;
             updated: Date;
-            icon: string;
         };
 
         type Icon = {

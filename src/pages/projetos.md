@@ -3,7 +3,6 @@ title: Projetos
 description: Projetos em que trabalhei ao longo do tempo
 published: 2024-02-28
 updated: 2024-03-01
-icon: 🧰
 ---
 
 ```

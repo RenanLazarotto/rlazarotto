@@ -3,7 +3,6 @@ title: Agora
 description: O que eu estou fazendo recentemente
 published: 2024-02-28
 updated: 2024-03-01
-icon: ⏰
 ---
 
 <script lang="ts">
