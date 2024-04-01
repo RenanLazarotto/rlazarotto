@@ -1,83 +1,51 @@
 <script lang="ts">
-    import "@fontsource-variable/inter";
+    import "@fontsource/ibm-plex-sans";
     import "../app.css";
     import FormattedDate from "$lib/components/FormattedDate.svelte";
+    import Link from "$lib/components/Link.svelte";
 
     export let data;
 </script>
 
-<div class="wrapper">
-    <header class="bg-base-300 rounded-xl shadow overflow-hidden">
-        <div class="flex justify-between items-center">
-            <div class="flex-shrink">
-                <h1 class="text-2xl font-bold px-3 pt-2">Renan Lazarotto</h1>
-                <p class="text-sm text-neutral-content px-3 pb-2 border-b border-b-base-100">
-                    Desenvolvedor web full-stack na Hammer
-                </p>
-            </div>
-            <ul class="menu menu-horizontal">
-                {#each data.pages as page}
-                    <li><a href={page.slug}>{page.title}</a></li>
-                {/each}
-            </ul>
-        </div>
-        <div class="text-xs breadcrumbs px-3 bg-base-200">
-            <ul>
-                <li>Início</li>
-            </ul>
-        </div>
+<div class="max-w-screen-xl mx-auto py-12 flex flex-col min-h-screen">
+    <header class="mb-6">
+        <h1 class="text-6xl font-bold">
+            <a href="/" class="hover:underline hover:decoration-dotted hover:text-rose-300">Renan Lazarotto</a>
+        </h1>
+        <p class="text-lg text-purple-500">Desenvolvedor web full-stack na Hammer</p>
     </header>
 
-    <aside>
-        <ul class="menu bg-base-200 rounded-box shadow">
-            <li class="menu-title">Últimas publicações</li>
-            {#each data.posts as post}
-                <li>
-                    <a href={post.slug} class="flex flex-col items-start gap-0">
-                        <b>{post.title}</b>
+    <section class="flex-1 flex gap-6">
+        <aside class="w-1/5">
+            <ul class="mb-6 flex flex-col gap-2">
+                {#each data.pages as page}
+                    <li>
+                        <Link href={`/${page.slug}`}>
+                            {page.title}
+                        </Link>
+                    </li>
+                {/each}
+            </ul>
+            <p class="text-gray-500 text-sm mb-3">Últimas publicações</p>
+            <ul>
+                {#each data.posts as post}
+                    <li class="flex flex-col">
+                        <Link href={"/blog/" + post.slug}>
+                            <b>{post.title}</b>
+                        </Link>
                         <FormattedDate date={post.updated ?? post.published} class="text-accent" />
-                    </a>
+                    </li>
+                {/each}
+                <li class="mt-3">
+                    <Link href="/blog">Ver mais</Link>
                 </li>
-            {/each}
-            <li><a href="/blog"> Ver mais</a></li>
-        </ul>
-    </aside>
+            </ul>
+        </aside>
 
-    <main>
-        <slot />
-    </main>
+        <main class="w-4/5 mb-6">
+            <slot />
+        </main>
+    </section>
 
     <footer>Renan Lazarotto &copy; {new Date().getFullYear()}</footer>
 </div>
-
-<style>
-    .wrapper {
-        display: grid;
-        height: 100vh;
-        gap: 24px;
-        grid-template-columns: 6rem 20rem 1fr 6rem;
-        grid-template-rows: 3rem auto 1fr auto 3rem;
-        grid-template-areas:
-            ". . . ."
-            ". header header ."
-            ". sidebar content ."
-            ". footer footer ."
-            ". . . .";
-    }
-
-    header {
-        grid-area: header;
-    }
-
-    aside {
-        grid-area: sidebar;
-    }
-
-    main {
-        grid-area: content;
-    }
-
-    footer {
-        grid-area: footer;
-    }
-</style>

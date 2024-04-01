@@ -10,24 +10,23 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "^3.1.1",
-		"@sveltejs/kit": "^2.5.4",
+		"@sveltejs/adapter-auto": "^3.2.0",
+		"@sveltejs/kit": "^2.5.5",
 		"@sveltejs/vite-plugin-svelte": "^3.0.2",
 		"@types/jsdom": "^21.1.6",
-		"autoprefixer": "^10.4.18",
-		"daisyui": "^4.7.3",
+		"autoprefixer": "^10.4.19",
 		"mdsvex": "^0.11.0",
-		"postcss": "^8.4.37",
+		"postcss": "^8.4.38",
 		"svelte": "^4.2.12",
 		"svelte-check": "^3.6.8",
-		"tailwindcss": "^3.4.1",
+		"tailwindcss": "^3.4.3",
 		"tslib": "^2.6.2",
-		"typescript": "^5.4.2",
-		"vite": "^5.2.1"
+		"typescript": "^5.4.3",
+		"vite": "^5.2.7"
 	},
 	"type": "module",
 	"dependencies": {
-		"@fontsource-variable/inter": "^5.0.17",
+		"@fontsource/ibm-plex-sans": "^5.0.19",
 		"date-fns": "^3.6.0"
 	}
 }

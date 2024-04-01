@@ -6,12 +6,8 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['"Inter Variable"', ...defaultTheme.fontFamily.sans],
+                sans: ["'IBM Plex Sans'", ...defaultTheme.fontFamily.serif],
             },
         },
-    },
-    plugins: [require("daisyui")],
-    daisyui: {
-        themes: ["dracula"],
     },
 };

@@ -27,13 +27,6 @@ declare global {
             published: Date;
             updated: Date;
         };
-
-        type Icon = {
-            width: number;
-            height: number;
-            fill: string;
-            viewBox: string;
-        };
     }
 }
 

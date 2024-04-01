@@ -1,6 +1,6 @@
 /** @type {import('./$types').PageLoad} */
 export async function load({ fetch, url }) {
-    const pagesResponse = await fetch("api/pages");
+    const pagesResponse = await fetch("/api/pages");
 
     let pages: Types.Page[] = await pagesResponse.json();
 
@@ -26,7 +26,7 @@ export async function load({ fetch, url }) {
         }
     });
 
-    const postsResponse = await fetch("api/posts?limit=5");
+    const postsResponse = await fetch("/api/posts?limit=5");
 
     let posts: Types.Post[] = await postsResponse.json();
 

@@ -1,6 +1,4 @@
 <script lang="ts">
-    import { formatDateToString } from "$lib/utils.js";
-
     export let data;
 </script>
 

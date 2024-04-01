@@ -35,7 +35,7 @@ async function getPages() {
 }
 
 /** @type {import('./$types').RequestHandler} */
-export async function GET({ url }) {
+export async function GET() {
     const pages = await getPages();
     return json(pages);
 }

@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+p + p {
+    @apply mt-4;
+}
+
+.article h2 {
+    @apply text-lg font-bold mt-6 mb-3;
+}
+
+.article h3 {
+    @apply font-bold mt-6 mb-3;
+}
+
+.article p + ul {
+    @apply mt-4;
+}
+
+.article ul {
+    @apply list-disc list-inside;
+}
+
+.article li + li {
+    @apply mt-2;
+}
