@@ -6,8 +6,12 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ["'IBM Plex Sans'", ...defaultTheme.fontFamily.serif],
+                sans: ["'Archivo Variable'", ...defaultTheme.fontFamily.sans],
             },
+        },
+        fontFamily: {
+            display: ["'Big Shoulders Stencil Display Variable'"],
+            compact: ["'Bebas Neue'", ...defaultTheme.fontFamily.sans],
         },
     },
 };

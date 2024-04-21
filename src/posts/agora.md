@@ -3,6 +3,8 @@ title: Agora
 description: O que eu estou fazendo recentemente
 published: 2024-02-28
 updated: 2024-03-01
+category: Informações
+fixed: true
 ---
 
 <script lang="ts">
@@ -14,7 +16,6 @@ Essa é uma <Link href="https://nownownow.com/about" target="_blank">página /no
 ### Novidades do site
 
 -   Reescrita total do site. Antes, ele era no formato de portfolio com foco nas minhas experiências e habilidades profissionais, agora o foco é mais amplo, mas ainda vou manter essas informações dentro da página <Link href="/sobre">Sobre</Link>;
--   Reescrita baseada no site de <Link href="https://www.josemunozmatos.com">José Munoz</Link> e uma versão antiga do site de <Link href="https://alexcarpenter.me/">Alex Carpenter</Link>;
 
 ### No trabalho
 

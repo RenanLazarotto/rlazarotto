@@ -10,22 +10,19 @@ declare global {
     }
 
     namespace Types {
-        type Post = {
-            slug: string;
+        type Breadcrumb = {
             title: string;
-            description?: string;
+            href: string;
+        };
+
+        type Post = {
+            title: string;
+            description: string;
+            slug: string;
             published: Date;
             updated: Date;
             category: string;
-            tags: string[];
-        };
-
-        type Page = {
-            slug: string;
-            title: string;
-            description?: string;
-            published: Date;
-            updated: Date;
+            fixed: boolean;
         };
     }
 }

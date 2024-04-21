@@ -2,7 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-p + p {
+.material-symbols-rounded {
+    font-family: "Material Symbols Rounded Variable";
+    font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 48;
+}
+
+.article p + p {
     @apply mt-4;
 }
 
@@ -24,4 +29,15 @@ p + p {
 
 .article li + li {
     @apply mt-2;
+}
+
+.borderlands {
+    text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000,
+        2px -2px 0 #000, -2px -2px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000, 3px -3px 0 #000, -3px -3px 0 #000;
+}
+
+@layer utilities {
+    .shadow-x {
+        box-shadow: -1px 0 8px rgba(0, 0, 0, 0.5), 1px 0 8px rgba(0, 0, 0, 0.5);
+    }
 }

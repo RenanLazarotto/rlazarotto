@@ -3,8 +3,8 @@ title: Olá, mundo... de novo?
 description: "Saindo de um portfolio para um site pessoal, reescrito do zero e sobre uma nova perspectiva."
 published: 2024-03-07
 updated: 2024-03-08
-category: posts
-tags: ["recomeçar"]
+category: Atualizações
+fixed: false
 ---
 
 ### Olá, mundo!
