@@ -2,7 +2,7 @@ import { error } from "@sveltejs/kit";
 
 export async function load({ params }) {
     try {
-        const post = await import(`../../posts/${params.slug}.md`);
+        const post = await import(`../../../content/posts/${params.slug}.md`);
 
         if (post.metadata.published) {
             post.metadata.published = new Date(post.metadata.published);
@@ -11,7 +11,6 @@ export async function load({ params }) {
         if (post.metadata.updated) {
             post.metadata.updated = new Date(post.metadata.updated);
         }
-        console.log(post);
 
         return {
             content: post.default,

@@ -10,19 +10,28 @@ declare global {
     }
 
     namespace Types {
-        type Breadcrumb = {
+        type Category = {
             title: string;
             href: string;
+            count: number;
         };
 
-        type Post = {
+        type Page = {
             title: string;
             description: string;
             slug: string;
             published: Date;
             updated: Date;
+        };
+
+        type Post = Page & {
             category: string;
-            fixed: boolean;
+        };
+
+        type Slide = {
+            caption: string;
+            src: string;
+            alt?: string;
         };
     }
 }

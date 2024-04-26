@@ -1,8 +1,10 @@
 /** @type {import('./$types').PageLoad} */
 export async function load({ fetch }) {
     const postsResponse = await fetch("/api/posts");
+    const pagesResponse = await fetch("/api/pages");
 
-    let { posts, fixed }: { fixed: Types.Post[]; posts: Types.Post[] } = await postsResponse.json();
+    let pages: Types.Page[] = await pagesResponse.json();
+    let posts: Types.Post[] = await postsResponse.json();
 
     posts.forEach((post, index) => {
         if (post.published) {
@@ -16,20 +18,20 @@ export async function load({ fetch }) {
         posts[index] = post;
     });
 
-    fixed.forEach((post, index) => {
-        if (post.published) {
-            post.published = new Date(post.published);
+    pages.forEach((page, index) => {
+        if (page.published) {
+            page.published = new Date(page.published);
         }
 
-        if (post.updated) {
-            post.updated = new Date(post.updated);
+        if (page.updated) {
+            page.updated = new Date(page.updated);
         }
 
-        fixed[index] = post;
+        pages[index] = page;
     });
 
     return {
-        posts: posts,
-        fixed: fixed,
+        posts,
+        pages,
     };
 }

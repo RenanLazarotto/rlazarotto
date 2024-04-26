@@ -11,14 +11,14 @@
 </script>
 
 <div class="max-w-screen-xl mx-auto p-8 flex flex-col min-h-screen bg-neutral-800 shadow-x">
-    <header class="mb-4">
+    <header class="mb-8">
         <a href="/" class="text-purple-600 hover:text-purple-400">
             <h1 class="font-compact text-5xl tracking-wide">Renan Lazarotto</h1>
             <div class="uppercase text-lg font-bold text-gray-500 tracking-widest">full stack developer</div></a
         >
     </header>
 
-    <main class="mb-6">
+    <main class="mb-6 flex-1">
         <slot />
     </main>
 

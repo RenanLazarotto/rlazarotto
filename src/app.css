@@ -19,7 +19,8 @@
     @apply font-bold mt-6 mb-3;
 }
 
-.article p + ul {
+.article p + ul,
+.article ul + p {
     @apply mt-4;
 }
 
