@@ -14,6 +14,9 @@ const config = {
 
     kit: {
         adapter: adapter(),
+        version: {
+            name: process.env.npm_package_version,
+        },
     },
 };
 
