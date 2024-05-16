@@ -37,32 +37,9 @@
 </section>
 
 <section class="mb-12">
-    <h2 class="font-bold text-2xl mb-4">Páginas e publicações</h2>
+    <h2 class="font-bold text-2xl mb-4">Publicações</h2>
 
-    <div class="flex flex-col">
-        <div class="mb-1">
-            <p class="uppercase text-xs font-bold text-neutral-500 tracking-widest">Páginas</p>
-        </div>
-        {#each data.pages as page}
-            <div
-                class="grid grid-cols-[max-content_minmax(0,1fr)] [&:not(:first-of-type)]:border-t [&:not(:first-of-type)]:border-neutral-600 [&:not(:first-of-type)]:border-dashed"
-            >
-                <div class="pt-2 pb-3 pr-4">
-                    <FormattedDate date={page.updated ?? page.published} class="font-light text-sm text-neutral-400" />
-                </div>
-                <div class="pt-2 pb-3">
-                    <a href={`/pages/${page.slug}`} class="font-bold hover:text-purple-500">
-                        {page.title}
-                    </a>
-                    <p class="leading-tight text-neutral-400 text-sm">{page.description}</p>
-                </div>
-            </div>
-        {/each}
-    </div>
     <div class="flex flex-col mt-6 mb-4">
-        <div class="mb-1">
-            <p class="uppercase text-xs font-bold text-neutral-500 tracking-widest">Publicações</p>
-        </div>
         {#each data.posts.slice(0, 5) as post}
             <div
                 class="grid grid-cols-[max-content_minmax(0,1fr)] [&:not(:first-of-type)]:border-t [&:not(:first-of-type)]:border-neutral-600 [&:not(:first-of-type)]:border-dashed"
