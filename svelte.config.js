@@ -1,6 +1,13 @@
-import adapter from "@sveltejs/adapter-auto";
-import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
+import { execSync } from "node:child_process";
 import { mdsvex } from "mdsvex";
+import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
+import adapter from "@sveltejs/adapter-auto";
+
+/** @type {{ package: string, hash: string }} */
+let version = {
+    package: process.env.npm_package_version,
+    hash: execSync("git rev-parse HEAD").toString().trim(),
+};
 
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
@@ -15,7 +22,7 @@ const config = {
     kit: {
         adapter: adapter(),
         version: {
-            name: process.env.npm_package_version,
+            name: JSON.stringify(version),
         },
     },
 };

@@ -1,7 +1,7 @@
 <script lang="ts">
     import Link from "$lib/components/Link.svelte";
-
     import { version } from "$app/environment";
+    let versionInfo: Types.Version = JSON.parse(version);
 </script>
 
 <footer>
@@ -35,7 +35,15 @@
         <dd
             class="py-1 pr-4 [&:not(:first-of-type)]:border-t [&:not(:first-of-type)]:border-neutral-600 [&:not(:first-of-type)]:border-dashed"
         >
-            {version}
+            {versionInfo.package}
+
+            <Link
+                href={`https://github.com/RenanLazarotto/rlazarotto/commit/${versionInfo.hash}`}
+                target="_blank"
+                class="bg-neutral-700 text-xs py-0.5 px-1 rounded"
+            >
+                {versionInfo.hash.slice(0, 7)}
+            </Link>
         </dd>
     </dl>
 </footer>
