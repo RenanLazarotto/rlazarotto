@@ -10,6 +10,11 @@ declare global {
     }
 
     namespace Types {
+        type Version = {
+            package: string;
+            hash: string;
+        };
+
         type Category = {
             title: string;
             href: string;
@@ -26,6 +31,7 @@ declare global {
 
         type Post = Page & {
             category: string;
+            readingTime: number;
         };
 
         type Slide = {

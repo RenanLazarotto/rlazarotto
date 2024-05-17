@@ -10,11 +10,11 @@
     <title>Renan Lazarotto</title>
 </svelte:head>
 
-<section class="mb-12">
+<section class="mb-12 text-lg">
     <div class="flex flex-col md:flex-row gap-8">
         <div class="flex-1">
-            <h2 class="font-bold mb-4">E aí, beleza? Eu sou Renan ✌🏻</h2>
-            <p class="text-justify mb-4">
+            <h2 class="font-bold mb-8 text-3xl">E aí, beleza? Eu sou Renan ✌🏻</h2>
+            <p class="text-justify mb-6">
                 Eu sou um programador full-stack de Curitiba, no Paraná, e atualmente trabalho do conforto do meu lar
                 para a
                 <Link href="https://wlgrupo.com/empresa/hammer/" target="_blank">Hammer Consultoria</Link>, convertendo
@@ -28,36 +28,39 @@
                 > ou descobrir qual é meu plano infalível da vez <Link href="/agora">aqui</Link>.
             </p>
         </div>
-        <img
-            src="/images/me.jpg"
-            alt="Eu, o autor!"
-            class="rounded-full w-48 h-48 grayscale border-4 border-neutral-300 shadow-lg shadow-neutral-900"
-        />
+        <div class="rounded-full w-64 h-64 overflow-hidden">
+            <img src="/images/me.jpg" alt="Eu, o autor!" class="grayscale" />
+        </div>
     </div>
 </section>
 
 <section class="mb-12">
     <h2 class="font-bold text-2xl mb-4">Publicações</h2>
 
-    <div class="flex flex-col mt-6 mb-4">
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
         {#each data.posts.slice(0, 5) as post}
-            <div
-                class="grid grid-cols-[max-content_minmax(0,1fr)] [&:not(:first-of-type)]:border-t [&:not(:first-of-type)]:border-neutral-600 [&:not(:first-of-type)]:border-dashed"
-            >
-                <div class="pt-2 pb-3 pr-4 flex flex-col justify-center">
-                    <FormattedDate date={post.updated ?? post.published} class="font-light text-sm text-neutral-400" />
-                    <a
-                        href={`/categories/${post.category
-                            .normalize("NFKD")
-                            .replace(/[\u0300-\u036f]/g, "")
-                            .replace(" ", "-")
-                            .toLowerCase()}`}
-                        class="text-xs text-purple-500 hover:text-purple-400 font-semibold">{post.category}</a
-                    >
-                </div>
-                <div class="pt-2 pb-3">
-                    <a href={`/posts/${post.slug}`} class="font-bold hover:text-purple-500">{post.title}</a>
-                    <p class="leading-tight text-neutral-400 text-sm">{post.description}</p>
+            <div class="border border-purple-950 rounded-lg overflow-hidden flex flex-col">
+                <img src={`/images/posts/${post.slug}/hero.webp`} alt="Imagem do post" />
+                <div class="flex flex-col p-6">
+                    <div class="mb-3">
+                        <a
+                            href={`/categories/${post.category
+                                .normalize("NFKD")
+                                .replace(/[\u0300-\u036f]/g, "")
+                                .replace(" ", "-")
+                                .toLowerCase()}`}
+                            class="bg-purple-950/50 hover:bg-purple-950/40 text-purple-400 hover:text-purple-500 px-2 py-1 rounded text-sm"
+                            >{post.category}</a
+                        >
+                    </div>
+
+                    <a href={`/posts/${post.slug}`} class="text-2xl font-bold hover:text-mint-500">{post.title}</a>
+                    <p class="mt-3 opacity-80">{post.description}</p>
+                    <div class="border-t border-t-purple-950 pt-3 mt-6 opacity-80 text-xs">
+                        Publicado em
+                        <FormattedDate date={post.updated ?? post.published} />
+                        :: Aprox. {post.readingTime} min
+                    </div>
                 </div>
             </div>
         {/each}

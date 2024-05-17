@@ -18,3 +18,8 @@ export const randomString = (length: number = 4) => {
 
     return `r${result}`;
 };
+
+export const estimateReadingTime = (text: string): number => {
+    const wordArray = text.split("");
+    return Math.ceil(wordArray.length / 260);
+};

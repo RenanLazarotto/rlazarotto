@@ -1,7 +1,5 @@
 <script lang="ts">
-    import "@fontsource-variable/archivo";
-    import "@fontsource/bebas-neue";
-    import "@fontsource-variable/big-shoulders-stencil-display";
+    import "@fontsource-variable/onest";
     import "@fontsource-variable/material-symbols-rounded";
 
     import "../app.css";

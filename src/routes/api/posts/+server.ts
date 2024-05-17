@@ -1,4 +1,6 @@
+import { estimateReadingTime } from "$lib/utils";
 import { json } from "@sveltejs/kit";
+import { JSDOM } from "jsdom";
 
 /** @type {import('./$types').RequestHandler} */
 export async function GET() {
@@ -15,8 +17,11 @@ export async function GET() {
         const slug = path.split("/").at(-1)?.replace(".md", "");
 
         if (file && typeof file === "object" && "metadata" in file && slug) {
+            const dom = new JSDOM(file.default.$$render());
+            const words = dom.window.document.body.textContent || "";
+
             const metadata = file.metadata as Omit<Types.Post, "slug">;
-            const post = { ...metadata, slug } satisfies Types.Post;
+            const post = { ...metadata, slug, readingTime: estimateReadingTime(words) } satisfies Types.Post;
 
             posts.push(post);
         }
