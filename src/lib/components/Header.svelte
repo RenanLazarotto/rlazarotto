@@ -4,17 +4,26 @@
     export let pages: Types.Page[];
 </script>
 
-<header class="mb-8 flex justify-between items-center">
-    <a href="/" class="text-purple-600 hover:text-purple-400">
-        <h1 class="font-compact text-5xl tracking-wide">Renan Lazarotto</h1>
-        <div class="uppercase text-lg font-bold text-gray-500 tracking-widest">full stack developer</div></a
-    >
+<header class="mb-16 flex justify-between items-center">
+    <div class="flex-1 block relative group h-10">
+        <p
+            class="uppercase absolute font-bold text-4xl tracking-wide text-mint-400 group-hover:text-purple-500 blur-[8px] z-20"
+        >
+            Renan Lazarotto
+        </p>
+        <a
+            href="/"
+            class="absolute z-30 text-mint-100 group-hover:text-purple-400 uppercase font-bold text-4xl tracking-wide"
+        >
+            Renan Lazarotto
+        </a>
+    </div>
 
-    <nav>
-        <ul class="flex gap-2">
+    <nav class="flex justify-center">
+        <ul class="inline-flex gap-2">
             {#each pages as page}
                 <li>
-                    <Link href={`/pages/${page.slug}`} class="font-compact text-3xl">
+                    <Link href={`/pages/${page.slug}`} class="block text-xl ">
                         {page.title}
                     </Link>
                 </li>
