@@ -41,7 +41,7 @@
         {#each data.posts.slice(0, 5) as post}
             <div class="border border-purple-950 rounded-lg overflow-hidden flex flex-col">
                 <img src={`/images/posts/${post.slug}/hero.webp`} alt="Imagem do post" />
-                <div class="flex flex-col p-6">
+                <div class="flex flex-1 flex-col p-6">
                     <div class="mb-3">
                         <a
                             href={`/categories/${post.category
@@ -56,10 +56,11 @@
 
                     <a href={`/posts/${post.slug}`} class="text-2xl font-bold hover:text-mint-500">{post.title}</a>
                     <p class="mt-3 opacity-80">{post.description}</p>
+                    <span class="flex-1" />
                     <div class="border-t border-t-purple-950 pt-3 mt-6 opacity-80 text-xs">
                         Publicado em
                         <FormattedDate date={post.updated ?? post.published} />
-                        :: Aprox. {post.readingTime} min
+                        • <b>{post.readingTime} min.</b> de leitura
                     </div>
                 </div>
             </div>

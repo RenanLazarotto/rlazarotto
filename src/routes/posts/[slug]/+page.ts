@@ -1,22 +1,32 @@
 import { error } from "@sveltejs/kit";
 
-export async function load({ params }) {
+/** @type {import('./$types').PageLoad} */
+export async function load({ fetch, params }) {
     try {
-        const post = await import(`../../../content/posts/${params.slug}.md`);
+        const file = await import(`@content/posts/${params.slug}.md`);
+        const rtResponse = await fetch(`/api/posts/reading-time/${params.slug}`);
+        const readingTime = await rtResponse.json();
+        const metadata = file.metadata as Omit<Types.Post, "slug">;
 
-        if (post.metadata.published) {
-            post.metadata.published = new Date(post.metadata.published);
+        if (metadata.published) {
+            metadata.published = new Date(metadata.published);
         }
 
-        if (post.metadata.updated) {
-            post.metadata.updated = new Date(post.metadata.updated);
+        if (metadata.updated) {
+            metadata.updated = new Date(metadata.updated);
         }
+
+        const post = {
+            ...metadata,
+            slug: params.slug,
+            ...readingTime,
+        } satisfies Types.Post;
 
         return {
-            content: post.default,
-            meta: post.metadata,
+            content: file.default,
+            meta: post,
         };
     } catch (e) {
-        error(404, `Could not find ${params.slug}`);
+        error(404, JSON.stringify(e));
     }
 }

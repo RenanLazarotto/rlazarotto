@@ -1,3 +1,4 @@
+/** @type {import('./$types').PageLoad} */
 export async function load({ fetch }) {
     let posts: Types.Post[];
     const postsResponse = await fetch("/api/posts");

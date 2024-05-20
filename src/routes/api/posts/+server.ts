@@ -1,12 +1,12 @@
 import { estimateReadingTime } from "$lib/utils";
 import { json } from "@sveltejs/kit";
-import { JSDOM } from "jsdom";
+import { stripHtml } from "string-strip-html";
 
 /** @type {import('./$types').RequestHandler} */
 export async function GET() {
     let posts: Types.Post[] = [];
 
-    const files = import.meta.glob("/src/content/posts/*.md", { eager: true });
+    const files = import.meta.glob("@content/posts/*.md", { eager: true });
 
     for (const path in files) {
         const file = files[path] as {
@@ -17,11 +17,9 @@ export async function GET() {
         const slug = path.split("/").at(-1)?.replace(".md", "");
 
         if (file && typeof file === "object" && "metadata" in file && slug) {
-            const dom = new JSDOM(file.default.$$render());
-            const words = dom.window.document.body.textContent || "";
-
+            const dom = stripHtml(file.default.$$render()).result;
             const metadata = file.metadata as Omit<Types.Post, "slug">;
-            const post = { ...metadata, slug, readingTime: estimateReadingTime(words) } satisfies Types.Post;
+            const post = { ...metadata, slug, readingTime: estimateReadingTime(dom) } satisfies Types.Post;
 
             posts.push(post);
         }
