@@ -115,11 +115,11 @@
 </script>
 
 <div
-    class="relative bg-black/30 rounded-lg mt-8"
+    class="relative bg-black/30 rounded-lg mt-4"
     class:w-fit={slides.length == 1}
     class:pt-2={slides.length == 1}
     class:px-2={slides.length == 1}
-    class:mb-8={slides.length == 1}
+    class:mb-4={slides.length == 1}
 >
     {#each slides as slide, i}
         {#if slide.type == "image"}
@@ -134,7 +134,7 @@
                 tabindex="0"
             >
                 <img src={slide.src} alt={slide.alt} class="w-full max-h-[400px] object-contain cursor-pointer" />
-                <p class="text-lg text-center my-4">{slide.title}</p>
+                <p class="text-sm text-gray-400 text-center my-2">{slide.title}</p>
             </div>
         {:else}
             <div class:hidden={i != current} class="flex flex-col items-center">
@@ -147,7 +147,7 @@
                 >
                     <source src={slide.src} type="video/webm" />
                 </video>
-                <p class="text-lg text-center my-4">{slide.title}</p>
+                <p class="text-sm text-gray-400 text-center my-2">{slide.title}</p>
             </div>
         {/if}
     {/each}
@@ -168,16 +168,14 @@
     {/if}
 </div>
 {#if slides.length > 1}
-    <nav class="flex justify-center gap-2 mt-4 mb-8">
+    <nav class="flex justify-center gap-2 mt-4 mb-4">
         {#each slides as slide, i}
-        <button
-        on:click={() => navigate(i)}
-        class="{i == current
-            ? 'border-mint-500'
-            : 'border-white/50'}  border-2 hover:border-purple-400 rounded"
-    >
-        <img src={slide.thumb} alt={slide.alt} class="object-cover rounded h-12 w-12" />
-    </button>
+            <button
+                on:click={() => navigate(i)}
+                class="{i == current ? 'border-mint-500' : 'border-white/50'}  border-2 hover:border-purple-400 rounded"
+            >
+                <img src={slide.thumb} alt={slide.alt} class="object-cover rounded h-12 w-12" />
+            </button>
         {/each}
     </nav>
 {/if}

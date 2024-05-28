@@ -28,7 +28,7 @@
         <p><b>{data.meta.readingTime} min.</b> de leitura</p>
     </div>
 
-    <section class="article mb-12">
+    <section class="article mb-12 text-justify">
         <svelte:component this={data.content} />
     </section>
 </article>
