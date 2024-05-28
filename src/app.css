@@ -2,17 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html::before {
-    @apply h-lvh w-screen opacity-100 contrast-[150%] mix-blend-multiply brightness-[70%] inset-0 content-[''] fixed -z-[1] bg-cover;
-    background-image: radial-gradient(circle at 50% 40%, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35)),
-        url("data:image/svg+xml,%3Csvg viewBox='0 0 10000 10000' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-}
-
-.material-symbols-rounded {
-    font-family: "Material Symbols Rounded Variable";
-    font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 48;
-}
-
 .article p + p {
     @apply mt-4;
 }
@@ -28,12 +17,4 @@ html::before {
 .article p + ul,
 .article ul + p {
     @apply mt-4;
-}
-
-.article ul {
-    @apply list-disc list-inside;
-}
-
-.article li + li {
-    @apply mt-2;
 }
