@@ -1,9 +1,9 @@
 <script lang="ts">
     export let date: Date;
 
-    import { formatDateToString } from "$lib/utils";
+    const formatter = new Intl.DateTimeFormat("pt-BR", { dateStyle: "short", timeZone: "UTC" });
 </script>
 
 <time datetime={date.toISOString()} class={$$props.class}>
-    {formatDateToString(date)}
+    {formatter.format(date)}
 </time>
