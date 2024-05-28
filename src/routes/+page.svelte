@@ -14,13 +14,13 @@
     <div class="flex flex-col md:flex-row gap-8">
         <div class="flex-1">
             <h2 class="font-bold mb-8 text-3xl">E aí, beleza? Eu sou Renan ✌🏻</h2>
-            <p class="text-justify mb-6">
+            <p class="text-justify mb-6 text-gray-300">
                 Eu sou um programador full-stack de Curitiba, no Paraná, e atualmente trabalho do conforto do meu lar
                 para a
                 <Link href="https://wlgrupo.com/empresa/hammer/" target="_blank">Hammer Consultoria</Link>, convertendo
                 café e requisitos em código e resultados.
             </p>
-            <p class="text-justify">
+            <p class="text-justify text-gray-300">
                 Aqui é o meu pequeno refúgio na internet, onde eu compartilho minhas paixões, minhas ideias e coisas que
                 são interessantes ou úteis de forma geral. Você pode ver um pouquinho mais das groselhas que eu tenho
                 pra falar <Link href="/blog">aqui</Link>, pode saber mais sobre mim e meu trabalho <Link href="/sobre"
@@ -43,7 +43,7 @@
                 <img src={`/images/posts/${post.slug}/hero.webp`} alt="Imagem do post" class="rounded-lg" />
                 <div class="flex flex-1 flex-col p-4">
                     <h2 class="text-2xl font-bold text-mint-300 group-hover:text-purple-400">{post.title}</h2>
-                    <p class="mt-3">{post.description}</p>
+                    <p class="mt-3 text-gray-300">{post.description}</p>
                     <span class="flex-1" />
 
                     <div class="mt-6 text-xs flex gap-2 text-gray-500">
