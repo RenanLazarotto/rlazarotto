@@ -9,8 +9,7 @@ category: Reviews
 <script lang="ts">
     import Quote from "$lib/components/Quote.svelte";
     import Link from "$lib/components/Link.svelte";
-    import Image from "$lib/components/Image.svelte";
-    import Video from "$lib/components/Video.svelte";
+    import Carousel from "$lib/components/Carousel.svelte";
 </script>
 
 <Quote>
@@ -25,11 +24,13 @@ Ontem, depois de alguns dias de espera, finalmente chegou meu celular novo - um 
 
 Por algum motivo infeliz que eu não consigo entender, as fabricantes de aparelhos continuaram subindo os preços dos aparelhos enquanto mandam menos coisas dentro da caixa. Pra quem tem menos de 20 anos, uma pequena lição de história: antigamente as caixas de telefone eram muito diferentes de como são hoje. Dando uma rápida garimpada, achei esse imagem aqui que mostra o que vinha na caixa de um Nokia 5230, um aparelho que inclusive eu tive:
 
-<Image src="/images/posts/g84-primeiras-impressoes/caixa-nokia-5230.webp" alt="Conteúdo da caixa de um Nokia 5230">
-<p class="text-xs mt-2">
-Imagem retirada de <Link href="https://iidontmind.blogspot.com/2011/05/nokia-5230-nuron-dicas-e-downloads.html" target="_blank">I Don't Mind</Link>
-</p>
-</Image>
+<Carousel slides={[{
+src: "/images/posts/g84-primeiras-impressoes/caixa-nokia-5230.webp",
+thumb: "/images/posts/g84-primeiras-impressoes/caixa-nokia-5230-thumb.webp",
+title: "Itens que acompanhavam um Nokia 5230",
+alt: "Conteúdo da caixa de um Nokia 5230",
+type: "image",
+}]} />
 
 Na imagem, o que vinha dentro da caixa de um celular típico de 2010:
 
@@ -74,64 +75,118 @@ A instalação foi absurdamente simples e eu me arrependo de não ter tirado pri
 
 Já com o software atualizado, era hora de começar a explorar o Android da Motorola. Um dos grandes pontos apontado por pessoas que não gostam do Android são as customizações de cada fabricante em cima dele. Além de aplicativos pré-instalados, as fabricantes tem total liberdade de customizar o sistema para se enquadrar à sua identidade visual. A Samsung, por exemplo, usa a interface chamada OneUI, que é bem diferente da interface "padrão" do Android, como desenvolvida pelo Google. Nesse ponto, a Motorola mantém a interface com praticamente nenhuma customização em relação ao Android do Google:
 
-<div class="block w-full h-96">
-<img src="/images/posts/g84-primeiras-impressoes/tela-inicial.webp" alt="Minha tela inicial do Moto G84" class="object-cover" />
-<p class="text-center text-xs mt-2">Tela inicial, já customizada</p>
-</div>
-
-<div class="block w-full h-96">
-<img src="/images/posts/g84-primeiras-impressoes/painel-notificações.webp" alt="Painel de notificações do Moto G84"/>
-<p class="text-center text-xs mt-2">Painel de notificações</p>
-</div>
-
-<div class="block w-full h-96">
-<img src="/images/posts/g84-primeiras-impressoes/configurações-rapidas.webp" alt="Configurações rápidas do Moto G84" />
-<p class="text-center text-xs mt-2">Painel de configurações rápidas</p>
-</div>
-
-<div class="block w-full h-96">
-
-<img src="/images/posts/g84-primeiras-impressoes/menu-desligar.webp" alt="Menu de desligar do Moto G84" />
-<p class="text-center text-xs mt-2">Menu de desligar</p>
-</div>
+<Carousel slides={[
+{
+src: "/images/posts/g84-primeiras-impressoes/tela-inicial.webp",
+thumb: "/images/posts/g84-primeiras-impressoes/tela-inicial-thumb.webp",
+title: "Minha tela inicial",
+alt: "Captura da tela inicial",
+type: "image",
+},
+{
+src: "/images/posts/g84-primeiras-impressoes/configuracoes-rapidas.webp",
+thumb: "/images/posts/g84-primeiras-impressoes/configuracoes-rapidas-thumb.webp",
+title: "Painel de configuracoes rápidas",
+alt: "Captura de tela representando o painel de configuracoes rápidas",
+type: "image",
+},
+{
+src: "/images/posts/g84-primeiras-impressoes/menu-desligar.webp",
+thumb: "/images/posts/g84-primeiras-impressoes/menu-desligar-thumb.webp",
+title: "Menu Desligar",
+alt: "Captura de tela representando o menu de desligar",
+type: "image",
+}
+]}/>
 
 Falando em customização, o aparelho conta com várias opções de customização. Acredito que boa parte delas já sejam do próprio Android e não sejam adições da Motorola, mas não tenho certeza. Uma coisa é certa - as opções são bem diferentes das oferecidas pela One UI, da Samsung, pelo menos até a versão 5.1, que foi a última que eu testei.
 
-<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-    <Image src="/images/posts/g84-primeiras-impressoes/personalização.webp" alt="Tela de personalização do Moto G84">
-        <p class="text-center text-xs mt-2">Tela de personalização do Moto G84</p>
-    </Image>
-    <Image src="/images/posts/g84-primeiras-impressoes/plano-de-fundo.webp" alt="Opções de plano de fundo">
-        <p class="text-center text-xs mt-2">Opções de plano de fundo</p>
-    </Image>
-    <Image src="/images/posts/g84-primeiras-impressoes/temas.webp" alt="Temas pré-definidos">
-        <p class="text-center text-xs mt-2">Temas pré-definidos</p>
-    </Image>
-    <Image src="/images/posts/g84-primeiras-impressoes/fontes.webp" alt="Fontes do celular">
-        <p class="text-center text-xs mt-2">Fontes do celular</p>
-    </Image>
-    <Image src="/images/posts/g84-primeiras-impressoes/cores.webp" alt="Opções de cores">
-        <p class="text-center text-xs mt-2">Opções de cores</p>
-    </Image>
-    <Image src="/images/posts/g84-primeiras-impressoes/ícones.webp" alt="Opções de formato dos ícones">
-        <p class="text-center text-xs mt-2">Opções de formato dos ícones</p>
-    </Image>
-    <Image src="/images/posts/g84-primeiras-impressoes/texto-tamanho-exibição.webp" alt="Ajuste do tamanho de exibição e da fonte">
-        <p class="text-center text-xs mt-2">Ajuste do tamanho de exibição e da fonte</p>
-    </Image>
-    <Image src="/images/posts/g84-primeiras-impressoes/layout.webp" alt="Opções de layout da grade de aplicativos">
-        <p class="text-center text-xs mt-2">Opções de layout da grade de aplicativos</p>
-    </Image>
-    <Video src="/images/posts/g84-primeiras-impressoes/animação-digital.webm" alt="Animações de desbloqueio por digital">
-        <p class="text-center text-xs mt-2">Animações de desbloqueio por digital</p>
-    </Video>
-    <Image src="/images/posts/g84-primeiras-impressoes/sons.webp" alt="Customização de sons">
-        <p class="text-center text-xs mt-2">Customização de sons</p>
-    </Image>
-    <Image src="/images/posts/g84-primeiras-impressoes/modo-escuro.webp" alt="Customização do modo escuro">
-        <p class="text-center text-xs mt-2">Customização do modo escuro</p>
-    </Image>
-</div>
+<Carousel slides={[
+{
+src: "/images/posts/g84-primeiras-impressoes/aplicativo-moto.webp",
+thumb: "/images/posts/g84-primeiras-impressoes/aplicativo-moto-thumb.webp",
+title: "Aplicativo Moto",
+alt: "Captura de tela representando o aplicativo Moto",
+type: "image",
+},
+{
+src: "/images/posts/g84-primeiras-impressoes/cores.webp",
+thumb: "/images/posts/g84-primeiras-impressoes/cores-thumb.webp",
+title: "Opcoes de cores para personalizacao",
+alt: "Captura de tela representando a tela de opcoes de cores",
+type: "image",
+},
+{
+src: "/images/posts/g84-primeiras-impressoes/fontes.webp",
+thumb: "/images/posts/g84-primeiras-impressoes/fontes-thumb.webp",
+title: "Opcoes de fontes",
+alt: "Captura de tela representando as opcoes de fontes do sistema",
+type: "image",
+},
+{
+src: "/images/posts/g84-primeiras-impressoes/icones.webp",
+thumb: "/images/posts/g84-primeiras-impressoes/icones-thumb.webp",
+title: "Personalizacao dos icones do celular",
+alt: "Captura de tela representando as opcoes de personalizacoes de icones",
+type: "image",
+},
+{
+src: "/images/posts/g84-primeiras-impressoes/layout.webp",
+thumb: "/images/posts/g84-primeiras-impressoes/layout-thumb.webp",
+title: "Opcoes de layout para a tela inicial e gaveta de aplicativos",
+alt: "Captura de tela representando as opcoes de layout para tela inicial e gaveta de aplicativos",
+type: "image",
+},
+{
+src: "/images/posts/g84-primeiras-impressoes/modo-escuro.webp",
+thumb: "/images/posts/g84-primeiras-impressoes/modo-escuro-thumb.webp",
+title: "Opcoes do Modo Escuro",
+alt: "Captura de tela representando as opcoes para utilizacao do Modo Escuro",
+type: "image",
+},
+{
+src: "/images/posts/g84-primeiras-impressoes/personalizacao.webp",
+thumb: "/images/posts/g84-primeiras-impressoes/personalizacao-thumb.webp",
+title: "Tela de personalizacao",
+alt: "Captura da tela de personalizacao",
+type: "image",
+},
+{
+src: "/images/posts/g84-primeiras-impressoes/plano-de-fundo.webp",
+thumb: "/images/posts/g84-primeiras-impressoes/plano-de-fundo-thumb.webp",
+title: "Opcoes de personalizacao do plano de fundo",
+alt: "Captura da tela de personalizacao dos planos de fundo",
+type: "image",
+},
+{
+src: "/images/posts/g84-primeiras-impressoes/sons.webp",
+thumb: "/images/posts/g84-primeiras-impressoes/sons-thumb.webp",
+title: "Configuracoes de sons",
+alt: "Captura de tela das configuracoes de sons",
+type: "image",
+},
+{
+src: "/images/posts/g84-primeiras-impressoes/temas.webp",
+thumb: "/images/posts/g84-primeiras-impressoes/temas-thumb.webp",
+title: "Temas pré-definidos",
+alt: "Captura de tela com os temas pré-definidos",
+type: "image",
+},
+{
+src: "/images/posts/g84-primeiras-impressoes/texto-tamanho-exibicao.webp",
+thumb: "/images/posts/g84-primeiras-impressoes/texto-tamanho-exibicao-thumb.webp",
+title: "Opcoes do tamanho do texto e de exibicao",
+alt: "Captura da tela com as opcoes do tamanho do texto e de exibicao",
+type: "image",
+},
+{
+src: "/images/posts/g84-primeiras-impressoes/animacao-digital.webm",
+thumb: "/images/posts/g84-primeiras-impressoes/animacao-digital-thumb.webp",
+title: "Animacoes do leitor de digital",
+alt: "Video demonstrando os efeitos exibidos no leitor de digital",
+type: "video",
+}
+]}/>
 
 ## Concluindo
 
