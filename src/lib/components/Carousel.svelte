@@ -168,20 +168,18 @@
     {/if}
 </div>
 {#if slides.length > 1}
-    <ul class="flex justify-center gap-2 mt-4 mb-8">
+    <nav class="flex justify-center gap-2 mt-4 mb-8">
         {#each slides as slide, i}
-            <li>
-                <button
-                    on:click={() => navigate(i)}
-                    class="{i == current
-                        ? 'border-mint-500'
-                        : 'border-white/50'}  border-2 hover:border-purple-400 rounded"
-                >
-                    <img src={slide.thumb} alt={slide.alt} class="object-cover rounded h-12 w-12" />
-                </button>
-            </li>
+        <button
+        on:click={() => navigate(i)}
+        class="{i == current
+            ? 'border-mint-500'
+            : 'border-white/50'}  border-2 hover:border-purple-400 rounded"
+    >
+        <img src={slide.thumb} alt={slide.alt} class="object-cover rounded h-12 w-12" />
+    </button>
         {/each}
-    </ul>
+    </nav>
 {/if}
 
 <div
