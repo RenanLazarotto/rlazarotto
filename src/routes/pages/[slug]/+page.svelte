@@ -1,5 +1,6 @@
 <script lang="ts">
     import FormattedDate from "$lib/components/FormattedDate.svelte";
+    import Icon from "$lib/components/Icon.svelte";
     import type { PageData } from "./$types";
 
     export let data: PageData;
@@ -13,9 +14,9 @@
 
 <ul class="flex gap-2 text-xs text-neutral-400 font-medium mb-5">
     <li><a href="/" class="hover:text-purple-400">Início</a></li>
-    <li><span class="material-symbols-rounded"> arrow_forward_ios </span></li>
+    <li><Icon id="chevron-right" /></li>
     <li><a href="/pages" class="hover:text-purple-400">Páginas</a></li>
-    <li><span class="material-symbols-rounded"> arrow_forward_ios </span></li>
+    <li><Icon id="chevron-right" /></li>
     <li><a href={`/pages/${data.slug}`} class="hover:text-purple-400">{data.title}</a></li>
 </ul>
 

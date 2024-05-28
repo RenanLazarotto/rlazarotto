@@ -1,5 +1,7 @@
 <script lang="ts">
     import FormattedDate from "$lib/components/FormattedDate.svelte";
+    import Icon from "$lib/components/Icon.svelte";
+    import Link from "$lib/components/Link.svelte";
     import type { PageData } from "./$types";
 
     export let data: PageData;
@@ -11,30 +13,41 @@
 
 <ul class="flex gap-2 text-xs text-neutral-400 font-medium mb-5">
     <li><a href="/">Início</a></li>
-    <li><span class="material-symbols-rounded"> arrow_forward_ios </span></li>
+    <li><Icon id="chevron-right" width={16} height={16} /></li>
     <li><a href="/categories">Categorias</a></li>
-    <li><span class="material-symbols-rounded"> arrow_forward_ios </span></li>
+    <li><Icon id="chevron-right" width={16} height={16} /></li>
     <li><a href={`/categories/${data.slug}`}>{data.category}</a></li>
 </ul>
 
 <section class="mb-12">
     <h2 class="font-bold text-2xl mb-4">Publicações da categoria "{data.category}"</h2>
 
-    <div class="flex flex-col">
+    <div class="flex flex-col gap-12">
         {#each data.posts as post}
-            <div
-                class="grid grid-cols-[max-content_minmax(0,1fr)] [&:not(:first-of-type)]:border-t [&:not(:first-of-type)]:border-neutral-600 [&:not(:first-of-type)]:border-dashed"
-            >
-                <div class="pt-2 pb-3 pr-4">
-                    <FormattedDate date={post.updated ?? post.published} class="font-light text-sm text-neutral-400" />
+            <a href={`/posts/${post.slug}`} class="flex flex-col lg:flex-row lg:items-center gap-4 group">
+                <img src={`/images/posts/${post.slug}/hero.webp`} alt="Imagem do post" class="rounded-lg lg:max-w-64" />
+                <div>
+                    <h2
+                        class="text-2xl font-bold text-mint-300 group-hover:text-purple-400 transition-colors duration-200"
+                    >
+                        {post.title}
+                    </h2>
+                    <p class="mt-3 opacity-80">{post.description}</p>
+                    <div class="flex gap-2">
+                        <Link
+                            href={`/categories/${post.category
+                                .normalize("NFKD")
+                                .replace(/[\u0300-\u036f]/g, "")
+                                .replace(" ", "-")
+                                .toLowerCase()}`}>{post.category}</Link
+                        >
+                        <p>•</p>
+                        <FormattedDate date={post.updated ?? post.published} />
+                        <p>•</p>
+                        <p><b>{post.readingTime} min.</b> de leitura</p>
+                    </div>
                 </div>
-                <div class="pt-2 pb-3">
-                    <a href={`/posts/${post.slug}`}>
-                        <p class="font-bold hover:text-purple-500">{post.title}</p>
-                        <p class="leading-tight text-neutral-400 text-sm">{post.description}</p>
-                    </a>
-                </div>
-            </div>
+            </a>
         {/each}
     </div>
 </section>
