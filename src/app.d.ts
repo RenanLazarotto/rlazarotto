@@ -35,9 +35,11 @@ declare global {
         };
 
         type Slide = {
-            caption: string;
+            title: string;
             src: string;
-            alt?: string;
+            thumb: string;
+            alt: string;
+            type: "image" | "video";
         };
     }
 }
