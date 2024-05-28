@@ -1,3 +1,3 @@
-<blockquote class="p-3 border-l-4 border-l-purple-500 mb-4 bg-neutral-700">
+<blockquote class="pl-4 border-l-[3px] border-l-mint-500 mb-4">
     <slot />
 </blockquote>
