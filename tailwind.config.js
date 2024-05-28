@@ -4,6 +4,7 @@ const colors = require("tailwindcss/colors");
 /** @type {import('tailwindcss').Config} */
 export default {
     content: ["./src/**/*.{html,js,svelte,ts,md}"],
+    darkMode: "class",
     theme: {
         extend: {
             fontFamily: {
@@ -15,7 +16,7 @@ export default {
             current: "currentColor",
             black: colors.black,
             white: colors.white,
-            gray: colors.gray,
+            gray: colors.slate,
             purple: colors.purple,
             violet: colors.violet,
             mint: {
