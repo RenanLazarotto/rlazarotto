@@ -1,6 +1,6 @@
 {
     "name": "site",
-    "version": "2.0.0",
+    "version": "2.0.1-beta.0",
     "private": true,
     "scripts": {
         "dev": "vite dev",
@@ -28,6 +28,7 @@
     "dependencies": {
         "@fontsource-variable/material-symbols-rounded": "^5.0.31",
         "@fontsource-variable/onest": "^5.0.4",
+        "date-fns": "^3.6.0",
         "string-strip-html": "^13.4.8"
     }
 }
