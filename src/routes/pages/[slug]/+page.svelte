@@ -1,40 +1,34 @@
 <script lang="ts">
     import FormattedDate from "$lib/components/FormattedDate.svelte";
-    import Icon from "$lib/components/Icon.svelte";
     import type { PageData } from "./$types";
 
     export let data: PageData;
 </script>
 
 <svelte:head>
-    <title>{data.title}</title>
+    <title>{data.meta.title}</title>
     <meta property="og:type" content="article" />
-    <meta property="og:title" content={data.title} />
+    <meta property="og:title" content={data.meta.title} />
 </svelte:head>
 
-<ul class="flex gap-2 text-xs text-neutral-400 font-medium mb-5">
-    <li><a href="/" class="hover:text-purple-400">Início</a></li>
-    <li><Icon id="chevron-right" /></li>
-    <li><a href="/pages" class="hover:text-purple-400">Páginas</a></li>
-    <li><Icon id="chevron-right" /></li>
-    <li><a href={`/pages/${data.slug}`} class="hover:text-purple-400">{data.title}</a></li>
-</ul>
-
-<h2 class="font-bold text-4xl mt-5 mb-2">{data.title}</h2>
-<p class="mb-2 before:inline-block before:align-middle before:w-8 before:h-0.5 before:mr-2 before:bg-purple-500">
-    {data.description}
-</p>
-<div class="flex gap-6 mb-6 text-xs">
-    <p class="text-neutral-500">
-        Publicado em <FormattedDate date={data.published} class="font-medium text-neutral-300" />
+<article class="max-w-screen-lg mx-auto">
+    <h2 class="font-bold text-5xl mt-5 text-gray-100">{data.meta.title}</h2>
+    <p class="mt-2 mb-3 text-gray-400 text-xl font-medium">
+        {data.meta.description}
     </p>
-    {#if data.updated}
-        <p class="text-neutral-500">
-            Última atualização em <FormattedDate date={data.updated} class="font-medium text-neutral-300" />
-        </p>
-    {/if}
-</div>
+    <div class="flex gap-2 mb-12 text-xs text-gray-400">
+        <FormattedDate date={data.meta.published} class="font-medium" />
+        {#if data.meta.updated}
+            <p>•</p>
+            <p>
+                Atualizado em <FormattedDate date={data.meta.updated} class="font-medium" />
+            </p>
+        {/if}
+        <p>•</p>
+        <p><b>{data.meta.readingTime} min.</b> de leitura</p>
+    </div>
 
-<article class="article mb-12">
-    <svelte:component this={data.content} />
+    <section class="article mb-12">
+        <svelte:component this={data.content} />
+    </section>
 </article>
