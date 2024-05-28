@@ -27,11 +27,11 @@ declare global {
             slug: string;
             published: Date;
             updated: Date;
+            readingTime: number;
         };
 
         type Post = Page & {
             category: string;
-            readingTime: number;
         };
 
         type Slide = {
