@@ -37,33 +37,30 @@
 <section class="mb-12">
     <h2 class="font-bold text-2xl mb-4">Publicações</h2>
 
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {#each data.posts.slice(0, 5) as post}
-            <div class="border border-purple-950 rounded-lg overflow-hidden flex flex-col">
-                <img src={`/images/posts/${post.slug}/hero.webp`} alt="Imagem do post" />
-                <div class="flex flex-1 flex-col p-6">
-                    <div class="mb-3">
-                        <a
+            <a href={`/posts/${post.slug}`} class="flex flex-col group">
+                <img src={`/images/posts/${post.slug}/hero.webp`} alt="Imagem do post" class="rounded-lg" />
+                <div class="flex flex-1 flex-col p-4">
+                    <h2 class="text-2xl font-bold text-mint-300 group-hover:text-purple-400">{post.title}</h2>
+                    <p class="mt-3">{post.description}</p>
+                    <span class="flex-1" />
+
+                    <div class="mt-6 text-xs flex gap-2 text-gray-500">
+                        <Link
                             href={`/categories/${post.category
                                 .normalize("NFKD")
                                 .replace(/[\u0300-\u036f]/g, "")
                                 .replace(" ", "-")
-                                .toLowerCase()}`}
-                            class="bg-purple-950/50 hover:bg-purple-950/40 text-purple-400 hover:text-purple-500 px-2 py-1 rounded text-sm"
-                            >{post.category}</a
+                                .toLowerCase()}`}>{post.category}</Link
                         >
-                    </div>
-
-                    <a href={`/posts/${post.slug}`} class="text-2xl font-bold hover:text-mint-500">{post.title}</a>
-                    <p class="mt-3 opacity-80">{post.description}</p>
-                    <span class="flex-1" />
-                    <div class="border-t border-t-purple-950 pt-3 mt-6 opacity-80 text-xs">
-                        Publicado em
+                        <p>•</p>
                         <FormattedDate date={post.updated ?? post.published} />
-                        • <b>{post.readingTime} min.</b> de leitura
+                        <p>•</p>
+                        <p><b>{post.readingTime} min.</b> de leitura</p>
                     </div>
                 </div>
-            </div>
+            </a>
         {/each}
     </div>
     {#if data.posts.length > 5}
