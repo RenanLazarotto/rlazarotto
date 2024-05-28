@@ -23,7 +23,7 @@
             <p class="text-justify text-gray-300">
                 Aqui é o meu pequeno refúgio na internet, onde eu compartilho minhas paixões, minhas ideias e coisas que
                 são interessantes ou úteis de forma geral. Você pode ver um pouquinho mais das groselhas que eu tenho
-                pra falar <Link href="/blog">aqui</Link>, pode saber mais sobre mim e meu trabalho <Link href="/sobre"
+                pra falar <Link href="/posts">aqui</Link>, pode saber mais sobre mim e meu trabalho <Link href="/sobre"
                     >aqui</Link
                 > ou descobrir qual é meu plano infalível da vez <Link href="/agora">aqui</Link>.
             </p>
