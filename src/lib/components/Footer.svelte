@@ -1,49 +1,25 @@
 <script lang="ts">
     import Link from "$lib/components/Link.svelte";
     import { version } from "$app/environment";
+    import Icon from "./Icon.svelte";
     let versionInfo: Types.Version = JSON.parse(version);
 </script>
 
-<footer>
-    <dl class="grid grid-cols-[max-content_minmax(0,1fr)] text-sm">
-        <dt
-            class="py-1 pr-4 text-neutral-500 [&:not(:first-of-type)]:border-t [&:not(:first-of-type)]:border-neutral-600 [&:not(:first-of-type)]:border-dashed"
+<footer class="mt-6 grid grid-cols-1 md:grid-cols-2">
+    <p class="text-purple-500 mb-2">
+        &copy; {new Date().getFullYear()} | Desenvolvido por Renan Lazarotto
+    </p>
+    <div class="flex justify-end text-xs items-center">
+        <Link href="https://github.com/RenanLazarotto/rlazarotto" target="_blank" showBackground={true}>
+            Versão {versionInfo.package}
+        </Link>
+        <Icon id="separator" width={16} height={16} class="mx-1" />
+        <Link
+            href={`https://github.com/RenanLazarotto/rlazarotto/commit/${versionInfo.hash}`}
+            target="_blank"
+            showBackground={true}
         >
-            Desenvolvido por
-        </dt>
-        <dd
-            class="py-1 pr-4 [&:not(:first-of-type)]:border-t [&:not(:first-of-type)]:border-neutral-600 [&:not(:first-of-type)]:border-dashed"
-        >
-            Renan Lazarotto
-        </dd>
-        <dt
-            class="py-1 pr-4 text-neutral-500 [&:not(:first-of-type)]:border-t [&:not(:first-of-type)]:border-neutral-600 [&:not(:first-of-type)]:border-dashed"
-        >
-            Código fonte
-        </dt>
-        <dd
-            class="py-1 pr-4 [&:not(:first-of-type)]:border-t [&:not(:first-of-type)]:border-neutral-600 [&:not(:first-of-type)]:border-dashed"
-        >
-            <Link href="https://github.com/RenanLazarotto/rlazarotto" target="_blank">RenanLazarotto/rlazarotto</Link>
-        </dd>
-
-        <dt
-            class="py-1 pr-4 text-neutral-500 [&:not(:first-of-type)]:border-t [&:not(:first-of-type)]:border-neutral-600 [&:not(:first-of-type)]:border-dashed"
-        >
-            Versão
-        </dt>
-        <dd
-            class="py-1 pr-4 [&:not(:first-of-type)]:border-t [&:not(:first-of-type)]:border-neutral-600 [&:not(:first-of-type)]:border-dashed"
-        >
-            {versionInfo.package}
-
-            <Link
-                href={`https://github.com/RenanLazarotto/rlazarotto/commit/${versionInfo.hash}`}
-                target="_blank"
-                class="bg-neutral-700 text-xs py-0.5 px-1 rounded"
-            >
-                {versionInfo.hash.slice(0, 7)}
-            </Link>
-        </dd>
-    </dl>
+            Último commit: {versionInfo.hash.slice(0, 7)}
+        </Link>
+    </div>
 </footer>
