@@ -1,5 +1,6 @@
 <script lang="ts">
     import FormattedDate from "$lib/components/FormattedDate.svelte";
+    import NotByIA from "$lib/components/NotByIA.svelte";
     import type { PageData } from "./$types";
 
     export let data: PageData;
@@ -12,11 +13,11 @@
 </svelte:head>
 
 <article class="max-w-screen-lg mx-auto">
-    <h2 class="font-bold text-5xl mt-5 text-gray-100">{data.meta.title}</h2>
-    <p class="mt-2 mb-3 text-gray-400 text-xl font-medium">
+    <h2 class="font-medium text-3xl my-5 text-gray-100">{data.meta.title}</h2>
+    <p class="mb-3 text-gray-500">
         {data.meta.description}
     </p>
-    <div class="flex gap-2 mb-12 text-xs text-gray-400">
+    <div class="flex gap-2 mb-12 text-xs text-gray-500">
         <FormattedDate date={data.meta.published} class="font-medium" />
         {#if data.meta.updated}
             <p>•</p>
@@ -28,7 +29,9 @@
         <p><b>{data.meta.readingTime} min.</b> de leitura</p>
     </div>
 
-    <section class="article mb-12 text-justify">
+    <section class="prose prose-invert mb-16 prose-hr:border-dashed text-justify max-w-none">
         <svelte:component this={data.content} />
     </section>
+
+    <NotByIA />
 </article>

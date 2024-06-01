@@ -1,35 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.article h2 {
-    @apply text-2xl font-bold mt-8 mb-2;
-}
-
-.article h3 {
-    @apply text-lg font-bold mt-6 mb-3;
-}
-.article p + p,
-.article p + ul,
-.article ul + p,
-.article blockquote + p {
-    @apply mt-6;
-}
-
-.article ul li + li {
-    @apply mt-1;
-}
-
-.article ul li::before {
-    content: "•";
-    vertical-align: middle;
-    padding-right: 8px;
-}
-
-.article ul li:nth-child(odd)::before {
-    color: #00f59b;
-}
-
-.article ul li:nth-child(even)::before {
-    color: #a855f7;
-}

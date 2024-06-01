@@ -1,4 +1,6 @@
+import { estimateReadingTime } from "$lib/utils.js";
 import { error, json } from "@sveltejs/kit";
+import { stripHtml } from "string-strip-html";
 
 /**
  * Retorna as publicações de uma categoria informada.
@@ -22,8 +24,9 @@ export async function GET({ params }) {
         const slug = path.split("/").at(-1)?.replace(".md", "");
 
         if (file && typeof file === "object" && "metadata" in file && slug) {
+            const dom = stripHtml(file.default.$$render()).result;
             const metadata = file.metadata as Omit<Types.Post, "slug">;
-            const post = { ...metadata, slug } satisfies Types.Post;
+            const post = { ...metadata, slug, readingTime: estimateReadingTime(dom) } satisfies Types.Post;
 
             if (
                 post.category

@@ -9,7 +9,7 @@ category: Reviews
 <script lang="ts">
     import Quote from "$lib/components/Quote.svelte";
     import Link from "$lib/components/Link.svelte";
-    import Carousel from "$lib/components/Carousel.svelte";
+    import Gallery from "$lib/components/Gallery.svelte";
 </script>
 
 <Quote>
@@ -22,7 +22,7 @@ Ontem, depois de alguns dias de espera, finalmente chegou meu celular novo - um 
 
 Por algum motivo infeliz que eu não consigo entender, as fabricantes de aparelhos continuaram subindo os preços dos aparelhos enquanto mandam menos coisas dentro da caixa. Pra quem tem menos de 20 anos, uma pequena lição de história: antigamente as caixas de telefone eram muito diferentes de como são hoje. Dando uma rápida garimpada, achei esse imagem aqui que mostra o que vinha na caixa de um Nokia 5230, um aparelho que inclusive eu tive:
 
-<Carousel slides={[{
+<Gallery slides={[{
 src: "/images/posts/g84-primeiras-impressoes/caixa-nokia-5230.webp",
 thumb: "/images/posts/g84-primeiras-impressoes/caixa-nokia-5230-thumb.webp",
 title: "Itens que acompanhavam um Nokia 5230",
@@ -73,7 +73,7 @@ A instalação foi absurdamente simples e eu me arrependo de não ter tirado pri
 
 Já com o software atualizado, era hora de começar a explorar o Android da Motorola. Um dos grandes pontos apontado por pessoas que não gostam do Android são as customizações de cada fabricante em cima dele. Além de aplicativos pré-instalados, as fabricantes tem total liberdade de customizar o sistema para se enquadrar à sua identidade visual. A Samsung, por exemplo, usa a interface chamada OneUI, que é bem diferente da interface "padrão" do Android, como desenvolvida pelo Google. Nesse ponto, a Motorola mantém a interface com praticamente nenhuma customização em relação ao Android do Google:
 
-<Carousel slides={[
+<Gallery slides={[
 {
 src: "/images/posts/g84-primeiras-impressoes/tela-inicial.webp",
 thumb: "/images/posts/g84-primeiras-impressoes/tela-inicial-thumb.webp",
@@ -99,7 +99,7 @@ type: "image",
 
 Falando em customização, o aparelho conta com várias opções de customização. Acredito que boa parte delas já sejam do próprio Android e não sejam adições da Motorola, mas não tenho certeza. Uma coisa é certa - as opções são bem diferentes das oferecidas pela One UI, da Samsung, pelo menos até a versão 5.1, que foi a última que eu testei.
 
-<Carousel slides={[
+<Gallery slides={[
 {
 src: "/images/posts/g84-primeiras-impressoes/aplicativo-moto.webp",
 thumb: "/images/posts/g84-primeiras-impressoes/aplicativo-moto-thumb.webp",

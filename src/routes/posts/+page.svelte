@@ -23,8 +23,9 @@
                     >
                         {post.title}
                     </h2>
-                    <p class="mt-3 opacity-80">{post.description}</p>
-                    <div class="flex gap-2">
+                    <p class="mt-2 mb-1 text-gray-300">{post.description}</p>
+
+                    <div class="flex gap-2 text-gray-300">
                         <Link
                             href={`/categories/${post.category
                                 .normalize("NFKD")

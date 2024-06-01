@@ -21,6 +21,9 @@ const config = {
 
     kit: {
         adapter: adapter(),
+        alias: {
+            $content: "./src/content",
+        },
         version: {
             name: JSON.stringify(version),
         },

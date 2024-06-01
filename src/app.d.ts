@@ -41,6 +41,24 @@ declare global {
             alt: string;
             type: "image" | "video";
         };
+
+        type Project = {
+            title: string;
+            description: string[];
+            year: number;
+            company: string;
+            stack: string[];
+            link?: string;
+            source?: string;
+        };
+
+        type Experience = {
+            company: string;
+            href?: string;
+            position: string;
+            start: string;
+            end?: string;
+        };
     }
 }
 

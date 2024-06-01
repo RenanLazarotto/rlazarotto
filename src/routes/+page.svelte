@@ -10,37 +10,42 @@
     <title>Renan Lazarotto</title>
 </svelte:head>
 
-<section class="mb-12 text-lg">
-    <div class="flex flex-col md:flex-row gap-8">
-        <div class="flex-1">
-            <h2 class="font-bold mb-8 text-3xl">E aí, beleza? Eu sou Renan ✌🏻</h2>
-            <p class="text-justify mb-6 text-gray-300">
-                Eu sou um programador full-stack de Curitiba, no Paraná, e atualmente trabalho do conforto do meu lar
-                para a
-                <Link href="https://wlgrupo.com/empresa/hammer/" target="_blank">Hammer Consultoria</Link>, convertendo
-                café e requisitos em código e resultados.
-            </p>
-            <p class="text-justify text-gray-300">
-                Aqui é o meu pequeno refúgio na internet, onde eu compartilho minhas paixões, minhas ideias e coisas que
-                são interessantes ou úteis de forma geral. Você pode ver um pouquinho mais das groselhas que eu tenho
-                pra falar <Link href="/posts">aqui</Link>, pode saber mais sobre mim e meu trabalho <Link href="/sobre"
-                    >aqui</Link
-                > ou descobrir qual é meu plano infalível da vez <Link href="/agora">aqui</Link>.
-            </p>
-        </div>
-        <div class="rounded-full w-64 h-64 overflow-hidden">
-            <img src="/images/me.jpg" alt="Eu, o autor!" class="grayscale" />
-        </div>
-    </div>
+<section class="mb-16">
+    <p class="text-justify mb-6 text-gray-300">
+        Programador full-stack de Curitiba, no Paraná, atualmente trabalhando do conforto do meu lar para a
+        <Link href="https://wlgrupo.com/empresa/hammer/" target="_blank">Hammer Consultoria</Link>, convertendo café e
+        requisitos em código e resultados.
+    </p>
+    <p class="text-justify mb-6 text-gray-300">
+        Aqui é o meu pequeno refúgio na internet. Você pode ver um pouquinho mais das groselhas que eu tenho pra falar <Link
+            href="/posts">aqui</Link
+        >, pode saber mais sobre mim e meu trabalho <Link href="/sobre">aqui</Link> ou descobrir qual é meu plano infalível
+        da vez <Link href="/agora">aqui</Link>.
+    </p>
 </section>
 
-<section class="mb-12">
-    <h2 class="font-bold text-2xl mb-4">Publicações</h2>
+<section class="mb-16">
+    <nav class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+        {#each data.pages as page}
+            <div class="text-center">
+                <Link href={`/pages/${page.slug}`} class="text-xl">
+                    {page.title}
+                </Link>
+                <p class="text-gray-500">{page.description}</p>
+            </div>
+        {/each}
+    </nav>
+</section>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<hr class="mb-16 border-t border-t-gray-900" />
+
+<section class="mb-16">
+    <h2 class="text-2xl leading-snug font-bold mb-4">Publicações</h2>
+
+    <div class="flex flex-col gap-8">
         {#each data.posts.slice(0, 5) as post}
-            <a href={`/posts/${post.slug}`} class="flex flex-col group">
-                <img src={`/images/posts/${post.slug}/hero.webp`} alt="Imagem do post" class="rounded-lg" />
+            <a href={`/posts/${post.slug}`} class="flex group">
+                <img src={`/images/posts/${post.slug}/hero.webp`} alt="Imagem do post" class="rounded-lg lg:max-w-64" />
                 <div class="flex flex-1 flex-col p-4">
                     <h2 class="text-2xl font-bold text-mint-300 group-hover:text-purple-400">{post.title}</h2>
                     <p class="mt-3 text-gray-300">{post.description}</p>

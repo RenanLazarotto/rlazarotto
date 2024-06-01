@@ -1,14 +1,35 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
+const plugin = require("tailwindcss/plugin");
 
 /** @type {import('tailwindcss').Config} */
 export default {
     content: ["./src/**/*.{html,js,svelte,ts,md}"],
     darkMode: "class",
+    plugins: [
+        require("@tailwindcss/typography"),
+        plugin(function ({ matchUtilities, theme }) {
+            matchUtilities(
+                {
+                    // <nome-da-classe-do-tailwind>: (<valor-recebido>) => ({<nome-da-propriedade-css>: <valor-recebido>})
+                    shape: (value) => ({ "shape-outside": value }),
+                },
+                { values: theme("shapes") }
+            );
+        }),
+    ],
     theme: {
+        shapes: {
+            circle: "circle()",
+            ellipse: "ellipse()",
+            inset: "inset()",
+            polygon: "polygon()",
+            initial: "initial",
+            inherit: "inherit",
+        },
         extend: {
             fontFamily: {
-                sans: ["'Onest Variable'", ...defaultTheme.fontFamily.sans],
+                sans: ["'Inter Variable'", ...defaultTheme.fontFamily.sans],
             },
         },
         colors: {

@@ -1,47 +1,150 @@
 ---
 title: Sobre
-description: Um pouco a mais sobre a pessoa por trás da tela
+description: Sobre mim além da tela
 published: 2024-02-28
 updated: 2024-03-01
 ---
 
 <script lang="ts">
     import Link from "$lib/components/Link.svelte";
-    import { differenceInYears } from "date-fns";
+    import Quote from "$lib/components/Quote.svelte";
+    import Portrait from "$lib/components/Portrait.svelte";
+    import List from "$lib/components/List.svelte";
+    import ListItem from "$lib/components/ListItem.svelte";
 
-    const age = differenceInYears(new Date(), "1991-09-25 05:25:00");
+    import { experiences } from "$content/experiences";
+    import { projects } from "$content/projects";
 </script>
 
-Olá, seja bem vindo! Você encontrou meu refúgio na internet, e falar a respeito de si mesmo é sempre difícil, mas lá vai. Eu me chamo Renan Lazarotto, eu tenho {age} anos e sou natural de Curitiba, Paraná (onde eu também resido).
+## Quem sou eu?
 
-Sou programador full stack na Hammer Consult desde agosto de 2022. Comecei fazendo manutenção em um backend em PHP e hoje desenvolvo um sistema que utiliza SvelteKit e Go.
+<Portrait src="/images/me.jpg" alt="A minha cara além da tela" title="A única foto com qualidade profissional minha que eu tenho" rounded />
 
-## 🧔🏻 Vida pessoal
+Olá, seja bem vindo! Eu me chamo Renan, sou programador full-stack, nascido e morando em Curitiba, no Paraná. Desde pequeno eu sou o tipo de pessoa curiosa que gosta de entender como as coisas funcionam, com um talento especial pra desmontar alguma coisa pra "ver como ela funciona por dentro", apenas pra ter sucesso variável na remontagem.
 
-Eu nasci em Curitiba, no Paraná, em 25 de setembro de 1991. Comecei a ter interesse por computadores já na infância, estragando o computador do meu pai mais vezes do que ele conseguia pagar pelo conserto - até que ele me inscreveu em um curso de montagem e manutenção de computadores, para que eu aprendesse a consertar meu estrago sozinho quando eu tinha 10 anos.
+Comecei a demonstrar interesse e aptidão com computadores ainda pequeno, quando fiz meu pai gastar uma pequena fortuna pagando um técnico pra consertar as bobeiras que eu fazia. Depois disso se repetir algumas vezes, fiz um curso de montagem e manutenção de computadores. Com o que eu aprendi, fiz muitos bicos de formatação e manutenção nos computadores da vizinhança, posteriormente sendo um diferencial pra conseguir emprego.
 
-Na adolescência, começou meu interesse em programação, quando tentei desenvolver alguns softwares com interfáce gráfica para automatizar algumas tarefas repetitivas e para aprender um pouco mais sobre programação. Esse interesse precoce se mostrou útil anos depois, quando trabalhava como técnico de suporte - com o pouco que eu sabia, eu consegui automatizar várias tarefas e cortei pela metade o tempo pra finalizá-las.
+O interesse por programação veio quase que naturalmente, quando as engrenagens da discórdia começaram a girar dentro da minha cabeça querendo entender _como_ um computador funciona a nível lógico, pois o físico eu já conhecia razoavelmente bem. Durante um bom tempo eu fui autodidata, mas acabei empacando na enorme quantidade de conteúdos e conceitos que eu precisaria absorver antes de sair do "hello world" pra algo mais concreto. Mesmo assim, acabei escrevendo alguns programas que automatizavam minhas rotinas de trabalho, me poupando um bom tempo.
 
-## 👷🏻‍♂️ Carreira profissional
+Isso tudo me levou ao inevitável caminho da faculdade de TI. Aproveitando o fato de que, na época, eu trabalhava na escola de uma rede de ensino que possuía também uma faculdade, me formei em Gestão de TI. Comecei a trabalhar como desenvolvedor algum tempo depois, uma coisa levou a outra e hoje estou aqui.
 
-Depois de ter passado alguns anos trabalhando como analista/técnico de suporte (e também após ter me formado em Gestão de TI), migrei para a área de desenvolvimento. Inicialmente, trabalhei apenas como programador backend com foco em sistemas rodando em PHP e <Link href="https://symfony.com" target="_blank">Symfony</Link>.
+---
 
-Após alguns anos trabalhando exclusivamente com PHP e após ingressar na Hammer, devido a uma exigência do trabalho comecei a trabalhar com Go e SvelteKit. Foi uma mudança muito bem vinda que finalmente abriu as portas para o desenvolvimento frontend, algo que eu desejava aprimorar para sair dos projetos feitos com Bootstap e jQuery.
+## O que eu faço?
 
-## 🎯 Interesses
+Inicialmente, trabalhei apenas com backends em PHP - um pouco por medo de tentar novas coisas e sair da minha zona de conforto e um pouco pelo pouco incentivo pra aprender mais, uma vez que meu trabalho era justamente desenvolver backends em PHP.
 
-🎌 **Japão**: sou fascinado pelo Japão e sua cultura. Venho tentando aprender japonês há algum tempo. Embora ainda não tenha conseguido uma rotina de estudos, estou sempre vendo conteúdos sobre o idioma japonês e aprimorando de pouquinho em pouquinho o que sei sobre ele.
+Hoje, meu cinto de utilidades tem algumas ferramentas a mais. Além do conhecimento em bancos de dados, essencial quando você trabalha com backends, eu conheço (algo além do básico) de Go, Python e JavaScript, além de tecnologias auxiliares como Redis e RabbitMQ. Também sei algo de DevOPs, análise de requisitos e controle de qualidade.
 
-#️⃣ **Desenvolvimento**: desde que comecei a trabalhar com programação, me apaixonei ainda mais por desenvolvimento. Apesar de que aprender uma linguagem de programação nova as vezes seja bem desafiador (como, por exemplo, o perrengue que eu passei ao aprender Go e entender os conceitos que são bem diferentes dos existentes no PHP), é sempre um desafio extremamente recompensador.
+O que eu não sei não é problema, eu aprendo. Tendo um bom ponto de partida, seja algum artigo explicativo ou alguém para tirar as dúvidas, nenhuma tecnologia é complexa demais que não possa ser estudada.
 
-🎮 **Jogos digitais**: sempre fui um ávido jogador. Desde pequeno, com meu primeiro vídeo-game (um Super Nintendo) até minha juventude com um PC gamer, já acumulei muitas horas de jogo em vários jogos diferentes.
+Agora, eu passo meu tempo me divertindo com o SvelteKit, minha ferramenta de escolha pra desenvolvimento front-end - a qual eu usei pra fazer esse site. Embora eu não tenha mais o costume de mexer com backends para projetos pessoais, minha linguagem de escolha seria o Go, que eu uso bastante no trabalho.
 
-👨‍👧‍👦 **Filhos**: apesar de que meus filhos me tiram do sério a maior parte do tempo (afinal de contas, eles tem toda a energia do mundo que eu não tenho), eu sou grato por eles e minha vida não seria a mesma sem eles.
+<Quote class="mt-6">
+Eu falo mais sobre meu plano infalível do momento na minha página <Link href="/agora">Agora</Link>.
+</Quote>
+
+---
+
+## Por que criar um site?
+
+Ser uma pessoa curiosa e que gosta de fazer as coisas do seu jeito tem suas desvantagens. Eu poderia apenas utilizar uma plataforma de blog como o WordPress e escrever minhas coisas lá, mas eu queria algo que fosse meu.
+
+Desenvolver um site próprio também tem sido algo que eu desejava desde quando conheci a internet, antes mesmo de entender como que essa coisa toda funcionava, e quando os computadores eram brancos-amarelados com monitores CRT de 14".
+
+Meu site também é a minha plataforma de testes - é aqui que eu aprendo muita coisa, que eu faço muita coisa (que raramente eu publico) e que eu mantenho a chama da minha curiosidade acesa.
+
+---
+
+## Experiência profissional
+
+<List>
+    {#each experiences as experience}
+        <ListItem>
+            <div slot="left">
+                {#if experience.href}
+                    <Link href={experience.href}>{experience.company}</Link>
+                {:else}
+                    <p>{experience.company}</p>
+                {/if}
+            </div>
+            <div slot="right" class="flex text-sm text-gray-500">
+                <p>{experience.position}</p>
+                <span class="mx-2">•</span>
+                <p>{experience.start}</p>
+                {#if experience.end}
+                    {#if experience.start != experience.end}
+                        <span class="mx-0.5">–</span>
+                        <p>{experience.end}</p>
+                    {/if}
+                {:else}
+                    <span class="mx-0.5">–</span>
+                    <p>Agora</p>
+                {/if}
+            </div>
+        </ListItem>
+    {/each}
+</List>
+
+---
+
+## Projetos em que trabalhei
+
+<List>
+    {#each projects as project}
+        <ListItem class="flex-col" showLine={false}>
+            <div class="flex-1 flex gap-4 items-center mb-2">
+                <div>
+                    {#if project.link}
+                        <Link href={project.link} target="_blank">{project.title}</Link>
+                    {:else}
+                        <p class="font-bold">{project.title}</p>
+                    {/if}
+                    <div class="flex text-xs text-gray-600 gap-2">
+                        {#each project.stack as stack, i}
+                            <p>{stack}</p>
+                            {#if i + 1 != project.stack.length}
+                                <p>•</p>
+                            {/if}
+                        {/each}
+                    </div>
+                </div>
+                <div class="flex-1" />
+                <div class="flex gap-2 text-sm text-gray-500">
+                    {#if project.source}
+                        <Link href={project.source} target="_blank">Open-source</Link>
+                        <p>•</p>
+                    {/if}
+                    <p>{project.company}</p>
+                    <p>•</p>
+                    <p>{project.year}</p>
+                </div>
+            </div>
+            <div class="text-gray-400">
+                {#each project.description as description}
+                    <p>{description}</p>
+                {/each}
+            </div>
+        </ListItem>
+    {/each}
+
+</List>
+
+---
 
 ## Contato
 
-Apesar de eu ser uma pessoa extremamente tecnológica e de ter uma presença praticamente constante online, eu não sou muito fã de várias redes sociais. De modo geral, a maioria das minhas redes sociais existem apenas para que eu consuma o conteúdo dentro de seus "jardins murados".
-
--   <Link href="/curriculo">Currículo</Link>
--   <Link href="mailto:renanlazarotto@gmail.com">Email</Link>
--   <Link href="https://github.com/RenanLazarotto" target="_blank">GitHub</Link>
+<List>
+    <ListItem showLine={false}>
+        <Link href="mailto:renanlazarotto@gmail.com" slot="left">Email</Link>
+        <div slot="right" class="text-sm text-gray-500">renanlazarotto@gmail.com</div>
+    </ListItem>
+    <ListItem showLine={false}>
+         <Link href="https://github.com/RenanLazarotto" target="_blank" slot="left">GitHub</Link>
+        <div slot="right" class="text-sm text-gray-500">@RenanLazarotto</div>
+    </ListItem>
+    <ListItem showLine={false}>
+        <Link href="/curriculo" slot="left">Currículo</Link>
+        <div slot="right" class="text-sm text-gray-500">PDF</div>
+    </ListItem>
+</List>

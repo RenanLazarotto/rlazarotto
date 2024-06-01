@@ -1,21 +1,17 @@
 <script lang="ts">
+    import Icon from "./Icon.svelte";
     import Link from "./Link.svelte";
 
-    export let pages: Types.Page[];
+    export let url: string;
 </script>
 
-<header class="mb-16 flex justify-between items-center">
-    <Link href="/" class="uppercase font-bold text-3xl tracking-widest">Renan Lazarotto</Link>
-
-    <nav class="flex justify-center">
-        <ul class="inline-flex gap-4">
-            {#each pages as page}
-                <li>
-                    <Link href={`/pages/${page.slug}`} class="block uppercase">
-                        {page.title}
-                    </Link>
-                </li>
-            {/each}
-        </ul>
-    </nav>
+<header class:mb-16={url == "/"} class="flex justify-between items-center">
+    {#if url != "/"}
+        <Link href="/" class="flex items-center gap-2">
+            <Icon id="arrow-back" width={16} height={16} />
+            Home
+        </Link>
+    {:else}
+        <Link href="/" class="font-medium text-3xl">Renan Lazarotto</Link>
+    {/if}
 </header>

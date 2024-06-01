@@ -1,6 +1,5 @@
 <script lang="ts">
     import FormattedDate from "$lib/components/FormattedDate.svelte";
-    import Icon from "$lib/components/Icon.svelte";
     import Link from "$lib/components/Link.svelte";
     import type { PageData } from "./$types";
 
@@ -9,45 +8,35 @@
 
 <svelte:head>
     <title>Publicações da categoria {data.category}</title>
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Publicações da categoria {data.category}" />
 </svelte:head>
 
-<ul class="flex gap-2 text-xs text-neutral-400 font-medium mb-5">
-    <li><a href="/">Início</a></li>
-    <li><Icon id="chevron-right" width={16} height={16} /></li>
-    <li><a href="/categories">Categorias</a></li>
-    <li><Icon id="chevron-right" width={16} height={16} /></li>
-    <li><a href={`/categories/${data.slug}`}>{data.category}</a></li>
-</ul>
+<h2 class="font-medium text-3xl my-5 text-gray-100">Publicações da categoria "{data.category}"</h2>
 
-<section class="mb-12">
-    <h2 class="font-bold text-2xl mb-4">Publicações da categoria "{data.category}"</h2>
+<div class="flex flex-col gap-8">
+    {#each data.posts as post}
+        <a href={`/posts/${post.slug}`} class="flex group">
+            <img src={`/images/posts/${post.slug}/hero.webp`} alt="Imagem do post" class="rounded-lg lg:max-w-64" />
+            <div class="flex flex-1 flex-col p-4">
+                <h2 class="text-2xl font-bold text-mint-300 group-hover:text-purple-400">{post.title}</h2>
+                <p class="mt-3 text-gray-300">{post.description}</p>
+                <span class="flex-1" />
 
-    <div class="flex flex-col gap-12">
-        {#each data.posts as post}
-            <a href={`/posts/${post.slug}`} class="flex flex-col lg:flex-row lg:items-center gap-4 group">
-                <img src={`/images/posts/${post.slug}/hero.webp`} alt="Imagem do post" class="rounded-lg lg:max-w-64" />
-                <div>
-                    <h2
-                        class="text-2xl font-bold text-mint-300 group-hover:text-purple-400 transition-colors duration-200"
+                <div class="mt-6 text-xs flex gap-2 text-gray-500">
+                    <Link
+                        href={`/categories/${post.category
+                            .normalize("NFKD")
+                            .replace(/[\u0300-\u036f]/g, "")
+                            .replace(" ", "-")
+                            .toLowerCase()}`}>{post.category}</Link
                     >
-                        {post.title}
-                    </h2>
-                    <p class="mt-3 opacity-80">{post.description}</p>
-                    <div class="flex gap-2">
-                        <Link
-                            href={`/categories/${post.category
-                                .normalize("NFKD")
-                                .replace(/[\u0300-\u036f]/g, "")
-                                .replace(" ", "-")
-                                .toLowerCase()}`}>{post.category}</Link
-                        >
-                        <p>•</p>
-                        <FormattedDate date={post.updated ?? post.published} />
-                        <p>•</p>
-                        <p><b>{post.readingTime} min.</b> de leitura</p>
-                    </div>
+                    <p>•</p>
+                    <FormattedDate date={post.updated ?? post.published} />
+                    <p>•</p>
+                    <p><b>{post.readingTime} min.</b> de leitura</p>
                 </div>
-            </a>
-        {/each}
-    </div>
-</section>
+            </div>
+        </a>
+    {/each}
+</div>

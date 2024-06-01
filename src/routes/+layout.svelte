@@ -1,6 +1,5 @@
 <script lang="ts">
-    import "@fontsource-variable/onest";
-    import "@fontsource-variable/material-symbols-rounded";
+    import "@fontsource-variable/inter";
 
     import "../app.css";
     import SVG from "$lib/components/SVG.svelte";
@@ -12,8 +11,8 @@
 </script>
 
 <SVG />
-<div class="max-w-screen-xl mx-auto p-8 flex flex-col min-h-screen">
-    <Header pages={data.pages} />
+<div class="max-w-4xl mx-auto px-8 py-12 flex flex-col min-h-screen">
+    <Header url={data.url}/>
 
     <main class="flex-1">
         <slot />

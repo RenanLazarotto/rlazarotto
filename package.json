@@ -1,6 +1,6 @@
 {
     "name": "site",
-    "version": "2.0.1-beta.0",
+    "version": "2.0.1-beta.1",
     "private": true,
     "scripts": {
         "dev": "vite dev",
@@ -13,6 +13,7 @@
         "@sveltejs/adapter-auto": "^3.2.1",
         "@sveltejs/kit": "^2.5.10",
         "@sveltejs/vite-plugin-svelte": "^3.1.0",
+        "@tailwindcss/typography": "^0.5.13",
         "@types/jsdom": "^21.1.6",
         "autoprefixer": "^10.4.19",
         "mdsvex": "^0.11.0",
@@ -26,8 +27,7 @@
     },
     "type": "module",
     "dependencies": {
-        "@fontsource-variable/material-symbols-rounded": "^5.0.31",
-        "@fontsource-variable/onest": "^5.0.4",
+        "@fontsource-variable/inter": "^5.0.18",
         "date-fns": "^3.6.0",
         "string-strip-html": "^13.4.8"
     }
