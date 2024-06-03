@@ -7,7 +7,7 @@ updated: 2024-03-01
 
 <script lang="ts">
     import Link from "$lib/components/Link.svelte";
-    import Quote from "$lib/components/Quote.svelte";
+    import Banner from "$lib/components/Banner.svelte";
     import Portrait from "$lib/components/Portrait.svelte";
     import List from "$lib/components/List.svelte";
     import ListItem from "$lib/components/ListItem.svelte";
@@ -40,9 +40,11 @@ O que eu não sei não é problema, eu aprendo. Tendo um bom ponto de partida, s
 
 Agora, eu passo meu tempo me divertindo com o SvelteKit, minha ferramenta de escolha pra desenvolvimento front-end - a qual eu usei pra fazer esse site. Embora eu não tenha mais o costume de mexer com backends para projetos pessoais, minha linguagem de escolha seria o Go, que eu uso bastante no trabalho.
 
-<Quote class="mt-6">
-Eu falo mais sobre meu plano infalível do momento na minha página <Link href="/agora">Agora</Link>.
-</Quote>
+<Banner class="mt-6"  type="info" icon="info">
+    <p>
+        Eu falo mais sobre meu plano infalível do momento na minha página <Link href="/agora">Agora</Link>.
+    </p>
+</Banner>
 
 ---
 

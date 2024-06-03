@@ -2,16 +2,17 @@
 title: Um dia
 description: Desejos para o futuro
 published: 2024-05-29
+updated: 2024-06-03
 ---
 
 <script lang="ts">
     import Link from "$lib/components/Link.svelte";
-    import Quote from "$lib/components/Quote.svelte";
+    import Banner from "$lib/components/Banner.svelte";
 </script>
 
-<Quote>
+<Banner type="info"  icon="info">
     Essa é uma <Link href="https://someday.page/" target="_blank">página /someday</Link>, que retrata o que eu planejo conseguir, conquistar ou apenas viver um dia. É, essencialmente, um oposto do que eu estou fazendo <Link href="/pages/agora">agora</Link>.
-</Quote>
+</Banner>
 
 Pensar sobre o futuro é uma coisa esquisita e ao mesmo tempo fascinante - eu não faço a menor ideia de onde eu vou estar aqui a 1 ou 2 anos, quem dirá daqui 1 ou 2 meses, mas alguns sonhos ficam gravados em nós e esses são os meus.
 
@@ -21,15 +22,21 @@ Pensar sobre o futuro é uma coisa esquisita e ao mesmo tempo fascinante - eu n�
 
 Isso inclui um emprego que me pague o suficiente pra ter um bom equilíbrio entre vida pessoal e trabalho.
 
+---
+
 ## Um computador pra chamar de meu
 
 Depois de muito tempo usando notebooks, está crescendo cada vez mais a vontade de ter um computador de mesa, algo que a juventude atual praticamente abandonou devido ao forte domínio dos celulares. Quero ter meu _setup_ com 2 ou 3 monitores (sim, eu preciso de pelo menos 2 pra ser feliz, e consigo facilmente achar uso contínuo para 3 ou até mesmo 4), uma cadeira confortável que não precisa nem ser gamer e potência de sobra pra jogar qualquer jogo na configuração máxima - um sonho de criança.
 
 Ah, e RGB. RGB em tudo. RGB na mesa, na cadeira, no computador, no teclado... O único que fica de fora é o mouse que eu já tenho - não bastasse ser lilás, também é RGB. Obrigado Logitech por pensar nas pessoas que não gostam do padrão preto-ou-branco.
 
+---
+
 ## Hora de me motorizar
 
 Ter um carro foi, durante um bom tempo, uma realização concluída com sucesso, mas nem sempre as coisas saem como esperamos. Depois de alguns infortúnios, fiquei sem o possante próprio. Agora, é trabalhar pra conseguir um, e quem sabe um dia eu consiga atingir um nível de estabilidade financeira que me permita fazer aquele project car maroto...
+
+---
 
 ## Minha casa, minha vida
 

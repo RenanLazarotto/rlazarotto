@@ -7,16 +7,20 @@ category: Reviews
 ---
 
 <script lang="ts">
-    import Quote from "$lib/components/Quote.svelte";
+    import Banner from "$lib/components/Banner.svelte";
     import Link from "$lib/components/Link.svelte";
     import Gallery from "$lib/components/Gallery.svelte";
+    import List from "$lib/components/List.svelte";
+    import ListItem from "$lib/components/ListItem.svelte";
 </script>
 
-<Quote>
+<Banner icon="info">
 Peço desculpas pela falta de imagens do celular em si - eu só tenho ele e não tive como tirar fotos da caixa, ou fazer um unboxing - que era minha ideia inicial. O unboxing fica pra próxima!
-</Quote>
+</Banner>
 
 Ontem, depois de alguns dias de espera, finalmente chegou meu celular novo - um Motorola Moto G84 5G. É o meu primeiro celular da Motorola depois de **_muito_** tempo, sendo meu último um Moto X, da primeira geração. Como a vida adulta cobra da gente, acabei deixando pra abrir o celular hoje e só então começar todo o tedioso processo de configurar o telefone.
+
+---
 
 ## Conteúdo da caixa
 
@@ -32,26 +36,68 @@ type: "image",
 
 Na imagem, o que vinha dentro da caixa de um celular típico de 2010:
 
--   Celular;
--   Bateria - sim, as baterias eram removíveis e o próprio usuário podia trocá-las em questão de segunods. Inclusive, era uma prática de quem tinha condições de comprar uma segunda bateria simplesmente trocar a bateria esgotada pela carregada e continuar usando o telefone com o mínimo de interrupção;
--   Carregador comum;
--   Carregador veicular;
--   Duas tampas traseiras nas cores vermelha e azul;
--   Manual - um manual de verdade, ao contrário dos informativos que vem nas caixas atualmente;
--   Fone de ouvido;
--   Caneta Stylus - atualmente, as canetas são do tipo "capacitiva", como as SPen e a caneta da Apple, que são inteligentes, se conectam com o celular e tem diversas funcionalidades. Essa era uma caneta do tipo "resistiva", que nada mais era que uma caneta de plástico que servia com o único propósito de fazer pressão em um ponto específico da tela. No caso do Nokia 5230, o touchscreen dele era resistivo, funcionava detectando pressão na tela. Lembrando que essa era uma tecnologia relativamente nova na época, que ainda estava se popularizando entre celulares mais baratos.
+<List class="gap-2 mb-8">
+    <ListItem>
+        <p class="before:content-['•'] before:mr-2 before:text-mint-500">Celular</p>
+    </ListItem>
+    <ListItem class="flex-col">
+        <p class="before:content-['•'] before:mr-2 before:text-mint-500">Bateria</p>
+        <Banner color="mint" icon="question" class="mb-3 mt-1">
+            <p>Sim, as baterias eram removíveis e o próprio usuário podia trocá-las em questão de segundos.</p>
+            <p class="mt-2"  >
+                Inclusive, era uma prática de quem tinha condições de comprar uma segunda bateria simplesmente trocar a bateria esgotada pela carregada e continuar usando o telefone com o mínimo de interrupção.
+            </p>
+        </Banner>
+    </ListItem>
+    <ListItem>
+        <p class="before:content-['•'] before:mr-2 before:text-mint-500">Carregador comum</p>
+    </ListItem>
+    <ListItem>
+        <p class="before:content-['•'] before:mr-2 before:text-mint-500">Carregador veicular</p>
+    </ListItem>
+    <ListItem>
+        <p class="before:content-['•'] before:mr-2 before:text-mint-500">Duas tampas traseiras nas cores vermelha e azul</p>
+    </ListItem>
+    <ListItem>
+        <p class="before:content-['•'] before:mr-2 before:text-mint-500">Manual - um manual de verdade, ao contrário dos informativos que vem nas caixas atualmente</p>
+    </ListItem>
+    <ListItem>
+        <p class="before:content-['•'] before:mr-2 before:text-mint-500">Fone de ouvido</p>
+    </ListItem>
+    <ListItem>
+        <p class="before:content-['•'] before:mr-2 before:text-mint-500">Caneta Stylus resistiva</p>
+    </ListItem>
+</List>
 
 Na caixa do Moto G84, veio:
 
--   Celular;
--   Carregador turbo de 33W;
--   Cabo USB;
--   Alguns informativos sobre informações regulamentárias;
--   Ejetor da bandeja do chip e cartão de memória.
+<List class="gap-2 mb-8">
+    <ListItem>
+        <p class="before:content-['•'] before:mr-2 before:text-mint-500">Celular</p>
+    </ListItem>
+    <ListItem>
+        <p class="before:content-['•'] before:mr-2 before:text-mint-500">Carregador turbo de 33W</p>
+    </ListItem>
+    <ListItem>
+        <p class="before:content-['•'] before:mr-2 before:text-mint-500">Cabo USB</p>
+    </ListItem>
+    <ListItem>
+        <p class="before:content-['•'] before:mr-2 before:text-mint-500">
+        Alguns informativos sobre informações regulamentárias
+        </p>
+    </ListItem>
+    <ListItem>
+        <p class="before:content-['•'] before:mr-2 before:text-mint-500">
+            Ejetor da bandeja do chip e cartão de memória
+        </p>
+    </ListItem>
+</List>
 
 Tudo isso numa embalagem de papelão. Nesse quesito, ponto positivo pra Motorola - embalagens de papel são mais sustentáveis e se decompôe mais rapidamente do que plástico. O que decepciona mesmo é o conteúdo, já que não vem nem mesmo um fone de ouvido. Pra mim acaba não sendo um problema, pois eu uso um fone Bluetooth, mas pra muita gente esse é um item essencial, que se torna um gasto a mais logo após já ter arcado com o preço de um celular.
 
 Sendo sincero, não reclamo, pois eu estava ciente de que viria apenas o aparelho e o carregador antes da compra. O que eu realmente senti falta foi a inclusão de uma capinha. Muitos aparelhos de marcas como Xiaomi incluem uma capinha transparente na caixa, que é uma baita mão na roda.
+
+---
 
 ## Primeira inicialização
 
@@ -64,6 +110,8 @@ Após a carga completa, liguei o celular pela primeira vez. A inicialização fo
 Agora aqui um detalhe que reparei vem aparelhos diferentes e ROMs diferentes: uma das últimas etapas da configuração é os toques finais, que incluem copiar os dados de um aparelho antigo, customizar o tamanho da fonte e da exibição, cores e etc. Essas etapas podem ser puladas para serem concluídas depois, através de uma notificação persistente. Acontece que essa notificação vai aparecer independente de você ter concluído essas etapas opcionais ou não.
 
 Outro detalhe que eu noitei foi que os aplicativos "recomendados" acabam sendo instalados mesmo se você cancelar a instalação na Play Store. É bem frustrante, ainda mais considerando que os aplicativos são do nível Candy Crush, Sporting Bet, Booking.com e TikTok. Não tenho nada contra esses aplicativos, mas não vejo sentido em forçar a instalação deles apenas para que me dar a opção de excluí-los depois.
+
+---
 
 ## Software da Motorola
 
@@ -185,6 +233,8 @@ alt: "Video demonstrando os efeitos exibidos no leitor de digital",
 type: "video",
 }
 ]}/>
+
+---
 
 ## Concluindo
 

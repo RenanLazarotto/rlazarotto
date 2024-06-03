@@ -2,21 +2,25 @@
 title: Agora
 description: Objetivos a curto-prazo
 published: 2024-02-28
-updated: 2024-05-28
+updated: 2024-06-03
 ---
 
 <script lang="ts">
     import Link from "$lib/components/Link.svelte";
-    import Quote from "$lib/components/Quote.svelte";
+    import Banner from "$lib/components/Banner.svelte";
 </script>
 
-<Quote>
-    Essa é uma <Link href="https://nownownow.com/about" target="_blank">página /now</Link>, um resumo do que vem acontecendo na minha vida que eu ache interessante (ou não) de comentar.
-</Quote>
+<Banner type="info" icon="info" >
+    <p>
+        Essa é uma <Link href="https://nownownow.com/about" target="_blank">página /now</Link>, um resumo do que vem acontecendo na minha vida que eu ache interessante (ou não) de comentar.
+    </p>
+</Banner>
 
 ## Reescrevendo o site - de novo!
 
 Eu já perdi a conta de quantas iterações esse site já teve - e que nunca viram a luz do dia. Inicialmente, era pra ser um portfolio de um programador, mas se você sacudir uma árvore caem seis portfolios com o mesmo objetivo. Achei que seria mais interessante ter um site pessoal que misturasse blog, portfolio e o que mais eu tivesse vontade - e disso nasceu essa versão do meu site.
+
+---
 
 ## Aprendendo coisas novas
 
@@ -30,11 +34,15 @@ Pra finalizar, novamente eu me vi usando o Tailwind CSS. É uma ferramenta poder
 
 Eu não vejo isso exatamente como um problema - é um projeto pessoal, que só eu vou manter, que em teoria só precisa fazer sentido pra mim. Enquanto na primeira versão eu fiz o caminho inverso - migrei do Tailwind para CSS puro, dessa vez mantive tudo no Tailwind e não vejo motivos pra ser de outra forma.
 
+---
+
 ## Iniciando uma nova saga
 
 Essa mudança de foco no meu site reflete também uma mudança de foco na minha vida em geral. Conforme o tempo foi passando, percebi que eu precisava cuidar mais de alguns aspectos que vinham me incomodando a muito tempo, e o primeiro passo foi a pegada mais minimalista.
 
 Fica bem evidente quando comparamos uma versão com a outra do site - a primeira versão, apesar de eu achá-la bem bonita (até porque fui o responsável por ela), ela é visualmente _poluída_. No mundo real, as mudanças começaram com o desapego de tranqueiras que foram acumulando durante os anos. Aos poucos, fui me desfazendo de todas as coisas que eu nunca usava ou tinha algum real propósito. É libertador e eu recomendo quem puder fazer isso que o faça.
+
+---
 
 ## Diversão - eu não sou de ferro, afinal...
 

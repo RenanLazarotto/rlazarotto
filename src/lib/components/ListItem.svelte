@@ -2,7 +2,11 @@
     export let showLine: boolean = true;
 </script>
 
-<div class:items-center={showLine} class:gap-4={showLine} class="flex {$$props.class}">
+<div
+    class:items-center={showLine && $$slots.left && $$slots.right}
+    class:gap-4={showLine && $$slots.left && $$slots.right}
+    class="flex {$$props.class}"
+>
     {#if $$slots.left && $$slots.right}
         <slot name="left" />
         {#if showLine}
