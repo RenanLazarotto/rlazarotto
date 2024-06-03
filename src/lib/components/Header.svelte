@@ -5,10 +5,10 @@
     export let url: string;
 </script>
 
-<header class:mb-16={url == "/"} class="flex justify-between items-center">
+<header class:mb-12={url == "/"} class="flex justify-between items-center mt-12">
     {#if url != "/"}
         <Link href="/" class="flex items-center gap-2">
-            <Icon id="arrow-back" width={16} height={16} />
+            <Icon id="back" width={16} height={16} />
             Home
         </Link>
     {:else}

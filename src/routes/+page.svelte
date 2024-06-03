@@ -1,4 +1,5 @@
 <script lang="ts">
+    import Divider from "$lib/components/Divider.svelte";
     import FormattedDate from "$lib/components/FormattedDate.svelte";
     import Link from "$lib/components/Link.svelte";
     import type { PageData } from "./$types";
@@ -10,7 +11,7 @@
     <title>Renan Lazarotto</title>
 </svelte:head>
 
-<section class="mb-16">
+<section>
     <p class="text-justify mb-6 text-gray-300">
         Programador full-stack de Curitiba, no Paraná, atualmente trabalhando do conforto do meu lar para a
         <Link href="https://wlgrupo.com/empresa/hammer/" target="_blank">Hammer Consultoria</Link>, convertendo café e
@@ -19,12 +20,12 @@
     <p class="text-justify mb-6 text-gray-300">
         Aqui é o meu pequeno refúgio na internet. Você pode ver um pouquinho mais das groselhas que eu tenho pra falar <Link
             href="/posts">aqui</Link
-        >, pode saber mais sobre mim e meu trabalho <Link href="/sobre">aqui</Link> ou descobrir qual é meu plano infalível
-        da vez <Link href="/agora">aqui</Link>.
+        >, pode saber mais sobre mim e meu trabalho <Link href="/pages/sobre">aqui</Link> ou descobrir qual é meu plano infalível
+        da vez <Link href="/pages/agora">aqui</Link>.
     </p>
 </section>
 
-<section class="mb-16">
+<section class="my-12">
     <nav class="grid grid-cols-1 sm:grid-cols-3 gap-8">
         {#each data.pages as page}
             <div class="text-center">
@@ -37,14 +38,14 @@
     </nav>
 </section>
 
-<hr class="mb-16 border-t border-t-gray-900" />
+<Divider />
 
-<section class="mb-16">
+<section>
     <h2 class="text-2xl leading-snug font-bold mb-4">Publicações</h2>
 
     <div class="flex flex-col gap-8">
         {#each data.posts.slice(0, 5) as post}
-            <a href={`/posts/${post.slug}`} class="flex group">
+            <a href={`/posts/${post.slug}`} class="flex flex-col lg:flex-row lg:items-center gap-4 group">
                 <img src={`/images/posts/${post.slug}/hero.webp`} alt="Imagem do post" class="rounded-lg lg:max-w-64" />
                 <div class="flex flex-1 flex-col p-4">
                     <h2 class="text-2xl font-bold text-mint-300 group-hover:text-purple-400">{post.title}</h2>

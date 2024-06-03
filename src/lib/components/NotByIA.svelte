@@ -2,7 +2,7 @@
     import Link from "./Link.svelte";
 </script>
 
-<section class="flex items-center gap-4 my-6 max-w-2xl mx-auto">
+<section class="flex items-center gap-4">
     <img src="/images/not-by-ia-dark.svg" alt="Escrito por um humano, não por IA" />
     <p class="text-xs text-gray-600">
         Esse conteúdo foi escrito por um humano (no caso, <Link href="/pages/sobre">eu</Link>, o autor). Foi utilizado

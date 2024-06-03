@@ -11,8 +11,8 @@
 </script>
 
 <SVG />
-<div class="max-w-4xl mx-auto px-8 py-12 flex flex-col min-h-screen">
-    <Header url={data.url}/>
+<div class="max-w-3xl mx-auto flex flex-col min-h-screen">
+    <Header url={data.url} />
 
     <main class="flex-1">
         <slot />
