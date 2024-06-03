@@ -115,11 +115,12 @@
 </script>
 
 <div
-    class="relative bg-black/30 rounded-lg mt-4"
+    class="relative bg-black/30 rounded-lg mt-4 not-prose"
     class:w-fit={slides.length == 1}
     class:pt-2={slides.length == 1}
     class:px-2={slides.length == 1}
     class:mb-4={slides.length == 1}
+    class:mx-auto={slides.length == 1}
 >
     {#each slides as slide, i}
         {#if slide.type == "image"}
@@ -133,7 +134,11 @@
                 on:keypress={(e) => handleKeypress(e, ["Space", "Enter"], open)}
                 tabindex="0"
             >
-                <img src={slide.src} alt={slide.alt} class="w-full max-h-[400px] object-contain cursor-pointer" />
+                <img
+                    src={slide.src}
+                    alt={slide.alt}
+                    class="w-full max-h-[400px] object-contain cursor-pointer rounded"
+                />
                 <p class="text-sm text-gray-400 text-center my-2">{slide.title}</p>
             </div>
         {:else}
@@ -157,18 +162,18 @@
             on:click={previous}
             class="left-0 cursor-pointer absolute top-1/2 w-auto p-4 -mt-5 text-white font-bold text-lg select-none transition ease-in-out rounded-r hover:bg-black/20"
         >
-            <Icon id="arrow-back" width={32} height={32} />
+            <Icon id="back" width={32} height={32} />
         </button>
         <button
             on:click={next}
             class="right-0 cursor-pointer absolute top-1/2 w-auto p-4 -mt-5 text-white font-bold text-lg select-none transition ease-in-out rounded-l hover:bg-black/20"
         >
-            <Icon id="arrow-forward" width={32} height={32} />
+            <Icon id="forward" width={32} height={32} />
         </button>
     {/if}
 </div>
 {#if slides.length > 1}
-    <nav class="flex justify-center gap-2 mt-4 mb-4">
+    <nav class="flex justify-center gap-2 mt-4 mb-4 not-prose">
         {#each slides as slide, i}
             <button
                 on:click={() => navigate(i)}
