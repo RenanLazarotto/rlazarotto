@@ -1,8 +1,8 @@
 ---
 title: Moto G84 5G - Primeiras impressões
 description: As primeiras impressões do meu novo celular - o Moto G84 5G!
-published: 2024-04-24
-updated:
+published: 2024-04-24T15:00-03:00
+updated: 2024-06-06T10:25-03:00
 category: Reviews
 ---
 
