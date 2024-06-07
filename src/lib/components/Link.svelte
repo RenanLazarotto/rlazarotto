@@ -3,7 +3,9 @@
     export let target: string = "_self";
     export let showBackground: boolean = false;
 
-    let background = showBackground ? "py-1 px-2 rounded-md bg-mint-700/20 hover:bg-purple-700/20" : "";
+    let background = showBackground
+        ? "py-1 px-2 rounded-md bg-mint-700/20 hover:bg-purple-700/20"
+        : "";
 </script>
 
 <a

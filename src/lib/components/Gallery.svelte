@@ -139,7 +139,9 @@
                     alt={slide.alt}
                     class="w-full max-h-[400px] object-contain cursor-pointer rounded"
                 />
-                <p class="text-sm text-gray-400 text-center my-2">{slide.title}</p>
+                <p class="text-sm text-gray-400 text-center my-2">
+                    {slide.title}
+                </p>
             </div>
         {:else}
             <div class:hidden={i != current} class="flex flex-col items-center">
@@ -148,11 +150,14 @@
                     class="w-full max-h-[400px] object-contain"
                     controls
                     on:click={open}
-                    on:keypress={(e) => handleKeypress(e, ["Space", "Enter"], open)}
+                    on:keypress={(e) =>
+                        handleKeypress(e, ["Space", "Enter"], open)}
                 >
                     <source src={slide.src} type="video/webm" />
                 </video>
-                <p class="text-sm text-gray-400 text-center my-2">{slide.title}</p>
+                <p class="text-sm text-gray-400 text-center my-2">
+                    {slide.title}
+                </p>
             </div>
         {/if}
     {/each}
@@ -177,9 +182,15 @@
         {#each slides as slide, i}
             <button
                 on:click={() => navigate(i)}
-                class="{i == current ? 'border-mint-500' : 'border-white/50'}  border-2 hover:border-purple-400 rounded"
+                class="{i == current
+                    ? 'border-mint-500'
+                    : 'border-white/50'}  border-2 hover:border-purple-400 rounded"
             >
-                <img src={slide.thumb} alt={slide.alt} class="object-cover rounded h-12 w-12" />
+                <img
+                    src={slide.thumb}
+                    alt={slide.alt}
+                    class="object-cover rounded h-12 w-12"
+                />
             </button>
         {/each}
     </nav>
@@ -189,17 +200,21 @@
     role="dialog"
     class:hidden={!isOpen}
     aria-label={slides[current].title}
-    class="fixed z-30 left-0 top-0 w-full min-h-screen overflow-auto bg-black/60 backdrop-blur-md flex flex-col justify-center"
+    class="fixed z-30 left-0 top-0 w-full min-h-screen h-screen overflow-auto bg-black/60 backdrop-blur-md flex flex-col justify-center"
 >
     <button
         bind:this={closeButton}
         on:click={close}
-        class="absolute top-8 right-8 cursor-pointer transition-colors duration-300 bg-mint-700 hover:bg-mint-600 active:bg-mint-800 text-white rounded-full h-12 w-12 flex items-center justify-center"
+        class="absolute top-8 right-8 cursor-pointer transition-colors duration-300 bg-mint-700 hover:bg-mint-600 active:bg-mint-800 text-white rounded-full h-12 w-12 flex items-center justify-center z-50"
     >
         <Icon id="close" width={32} height={32} />
     </button>
     {#if slides[current].type == "image"}
-        <img src={slides[current].src} alt={slides[current].alt} class="mx-auto p-8 z-40 max-h-screen" />
+        <img
+            src={slides[current].src}
+            alt={slides[current].alt}
+            class="mx-auto p-8 z-40 max-h-screen"
+        />
     {:else}
         <!-- svelte-ignore a11y-media-has-caption -->
         <video class="flex-1 mx-auto p-8 z-40 w-full" controls>
