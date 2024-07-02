@@ -2,7 +2,7 @@
 title: O processo de desenvolvimento do site - parte 1
 description: Da necessidade de atualizar o que já existe até a vontade de fazer algo novo
 published: 2024-06-06T14:25-03:00
-updated:
+updated: 2024-07-01T08:15-03:00
 category: Atualizações
 ---
 
@@ -12,6 +12,8 @@ category: Atualizações
 </script>
 
 E começa hoje uma explicação de como esse lindo e maravilhoso site que você está vendo foi criado! Sem delongas, vamos ao que interessa!
+
+---
 
 ## No princípio...
 
