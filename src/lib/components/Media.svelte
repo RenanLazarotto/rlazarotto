@@ -114,7 +114,7 @@
     role="dialog"
     class:hidden={!isOpen}
     aria-label={media.title}
-    class="fixed left-0 top-0 z-30 flex h-screen min-h-screen w-full flex-col justify-center overflow-auto bg-black/60 backdrop-blur-md"
+    class="not-prose fixed left-0 top-0 z-30 h-screen min-h-screen w-full overflow-auto bg-black/60 backdrop-blur-md"
 >
     <button
         bind:this={closeButton}
@@ -124,11 +124,7 @@
         <Icon id="close" width={32} height={32} />
     </button>
     {#if media.type == "image"}
-        <img
-            src={media.src}
-            alt={media.alt}
-            class="z-40 mx-auto max-h-screen p-8"
-        />
+        <img src={media.src} alt={media.alt} class="z-40 mx-auto p-8" />
     {:else}
         <!-- svelte-ignore a11y-media-has-caption -->
         <video class="z-40 mx-auto w-full flex-1 p-8" controls>
