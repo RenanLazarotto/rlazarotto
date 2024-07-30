@@ -4,8 +4,9 @@
 
     export let src: string;
     export let alt: string;
-    export let title: string;
     export let enlargeable: boolean = true;
+
+    const id = `image-${crypto.randomUUID().split("-").at(-1)?.toUpperCase()}`;
 
     // Controla o modal de visualização da imagem/vídeo
     let isOpen: boolean = false;
@@ -92,7 +93,7 @@
             class="w-full rounded object-contain"
         />
         {#if $$slots.default}
-            <p class="my-2 text-center text-sm text-gray-400">
+            <p class="my-2 text-center text-sm text-gray-400" {id}>
                 <slot />
             </p>
         {/if}
@@ -103,7 +104,7 @@
     <div
         role="dialog"
         class:hidden={!isOpen}
-        aria-label={title}
+        aria-labelledby={`${id}`}
         class="not-prose fixed left-0 top-0 z-30 h-screen min-h-screen w-full overflow-auto bg-black/60 backdrop-blur-md flex items-center"
     >
         <button
