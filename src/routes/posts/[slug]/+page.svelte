@@ -22,14 +22,19 @@
         {#if data.meta.updated}
             <p>•</p>
             <p>
-                Atualizado em <FormattedDate date={data.meta.updated} class="font-medium" />
+                Atualizado em <FormattedDate
+                    date={data.meta.updated}
+                    class="font-medium"
+                />
             </p>
         {/if}
         <p>•</p>
         <p><b>{data.meta.readingTime} min.</b> de leitura</p>
     </div>
 
-    <section class="prose prose-invert mb-16 prose-hr:border-dashed text-justify max-w-none">
+    <section
+        class="prose prose-invert mb-16 prose-hr:border-dashed text-justify max-w-none"
+    >
         <svelte:component this={data.content} />
     </section>
 

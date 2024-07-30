@@ -4,7 +4,9 @@ import { error } from "@sveltejs/kit";
 export async function load({ fetch, params }) {
     try {
         const file = await import(`@content/posts/${params.slug}.md`);
-        const rtResponse = await fetch(`/api/posts/reading-time/${params.slug}`);
+        const rtResponse = await fetch(
+            `/api/posts/reading-time/${params.slug}`
+        );
         const readingTime = await rtResponse.json();
         const metadata = file.metadata as Omit<Types.Post, "slug">;
 
