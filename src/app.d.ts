@@ -34,14 +34,24 @@ declare global {
             category: string;
         };
 
-        type Media = {
+        type Image = {
+            title: string;
+            src: string;
+            alt: string;
+        };
+
+        type Video = {
+            title: string;
+            src: string;
+            alt: string;
+            type: string;
+        };
+
+        type Slide = {
             title: string;
             src: string;
             alt: string;
             type: "image" | "video";
-        };
-
-        type Slide = Media & {
             thumb: string;
         };
 
