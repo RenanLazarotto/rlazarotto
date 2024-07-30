@@ -3,7 +3,11 @@ export const estimateReadingTime = (text: string): number => {
     return Math.ceil(words.length / 260);
 };
 
-export const handleKeypress = (e: KeyboardEvent, keys: string[], callback: Function) => {
+export const handleKeypress = (
+    e: KeyboardEvent,
+    keys: string[],
+    callback: Function
+) => {
     if (keys.includes(e.code)) {
         callback();
     }

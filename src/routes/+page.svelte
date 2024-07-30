@@ -13,15 +13,20 @@
 
 <section>
     <p class="text-justify mb-6 text-gray-300">
-        Programador full-stack de Curitiba, no Paraná, atualmente trabalhando do conforto do meu lar para a
-        <Link href="https://wlgrupo.com/empresa/hammer/" target="_blank">Hammer Consultoria</Link>, convertendo café e
-        requisitos em código e resultados.
+        Programador full-stack de Curitiba, no Paraná, atualmente trabalhando do
+        conforto do meu lar para a
+        <Link href="https://wlgrupo.com/empresa/hammer/" target="_blank"
+            >Hammer Consultoria</Link
+        >, convertendo café e requisitos em código e resultados.
     </p>
     <p class="text-justify mb-6 text-gray-300">
-        Aqui é o meu pequeno refúgio na internet. Você pode ver um pouquinho mais das groselhas que eu tenho pra falar <Link
-            href="/posts">aqui</Link
-        >, pode saber mais sobre mim e meu trabalho <Link href="/pages/sobre">aqui</Link> ou descobrir qual é meu plano infalível
-        da vez <Link href="/pages/agora">aqui</Link>.
+        Aqui é o meu pequeno refúgio na internet. Você pode ver um pouquinho
+        mais das groselhas que eu tenho pra falar <Link href="/posts">aqui</Link
+        >, pode saber mais sobre mim e meu trabalho <Link href="/pages/sobre"
+            >aqui</Link
+        > ou descobrir qual é meu plano infalível da vez <Link
+            href="/pages/agora">aqui</Link
+        >.
     </p>
 </section>
 
@@ -45,10 +50,21 @@
 
     <div class="flex flex-col gap-8">
         {#each data.posts.slice(0, 5) as post}
-            <a href={`/posts/${post.slug}`} class="flex flex-col lg:flex-row lg:items-center gap-4 group">
-                <img src={`/images/posts/${post.slug}/hero.webp`} alt="Imagem do post" class="rounded-lg lg:max-w-64" />
+            <a
+                href={`/posts/${post.slug}`}
+                class="flex flex-col lg:flex-row lg:items-center gap-4 group"
+            >
+                <img
+                    src={`/images/posts/${post.slug}/hero.webp`}
+                    alt="Imagem do post"
+                    class="rounded-lg lg:max-w-64"
+                />
                 <div class="flex flex-1 flex-col p-4">
-                    <h2 class="text-2xl font-bold text-mint-300 group-hover:text-purple-400">{post.title}</h2>
+                    <h2
+                        class="text-2xl font-bold text-mint-300 group-hover:text-purple-400"
+                    >
+                        {post.title}
+                    </h2>
                     <p class="mt-3 text-gray-300">{post.description}</p>
                     <span class="flex-1" />
 
