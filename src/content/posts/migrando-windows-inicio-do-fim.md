@@ -7,10 +7,21 @@ category: Sistemas operacionais
 ---
 
 <script lang="ts">
-    import Media from "$lib/components/Media.svelte";
+    import Image from "$lib/components/Image.svelte";
     import Link from "$lib/components/Link.svelte";
     import Gallery from "$lib/components/Gallery.svelte";
 </script>
+
+<Image
+    src="/images/posts/migrando-windows-inicio-do-fim/hero.webp"
+    alt="Imagem do post"
+    title="Imagem do post"
+    enlargeable={false}
+>
+    Fonte: <Link href="https://arstechnica.com/information-technology/2012/07/how-to-move-from-windows-to-linux/" target="_blank">
+        Ars Technica
+    </Link>
+</Image>
 
 Finalmente chegou o dia onde eu me cansei da Microsoft e decidi fazer alguma coisa. Depois de muitos anos preso e atrelado ao Windows, eu tomei minha dose de coragem e me aventurei por algumas distribuições do Linux até achar uma que me fizesse sentir o mesmo quentinho de "estar em casa".
 
@@ -22,30 +33,27 @@ Com isso, chega ao fim um relacionamento de mais de 20 anos com o Windows e hoje
 
 O último Windows realmente bom foi o Windows 7. Nada de IA, nada de recursos online que não agregam em nada na usabilidade do sistema ou de lojas de aplicativos malfeitas. Apenas um sistema com o mais básico dos recursos que o Windows pode oferecer, que é o sistema em si, um navegador meia boca pra baixar outro melhor, um player de mídia meia boca mas que dá conta de ouvir uma música ou outra e alguns vídeos que não sejam modernos demais, além de mais uns cacarecos que praticamente não ocupam espaço ou consomem recursos.
 
-<Media media={{
-src: "/images/posts/migrando-windows-inicio-do-fim/w7.webp",
-title: "A área de trabalho 'clássica' do Windows 7, como muitos ainda lembram.",
-alt: "Captura de tela da área de trabalho do Windows 7",
-type: "image",
-}} />
+<Image 
+    src="/images/posts/migrando-windows-inicio-do-fim/w7.webp"
+    title="A área de trabalho 'clássica' do Windows 7, como muitos ainda lembram."
+    alt="Captura de tela da área de trabalho do Windows 7" 
+/>
 
 O Windows 8 foi uma tentativa frustrada de modernizar o que não precisava ser modernizado. Com a interface pensada em dispositivos sensíveis ao toque, que era a promessa do momento, quem usava um computador do modo tradicional ficou a ver navios com a mudança. Mesmo com as correções no Windows 8.1 (que nada mais é do que um Windows 8 levemente menos quebrado), o estrago foi feito e não tinha muito mais o que ser feito além de começar tudo de novo.
 
-<Media media={{
-src: "/images/posts/migrando-windows-inicio-do-fim/w8.webp",
-title: "A 'tela' iniciar do Windows 8. Não consigo nem pensar em um comentário para colocar aqui.",
-alt: "Captura da tela iniciar do Windows 8",
-type: "image",
-}} />
+<Image
+    src="/images/posts/migrando-windows-inicio-do-fim/w8.webp",
+    title="A 'tela' iniciar do Windows 8. Não consigo nem pensar em um comentário para colocar aqui."
+    alt="Captura da tela iniciar do Windows 8"
+/>
 
 O Windows 10 veio para ser o salvador da pátria. A ideia era trazer de volta parte da experiência do Windows 7 com uma identidade visual nova, baseada no quadradão do Windows 8(.1). Foi inclusive vendido como "o último Windows", que seria atualizado constantemente daquele ponto em diante, funcionando como uma forma de "serviço".
 
-<Media media={{
-src: "/images/posts/migrando-windows-inicio-do-fim/w10.webp",
-title: "A área de trabalho do Windows 10, uma mistura do bom e do ruim mas que ainda assim deu certo.",
-alt: "Captura de tela da área de trabalho do Windows 10",
-type: "image",
-}} />
+<Image 
+    src="/images/posts/migrando-windows-inicio-do-fim/w10.webp"
+    title="A área de trabalho do Windows 10, uma mistura do bom e do ruim mas que ainda assim deu certo."
+    alt="Captura de tela da área de trabalho do Windows 10"
+/>
 
 De início, muita coisa foi herdada das versões passadas. Eu consigo me lembrar vagamente de quando a janela do UAC (aquela confirmação chata que aparece pra pedir permissões elevadas pra fazer alguma coisa, como instalar um programa) migrou do estilo Windows 7 para um mais integrado ao restante do Windos 10 - ficou escondida no programa Insiders por algum tempo até ser liberada para todos.
 
@@ -96,21 +104,19 @@ As duas alternativas, atualmente, são: gastar rios de dinheiro em um Mac, que t
 
 Depois de alguns dias testando distribuições aleatórias, sejam elas grandes e famosas ou pequenas e quase desconhecidas, eu decidi ficar com o Linux Mint. Não vou me extender ainda mais para falar sobre ele - vou deixar isso pra uma eventual parte 2, mas posso comentar a respeito de como ele facilitou a transição. A interface padrão dele é essa:
 
-<Media media={{
-src: "/images/posts/migrando-windows-inicio-do-fim/mint-install.webp",
-title: "Tela padrão da instalação do Mint, que é praticamente a mesma do que é vista após iniciar o sistema instalado pela primeira vez.",
-alt: "Captura de tela da área de trabalho na instalação do Linux Mint",
-type: "image",
-}} />
+<Image
+    src="/images/posts/migrando-windows-inicio-do-fim/mint-install.webp"
+    title="Tela padrão da instalação do Mint, que é praticamente a mesma do que é vista após iniciar o sistema instalado pela primeira vez."
+    alt="Captura de tela da área de trabalho na instalação do Linux Mint" 
+/>
 
 Consegue perceber as semelhanças com as áreas de trabalho das versões do Windows que eu coloquei pra cima? Então, facilita bastante a transição quando você já tem um ambiente familiar. Mas, ao contrário do Windows que é muito limitado quando o quesito é personalização, é assim que o meu Linux Mint se parece hoje:
 
-<Media media={{
-src: "/images/posts/migrando-windows-inicio-do-fim/desktop.webp",
-title: "Inspirado no Mac, sim, fazer o que se ao menos isso a Apple faz direito?",
-alt: "Captura de tela da minha área de trabalho do Linux Mint",
-type: "image",
-}} />
+<Image
+    src="/images/posts/migrando-windows-inicio-do-fim/desktop.webp"
+    title="Inspirado no Mac, sim, fazer o que se ao menos isso a Apple faz direito?"
+    alt="Captura de tela da minha área de trabalho do Linux Mint"
+/>
 
 Eu tenho todos os meus fluxos de trabalho funcionando perfeitamente nele, incluindo os aplicativos que eu preciso para trabalhar (e até alguns jogos, mas quase não tenho tempo pra isso). O sistema é, de forma geral, mais responsivo e eu tenho a impressão de que ele gerencia melhor os recursos do meu computador.
 

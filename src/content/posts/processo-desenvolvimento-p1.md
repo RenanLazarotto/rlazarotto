@@ -7,7 +7,7 @@ category: Atualizações
 ---
 
 <script lang="ts">
-    import Media from "$lib/components/Media.svelte";
+    import Image from "$lib/components/Image.svelte";
     import Link from "$lib/components/Link.svelte";
 </script>
 
@@ -35,12 +35,11 @@ A criação de componentes se mistura muito com o passo 3, que é a criação do
 
 Por outro lado, alguns componentes existem em função do conteúdo. Esse post que você lê agora é composto por um componente de mídia e um componente de link, enquanto a rota responsável por todos os posts usa um componente de data formatada e o componente do ícone "escrito por humano", ali em baixo. Esses são algus dos componentes que, apesar de também terem sofrido muitas alterações no decorrer do desenvolvimento do site, não foram reescritas - foram ajustes para alinhar os componentes com a identidade visual que eu estava criando, ou para corrigir bugs que eu encontrava no caminho.
 
-<Media media={{
-src: "/images/posts/processo-desenvolvimento-p1/componentes.webp",
-title: "Componentes que existem atualmente no site",
-alt: "Listagem da pasta do código-fonte com os componentes usados no site",
-type: "image",
-}} />
+<Image
+src="/images/posts/processo-desenvolvimento-p1/componentes.webp"
+title="Componentes que existem atualmente no site"
+alt="Listagem da pasta do código-fonte com os componentes usados no site"
+/>
 
 Tem alguns outros componentes para listas, ícones, a minha foto na página <Link href="/pages/sobre">sobre</Link> e para um alerta/banner, que até o momento eu usei mais para colocar informações que não precisam necessariamente fazer parte do conteúdo dos poucos posts que escrevi.
 
@@ -54,12 +53,11 @@ Apenas nessa parte, eu acredito que eu fiz mais protótipos do que eu consigo le
 
 Depois de muito protelar, cheguei num layout final, que é o que você está vendo hoje. Muito do que ficou na versão final já estava pronto quando eu no site de <Link href="https://alexandersandberg.com/" target="_blank">Alexander Sandberg</Link>. Por exemplo, os itens de navegação das páginas principais ainda estavam no cabeçalho da página, ao invés de terem uma seção dedicada após a introdução:
 
-<Media media={{
-src: "/images/posts/processo-desenvolvimento-p1/navegacao.webp",
-title: "Introdução com a navegação das principais páginas do site logo após",
-alt: "Captura do menu de navegação com as princiapis páginas do site em baixo do texto de introdução",
-type: "image",
-}} />
+<Image
+src="/images/posts/processo-desenvolvimento-p1/navegacao.webp"
+title="Introdução com a navegação das principais páginas do site logo após"
+alt="Captura do menu de navegação com as princiapis páginas do site em baixo do texto de introdução"
+/>
 
 Em um primeiro momento, eu ia incluir os projetos que eu trabalhei também na página inicial, após a navegação, mas preferi agrupar essas informações a meu respeito dentro da página <Link href="/pages/sobre">sobre</Link>, afinal a ideia é destacar a minha introdução e os conteúdos que eu vou escrever.
 

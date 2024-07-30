@@ -7,7 +7,7 @@ category: Atualizações
 ---
 
 <script lang="ts">
-    import Media from "$lib/components/Media.svelte";
+    import Image from "$lib/components/Image.svelte";
     import Link from "$lib/components/Link.svelte";
 </script>
 
@@ -25,23 +25,23 @@ Buscar inspiração em sites como o <Link href="https://deadsimplesites.com/" ta
 
 Por fim, cheguei num "finalista" de como eu queria que meu site se parecesse: <Link href="https://alexandersandberg.com/" target="_blank">Alexander Sandberg</Link>.
 
-<Media media={{
-src: "/images/posts/processo-desenvolvimento-p2/alexander-sandberg.webp",
-title: "A inspiração pro meu site",
-alt: "Captura de tela do site de Alexander Sandberg, a inspiração pro meu site",
-type: "image",
-}} />
+<Image
+src="/images/posts/processo-desenvolvimento-p2/alexander-sandberg.webp"
+title="A inspiração pro meu site"
+alt="Captura de tela do site de Alexander Sandberg, a inspiração pro meu site"
+type="image"
+/>
 
 É um site simples e direto, uma pequena introdução, e alguns links de páginas, projetos e publicações - algo bem próximo do que eu precisava.
 
 Uma vez que eu finalmente consegui me decidir nesse design, eu comecei a implementar a minha visão dele. Aumenta um pouco a largura aqui, troca as cores ali, reordena uma coisa pra cá, bota uma imagem aqui... e o resultado me deixou bastante feliz.
 
-<Media media={{
-src: "/images/posts/processo-desenvolvimento-p2/rlazarotto-v2.webp",
-title: "A página inicial da segunda versão do meu site",
-alt: "Captura de tela da página inicial da segunda versão do meu site",
-type: "image",
-}} />
+<Image
+src="/images/posts/processo-desenvolvimento-p2/rlazarotto-v2.webp"
+title="A página inicial da segunda versão do meu site"
+alt="Captura de tela da página inicial da segunda versão do meu site"
+type="image"
+/>
 
 ---
 

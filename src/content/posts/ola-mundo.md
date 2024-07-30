@@ -7,7 +7,7 @@ category: Atualizações
 ---
 
 <script lang="ts">
-    import Media from "$lib/components/Media.svelte";
+    import Image from "$lib/components/Image.svelte";
     import Link from "$lib/components/Link.svelte";
     import List from "$lib/components/List.svelte";
     import ListItem from "$lib/components/ListItem.svelte";
@@ -62,21 +62,19 @@ Não preciso nem dizer que isso nunca saiu do papel, pois eu não tinha sequer m
 
 Quando eu comecei a primeira versão do que viria ser meu site, eu queria algo que fosse um portfolio, igual aos <Link href="https://github.com/emmabostian/developer-portfolios" target="_blank">muitos outros que tem por aí</Link>.
 
-<Media media={{
-src: "/images/posts/ola-mundo/site-v1.webp",
-title: "A carinha da versão 1.0 do meu site",
-alt: "Captura de tela da versão 1.0 do meu site",
-type: "image",
-}} />
+<Image 
+src="/images/posts/ola-mundo/site-v1.webp"
+title="A carinha da versão 1.0 do meu site"
+alt="Captura de tela da versão 1.0 do meu site"
+/>
 
 Confesso que eu fiquei - ainda estou - bem feliz com o resultado. Foi um grande desafio desenvolver esse site, especialmente se considerar que eu estava começando a me aventurar mais profundamente no desenvolvimento front-end. Hoje ele já não representa a imagem que eu quero passar a meu respeito como profissional, a começar pela seção de "Habilidades", algo que eu considerei ser absolutamente essencial destacar _pois era o que todos os outros portfolios que eu visitei faziam_.
 
-<Media media={{
-src: "/images/posts/ola-mundo/habilidades.webp",
-title: "Bloco de habilidades, prontamente destacado",
-alt: "Captura de tela exibindo a seção de habilidades",
-type: "image",
-}} />
+<Image
+src="/images/posts/ola-mundo/habilidades.webp"
+title="Bloco de habilidades, prontamente destacado"
+alt="Captura de tela exibindo a seção de habilidades"
+ />
 
 Agora, o foco é em me apresentar como pessoa e minhas ideias. Ainda mantenho um histórico de alguns projetos em que trabalhei, destacando quais habilidades efetivamente foram utilizados em cada um, além do histórico profissional na página <Link href="/pages/sobre">sobre mim</Link>. Essas informações, ao meu ver, já dão uma visão geral do meu conhecimento, sem necessariamente entrar em detalhes que, muitas vezes, acabam não sendo tão relevantes.
 
