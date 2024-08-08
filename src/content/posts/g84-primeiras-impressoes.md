@@ -12,6 +12,8 @@ category: Reviews
     import Gallery from "$lib/components/Gallery.svelte";
     import List from "$lib/components/List.svelte";
     import ListItem from "$lib/components/ListItem.svelte";
+    import Image from "$lib/components/Image.svelte";
+
 </script>
 
 <Banner icon="info">
@@ -26,13 +28,11 @@ Ontem, depois de alguns dias de espera, finalmente chegou meu celular novo - um 
 
 Por algum motivo infeliz que eu não consigo entender, as fabricantes de aparelhos continuaram subindo os preços dos aparelhos enquanto mandam menos coisas dentro da caixa. Pra quem tem menos de 20 anos, uma pequena lição de história: antigamente as caixas de telefone eram muito diferentes de como são hoje. Dando uma rápida garimpada, achei esse imagem aqui que mostra o que vinha na caixa de um Nokia 5230, um aparelho que inclusive eu tive:
 
-<Gallery slides={[{
-src: "/images/posts/g84-primeiras-impressoes/caixa-nokia-5230.webp",
-thumb: "/images/posts/g84-primeiras-impressoes/caixa-nokia-5230-thumb.webp",
-title: "Itens que acompanhavam um Nokia 5230",
-alt: "Conteúdo da caixa de um Nokia 5230",
-type: "image",
-}]} />
+<Image
+    src="/images/posts/g84-primeiras-impressoes/caixa-nokia-5230.webp"
+    alt="Itens que acompanhavam um Nokia 5230"
+    enlargeable={false}
+/>
 
 Na imagem, o que vinha dentro da caixa de um celular típico de 2010:
 
@@ -132,8 +132,8 @@ type: "image",
 {
 src: "/images/posts/g84-primeiras-impressoes/configuracoes-rapidas.webp",
 thumb: "/images/posts/g84-primeiras-impressoes/configuracoes-rapidas-thumb.webp",
-title: "Painel de configuracoes rápidas",
-alt: "Captura de tela representando o painel de configuracoes rápidas",
+title: "Painel de configurações rápidas",
+alt: "Captura de tela representando o painel de configurações rápidas",
 type: "image",
 },
 {
@@ -158,56 +158,56 @@ type: "image",
 {
 src: "/images/posts/g84-primeiras-impressoes/cores.webp",
 thumb: "/images/posts/g84-primeiras-impressoes/cores-thumb.webp",
-title: "Opcoes de cores para personalizacao",
-alt: "Captura de tela representando a tela de opcoes de cores",
+title: "Opções de cores para personalização",
+alt: "Captura de tela representando a tela de opções de cores",
 type: "image",
 },
 {
 src: "/images/posts/g84-primeiras-impressoes/fontes.webp",
 thumb: "/images/posts/g84-primeiras-impressoes/fontes-thumb.webp",
-title: "Opcoes de fontes",
-alt: "Captura de tela representando as opcoes de fontes do sistema",
+title: "Opções de fontes",
+alt: "Captura de tela representando as opções de fontes do sistema",
 type: "image",
 },
 {
 src: "/images/posts/g84-primeiras-impressoes/icones.webp",
 thumb: "/images/posts/g84-primeiras-impressoes/icones-thumb.webp",
-title: "Personalizacao dos icones do celular",
-alt: "Captura de tela representando as opcoes de personalizacoes de icones",
+title: "Personalização dos icones do celular",
+alt: "Captura de tela representando as opções de personalizações de icones",
 type: "image",
 },
 {
 src: "/images/posts/g84-primeiras-impressoes/layout.webp",
 thumb: "/images/posts/g84-primeiras-impressoes/layout-thumb.webp",
-title: "Opcoes de layout para a tela inicial e gaveta de aplicativos",
-alt: "Captura de tela representando as opcoes de layout para tela inicial e gaveta de aplicativos",
+title: "Opções de layout para a tela inicial e gaveta de aplicativos",
+alt: "Captura de tela representando as opções de layout para tela inicial e gaveta de aplicativos",
 type: "image",
 },
 {
 src: "/images/posts/g84-primeiras-impressoes/modo-escuro.webp",
 thumb: "/images/posts/g84-primeiras-impressoes/modo-escuro-thumb.webp",
-title: "Opcoes do Modo Escuro",
-alt: "Captura de tela representando as opcoes para utilizacao do Modo Escuro",
+title: "Opções do Modo Escuro",
+alt: "Captura de tela representando as opções para utilizacao do Modo Escuro",
 type: "image",
 },
 {
 src: "/images/posts/g84-primeiras-impressoes/personalizacao.webp",
 thumb: "/images/posts/g84-primeiras-impressoes/personalizacao-thumb.webp",
-title: "Tela de personalizacao",
-alt: "Captura da tela de personalizacao",
+title: "Tela de personalização",
+alt: "Captura da tela de personalização",
 type: "image",
 },
 {
 src: "/images/posts/g84-primeiras-impressoes/plano-de-fundo.webp",
 thumb: "/images/posts/g84-primeiras-impressoes/plano-de-fundo-thumb.webp",
-title: "Opcoes de personalizacao do plano de fundo",
-alt: "Captura da tela de personalizacao dos planos de fundo",
+title: "Opções de personalização do plano de fundo",
+alt: "Captura da tela de personalização dos planos de fundo",
 type: "image",
 },
 {
 src: "/images/posts/g84-primeiras-impressoes/sons.webp",
 thumb: "/images/posts/g84-primeiras-impressoes/sons-thumb.webp",
-title: "Configuracoes de sons",
+title: "Configurações de sons",
 alt: "Captura de tela das configuracoes de sons",
 type: "image",
 },
@@ -221,14 +221,14 @@ type: "image",
 {
 src: "/images/posts/g84-primeiras-impressoes/texto-tamanho-exibicao.webp",
 thumb: "/images/posts/g84-primeiras-impressoes/texto-tamanho-exibicao-thumb.webp",
-title: "Opcoes do tamanho do texto e de exibicao",
-alt: "Captura da tela com as opcoes do tamanho do texto e de exibicao",
+title: "Opções do tamanho do texto e de exibição",
+alt: "Captura da tela com as opções do tamanho do texto e de exibição",
 type: "image",
 },
 {
 src: "/images/posts/g84-primeiras-impressoes/animacao-digital.webm",
 thumb: "/images/posts/g84-primeiras-impressoes/animacao-digital-thumb.webp",
-title: "Animacoes do leitor de digital",
+title: "Animações do leitor de digital",
 alt: "Video demonstrando os efeitos exibidos no leitor de digital",
 type: "video",
 }

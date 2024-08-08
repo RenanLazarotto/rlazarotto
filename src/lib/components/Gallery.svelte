@@ -1,12 +1,7 @@
-<!--
-    @component 
-    Cria uma galeria com imagens ou vídeos
-
-    @param {Types.Slide[]} slides Conteúdo da galeria
--->
 <script lang="ts">
-    import { handleKeypress } from "$lib/utils";
+    import { fade } from "svelte/transition";
     import Icon from "./Icon.svelte";
+    import { cubicInOut } from "svelte/easing";
 
     // Conteúdo da galeria
     export let slides: Types.Slide[];
@@ -114,111 +109,175 @@
     };
 </script>
 
-<div
-    class="relative bg-black/30 rounded-lg mt-4 not-prose"
-    class:w-fit={slides.length == 1}
-    class:pt-2={slides.length == 1}
-    class:px-2={slides.length == 1}
-    class:mb-4={slides.length == 1}
-    class:mx-auto={slides.length == 1}
->
-    {#each slides as slide, i}
-        {#if slide.type == "image"}
-            <div
-                role="button"
-                class:hidden={i != current}
-                class:inline-flex={slides.length == 1}
-                class:flex={slides.length > 1}
-                class="flex-col items-center"
-                on:click={open}
-                on:keypress={(e) => handleKeypress(e, ["Space", "Enter"], open)}
-                tabindex="0"
-            >
-                <img
-                    src={slide.src}
-                    alt={slide.alt}
-                    class="w-full max-h-[400px] object-contain cursor-pointer rounded"
-                />
-                <p class="text-sm text-gray-400 text-center my-2">
-                    {slide.title}
-                </p>
-            </div>
-        {:else}
-            <div class:hidden={i != current} class="flex flex-col items-center">
-                <!-- svelte-ignore a11y-media-has-caption -->
-                <video
-                    class="w-full max-h-[400px] object-contain"
-                    controls
-                    on:click={open}
-                    on:keypress={(e) =>
-                        handleKeypress(e, ["Space", "Enter"], open)}
+<div class="relative mt-4 not-prose">
+    <div class="h-[400px]">
+        {#each slides as slide, i}
+            {#if current === i}
+                <div
+                    transition:fade={{
+                        delay: 0,
+                        duration: 500,
+                        easing: cubicInOut,
+                    }}
+                    class="flex justify-center"
                 >
-                    <source src={slide.src} type="video/webm" />
-                </video>
-                <p class="text-sm text-gray-400 text-center my-2">
-                    {slide.title}
-                </p>
-            </div>
-        {/if}
-    {/each}
+                    {#if slide.type == "image"}
+                        <img
+                            src={slide.src}
+                            alt={slide.alt}
+                            class="max-w-fit h-[400px] object-contain rounded absolute"
+                        />
+                        <p
+                            class="absolute z-50 bottom-[10px] bg-black/50 backdrop-blur px-3 py-1 rounded-full text-xs font-bold"
+                        >
+                            {slide.title}
+                        </p>
+                    {:else}
+                        <!-- svelte-ignore a11y-media-has-caption -->
+                        <video
+                            class="h-[400px] object-contain max-w-fit absolute"
+                            controls
+                            loop
+                        >
+                            <source src={slide.src} type="video/webm" />
+                        </video>
+                        <p
+                            class="absolute z-50 bottom-10 bg-black/50 backdrop-blur px-3 py-1 rounded-full text-xs font-bold"
+                        >
+                            {slide.title}
+                        </p>
+                    {/if}
+                </div>
+            {/if}
+        {/each}
+    </div>
 
-    {#if slides.length > 1}
+    <button
+        on:click={open}
+        class="absolute bottom-0 left-0 cursor-pointer w-auto p-2 text-white font-bold text-lg select-none transition ease-in-out rounded bg-mint-900/50 hover:bg-mint-800"
+    >
+        <Icon id="expand" width={24} height={24} />
+    </button>
+
+    <div class="flex absolute right-0 bottom-0 gap-2">
         <button
             on:click={previous}
-            class="left-0 cursor-pointer absolute top-1/2 w-auto p-4 -mt-5 text-white font-bold text-lg select-none transition ease-in-out rounded-r hover:bg-black/20"
+            class="cursor-pointer w-auto px-3 py-2 text-white font-bold text-lg select-none transition ease-in-out rounded bg-mint-900/50 hover:bg-mint-800"
         >
-            <Icon id="back" width={32} height={32} />
+            <Icon id="arrow-left" width={24} height={24} />
         </button>
         <button
             on:click={next}
-            class="right-0 cursor-pointer absolute top-1/2 w-auto p-4 -mt-5 text-white font-bold text-lg select-none transition ease-in-out rounded-l hover:bg-black/20"
+            class="cursor-pointer w-auto px-3 py-2 text-white font-bold text-lg select-none transition ease-in-out rounded bg-mint-900/50 hover:bg-mint-800"
         >
-            <Icon id="forward" width={32} height={32} />
+            <Icon id="arrow-right" width={24} height={24} />
         </button>
-    {/if}
+    </div>
 </div>
-{#if slides.length > 1}
-    <nav class="flex justify-center gap-2 mt-4 mb-4 not-prose">
-        {#each slides as slide, i}
-            <button
-                on:click={() => navigate(i)}
-                class="{i == current
-                    ? 'border-mint-500'
-                    : 'border-white/50'}  border-2 hover:border-purple-400 rounded"
-            >
-                <img
-                    src={slide.thumb}
-                    alt={slide.alt}
-                    class="object-cover rounded h-12 w-12"
-                />
-            </button>
-        {/each}
-    </nav>
-{/if}
 
 <div
     role="dialog"
     class:hidden={!isOpen}
     aria-label={slides[current].title}
-    class="fixed z-30 left-0 top-0 w-full min-h-screen h-screen overflow-auto bg-black/60 backdrop-blur-md flex flex-col justify-center"
+    class="fixed z-50 left-0 top-0 right-0 bottom-0 w-screen h-screen bg-black/60 backdrop-blur-md grid grid-rows-[1fr_auto] p-4 gap-4"
 >
-    <button
-        bind:this={closeButton}
-        on:click={close}
-        class="absolute top-8 right-8 cursor-pointer transition-colors duration-300 bg-mint-700 hover:bg-mint-600 active:bg-mint-800 text-white rounded-full h-12 w-12 flex items-center justify-center z-50"
-    >
-        <Icon id="close" width={32} height={32} />
-    </button>
-    {#if slides[current].type == "image"}
-        <img
-            src={slides[current].src}
-            alt={slides[current].alt}
-            class="mx-auto p-8 z-40 max-h-screen"
-        />
-    {:else}
-        <!-- svelte-ignore a11y-media-has-caption -->
-        <video class="flex-1 mx-auto p-8 z-40 w-full" controls>
-            <source src={slides[current].src} type="video/webm" />
-        </video>
-    {/if}
+    <div class="flex w-full relative overflow-hidden">
+        <div class="flex relative h-full w-full justify-center">
+            {#each slides as slide, i}
+                {#if current === i}
+                    <div
+                        transition:fade={{
+                            delay: 0,
+                            duration: 500,
+                            easing: cubicInOut,
+                        }}
+                        class="flex justify-center relative"
+                    >
+                        {#if slide.type == "image"}
+                            <img
+                                src={slide.src}
+                                alt={slide.alt}
+                                class="object-contain rounded-lg not-prose h-full max-w-fit mx-auto absolute"
+                            />
+                        {:else}
+                            <!-- svelte-ignore a11y-media-has-caption -->
+                            <video
+                                class="object-contain rounded-lg not-prose h-full max-w-fit mx-auto absolute"
+                                controls
+                            >
+                                <source src={slide.src} type="video/webm" />
+                            </video>
+                        {/if}
+                    </div>
+                {/if}
+                <!-- {#if slide.type == "image"}
+                    <div
+                        class:hidden={i != current}
+                        class="relative"
+                        in:fade
+                        out:fade
+                    >
+                        <img
+                            src={slide.src}
+                            alt={slide.alt}
+                            class="object-contain rounded-lg not-prose h-full max-w-fit mx-auto"
+                            in:fade
+                            out:fade
+                        />
+                    </div>
+                {:else}
+                    <div class:hidden={i != current} class="relative">
+                        < !-- svelte-ignore a11y-media-has-caption -- >
+                        <video
+                            class="object-contain max-w-fit not-prose h-full mx-auto"
+                            in:fade
+                            out:fade
+                            controls
+                        >
+                            <source src={slide.src} type="video/webm" />
+                        </video>
+                    </div>
+                {/if} -->
+            {/each}
+        </div>
+
+        <button
+            bind:this={closeButton}
+            on:click={close}
+            class="absolute left-0 bottom-4 cursor-pointer w-auto px-3 py-2 text-white font-bold text-lg select-none transition ease-in-out rounded bg-mint-900/50 hover:bg-mint-800"
+        >
+            <Icon id="close" width={32} height={32} />
+        </button>
+        <div class="flex absolute right-0 bottom-4 gap-2">
+            <button
+                on:click={previous}
+                class="cursor-pointer w-auto px-3 py-2 text-white font-bold text-lg select-none transition ease-in-out rounded bg-mint-900/50 hover:bg-mint-800"
+            >
+                <Icon id="arrow-left" width={24} height={24} />
+            </button>
+            <button
+                on:click={next}
+                class="cursor-pointer w-auto px-3 py-2 text-white font-bold text-lg select-none transition ease-in-out rounded bg-mint-900/50 hover:bg-mint-800"
+            >
+                <Icon id="arrow-right" width={24} height={24} />
+            </button>
+        </div>
+    </div>
+
+    <nav class="flex gap-2 not-prose">
+        {#each slides as slide, i}
+            <button
+                on:click={() => navigate(i)}
+                class="{i == current
+                    ? 'opacity-100'
+                    : 'opacity-35'} hover:opacity-70 rounded"
+            >
+                <img
+                    src={slide.thumb}
+                    alt={slide.alt}
+                    class="object-cover rounded h-16 w-16"
+                />
+            </button>
+        {/each}
+    </nav>
 </div>
