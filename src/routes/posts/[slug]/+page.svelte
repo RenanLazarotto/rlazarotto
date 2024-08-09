@@ -12,7 +12,7 @@
     <meta property="og:title" content={data.meta.title} />
 </svelte:head>
 
-<article class="max-w-screen-lg mx-auto">
+<article class="mx-auto">
     <h2 class="font-medium text-3xl my-5 text-gray-100">{data.meta.title}</h2>
     <p class="mb-3 text-gray-500">
         {data.meta.description}
