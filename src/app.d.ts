@@ -47,14 +47,6 @@ declare global {
             type: string;
         };
 
-        type Slide = {
-            title: string;
-            src: string;
-            alt: string;
-            type: "image" | "video";
-            thumb: string;
-        };
-
         type Project = {
             title: string;
             description: string[];

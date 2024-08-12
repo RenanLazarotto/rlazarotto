@@ -1,12 +1,8 @@
 <script lang="ts">
-    import { handleKeypress } from "$lib/utils";
     import Icon from "./Icon.svelte";
 
     export let src: string;
     export let alt: string;
-    export let enlargeable: boolean = true;
-
-    const id = `image-${crypto.randomUUID().split("-").at(-1)?.toUpperCase()}`;
 
     // Controla o modal de visualização da imagem/vídeo
     let isOpen: boolean = false;
@@ -76,44 +72,34 @@
 <div
     class="not-prose relative mx-auto mb-4 mt-4 w-fit rounded-lg bg-black/30 px-2 pt-2"
 >
-    <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-    <div
-        role={enlargeable ? "button" : null}
-        class="inline-flex flex-col items-center"
-        on:click={enlargeable ? open : () => {}}
-        on:keypress={enlargeable
-            ? (e) => handleKeypress(e, ["Space", "Enter"], open)
-            : () => {}}
-        tabindex={enlargeable ? 0 : null}
-    >
-        <img
-            {src}
-            {alt}
-            class:cursor-pointer={enlargeable}
-            class="w-full rounded object-contain"
-        />
-        {#if $$slots.default}
-            <p class="my-2 text-center text-sm text-gray-400" {id}>
-                <slot />
-            </p>
-        {/if}
+    <div class="inline-flex flex-col items-center">
+        <button on:click={open} class="cursor-pointer">
+            <img {src} {alt} class="w-full rounded object-contain" />
+            {#if $$slots.default}
+                <p class="my-2 text-center text-sm text-gray-400">
+                    <slot />
+                </p>
+            {/if}
+        </button>
     </div>
 </div>
 
-{#if enlargeable}
-    <div
-        role="dialog"
-        class:hidden={!isOpen}
-        aria-labelledby={`${id}`}
-        class="not-prose fixed left-0 top-0 z-30 h-screen min-h-screen w-full overflow-auto bg-black/60 backdrop-blur-md flex items-center"
+<div
+    role="dialog"
+    class:hidden={!isOpen}
+    aria-label={alt}
+    class="fixed z-50 left-0 top-0 right-0 bottom-0 w-screen h-screen bg-black/60 backdrop-blur-md not-prose p-4 flex justify-center items-center"
+>
+    <img
+        {src}
+        {alt}
+        class="rounded-lg max-w-full max-h-full h-auto self-center"
+    />
+    <button
+        bind:this={closeButton}
+        on:click={close}
+        class="absolute left-4 bottom-4 cursor-pointer px-3 py-2 text-white font-bold select-none transition ease-in-out rounded-lg bg-mint-900/50 hover:bg-mint-800 flex items-center"
     >
-        <button
-            bind:this={closeButton}
-            on:click={close}
-            class="absolute right-8 top-8 z-50 flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-mint-700 text-white transition-colors duration-300 hover:bg-mint-600 active:bg-mint-800"
-        >
-            <Icon id="close" width={32} height={32} />
-        </button>
-        <img {src} {alt} class="z-40 mx-auto p-8" />
-    </div>
-{/if}
+        <Icon id="close" width={24} height={24} /> Fechar
+    </button>
+</div>
