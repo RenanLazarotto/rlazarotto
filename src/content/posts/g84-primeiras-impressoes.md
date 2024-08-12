@@ -38,7 +38,7 @@ Na imagem, o que vinha dentro da caixa de um celular típico de 2010:
 -   Bateria, que eram eram removíveis e o próprio usuário podia trocá-las em questão de segundos
 -   Carregador comum
 -   Carregador veicular
--   Duas tampas traseiras nas cores vermelha e azul
+-   Duas tampas traseiras nas cores vermelho e azul
 -   Manual - um manual de verdade, ao contrário dos informativos que vem nas caixas atualmente
 -   Fone de ouvido
 -   Caneta Stylus resistiva
@@ -77,118 +77,54 @@ Uma vez que meu perrengue com a configuração inicial foi resolvido, fui começ
 
 A instalação foi absurdamente simples e eu me arrependo de não ter tirado prints. Mas, de forma resumida, o processo de atualização acontece todo em segundo plano: uma vez que uma atualização é encontrada, o sistema faz o download do pacote, verifica e instala. Após a instalação estar concluída, você recebe uma notificação pedindo para que o aparelho seja reiniciado para completar a atualização. O tempo de reinício estimado é de 90 segundos, mas leva menos que isso. Ao todo, o processo inteiro levou entre 10 e 15 minutos, contando o tempo do download, verificação e instalação da atualização, além do tempo de reinício. Ah, a atualização do Android 14 tem 1.84GB para download, então acredito que o melhor é fazer o download conectado ao WiFi.
 
-Já com o software atualizado, era hora de começar a explorar o Android da Motorola. Um dos grandes pontos apontado por pessoas que não gostam do Android são as customizações de cada fabricante em cima dele. Além de aplicativos pré-instalados, as fabricantes tem total liberdade de customizar o sistema para se enquadrar à sua identidade visual. A Samsung, por exemplo, usa a interface chamada OneUI, que é bem diferente da interface "padrão" do Android, como desenvolvida pelo Google. Nesse ponto, a Motorola mantém a interface com praticamente nenhuma customização em relação ao Android do Google:
-
-<Gallery slides={[
-{
-src: "/images/posts/g84-primeiras-impressoes/tela-inicial.webp",
-thumb: "/images/posts/g84-primeiras-impressoes/tela-inicial-thumb.webp",
-title: "Minha tela inicial",
-alt: "Captura da tela inicial",
-type: "image",
-},
-{
-src: "/images/posts/g84-primeiras-impressoes/configuracoes-rapidas.webp",
-thumb: "/images/posts/g84-primeiras-impressoes/configuracoes-rapidas-thumb.webp",
-title: "Painel de configurações rápidas",
-alt: "Captura de tela representando o painel de configurações rápidas",
-type: "image",
-},
-{
-src: "/images/posts/g84-primeiras-impressoes/menu-desligar.webp",
-thumb: "/images/posts/g84-primeiras-impressoes/menu-desligar-thumb.webp",
-title: "Menu Desligar",
-alt: "Captura de tela representando o menu de desligar",
-type: "image",
-}
-]}/>
+Já com o software atualizado, era hora de começar a explorar o Android da Motorola. Um dos grandes pontos apontado por pessoas que não gostam do Android são as customizações de cada fabricante em cima dele. Além de aplicativos pré-instalados, as fabricantes tem total liberdade de customizar o sistema para se enquadrar à sua identidade visual. A Samsung, por exemplo, usa a interface chamada OneUI, que é bem diferente da interface "padrão" do Android, como desenvolvida pelo Google. Nesse ponto, a Motorola mantém a interface com praticamente nenhuma customização em relação ao Android do Google.
 
 Falando em customização, o aparelho conta com várias opções de customização. Acredito que boa parte delas já sejam do próprio Android e não sejam adições da Motorola, mas não tenho certeza. Uma coisa é certa - as opções são bem diferentes das oferecidas pela One UI, da Samsung, pelo menos até a versão 5.1, que foi a última que eu testei.
 
 <Gallery slides={[
 {
 src: "/images/posts/g84-primeiras-impressoes/aplicativo-moto.webp",
-thumb: "/images/posts/g84-primeiras-impressoes/aplicativo-moto-thumb.webp",
-title: "Aplicativo Moto",
 alt: "Captura de tela representando o aplicativo Moto",
-type: "image",
 },
 {
 src: "/images/posts/g84-primeiras-impressoes/cores.webp",
-thumb: "/images/posts/g84-primeiras-impressoes/cores-thumb.webp",
-title: "Opções de cores para personalização",
 alt: "Captura de tela representando a tela de opções de cores",
-type: "image",
 },
 {
 src: "/images/posts/g84-primeiras-impressoes/fontes.webp",
-thumb: "/images/posts/g84-primeiras-impressoes/fontes-thumb.webp",
-title: "Opções de fontes",
 alt: "Captura de tela representando as opções de fontes do sistema",
-type: "image",
 },
 {
 src: "/images/posts/g84-primeiras-impressoes/icones.webp",
-thumb: "/images/posts/g84-primeiras-impressoes/icones-thumb.webp",
-title: "Personalização dos icones do celular",
 alt: "Captura de tela representando as opções de personalizações de icones",
-type: "image",
 },
 {
 src: "/images/posts/g84-primeiras-impressoes/layout.webp",
-thumb: "/images/posts/g84-primeiras-impressoes/layout-thumb.webp",
-title: "Opções de layout para a tela inicial e gaveta de aplicativos",
 alt: "Captura de tela representando as opções de layout para tela inicial e gaveta de aplicativos",
-type: "image",
 },
 {
 src: "/images/posts/g84-primeiras-impressoes/modo-escuro.webp",
-thumb: "/images/posts/g84-primeiras-impressoes/modo-escuro-thumb.webp",
-title: "Opções do Modo Escuro",
 alt: "Captura de tela representando as opções para utilizacao do Modo Escuro",
-type: "image",
 },
 {
 src: "/images/posts/g84-primeiras-impressoes/personalizacao.webp",
-thumb: "/images/posts/g84-primeiras-impressoes/personalizacao-thumb.webp",
-title: "Tela de personalização",
 alt: "Captura da tela de personalização",
-type: "image",
 },
 {
 src: "/images/posts/g84-primeiras-impressoes/plano-de-fundo.webp",
-thumb: "/images/posts/g84-primeiras-impressoes/plano-de-fundo-thumb.webp",
-title: "Opções de personalização do plano de fundo",
 alt: "Captura da tela de personalização dos planos de fundo",
-type: "image",
 },
 {
 src: "/images/posts/g84-primeiras-impressoes/sons.webp",
-thumb: "/images/posts/g84-primeiras-impressoes/sons-thumb.webp",
-title: "Configurações de sons",
 alt: "Captura de tela das configuracoes de sons",
-type: "image",
 },
 {
 src: "/images/posts/g84-primeiras-impressoes/temas.webp",
-thumb: "/images/posts/g84-primeiras-impressoes/temas-thumb.webp",
-title: "Temas pré-definidos",
 alt: "Captura de tela com os temas pré-definidos",
-type: "image",
 },
 {
 src: "/images/posts/g84-primeiras-impressoes/texto-tamanho-exibicao.webp",
-thumb: "/images/posts/g84-primeiras-impressoes/texto-tamanho-exibicao-thumb.webp",
-title: "Opções do tamanho do texto e de exibição",
 alt: "Captura da tela com as opções do tamanho do texto e de exibição",
-type: "image",
-},
-{
-src: "/images/posts/g84-primeiras-impressoes/animacao-digital.webm",
-thumb: "/images/posts/g84-primeiras-impressoes/animacao-digital-thumb.webp",
-title: "Animações do leitor de digital",
-alt: "Video demonstrando os efeitos exibidos no leitor de digital",
-type: "video",
 }
 ]}/>
 
