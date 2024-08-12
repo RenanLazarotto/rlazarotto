@@ -9,8 +9,6 @@ category: Atualizações
 <script lang="ts">
     import Image from "$lib/components/Image.svelte";
     import Link from "$lib/components/Link.svelte";
-    import List from "$lib/components/List.svelte";
-    import ListItem from "$lib/components/ListItem.svelte";
 </script>
 
 ## Olá, mundo outra vez!
@@ -27,28 +25,10 @@ Por conta disso, implementei muitas coisas que sozinhas eram incríveis, mas jun
 
 Do momento que eu comecei essa reescrita até agora, eu devo ter testado _pelo menos_ seis layouts completamente diferentes - dentre eles:
 
-<List class="gap-2 mb-8">
-<ListItem>
-<p class="before:content-['•'] before:mr-2 before:text-mint-500">
-Um design que lembrava um painel administrativo (dashboard)
-</p>
-</ListItem>
-<ListItem>
-<p class="before:content-['•'] before:mr-2 before:text-mint-500">
-Um blog onde todas as páginas do site eram publicações
-</p>
-</ListItem>
-<ListItem>
-<p class="before:content-['•'] before:mr-2 before:text-mint-500">
-Um site similar ao antigo, porém redesenhado para não parecer tanto quanto um portfolio "genérico"
-</p>
-</ListItem>
-<ListItem>
-<p class="before:content-['•'] before:mr-2 before:text-mint-500">
-Um site extremamente minimalista, com pouquíssimas informações detalhadas
-</p>
-</ListItem>
-</List>
+-   Um design que lembrava um painel administrativo (dashboard)
+-   Um blog onde todas as páginas do site eram publicações
+-   Um site similar ao antigo, porém redesenhado para não parecer tanto quanto um portfolio "genérico"
+-   Um site extremamente minimalista, com pouquíssimas informações detalhadas
 
 E esses são os que eu lembro. Por fim, acabei por achar um único site que me serviu de inspiração "definitiva": o site pessoal de <Link href="https://alexandersandberg.com/" target="_blank">Alexander Sandberg</Link>. Eu já tinha um layout praticamente pronto, mas algumas coisas ainda me incomodavam, como os links de navegação como uma barra superior, algo que eu considero comum _demais_ ao ponto de eu preferir não utilizar essa disposição por causa disso.
 

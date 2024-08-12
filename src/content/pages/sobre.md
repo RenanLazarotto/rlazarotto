@@ -9,8 +9,6 @@ updated: 2024-03-01
     import Link from "$lib/components/Link.svelte";
     import Banner from "$lib/components/Banner.svelte";
     import Portrait from "$lib/components/Portrait.svelte";
-    import List from "$lib/components/List.svelte";
-    import ListItem from "$lib/components/ListItem.svelte";
 
     import { experiences } from "$content/experiences";
     import { projects } from "$content/projects";
@@ -60,17 +58,18 @@ Meu site também é a minha plataforma de testes - é aqui que eu aprendo muita 
 
 ## Experiência profissional
 
-<List>
+<div class="flex flex-col gap-4 not-prose">
     {#each experiences as experience}
-        <ListItem>
-            <div slot="left">
+        <div class="flex items-center gap-4">
+            <div>
                 {#if experience.href}
                     <Link href={experience.href}>{experience.company}</Link>
                 {:else}
                     <p>{experience.company}</p>
                 {/if}
             </div>
-            <div slot="right" class="flex text-sm text-gray-500">
+            <hr class="flex-1 border-dashed border-gray-800" />
+            <div class="flex text-sm text-gray-500">
                 <p>{experience.position}</p>
                 <span class="mx-2">•</span>
                 <p>{experience.start}</p>
@@ -84,17 +83,17 @@ Meu site também é a minha plataforma de testes - é aqui que eu aprendo muita 
                     <p>Agora</p>
                 {/if}
             </div>
-        </ListItem>
+        </div>
     {/each}
-</List>
+</div>
 
 ---
 
 ## Projetos em que trabalhei
 
-<List>
+<div class="flex flex-col gap-4 not-prose">
     {#each projects as project}
-        <ListItem class="flex-col" showLine={false}>
+        <div class="flex flex-col">
             <div class="flex-1 flex gap-4 items-center mb-2">
                 <div>
                     {#if project.link}
@@ -127,26 +126,25 @@ Meu site também é a minha plataforma de testes - é aqui que eu aprendo muita 
                     <p>{description}</p>
                 {/each}
             </div>
-        </ListItem>
+        </div>
     {/each}
-
-</List>
+</div>
 
 ---
 
 ## Contato
 
-<List>
-    <ListItem showLine={false}>
-        <Link href="mailto:renanlazarotto@gmail.com" slot="left">Email</Link>
-        <div slot="right" class="text-sm text-gray-500">renanlazarotto@gmail.com</div>
-    </ListItem>
-    <ListItem showLine={false}>
-         <Link href="https://github.com/RenanLazarotto" target="_blank" slot="left">GitHub</Link>
-        <div slot="right" class="text-sm text-gray-500">@RenanLazarotto</div>
-    </ListItem>
-    <ListItem showLine={false}>
-        <Link href="/curriculo" slot="left">Currículo</Link>
-        <div slot="right" class="text-sm text-gray-500">PDF</div>
-    </ListItem>
-</List>
+<div class="flex flex-col gap-4 not-prose">
+    <div class="flex flex-col">
+        <Link href="mailto:renanlazarotto@gmail.com">Email</Link>
+        <div class="text-sm text-gray-500">renanlazarotto@gmail.com</div>
+    </div>
+    <div class="flex flex-col">
+         <Link href="https://github.com/RenanLazarotto" target="_blank">GitHub</Link>
+        <div class="text-sm text-gray-500">@RenanLazarotto</div>
+    </div>
+   <div class="flex flex-col">
+        <Link href="/curriculo">Currículo</Link>
+        <div class="text-sm text-gray-500">PDF</div>
+    </div>
+</div>
