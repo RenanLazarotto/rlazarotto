@@ -10,8 +10,6 @@ category: Reviews
     import Banner from "$lib/components/Banner.svelte";
     import Link from "$lib/components/Link.svelte";
     import Gallery from "$lib/components/Gallery.svelte";
-    import List from "$lib/components/List.svelte";
-    import ListItem from "$lib/components/ListItem.svelte";
     import Image from "$lib/components/Image.svelte";
 
 </script>
@@ -36,62 +34,22 @@ Por algum motivo infeliz que eu não consigo entender, as fabricantes de aparelh
 
 Na imagem, o que vinha dentro da caixa de um celular típico de 2010:
 
-<List class="gap-2 mb-8">
-    <ListItem>
-        <p class="before:content-['•'] before:mr-2 before:text-mint-500">Celular</p>
-    </ListItem>
-    <ListItem class="flex-col">
-        <p class="before:content-['•'] before:mr-2 before:text-mint-500">Bateria</p>
-        <Banner color="mint" icon="question" class="mb-3 mt-1">
-            <p>Sim, as baterias eram removíveis e o próprio usuário podia trocá-las em questão de segundos.</p>
-            <p class="mt-2"  >
-                Inclusive, era uma prática de quem tinha condições de comprar uma segunda bateria simplesmente trocar a bateria esgotada pela carregada e continuar usando o telefone com o mínimo de interrupção.
-            </p>
-        </Banner>
-    </ListItem>
-    <ListItem>
-        <p class="before:content-['•'] before:mr-2 before:text-mint-500">Carregador comum</p>
-    </ListItem>
-    <ListItem>
-        <p class="before:content-['•'] before:mr-2 before:text-mint-500">Carregador veicular</p>
-    </ListItem>
-    <ListItem>
-        <p class="before:content-['•'] before:mr-2 before:text-mint-500">Duas tampas traseiras nas cores vermelha e azul</p>
-    </ListItem>
-    <ListItem>
-        <p class="before:content-['•'] before:mr-2 before:text-mint-500">Manual - um manual de verdade, ao contrário dos informativos que vem nas caixas atualmente</p>
-    </ListItem>
-    <ListItem>
-        <p class="before:content-['•'] before:mr-2 before:text-mint-500">Fone de ouvido</p>
-    </ListItem>
-    <ListItem>
-        <p class="before:content-['•'] before:mr-2 before:text-mint-500">Caneta Stylus resistiva</p>
-    </ListItem>
-</List>
+-   Celular
+-   Bateria, que eram eram removíveis e o próprio usuário podia trocá-las em questão de segundos
+-   Carregador comum
+-   Carregador veicular
+-   Duas tampas traseiras nas cores vermelha e azul
+-   Manual - um manual de verdade, ao contrário dos informativos que vem nas caixas atualmente
+-   Fone de ouvido
+-   Caneta Stylus resistiva
 
 Na caixa do Moto G84, veio:
 
-<List class="gap-2 mb-8">
-    <ListItem>
-        <p class="before:content-['•'] before:mr-2 before:text-mint-500">Celular</p>
-    </ListItem>
-    <ListItem>
-        <p class="before:content-['•'] before:mr-2 before:text-mint-500">Carregador turbo de 33W</p>
-    </ListItem>
-    <ListItem>
-        <p class="before:content-['•'] before:mr-2 before:text-mint-500">Cabo USB</p>
-    </ListItem>
-    <ListItem>
-        <p class="before:content-['•'] before:mr-2 before:text-mint-500">
-        Alguns informativos sobre informações regulamentárias
-        </p>
-    </ListItem>
-    <ListItem>
-        <p class="before:content-['•'] before:mr-2 before:text-mint-500">
-            Ejetor da bandeja do chip e cartão de memória
-        </p>
-    </ListItem>
-</List>
+-   Celular
+-   Carregador turbo de 33W
+-   Cabo USB
+-   Alguns informativos sobre informações regulamentárias
+-   Ejetor da bandeja do chip e cartão de memória
 
 Tudo isso numa embalagem de papelão. Nesse quesito, ponto positivo pra Motorola - embalagens de papel são mais sustentáveis e se decompôe mais rapidamente do que plástico. O que decepciona mesmo é o conteúdo, já que não vem nem mesmo um fone de ouvido. Pra mim acaba não sendo um problema, pois eu uso um fone Bluetooth, mas pra muita gente esse é um item essencial, que se torna um gasto a mais logo após já ter arcado com o preço de um celular.
 
