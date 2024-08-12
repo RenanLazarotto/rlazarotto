@@ -210,34 +210,6 @@
                         {/if}
                     </div>
                 {/if}
-                <!-- {#if slide.type == "image"}
-                    <div
-                        class:hidden={i != current}
-                        class="relative"
-                        in:fade
-                        out:fade
-                    >
-                        <img
-                            src={slide.src}
-                            alt={slide.alt}
-                            class="object-contain rounded-lg not-prose h-full max-w-fit mx-auto"
-                            in:fade
-                            out:fade
-                        />
-                    </div>
-                {:else}
-                    <div class:hidden={i != current} class="relative">
-                        < !-- svelte-ignore a11y-media-has-caption -- >
-                        <video
-                            class="object-contain max-w-fit not-prose h-full mx-auto"
-                            in:fade
-                            out:fade
-                            controls
-                        >
-                            <source src={slide.src} type="video/webm" />
-                        </video>
-                    </div>
-                {/if} -->
             {/each}
         </div>
 
