@@ -77,7 +77,7 @@
                                 .toLowerCase()}`}>{post.category}</Link
                         >
                         <p>•</p>
-                        <FormattedDate date={post.updated ?? post.published} />
+                        <FormattedDate date={post.published} />
                         <p>•</p>
                         <p><b>{post.readingTime} min.</b> de leitura</p>
                     </div>
