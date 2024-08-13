@@ -69,18 +69,20 @@
     };
 </script>
 
-<div
-    class="not-prose relative mx-auto mb-4 mt-4 w-fit rounded-lg bg-black/30 px-2 pt-2"
->
-    <div class="inline-flex flex-col items-center">
-        <button on:click={open} class="cursor-pointer">
-            <img {src} {alt} class="w-full rounded object-contain" />
-            {#if $$slots.default}
-                <p class="my-2 text-center text-sm text-gray-400">
-                    <slot />
-                </p>
-            {/if}
+<div class="my-6 not-prose">
+    <div class="flex flex-col justify-center">
+        <button on:click={open} class="max-h-[500px]">
+            <img
+                {src}
+                {alt}
+                class="max-h-[500px] h-full object-contain rounded cursor-pointer mx-auto"
+            />
         </button>
+        {#if $$slots.default}
+            <p class="mt-2 text-center text-sm text-gray-400">
+                <slot />
+            </p>
+        {/if}
     </div>
 </div>
 
@@ -98,7 +100,7 @@
     <button
         bind:this={closeButton}
         on:click={close}
-        class="absolute left-4 bottom-4 cursor-pointer px-3 py-2 text-white font-bold select-none transition ease-in-out rounded-lg bg-mint-900/50 hover:bg-mint-800 flex items-center"
+        class="absolute left-4 bottom-4 cursor-pointer px-3 py-2 text-white font-bold select-none transition ease-in-out rounded-lg bg-mint-950/75 hover:bg-mint-800 flex items-center backdrop-blur"
     >
         <Icon id="close" width={24} height={24} /> Fechar
     </button>

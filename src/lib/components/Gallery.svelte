@@ -1,17 +1,27 @@
 <script lang="ts">
+    import { Splide, SplideSlide } from "@splidejs/svelte-splide";
+    import "@splidejs/svelte-splide/css/default";
+    import "$lib/themes/splide.css";
     import Icon from "./Icon.svelte";
+    import { onMount } from "svelte";
+    import type {
+        Splide as SplideType,
+        SplideSlide as SplideSlideType,
+    } from "@splidejs/svelte-splide";
+    import { browser } from "$app/environment";
 
-    // Conteúdo da galeria
-    export let slides: Types.Image[];
+    export let images: Types.Image[];
 
-    // Índice da imagem/vídeo selecinado
+    // Referências à elementos
+    let main: SplideType;
+    let thumbs: SplideSlideType;
+    let closeButton: HTMLButtonElement;
+
+    // Índice selecinado
     let current: number = 0;
 
-    // Controla o modal de visualização da imagem/vídeo
+    // Controla o modal de visualização
     let isOpen: boolean = false;
-
-    // Referência ao botão de fechar dentro do modal
-    let closeButton: HTMLButtonElement;
 
     /**
      * Função de callback para fechar o modal com o teclado
@@ -36,101 +46,108 @@
         }
     };
 
-    /**
-     * Navega para o item especificado da galeria.
-     *
-     * @param {number} index - Índice do item para o qual navegar
-     */
-    const navigate = (index: number) => {
-        current = index;
-    };
-
-    /**
-     * Abre o modal de visualização de imagem
-     */
     const open = () => {
-        // Oculta a barra de navegação na página
         document.body.style.overflow = "hidden";
-
-        // Abre o modal
         isOpen = true;
-
-        // Adiciona os listeners dos eventos
         closeButton.addEventListener("keydown", disableTab);
         document.addEventListener("keydown", keyboardClose);
-
-        // Espera 100ms para focar no botão de fechar
         setTimeout(() => {
             closeButton.focus();
         }, 100);
     };
 
-    /**
-     * Fecha o modal de visualização de imagem
-     */
     const close = () => {
-        // Deixa a critério do navegador exibir a barra de navegação da página
         document.body.style.overflow = "auto";
-
-        // Fecha o modal
         isOpen = false;
-
-        // Remove os listeners dos eventos
         closeButton.removeEventListener("keydown", disableTab);
         document.removeEventListener("keydown", keyboardClose);
     };
+
+    onMount(() => {
+        if (browser) {
+            main.splide.sync(thumbs.splide);
+        }
+    });
 </script>
 
-<div class="relative my-6 not-prose">
-    <div class="h-[500px] flex justify-center">
-        {#each slides as slide, i}
-            <button on:click={open} class:hidden={current != i} class="h-full">
+<Splide
+    aria-label="Image gallery"
+    options={{
+        type: "loop",
+        height: "650px",
+        pagination: false,
+        arrows: true,
+        drag: true,
+        snap: true,
+        dragMinThreshold: {
+            mouse: 4,
+            touch: 10,
+        },
+    }}
+    bind:this={main}
+    class="my-6 not-prose"
+>
+    {#each images as image, i}
+        <SplideSlide class="flex justify-center">
+            <button
+                on:click={(e) => {
+                    current = i;
+                    open();
+                }}
+                class="max-h-[650px] h-full"
+            >
                 <img
-                    src={slide.src}
-                    alt={slide.alt}
-                    class="h-full object-contain rounded cursor-pointer"
+                    src={image.src}
+                    alt={image.alt}
+                    class="h-full object-contain rounded"
                 />
             </button>
-        {/each}
-    </div>
-</div>
-<nav class="flex justify-center gap-2 not-prose">
-    {#each slides as slide, i}
-        <button
-            on:click={() => navigate(i)}
-            class:border-mint-500={i == current}
-            class:border-transparent={i != current}
-            class="{i == current
-                ? 'hover:border-purple-400'
-                : 'hover:border-purple-400/75'} border-2 rounded-lg overflow-hidden"
-        >
-            <img
-                src={slide.src}
-                alt={slide.alt}
-                class:opacity-50={i != current}
-                class:opacity-100={i == current}
-                class="object-cover h-16 min-h-16 w-16 min-w-16 hover:opacity-75"
-            />
-        </button>
+        </SplideSlide>
     {/each}
-</nav>
+</Splide>
+
+<Splide
+    options={{
+        rewind: true,
+        fixedWidth: 128,
+        fixedHeight: 96,
+        isNavigation: true,
+        gap: 4,
+        focus: "center",
+        pagination: false,
+        cover: true,
+        arrows: false,
+        dragMinThreshold: {
+            mouse: 4,
+            touch: 10,
+        },
+    }}
+    bind:this={thumbs}
+    class="not-prose mb-6"
+>
+    {#each images as image}
+        <SplideSlide class="rounded-lg">
+            <img src={image.src} alt={image.alt} class="rounded-lg" />
+        </SplideSlide>
+    {/each}
+</Splide>
 
 <div
     role="dialog"
     class:hidden={!isOpen}
-    aria-label={slides[current].alt}
+    aria-label={images[current].alt}
     class="fixed z-50 left-0 top-0 right-0 bottom-0 w-screen h-screen bg-black/60 backdrop-blur-md not-prose p-4 flex justify-center items-center"
 >
     <img
-        src={slides[current].src}
-        alt={slides[current].alt}
+        src={images[current].src}
+        alt={images[current].alt}
         class="rounded-lg max-w-full max-h-full h-auto self-center"
     />
 
     <button
         bind:this={closeButton}
         on:click={close}
-        class="absolute left-4 bottom-4 cursor-pointer px-3 py-2 text-white font-bold select-none transition ease-in-out rounded-lg bg-mint-900/50 hover:bg-mint-800 flex items-center"
+        class="absolute left-4 bottom-4 cursor-pointer px-3 py-2 text-white font-bold select-none transition-all ease-in-out rounded-lg bg-mint-950/75 hover:bg-mint-800 flex items-center backdrop-blur"
     >
         <Icon id="close" width={24} height={24} /> Fechar
     </button>
