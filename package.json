@@ -10,8 +10,8 @@
         "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
     },
     "devDependencies": {
-        "@sveltejs/adapter-auto": "^3.2.2",
-        "@sveltejs/kit": "^2.5.20",
+        "@sveltejs/adapter-auto": "^3.2.4",
+        "@sveltejs/kit": "^2.5.22",
         "@sveltejs/vite-plugin-svelte": "^3.1.1",
         "@tailwindcss/typography": "^0.5.14",
         "@types/jsdom": "^21.1.7",
@@ -28,6 +28,7 @@
     "type": "module",
     "dependencies": {
         "@fontsource-variable/inter": "^5.0.20",
+        "@splidejs/svelte-splide": "^0.2.9",
         "date-fns": "^3.6.0",
         "string-strip-html": "^13.4.8"
     }
