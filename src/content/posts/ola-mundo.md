@@ -2,7 +2,7 @@
 title: Olá, mundo... de novo?
 description: "Saindo de um portfolio para um site pessoal, reescrito do zero e sobre uma nova perspectiva."
 published: 2024-03-07T20:00-03:00
-updated: 2024-06-06T10:00-03:00
+updated: 2024-08-13T18:20-03:00
 category: Atualizações
 ---
 
@@ -44,16 +44,14 @@ Quando eu comecei a primeira versão do que viria ser meu site, eu queria algo q
 
 <Image 
 src="/images/posts/ola-mundo/site-v1.webp"
-title="A carinha da versão 1.0 do meu site"
-alt="Captura de tela da versão 1.0 do meu site"
+alt="A carinha da versão 1.0 do meu site"
 />
 
 Confesso que eu fiquei - ainda estou - bem feliz com o resultado. Foi um grande desafio desenvolver esse site, especialmente se considerar que eu estava começando a me aventurar mais profundamente no desenvolvimento front-end. Hoje ele já não representa a imagem que eu quero passar a meu respeito como profissional, a começar pela seção de "Habilidades", algo que eu considerei ser absolutamente essencial destacar _pois era o que todos os outros portfolios que eu visitei faziam_.
 
 <Image
 src="/images/posts/ola-mundo/habilidades.webp"
-title="Bloco de habilidades, prontamente destacado"
-alt="Captura de tela exibindo a seção de habilidades"
+alt="Bloco de habilidades, prontamente destacado"
  />
 
 Agora, o foco é em me apresentar como pessoa e minhas ideias. Ainda mantenho um histórico de alguns projetos em que trabalhei, destacando quais habilidades efetivamente foram utilizados em cada um, além do histórico profissional na página <Link href="/pages/sobre">sobre mim</Link>. Essas informações, ao meu ver, já dão uma visão geral do meu conhecimento, sem necessariamente entrar em detalhes que, muitas vezes, acabam não sendo tão relevantes.

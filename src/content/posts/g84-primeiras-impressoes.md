@@ -2,7 +2,7 @@
 title: Moto G84 5G - Primeiras impressões
 description: As primeiras impressões do meu novo celular - o Moto G84 5G!
 published: 2024-04-24T15:00-03:00
-updated: 2024-06-06T10:25-03:00
+updated: 2024-08-13T18:20-03:00
 category: Reviews
 ---
 
@@ -29,7 +29,6 @@ Por algum motivo infeliz que eu não consigo entender, as fabricantes de aparelh
 <Image
     src="/images/posts/g84-primeiras-impressoes/caixa-nokia-5230.webp"
     alt="Itens que acompanhavam um Nokia 5230"
-    enlargeable={false}
 />
 
 Na imagem, o que vinha dentro da caixa de um celular típico de 2010:
@@ -81,7 +80,7 @@ Já com o software atualizado, era hora de começar a explorar o Android da Moto
 
 Falando em customização, o aparelho conta com várias opções de customização. Acredito que boa parte delas já sejam do próprio Android e não sejam adições da Motorola, mas não tenho certeza. Uma coisa é certa - as opções são bem diferentes das oferecidas pela One UI, da Samsung, pelo menos até a versão 5.1, que foi a última que eu testei.
 
-<Gallery slides={[
+<Gallery images={[
 {
 src: "/images/posts/g84-primeiras-impressoes/aplicativo-moto.webp",
 alt: "Captura de tela representando o aplicativo Moto",
@@ -126,7 +125,7 @@ alt: "Captura de tela com os temas pré-definidos",
 src: "/images/posts/g84-primeiras-impressoes/texto-tamanho-exibicao.webp",
 alt: "Captura da tela com as opções do tamanho do texto e de exibição",
 }
-]}/>
+]} />
 
 ---
 
