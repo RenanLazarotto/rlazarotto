@@ -2,7 +2,7 @@
 title: Moto G84 5G - Primeiras impressões
 description: As primeiras impressões do meu novo celular - o Moto G84 5G!
 published: 2024-04-24T15:00-03:00
-updated: 2024-06-06T10:25-03:00
+updated: 2024-08-13T18:20-03:00
 category: Reviews
 ---
 
@@ -10,8 +10,7 @@ category: Reviews
     import Banner from "$lib/components/Banner.svelte";
     import Link from "$lib/components/Link.svelte";
     import Gallery from "$lib/components/Gallery.svelte";
-    import List from "$lib/components/List.svelte";
-    import ListItem from "$lib/components/ListItem.svelte";
+    import Image from "$lib/components/Image.svelte";
 </script>
 
 <Banner icon="info">
@@ -26,72 +25,29 @@ Ontem, depois de alguns dias de espera, finalmente chegou meu celular novo - um 
 
 Por algum motivo infeliz que eu não consigo entender, as fabricantes de aparelhos continuaram subindo os preços dos aparelhos enquanto mandam menos coisas dentro da caixa. Pra quem tem menos de 20 anos, uma pequena lição de história: antigamente as caixas de telefone eram muito diferentes de como são hoje. Dando uma rápida garimpada, achei esse imagem aqui que mostra o que vinha na caixa de um Nokia 5230, um aparelho que inclusive eu tive:
 
-<Gallery slides={[{
-src: "/images/posts/g84-primeiras-impressoes/caixa-nokia-5230.webp",
-thumb: "/images/posts/g84-primeiras-impressoes/caixa-nokia-5230-thumb.webp",
-title: "Itens que acompanhavam um Nokia 5230",
-alt: "Conteúdo da caixa de um Nokia 5230",
-type: "image",
-}]} />
+<Image
+    src="/images/posts/g84-primeiras-impressoes/caixa-nokia-5230.webp"
+    alt="Itens que acompanhavam um Nokia 5230"
+/>
 
 Na imagem, o que vinha dentro da caixa de um celular típico de 2010:
 
-<List class="gap-2 mb-8">
-    <ListItem>
-        <p class="before:content-['•'] before:mr-2 before:text-mint-500">Celular</p>
-    </ListItem>
-    <ListItem class="flex-col">
-        <p class="before:content-['•'] before:mr-2 before:text-mint-500">Bateria</p>
-        <Banner color="mint" icon="question" class="mb-3 mt-1">
-            <p>Sim, as baterias eram removíveis e o próprio usuário podia trocá-las em questão de segundos.</p>
-            <p class="mt-2"  >
-                Inclusive, era uma prática de quem tinha condições de comprar uma segunda bateria simplesmente trocar a bateria esgotada pela carregada e continuar usando o telefone com o mínimo de interrupção.
-            </p>
-        </Banner>
-    </ListItem>
-    <ListItem>
-        <p class="before:content-['•'] before:mr-2 before:text-mint-500">Carregador comum</p>
-    </ListItem>
-    <ListItem>
-        <p class="before:content-['•'] before:mr-2 before:text-mint-500">Carregador veicular</p>
-    </ListItem>
-    <ListItem>
-        <p class="before:content-['•'] before:mr-2 before:text-mint-500">Duas tampas traseiras nas cores vermelha e azul</p>
-    </ListItem>
-    <ListItem>
-        <p class="before:content-['•'] before:mr-2 before:text-mint-500">Manual - um manual de verdade, ao contrário dos informativos que vem nas caixas atualmente</p>
-    </ListItem>
-    <ListItem>
-        <p class="before:content-['•'] before:mr-2 before:text-mint-500">Fone de ouvido</p>
-    </ListItem>
-    <ListItem>
-        <p class="before:content-['•'] before:mr-2 before:text-mint-500">Caneta Stylus resistiva</p>
-    </ListItem>
-</List>
+-   Celular
+-   Bateria, que eram eram removíveis e o próprio usuário podia trocá-las em questão de segundos
+-   Carregador comum
+-   Carregador veicular
+-   Duas tampas traseiras nas cores vermelho e azul
+-   Manual - um manual de verdade, ao contrário dos informativos que vem nas caixas atualmente
+-   Fone de ouvido
+-   Caneta Stylus resistiva
 
 Na caixa do Moto G84, veio:
 
-<List class="gap-2 mb-8">
-    <ListItem>
-        <p class="before:content-['•'] before:mr-2 before:text-mint-500">Celular</p>
-    </ListItem>
-    <ListItem>
-        <p class="before:content-['•'] before:mr-2 before:text-mint-500">Carregador turbo de 33W</p>
-    </ListItem>
-    <ListItem>
-        <p class="before:content-['•'] before:mr-2 before:text-mint-500">Cabo USB</p>
-    </ListItem>
-    <ListItem>
-        <p class="before:content-['•'] before:mr-2 before:text-mint-500">
-        Alguns informativos sobre informações regulamentárias
-        </p>
-    </ListItem>
-    <ListItem>
-        <p class="before:content-['•'] before:mr-2 before:text-mint-500">
-            Ejetor da bandeja do chip e cartão de memória
-        </p>
-    </ListItem>
-</List>
+-   Celular
+-   Carregador turbo de 33W
+-   Cabo USB
+-   Alguns informativos sobre informações regulamentárias
+-   Ejetor da bandeja do chip e cartão de memória
 
 Tudo isso numa embalagem de papelão. Nesse quesito, ponto positivo pra Motorola - embalagens de papel são mais sustentáveis e se decompôe mais rapidamente do que plástico. O que decepciona mesmo é o conteúdo, já que não vem nem mesmo um fone de ouvido. Pra mim acaba não sendo um problema, pois eu uso um fone Bluetooth, mas pra muita gente esse é um item essencial, que se torna um gasto a mais logo após já ter arcado com o preço de um celular.
 
@@ -119,120 +75,56 @@ Uma vez que meu perrengue com a configuração inicial foi resolvido, fui começ
 
 A instalação foi absurdamente simples e eu me arrependo de não ter tirado prints. Mas, de forma resumida, o processo de atualização acontece todo em segundo plano: uma vez que uma atualização é encontrada, o sistema faz o download do pacote, verifica e instala. Após a instalação estar concluída, você recebe uma notificação pedindo para que o aparelho seja reiniciado para completar a atualização. O tempo de reinício estimado é de 90 segundos, mas leva menos que isso. Ao todo, o processo inteiro levou entre 10 e 15 minutos, contando o tempo do download, verificação e instalação da atualização, além do tempo de reinício. Ah, a atualização do Android 14 tem 1.84GB para download, então acredito que o melhor é fazer o download conectado ao WiFi.
 
-Já com o software atualizado, era hora de começar a explorar o Android da Motorola. Um dos grandes pontos apontado por pessoas que não gostam do Android são as customizações de cada fabricante em cima dele. Além de aplicativos pré-instalados, as fabricantes tem total liberdade de customizar o sistema para se enquadrar à sua identidade visual. A Samsung, por exemplo, usa a interface chamada OneUI, que é bem diferente da interface "padrão" do Android, como desenvolvida pelo Google. Nesse ponto, a Motorola mantém a interface com praticamente nenhuma customização em relação ao Android do Google:
-
-<Gallery slides={[
-{
-src: "/images/posts/g84-primeiras-impressoes/tela-inicial.webp",
-thumb: "/images/posts/g84-primeiras-impressoes/tela-inicial-thumb.webp",
-title: "Minha tela inicial",
-alt: "Captura da tela inicial",
-type: "image",
-},
-{
-src: "/images/posts/g84-primeiras-impressoes/configuracoes-rapidas.webp",
-thumb: "/images/posts/g84-primeiras-impressoes/configuracoes-rapidas-thumb.webp",
-title: "Painel de configuracoes rápidas",
-alt: "Captura de tela representando o painel de configuracoes rápidas",
-type: "image",
-},
-{
-src: "/images/posts/g84-primeiras-impressoes/menu-desligar.webp",
-thumb: "/images/posts/g84-primeiras-impressoes/menu-desligar-thumb.webp",
-title: "Menu Desligar",
-alt: "Captura de tela representando o menu de desligar",
-type: "image",
-}
-]}/>
+Já com o software atualizado, era hora de começar a explorar o Android da Motorola. Um dos grandes pontos apontado por pessoas que não gostam do Android são as customizações de cada fabricante em cima dele. Além de aplicativos pré-instalados, as fabricantes tem total liberdade de customizar o sistema para se enquadrar à sua identidade visual. A Samsung, por exemplo, usa a interface chamada OneUI, que é bem diferente da interface "padrão" do Android, como desenvolvida pelo Google. Nesse ponto, a Motorola mantém a interface com praticamente nenhuma customização em relação ao Android do Google.
 
 Falando em customização, o aparelho conta com várias opções de customização. Acredito que boa parte delas já sejam do próprio Android e não sejam adições da Motorola, mas não tenho certeza. Uma coisa é certa - as opções são bem diferentes das oferecidas pela One UI, da Samsung, pelo menos até a versão 5.1, que foi a última que eu testei.
 
-<Gallery slides={[
+<Gallery images={[
 {
 src: "/images/posts/g84-primeiras-impressoes/aplicativo-moto.webp",
-thumb: "/images/posts/g84-primeiras-impressoes/aplicativo-moto-thumb.webp",
-title: "Aplicativo Moto",
 alt: "Captura de tela representando o aplicativo Moto",
-type: "image",
 },
 {
 src: "/images/posts/g84-primeiras-impressoes/cores.webp",
-thumb: "/images/posts/g84-primeiras-impressoes/cores-thumb.webp",
-title: "Opcoes de cores para personalizacao",
-alt: "Captura de tela representando a tela de opcoes de cores",
-type: "image",
+alt: "Captura de tela representando a tela de opções de cores",
 },
 {
 src: "/images/posts/g84-primeiras-impressoes/fontes.webp",
-thumb: "/images/posts/g84-primeiras-impressoes/fontes-thumb.webp",
-title: "Opcoes de fontes",
-alt: "Captura de tela representando as opcoes de fontes do sistema",
-type: "image",
+alt: "Captura de tela representando as opções de fontes do sistema",
 },
 {
 src: "/images/posts/g84-primeiras-impressoes/icones.webp",
-thumb: "/images/posts/g84-primeiras-impressoes/icones-thumb.webp",
-title: "Personalizacao dos icones do celular",
-alt: "Captura de tela representando as opcoes de personalizacoes de icones",
-type: "image",
+alt: "Captura de tela representando as opções de personalizações de icones",
 },
 {
 src: "/images/posts/g84-primeiras-impressoes/layout.webp",
-thumb: "/images/posts/g84-primeiras-impressoes/layout-thumb.webp",
-title: "Opcoes de layout para a tela inicial e gaveta de aplicativos",
-alt: "Captura de tela representando as opcoes de layout para tela inicial e gaveta de aplicativos",
-type: "image",
+alt: "Captura de tela representando as opções de layout para tela inicial e gaveta de aplicativos",
 },
 {
 src: "/images/posts/g84-primeiras-impressoes/modo-escuro.webp",
-thumb: "/images/posts/g84-primeiras-impressoes/modo-escuro-thumb.webp",
-title: "Opcoes do Modo Escuro",
-alt: "Captura de tela representando as opcoes para utilizacao do Modo Escuro",
-type: "image",
+alt: "Captura de tela representando as opções para utilizacao do Modo Escuro",
 },
 {
 src: "/images/posts/g84-primeiras-impressoes/personalizacao.webp",
-thumb: "/images/posts/g84-primeiras-impressoes/personalizacao-thumb.webp",
-title: "Tela de personalizacao",
-alt: "Captura da tela de personalizacao",
-type: "image",
+alt: "Captura da tela de personalização",
 },
 {
 src: "/images/posts/g84-primeiras-impressoes/plano-de-fundo.webp",
-thumb: "/images/posts/g84-primeiras-impressoes/plano-de-fundo-thumb.webp",
-title: "Opcoes de personalizacao do plano de fundo",
-alt: "Captura da tela de personalizacao dos planos de fundo",
-type: "image",
+alt: "Captura da tela de personalização dos planos de fundo",
 },
 {
 src: "/images/posts/g84-primeiras-impressoes/sons.webp",
-thumb: "/images/posts/g84-primeiras-impressoes/sons-thumb.webp",
-title: "Configuracoes de sons",
 alt: "Captura de tela das configuracoes de sons",
-type: "image",
 },
 {
 src: "/images/posts/g84-primeiras-impressoes/temas.webp",
-thumb: "/images/posts/g84-primeiras-impressoes/temas-thumb.webp",
-title: "Temas pré-definidos",
 alt: "Captura de tela com os temas pré-definidos",
-type: "image",
 },
 {
 src: "/images/posts/g84-primeiras-impressoes/texto-tamanho-exibicao.webp",
-thumb: "/images/posts/g84-primeiras-impressoes/texto-tamanho-exibicao-thumb.webp",
-title: "Opcoes do tamanho do texto e de exibicao",
-alt: "Captura da tela com as opcoes do tamanho do texto e de exibicao",
-type: "image",
-},
-{
-src: "/images/posts/g84-primeiras-impressoes/animacao-digital.webm",
-thumb: "/images/posts/g84-primeiras-impressoes/animacao-digital-thumb.webp",
-title: "Animacoes do leitor de digital",
-alt: "Video demonstrando os efeitos exibidos no leitor de digital",
-type: "video",
+alt: "Captura da tela com as opções do tamanho do texto e de exibição",
 }
-]}/>
+]} />
 
 ---
 

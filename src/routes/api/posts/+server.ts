@@ -17,19 +17,24 @@ export async function GET() {
         const slug = path.split("/").at(-1)?.replace(".md", "");
 
         if (file && typeof file === "object" && "metadata" in file && slug) {
-            const dom = stripHtml(file.default.$$render()).result;
+            const dom = stripHtml(file.default.render().html).result;
             const metadata = file.metadata as Omit<Types.Post, "slug">;
-            const post = { ...metadata, slug, readingTime: estimateReadingTime(dom) } satisfies Types.Post;
+            const post = {
+                ...metadata,
+                slug,
+                readingTime: estimateReadingTime(dom),
+            } satisfies Types.Post;
 
             posts.push(post);
         }
     }
 
-    // Ordena os posts por atualização ou publicação
+    // Ordena os posts por publicação
     posts.sort((first, second) => {
-        const d1 = first.updated ?? first.published;
-        const d2 = second.updated ?? second.published;
-        return new Date(d2).getTime() - new Date(d1).getTime();
+        return (
+            new Date(second.published).getTime() -
+            new Date(first.published).getTime()
+        );
     });
 
     return json(posts);

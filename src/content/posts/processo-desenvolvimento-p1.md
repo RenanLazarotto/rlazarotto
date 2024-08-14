@@ -2,7 +2,7 @@
 title: O processo de desenvolvimento do site - parte 1
 description: Da necessidade de atualizar o que já existe até a vontade de fazer algo novo
 published: 2024-06-06T14:25-03:00
-updated: 2024-07-01T08:15-03:00
+updated: 2024-08-13T18:20-03:00
 category: Atualizações
 ---
 
@@ -37,8 +37,7 @@ Por outro lado, alguns componentes existem em função do conteúdo. Esse post q
 
 <Image
 src="/images/posts/processo-desenvolvimento-p1/componentes.webp"
-title="Componentes que existem atualmente no site"
-alt="Listagem da pasta do código-fonte com os componentes usados no site"
+alt="Componentes que existem atualmente no site"
 />
 
 Tem alguns outros componentes para listas, ícones, a minha foto na página <Link href="/pages/sobre">sobre</Link> e para um alerta/banner, que até o momento eu usei mais para colocar informações que não precisam necessariamente fazer parte do conteúdo dos poucos posts que escrevi.
@@ -55,8 +54,7 @@ Depois de muito protelar, cheguei num layout final, que é o que você está ven
 
 <Image
 src="/images/posts/processo-desenvolvimento-p1/navegacao.webp"
-title="Introdução com a navegação das principais páginas do site logo após"
-alt="Captura do menu de navegação com as princiapis páginas do site em baixo do texto de introdução"
+alt="Introdução com a navegação das principais páginas do site logo após"
 />
 
 Em um primeiro momento, eu ia incluir os projetos que eu trabalhei também na página inicial, após a navegação, mas preferi agrupar essas informações a meu respeito dentro da página <Link href="/pages/sobre">sobre</Link>, afinal a ideia é destacar a minha introdução e os conteúdos que eu vou escrever.

@@ -1,29 +1,11 @@
 <script lang="ts">
     const attr = {
-        viewBox: "0 0 16 16",
+        viewBox: "0 0 24 24",
         fill: "currentColor",
     };
 </script>
 
 <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
-    <symbol id="icon-close" {...attr}>
-        <path
-            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
-        />
-    </symbol>
-
-    <symbol id="icon-back" {...attr}>
-        <path
-            d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"
-        />
-    </symbol>
-
-    <symbol id="icon-forward" {...attr}>
-        <path
-            d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"
-        />
-    </symbol>
-
     <symbol id="icon-dot" {...attr}>
         <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
     </symbol>
@@ -70,6 +52,69 @@
         />
         <path
             d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm13 2v2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1M2 14a1 1 0 0 1-1-1V6h14v7a1 1 0 0 1-1 1z"
+        />
+    </symbol>
+
+    <symbol id="icon-arrow-left" {...attr}>
+        <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M5 12h14M5 12l4-4m-4 4 4 4"
+        />
+    </symbol>
+
+    <symbol id="icon-arrow-right" {...attr}>
+        <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 12H5m14 0-4 4m4-4-4-4"
+        />
+    </symbol>
+
+    <symbol id="icon-expand" {...attr}>
+        <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M16 4h4m0 0v4m0-4-5 5M8 20H4m0 0v-4m0 4 5-5"
+        />
+    </symbol>
+
+    <symbol id="icon-close" {...attr}>
+        <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18 17.94 6M18 18 6.06 6"
+        />
+    </symbol>
+
+    <symbol id="icon-play" {...attr}>
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path
+            d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z"
+            stroke-width="0"
+            fill="currentColor"
+        />
+    </symbol>
+
+    <symbol id="icon-pause" {...attr}>
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path
+            d="M9 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z"
+            stroke-width="0"
+            fill="currentColor"
+        />
+        <path
+            d="M17 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z"
+            stroke-width="0"
+            fill="currentColor"
         />
     </symbol>
 </svg>

@@ -2,7 +2,7 @@
 title: O processo de desenvolvimento do site - parte 2
 description: Da necessidade à realidade
 published: 2024-07-01T08:25-03:00
-updated:
+updated: 2024-08-13T18:20-03:00
 category: Atualizações
 ---
 
@@ -27,9 +27,7 @@ Por fim, cheguei num "finalista" de como eu queria que meu site se parecesse: <L
 
 <Image
 src="/images/posts/processo-desenvolvimento-p2/alexander-sandberg.webp"
-title="A inspiração pro meu site"
 alt="Captura de tela do site de Alexander Sandberg, a inspiração pro meu site"
-type="image"
 />
 
 É um site simples e direto, uma pequena introdução, e alguns links de páginas, projetos e publicações - algo bem próximo do que eu precisava.
@@ -39,15 +37,13 @@ Uma vez que eu finalmente consegui me decidir nesse design, eu comecei a impleme
 <Image
 src="/images/posts/processo-desenvolvimento-p2/rlazarotto-v2.webp"
 title="A página inicial da segunda versão do meu site"
-alt="Captura de tela da página inicial da segunda versão do meu site"
-type="image"
 />
 
 ---
 
 ## Escrevendo um pouco
 
-A minha vontade inicial e principal era ter um lugar para escrever um pouco sobre coisas relacionadas ao meu trabalho, à minha àrea de atuação ou simplesmente curiosidades que eu acho interessante falar sobre. Essa acabou se tornando a segunda barreira criativa que eu estou encarando - escrever sobre __o quê__?
+A minha vontade inicial e principal era ter um lugar para escrever um pouco sobre coisas relacionadas ao meu trabalho, à minha àrea de atuação ou simplesmente curiosidades que eu acho interessante falar sobre. Essa acabou se tornando a segunda barreira criativa que eu estou encarando - escrever sobre **o quê**?
 
 Até mesmo fazer esse post aqui está sendo mais trabalhoso do que eu esperava - o que eu posso falar sobre o processo que me levou até esse site se, agora que ele está finalmente pronto, nada parece ser tão relevante assim ao ponto de que eu queria compartilhar?
 

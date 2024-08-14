@@ -2,7 +2,7 @@
 title: Migrando do Windows - o início do fim
 description: Como e por que eu comecei a migrar do Windows para o Linux
 published: 2024-07-24T14:10-03:00
-updated: 
+updated: 2024-08-13T18:20-03:00
 category: Sistemas operacionais
 ---
 
@@ -12,15 +12,12 @@ category: Sistemas operacionais
     import Gallery from "$lib/components/Gallery.svelte";
 </script>
 
-<Image
-    src="/images/posts/migrando-windows-inicio-do-fim/hero.webp"
-    alt="Imagem do post"
-    title="Imagem do post"
-    enlargeable={false}
->
-    Fonte: <Link href="https://arstechnica.com/information-technology/2012/07/how-to-move-from-windows-to-linux/" target="_blank">
-        Ars Technica
-    </Link>
+<Image src="/images/posts/migrando-windows-inicio-do-fim/hero.webp"
+alt="Imagem do post">
+Fonte: <Link href="https://arstechnica.com/information-technology/2012/07/how-to-move-from-windows-to-linux/" target="_blank">
+Ars Technica
+
+</Link>
 </Image>
 
 Finalmente chegou o dia onde eu me cansei da Microsoft e decidi fazer alguma coisa. Depois de muitos anos preso e atrelado ao Windows, eu tomei minha dose de coragem e me aventurei por algumas distribuições do Linux até achar uma que me fizesse sentir o mesmo quentinho de "estar em casa".
@@ -35,24 +32,21 @@ O último Windows realmente bom foi o Windows 7. Nada de IA, nada de recursos on
 
 <Image 
     src="/images/posts/migrando-windows-inicio-do-fim/w7.webp"
-    title="A área de trabalho 'clássica' do Windows 7, como muitos ainda lembram."
-    alt="Captura de tela da área de trabalho do Windows 7" 
+    alt="A área de trabalho 'clássica' do Windows 7, como muitos ainda lembram."
 />
 
 O Windows 8 foi uma tentativa frustrada de modernizar o que não precisava ser modernizado. Com a interface pensada em dispositivos sensíveis ao toque, que era a promessa do momento, quem usava um computador do modo tradicional ficou a ver navios com a mudança. Mesmo com as correções no Windows 8.1 (que nada mais é do que um Windows 8 levemente menos quebrado), o estrago foi feito e não tinha muito mais o que ser feito além de começar tudo de novo.
 
 <Image
-    src="/images/posts/migrando-windows-inicio-do-fim/w8.webp",
-    title="A 'tela' iniciar do Windows 8. Não consigo nem pensar em um comentário para colocar aqui."
-    alt="Captura da tela iniciar do Windows 8"
+src="/images/posts/migrando-windows-inicio-do-fim/w8.webp",
+alt="A 'tela' iniciar do Windows 8. Não consigo nem pensar em um comentário para colocar aqui."
 />
 
 O Windows 10 veio para ser o salvador da pátria. A ideia era trazer de volta parte da experiência do Windows 7 com uma identidade visual nova, baseada no quadradão do Windows 8(.1). Foi inclusive vendido como "o último Windows", que seria atualizado constantemente daquele ponto em diante, funcionando como uma forma de "serviço".
 
 <Image 
     src="/images/posts/migrando-windows-inicio-do-fim/w10.webp"
-    title="A área de trabalho do Windows 10, uma mistura do bom e do ruim mas que ainda assim deu certo."
-    alt="Captura de tela da área de trabalho do Windows 10"
+    alt="A área de trabalho do Windows 10, uma mistura do bom e do ruim mas que ainda assim deu certo."
 />
 
 De início, muita coisa foi herdada das versões passadas. Eu consigo me lembrar vagamente de quando a janela do UAC (aquela confirmação chata que aparece pra pedir permissões elevadas pra fazer alguma coisa, como instalar um programa) migrou do estilo Windows 7 para um mais integrado ao restante do Windos 10 - ficou escondida no programa Insiders por algum tempo até ser liberada para todos.
@@ -67,20 +61,14 @@ Apesar de o Windows 11 contar com alguns avanços interessantes com relação ao
 
 O 11 carrega uma quantidade absurda de funcionalidades que são totalmente dispensáveis. Que tal um botão dedicado à "widgets", que precisam de internet e uma conta da Microsoft pra funcionar? Ou talvez um Menu Iniciar que não presta pra essencialmente nada, com as funcionalidades básicas do que consagraram o Menu Iniciar deixadas em segundo plano para favorecer recomendações e sugestões? E talvez uma loja de aplicativos mal otimizada e recheada de aplicativos no mínimo duvidosos? Você encontra tudo isso na nova versão do Windows.
 
-<Gallery slides={[
+<Gallery images={[
 {
 src: "/images/posts/migrando-windows-inicio-do-fim/w11.webp",
-thumb: "/images/posts/migrando-windows-inicio-do-fim/w11-thumb.webp",
-title: "A área de trabalho do Windows 11.",
-alt: "Captura de tela da área de trabalho do Windows 11",
-type: "image",
+alt: "A área de trabalho do Windows 11.",
 },
 {
 src: "/images/posts/migrando-windows-inicio-do-fim/w11-widgets.webp",
-thumb: "/images/posts/migrando-windows-inicio-do-fim/w11-widgets-thumb.webp",
-title: "Menu com 'widgets' do Windows 11 - uma alteração que absolutamente ninguém pediu.",
-alt: "Captura de tela exibindo o menu de 'widgets' do Windows 11",
-type: "image",
+alt: "Menu com 'widgets' do Windows 11 - uma alteração que absolutamente ninguém pediu.",
 }
 ]}/>
 
@@ -106,16 +94,14 @@ Depois de alguns dias testando distribuições aleatórias, sejam elas grandes e
 
 <Image
     src="/images/posts/migrando-windows-inicio-do-fim/mint-install.webp"
-    title="Tela padrão da instalação do Mint, que é praticamente a mesma do que é vista após iniciar o sistema instalado pela primeira vez."
-    alt="Captura de tela da área de trabalho na instalação do Linux Mint" 
+    alt="Tela padrão da instalação do Mint, que é praticamente a mesma do que é vista após iniciar o sistema instalado pela primeira vez."
 />
 
 Consegue perceber as semelhanças com as áreas de trabalho das versões do Windows que eu coloquei pra cima? Então, facilita bastante a transição quando você já tem um ambiente familiar. Mas, ao contrário do Windows que é muito limitado quando o quesito é personalização, é assim que o meu Linux Mint se parece hoje:
 
 <Image
     src="/images/posts/migrando-windows-inicio-do-fim/desktop.webp"
-    title="Inspirado no Mac, sim, fazer o que se ao menos isso a Apple faz direito?"
-    alt="Captura de tela da minha área de trabalho do Linux Mint"
+    alt="Inspirado no Mac, sim, fazer o que se ao menos isso a Apple faz direito?"
 />
 
 Eu tenho todos os meus fluxos de trabalho funcionando perfeitamente nele, incluindo os aplicativos que eu preciso para trabalhar (e até alguns jogos, mas quase não tenho tempo pra isso). O sistema é, de forma geral, mais responsivo e eu tenho a impressão de que ele gerencia melhor os recursos do meu computador.
