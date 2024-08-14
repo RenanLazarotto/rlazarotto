@@ -100,8 +100,9 @@
     <button
         bind:this={closeButton}
         on:click={close}
-        class="absolute left-4 bottom-4 cursor-pointer px-3 py-2 text-white font-bold select-none transition ease-in-out rounded-lg bg-mint-950/75 hover:bg-mint-800 flex items-center backdrop-blur"
+        class="absolute top-4 right-4 sm:left-4 sm:bottom-4 sm:top-auto sm:right-auto cursor-pointer px-3 py-2 text-white font-bold select-none transition-all ease-in-out rounded-lg bg-mint-950/75 hover:bg-mint-800 flex items-center backdrop-blur"
     >
-        <Icon id="close" width={24} height={24} /> Fechar
+        <Icon id="close" width={24} height={24} />
+        <p class="hidden sm:contents">Fechar</p>
     </button>
 </div>
