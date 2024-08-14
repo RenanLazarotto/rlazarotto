@@ -11,7 +11,6 @@ category: Reviews
     import Link from "$lib/components/Link.svelte";
     import Gallery from "$lib/components/Gallery.svelte";
     import Image from "$lib/components/Image.svelte";
-
 </script>
 
 <Banner icon="info">

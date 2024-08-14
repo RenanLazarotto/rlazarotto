@@ -1,7 +1,12 @@
 .splide__arrow {
     background: theme(colors.mint.700);
-    height: 3em;
-    width: 3em;
+}
+
+@media (min-width: 640px) {
+    .splide__arrow {
+        height: 3em;
+        width: 3em;
+    }
 }
 
 .splide__arrow svg {
