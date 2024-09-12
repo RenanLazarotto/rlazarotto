@@ -48,7 +48,7 @@
 <section>
     <h2 class="text-2xl leading-snug font-bold mb-4">Publicações</h2>
 
-    <div class="flex flex-col gap-8">
+    <div class="flex flex-col gap-8 mb-8">
         {#each data.posts.slice(0, 5) as post}
             <a
                 href={`/posts/${post.slug}`}
@@ -85,7 +85,13 @@
             </a>
         {/each}
     </div>
-    {#if data.posts.length > 5}
-        <Link href="/posts">Ver todas as publicações</Link>
-    {/if}
+    <div class="flex justify-center py-8">
+        {#if data.posts.length > 5}
+            <Link
+                href="/posts"
+                class="py-3 px-4 rounded-md bg-mint-700/20 hover:bg-purple-700/20"
+                >Ver todas as publicações</Link
+            >
+        {/if}
+    </div>
 </section>

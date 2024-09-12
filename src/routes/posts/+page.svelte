@@ -11,12 +11,21 @@
 </svelte:head>
 
 <section class="mb-12">
-    <h2 class="font-bold text-2xl mb-12 uppercase">Todas as publicações</h2>
+    <h2 class="font-bold text-3xl mt-5 mb-12 text-gray-100">
+        Todas as publicações
+    </h2>
 
     <div class="flex flex-col gap-12">
         {#each data.posts as post}
-            <a href={`/posts/${post.slug}`} class="flex flex-col lg:flex-row lg:items-center gap-4 group">
-                <img src={`/images/posts/${post.slug}/hero.webp`} alt="Imagem do post" class="rounded-lg lg:max-w-64" />
+            <a
+                href={`/posts/${post.slug}`}
+                class="flex flex-col lg:flex-row lg:items-center gap-4 group"
+            >
+                <img
+                    src={`/images/posts/${post.slug}/hero.webp`}
+                    alt="Imagem do post"
+                    class="rounded-lg lg:max-w-64"
+                />
                 <div>
                     <h2
                         class="text-2xl font-bold text-mint-300 group-hover:text-purple-400 transition-colors duration-200"
