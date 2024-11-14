@@ -1,0 +1,66 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.splide__arrow {
+	background: theme(colors.orange.700);
+}
+
+@media (min-width: 640px) {
+	.splide__arrow {
+		height: 3em;
+		width: 3em;
+	}
+}
+
+.splide__arrow svg {
+	fill: white;
+}
+
+.splide__arrow:focus-visible {
+	outline: 3px solid theme(colors.orange.600);
+}
+
+.splide.is-focus-in .splide__arrow:focus {
+	outline: 3px solid theme(colors.orange.600);
+}
+
+@supports (outline-offset: -3px) {
+	.splide__slide:focus-visible {
+		outline: 3px solid theme(colors.orange.600);
+	}
+}
+
+@media screen and (-ms-high-contrast: none) {
+	.splide__slide:focus-visible {
+		border: 3px solid theme(colors.orange.600);
+	}
+}
+
+@supports (outline-offset: -3px) {
+	.splide.is-focus-in .splide__slide:focus {
+		outline: 3px solid theme(colors.orange.600);
+	}
+}
+
+@media screen and (-ms-high-contrast: none) {
+	.splide.is-focus-in .splide__slide:focus {
+		border: 3px solid theme(colors.orange.600);
+	}
+
+	.splide.is-focus-in .splide__track > .splide__list > .splide__slide:focus {
+		border-color: theme(colors.orange.700);
+	}
+}
+
+.splide__toggle:focus-visible {
+	outline: 3px solid theme(colors.orange.600);
+}
+
+.splide.is-focus-in .splide__toggle:focus {
+	outline: 3px solid theme(colors.orange.600);
+}
+
+.splide__track--nav > .splide__list > .splide__slide.is-active {
+	border: 3px solid theme(colors.orange.500);
+}
