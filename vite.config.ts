@@ -9,4 +9,8 @@ export default defineConfig({
             "@content": path.resolve(__dirname, "./src/content"),
         },
     },
+    server: {
+        open: true,
+        port: 1991,
+    },
 });
