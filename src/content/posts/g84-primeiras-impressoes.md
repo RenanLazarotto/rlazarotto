@@ -7,15 +7,13 @@ category: Reviews
 ---
 
 <script lang="ts">
-    import Banner from "$lib/components/Banner.svelte";
-    import Link from "$lib/components/Link.svelte";
     import Gallery from "$lib/components/Gallery.svelte";
     import Image from "$lib/components/Image.svelte";
 </script>
 
-<Banner icon="info">
+<blockquote>
 Peço desculpas pela falta de imagens do celular em si - eu só tenho ele e não tive como tirar fotos da caixa, ou fazer um unboxing - que era minha ideia inicial. O unboxing fica pra próxima!
-</Banner>
+</blockquote>
 
 Ontem, depois de alguns dias de espera, finalmente chegou meu celular novo - um Motorola Moto G84 5G. É o meu primeiro celular da Motorola depois de **_muito_** tempo, sendo meu último um Moto X, da primeira geração. Como a vida adulta cobra da gente, acabei deixando pra abrir o celular hoje e só então começar todo o tedioso processo de configurar o telefone.
 

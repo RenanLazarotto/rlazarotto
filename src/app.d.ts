@@ -1,5 +1,5 @@
-// See https://kit.svelte.dev/docs/types#app
-// for information about these interfaces
+import type { Snippet } from "svelte";
+
 declare global {
     namespace App {
         // interface Error {}
@@ -10,27 +10,12 @@ declare global {
     }
 
     namespace Types {
-        type Version = {
-            package: string;
-            hash: string;
-        };
-
-        type Category = {
-            title: string;
-            href: string;
-            count: number;
-        };
-
-        type Page = {
+        type Post = {
             title: string;
             description: string;
             slug: string;
             published: Date;
             updated: Date;
-            readingTime: number;
-        };
-
-        type Post = Page & {
             category: string;
         };
 
@@ -38,13 +23,6 @@ declare global {
             title: string;
             src: string;
             alt: string;
-        };
-
-        type Video = {
-            title: string;
-            src: string;
-            alt: string;
-            type: string;
         };
 
         type Project = {
@@ -63,6 +41,14 @@ declare global {
             position: string;
             start: string;
             end?: string;
+        };
+    }
+
+    namespace Props {
+        type Icon = {
+            id: string;
+            width: number;
+            height: number;
         };
     }
 }

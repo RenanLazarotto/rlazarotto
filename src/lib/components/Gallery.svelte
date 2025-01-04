@@ -10,18 +10,22 @@
     } from "@splidejs/svelte-splide";
     import { browser } from "$app/environment";
 
-    export let images: Types.Image[];
+    interface Props {
+        images: Types.Image[];
+    }
+
+    let { images }: Props = $props();
 
     // Referências à elementos
-    let main: SplideType;
-    let thumbs: SplideSlideType;
-    let closeButton: HTMLButtonElement;
+    let main: SplideType = $state();
+    let thumbs: SplideSlideType = $state();
+    let closeButton: HTMLButtonElement = $state();
 
     // Índice selecinado
-    let current: number = 0;
+    let current: number = $state(0);
 
     // Controla o modal de visualização
-    let isOpen: boolean = false;
+    let isOpen: boolean = $state(false);
 
     /**
      * Função de callback para fechar o modal com o teclado
@@ -90,7 +94,7 @@
     {#each images as image, i}
         <SplideSlide class="flex justify-center">
             <button
-                on:click={(e) => {
+                onclick={(e) => {
                     current = i;
                     open();
                 }}
@@ -146,7 +150,7 @@
 
     <button
         bind:this={closeButton}
-        on:click={close}
+        onclick={close}
         class="absolute top-4 right-4 sm:left-4 sm:bottom-4 sm:top-auto sm:right-auto cursor-pointer px-3 py-2 text-white font-bold select-none transition-all ease-in-out rounded-lg bg-mint-950/75 hover:bg-mint-800 flex items-center backdrop-blur"
     >
         <Icon id="close" width={24} height={24} />

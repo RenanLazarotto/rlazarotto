@@ -1,9 +1,12 @@
 <script lang="ts">
-    import FormattedDate from "$lib/components/FormattedDate.svelte";
-    import Link from "$lib/components/Link.svelte";
+    import { formatDate } from "$lib/utils";
     import type { PageData } from "./$types";
 
-    export let data: PageData;
+    interface Props {
+        data: PageData;
+    }
+
+    let { data }: Props = $props();
 </script>
 
 <svelte:head>
@@ -35,17 +38,15 @@
                     <p class="mt-2 mb-1 text-gray-300">{post.description}</p>
 
                     <div class="flex gap-2 text-gray-300">
-                        <Link
-                            href={`/categories/${post.category
-                                .normalize("NFKD")
-                                .replace(/[\u0300-\u036f]/g, "")
-                                .replace(" ", "-")
-                                .toLowerCase()}`}>{post.category}</Link
+                        {post.category}
+                        <p>•</p>
+                        <time
+                            datetime={post.published?.toISOString() ??
+                                post.updated?.toISOString()}
+                            class="font-medium"
                         >
-                        <p>•</p>
-                        <FormattedDate date={post.updated ?? post.published} />
-                        <p>•</p>
-                        <p><b>{post.readingTime} min.</b> de leitura</p>
+                            {formatDate(post.published ?? post.updated)}
+                        </time>
                     </div>
                 </div>
             </a>

@@ -1,14 +1,19 @@
 <script lang="ts">
     import Icon from "./Icon.svelte";
 
-    export let src: string;
-    export let alt: string;
+    interface Props {
+        src: string;
+        alt: string;
+        children?: import('svelte').Snippet;
+    }
+
+    let { src, alt, children }: Props = $props();
 
     // Controla o modal de visualização da imagem/vídeo
-    let isOpen: boolean = false;
+    let isOpen: boolean = $state(false);
 
     // Referência ao botão de fechar dentro do modal
-    let closeButton: HTMLButtonElement;
+    let closeButton: HTMLButtonElement = $state();
 
     /**
      * Função de callback para fechar o modal com o teclado
@@ -71,16 +76,16 @@
 
 <div class="my-6 not-prose">
     <div class="flex flex-col justify-center">
-        <button on:click={open} class="max-h-[500px]">
+        <button onclick={open} class="max-h-[500px]">
             <img
                 {src}
                 {alt}
                 class="max-h-[500px] h-full object-contain rounded cursor-pointer mx-auto"
             />
         </button>
-        {#if $$slots.default}
+        {#if children}
             <p class="mt-2 text-center text-sm text-gray-400">
-                <slot />
+                {@render children?.()}
             </p>
         {/if}
     </div>
@@ -99,7 +104,7 @@
     />
     <button
         bind:this={closeButton}
-        on:click={close}
+        onclick={close}
         class="absolute top-4 right-4 sm:left-4 sm:bottom-4 sm:top-auto sm:right-auto cursor-pointer px-3 py-2 text-white font-bold select-none transition-all ease-in-out rounded-lg bg-mint-950/75 hover:bg-mint-800 flex items-center backdrop-blur"
     >
         <Icon id="close" width={24} height={24} />

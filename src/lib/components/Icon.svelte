@@ -1,9 +1,7 @@
 <script lang="ts">
-    export let id: string;
-    export let width: number = 36;
-    export let height: number = 36;
+    let { id, width = 36, height = 36 }: Props.Icon = $props();
 </script>
 
-<svg class="pointer-events-none {$$props.class}" {width} {height}>
+<svg class="pointer-events-none" {width} {height}>
     <use href="#icon-{id}" />
 </svg>

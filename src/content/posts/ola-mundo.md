@@ -8,7 +8,6 @@ category: Atualizações
 
 <script lang="ts">
     import Image from "$lib/components/Image.svelte";
-    import Link from "$lib/components/Link.svelte";
 </script>
 
 ## Olá, mundo outra vez!
@@ -30,7 +29,7 @@ Do momento que eu comecei essa reescrita até agora, eu devo ter testado _pelo m
 -   Um site similar ao antigo, porém redesenhado para não parecer tanto quanto um portfolio "genérico"
 -   Um site extremamente minimalista, com pouquíssimas informações detalhadas
 
-E esses são os que eu lembro. Por fim, acabei por achar um único site que me serviu de inspiração "definitiva": o site pessoal de <Link href="https://alexandersandberg.com/" target="_blank">Alexander Sandberg</Link>. Eu já tinha um layout praticamente pronto, mas algumas coisas ainda me incomodavam, como os links de navegação como uma barra superior, algo que eu considero comum _demais_ ao ponto de eu preferir não utilizar essa disposição por causa disso.
+E esses são os que eu lembro. Por fim, acabei por achar um único site que me serviu de inspiração "definitiva": o site pessoal de <a href="https://alexandersandberg.com/" target="_blank">Alexander Sandberg</a>. Eu já tinha um layout praticamente pronto, mas algumas coisas ainda me incomodavam, como os links de navegação como uma barra superior, algo que eu considero comum _demais_ ao ponto de eu preferir não utilizar essa disposição por causa disso.
 
 ---
 
@@ -40,7 +39,7 @@ A ideia de ter um site pessoal é _muito_ antiga. Meu primeiro contato com HTML 
 
 Não preciso nem dizer que isso nunca saiu do papel, pois eu não tinha sequer maturidade o suficiente pra entender tudo que era necessário pra fazer essa ideia funcionar, ainda mais nos anos 90, quando a internet como conhecemos não existia. Mas a ideia ficou cravada na minha memória, pois eu ainda lembro relativamente bem de como eu me senti empolgado por simplesmente _ver_ na minha tela uma lista com checkboxes do lado.
 
-Quando eu comecei a primeira versão do que viria ser meu site, eu queria algo que fosse um portfolio, igual aos <Link href="https://github.com/emmabostian/developer-portfolios" target="_blank">muitos outros que tem por aí</Link>.
+Quando eu comecei a primeira versão do que viria ser meu site, eu queria algo que fosse um portfolio, igual aos <a href="https://github.com/emmabostian/developer-portfolios" target="_blank">muitos outros que tem por aí</a>.
 
 <Image 
 src="/images/posts/ola-mundo/site-v1.webp"
@@ -54,10 +53,10 @@ src="/images/posts/ola-mundo/habilidades.webp"
 alt="Bloco de habilidades, prontamente destacado"
  />
 
-Agora, o foco é em me apresentar como pessoa e minhas ideias. Ainda mantenho um histórico de alguns projetos em que trabalhei, destacando quais habilidades efetivamente foram utilizados em cada um, além do histórico profissional na página <Link href="/pages/sobre">sobre mim</Link>. Essas informações, ao meu ver, já dão uma visão geral do meu conhecimento, sem necessariamente entrar em detalhes que, muitas vezes, acabam não sendo tão relevantes.
+Agora, o foco é em me apresentar como pessoa e minhas ideias. Ainda mantenho um histórico de alguns projetos em que trabalhei, destacando quais habilidades efetivamente foram utilizados em cada um, além do histórico profissional na página <a href="/pages/sobre">sobre mim</a>. Essas informações, ao meu ver, já dão uma visão geral do meu conhecimento, sem necessariamente entrar em detalhes que, muitas vezes, acabam não sendo tão relevantes.
 
 ---
 
 ### Finalizando
 
-Bom, essa é a minha re-introdução do site que venho desenvolvendo há, pelo menos, <Link href="https://github.com/RenanLazarotto/rlazarotto/commit/9d53b4522b323b1ec14303b70bd6e3bcb6f906fe" target="_blank">dois anos</Link>. Tenho muitas ideias, das quais algumas já coloquei em prática, pro futuro. Nos vemos em breve!
+Bom, essa é a minha re-introdução do site que venho desenvolvendo há, pelo menos, <a href="https://github.com/RenanLazarotto/rlazarotto/commit/9d53b4522b323b1ec14303b70bd6e3bcb6f906fe" target="_blank">dois anos</a>. Tenho muitas ideias, das quais algumas já coloquei em prática, pro futuro. Nos vemos em breve!

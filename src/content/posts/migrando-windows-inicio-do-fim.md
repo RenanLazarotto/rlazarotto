@@ -8,16 +8,15 @@ category: Sistemas operacionais
 
 <script lang="ts">
     import Image from "$lib/components/Image.svelte";
-    import Link from "$lib/components/Link.svelte";
     import Gallery from "$lib/components/Gallery.svelte";
 </script>
 
 <Image src="/images/posts/migrando-windows-inicio-do-fim/hero.webp"
 alt="Imagem do post">
-Fonte: <Link href="https://arstechnica.com/information-technology/2012/07/how-to-move-from-windows-to-linux/" target="_blank">
+Fonte: <a href="https://arstechnica.com/information-technology/2012/07/how-to-move-from-windows-to-linux/" target="_blank">
 Ars Technica
 
-</Link>
+</a>
 </Image>
 
 Finalmente chegou o dia onde eu me cansei da Microsoft e decidi fazer alguma coisa. Depois de muitos anos preso e atrelado ao Windows, eu tomei minha dose de coragem e me aventurei por algumas distribuições do Linux até achar uma que me fizesse sentir o mesmo quentinho de "estar em casa".
@@ -72,7 +71,7 @@ alt: "Menu com 'widgets' do Windows 11 - uma alteração que absolutamente ningu
 }
 ]}/>
 
-Mas calma que piora - já foram <Link href="https://news.microsoft.com/pt-br/trazendo-o-poder-da-ia-para-o-windows-11-desbloqueando-uma-nova-era-de-produtividade-para-clientes-e-desenvolvedores-com-o-windows-copilot-e-o-dev-home/" target="_blank">anunciados</Link> diversos "recursos" de IA que chegarão (ou já chegaram) no Windows em atualizações próximas. Nem todos esses recursos necessariamente rodam localmente (algo que ainda planejo escrever sobre), mas de qualquer forma consomem recursos que poderiam ser utilizados para outras coisas mais importantes, além de são recursos potencialmente invasivos, pois alguns deles funcionam observando tudo que se passa na tela do computador para aprender mais sobre o usuário (algo que eu também planejo escrever sobre).
+Mas calma que piora - já foram <a href="https://news.microsoft.com/pt-br/trazendo-o-poder-da-ia-para-o-windows-11-desbloqueando-uma-nova-era-de-produtividade-para-clientes-e-desenvolvedores-com-o-windows-copilot-e-o-dev-home/" target="_blank">anunciados</a> diversos "recursos" de IA que chegarão (ou já chegaram) no Windows em atualizações próximas. Nem todos esses recursos necessariamente rodam localmente (algo que ainda planejo escrever sobre), mas de qualquer forma consomem recursos que poderiam ser utilizados para outras coisas mais importantes, além de são recursos potencialmente invasivos, pois alguns deles funcionam observando tudo que se passa na tela do computador para aprender mais sobre o usuário (algo que eu também planejo escrever sobre).
 
 ---
 
@@ -84,7 +83,7 @@ Vamos por partes. Saber que o sistema que roda no meu computador vai deixar de r
 
 Outro fator a se considerar é o aumento artificial nos requisitos de sistema entre o Windows 10 e o Windows 11. Basta procurar na internet maneiras de burlar os requisitos do Windows 11 e veja como ele roda perfeitamente nos mesmos hardwares que rodavam o Windows 10 - incluindo meu notebook, um HP Pavilion 17 com um processador AMD A8-6410, 16GB de memória RAM DDR3 e um SSD SATA3 de 240GB. Pros padrões atuais é uma configuração bem básica, mas dá conta do recado pra praticamente tudo que eu preciso.
 
-Apesar de eu conseguir instalar e rodar de forma bastante satisfatória o Windows 11 (graças ao <Link href="https://atlasos.net/" target="_blank">AtlasOS</Link>, que faz o Windows ser minimamente usável sem o amontoado de inutilidades que ele instala por padrão), o Windows consome mais recursos do que o necessário para fazer o que um sistema operacional foi desenvolvido pra fazer. Com o futuro coberto por IA, algo que provavelmente vai ser "obrigatório" em algum momento, ter uma alternativa para ter um computador usável (sem precisar ter tudo que eu faço nele analisado por uma inteligencia artifical que provavelmente foi treinada especificamente para aprender meus interesses afim de vender coisas pra mim) deixa de ser uma opção para ser uma necessidade.
+Apesar de eu conseguir instalar e rodar de forma bastante satisfatória o Windows 11 (graças ao <a href="https://atlasos.net/" target="_blank">AtlasOS</a>, que faz o Windows ser minimamente usável sem o amontoado de inutilidades que ele instala por padrão), o Windows consome mais recursos do que o necessário para fazer o que um sistema operacional foi desenvolvido pra fazer. Com o futuro coberto por IA, algo que provavelmente vai ser "obrigatório" em algum momento, ter uma alternativa para ter um computador usável (sem precisar ter tudo que eu faço nele analisado por uma inteligencia artifical que provavelmente foi treinada especificamente para aprender meus interesses afim de vender coisas pra mim) deixa de ser uma opção para ser uma necessidade.
 
 As duas alternativas, atualmente, são: gastar rios de dinheiro em um Mac, que tem os mesmos problemas com uma cara diferente, ou usar o Linux, que tem problemas e caras diferentes. Como eu ainda não descobri uma forma de fazer dinheiro de forma honesta, legal e/ou sem esforço, migrar para o Linux é a única opção.
 

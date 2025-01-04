@@ -6,10 +6,6 @@ updated:
 category: Atualizações
 ---
 
-<script lang="ts">
-    import Link from "$lib/components/Link.svelte";
-</script>
-
 Olá mundo novamente!
 
 Como nada na vida são flores, algumas coisas do lado pessoal mudaram um pouco e eu acabei precisando focar mais em trabalho e sem querer o blog ficou um pouco de lado, algo que eu definitivamente não queria.
@@ -30,7 +26,7 @@ Por isso, estou estudando essas mudanças pra ver como elas me afetam e como eu 
 
 ---
 
-Espero conseguir realizar essa transição logo, pois quero criar uma certa frequência de postagens. Enquanto isso não acontece, dá pra acompanhar o que eu vou eventualmente fazer no <Link href="https://github.com/RenanLazarotto/rlazarotto" target="_blank">repositório do blog</Link>, mais especificamente no branch <Link href="https://github.com/RenanLazarotto/rlazarotto/tree/next" target="_blank">next</Link> (que, no momento em que estou escrevendo esse post, ainda não existe).
+Espero conseguir realizar essa transição logo, pois quero criar uma certa frequência de postagens. Enquanto isso não acontece, dá pra acompanhar o que eu vou eventualmente fazer no <a href="https://github.com/RenanLazarotto/rlazarotto" target="_blank">repositório do blog</a>, mais especificamente no branch <a href="https://github.com/RenanLazarotto/rlazarotto/tree/next" target="_blank">next</a> (que, no momento em que estou escrevendo esse post, ainda não existe).
 
 Esse branch servirá como uma prévia do que virá, e já garanto que vai ter muita coisa que não funciona nele até estar tudo pronto.
 

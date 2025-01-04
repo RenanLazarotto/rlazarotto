@@ -8,7 +8,6 @@ category: Sistemas operacionais
 
 <script lang="ts">
     import Image from "$lib/components/Image.svelte";
-    import Link from "$lib/components/Link.svelte";
 </script>
 
 Algum tempo atrás eu comecei a minha migração do Windows para Linux, que se deu em partes por uma questão de necessidade - meu computador quando eu escrevi sobre a migração não se dava muito bem com o Windows e isso impactava diretamente a minha produtividade (e a minha sanidade mental).
@@ -49,7 +48,7 @@ Bom, vamos por partes.
 
 Essa é uma pergunta muito complicada de responder, já que os motivos vão muito além do que é superficial.
 
-Dentro do universo do Linux, e de modo geral quando o assunto é código-aberto eu já notei esse mesmo padrão, você pode fazer as coisas do seu jeito. Essa é uma liberdade que nenhum outro sistema operacional te dá - e eu acho isso incrível. A possibilidade de poder testar diferentes ambientes, com diferentes premissas e ideais para fazer as mesmas coisas é uma experiência única, e com um pouco de criatividade e esforço é possível criar <Link href="https://www.reddit.com/r/unixporn/" target="_blank">interfaces muito bonitas</Link>.
+Dentro do universo do Linux, e de modo geral quando o assunto é código-aberto eu já notei esse mesmo padrão, você pode fazer as coisas do seu jeito. Essa é uma liberdade que nenhum outro sistema operacional te dá - e eu acho isso incrível. A possibilidade de poder testar diferentes ambientes, com diferentes premissas e ideais para fazer as mesmas coisas é uma experiência única, e com um pouco de criatividade e esforço é possível criar <a href="https://www.reddit.com/r/unixporn/" target="_blank">interfaces muito bonitas</a>.
 
 Mas, até onde isso é relevante o suficiente para ser um fator decisivo? Quanto tempo eu preciso "gastar" pra customizar o sistema até que ele chegue num "grau de perfeição", apenas pra logo depois deixar toda a perfeição visual ficar a cargo da minha visão periférica enquanto eu me foco em outra coisa?
 
@@ -77,7 +76,7 @@ Outro argumento furado - já estamos em 2024, se você ainda depende do Office p
 Listagem de jogos compatíveis com Linux de acordo com o Steam - mais de 15 mil jogos
 </Image>
 
-<Link href="https://store.steampowered.com/linux" target="_blank">É sério mesmo isso?</Link> Muitos títulos contam com versões nativas para Linux, e quando isso não é possível existem diversas ferramentas pra resolver esse problema, e é possível até mesmo ver o grau de compatibilidade do jogo com o Linux em sites como o <Link href="https://www.protondb.com/explore?selectedFilters=excludeNative" target="_blank">ProtonDB</Link>.
+<a href="https://store.steampowered.com/linux" target="_blank">É sério mesmo isso?</a> Muitos títulos contam com versões nativas para Linux, e quando isso não é possível existem diversas ferramentas pra resolver esse problema, e é possível até mesmo ver o grau de compatibilidade do jogo com o Linux em sites como o <a href="https://www.protondb.com/explore?selectedFilters=excludeNative" target="_blank">ProtonDB</a>.
 
 Inclusive, alguns jogos rodam _melhor_ no Linux do que no Windows. Mas, como eu falei antes...
 
