@@ -21,7 +21,7 @@
         class="flex justify-between items-center mt-12"
     >
         {#if data.url != "/"}
-            <a href="/" class="flex items-center gap-2">
+            <a href="/" class="flex items-center gap-2 mb-12">
                 <Icon id="back" width={16} height={16} />
                 Home
             </a>
@@ -33,8 +33,6 @@
     <main class="flex-1">
         {@render children?.()}
     </main>
-
-    <hr />
 
     <footer class="pb-16 text-gray-600 text-center">
         <p class="inline-flex items-center gap-1 mb-2">

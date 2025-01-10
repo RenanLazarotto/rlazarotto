@@ -17,8 +17,6 @@ Peço desculpas pela falta de imagens do celular em si - eu só tenho ele e não
 
 Ontem, depois de alguns dias de espera, finalmente chegou meu celular novo - um Motorola Moto G84 5G. É o meu primeiro celular da Motorola depois de **_muito_** tempo, sendo meu último um Moto X, da primeira geração. Como a vida adulta cobra da gente, acabei deixando pra abrir o celular hoje e só então começar todo o tedioso processo de configurar o telefone.
 
----
-
 ## Conteúdo da caixa
 
 Por algum motivo infeliz que eu não consigo entender, as fabricantes de aparelhos continuaram subindo os preços dos aparelhos enquanto mandam menos coisas dentro da caixa. Pra quem tem menos de 20 anos, uma pequena lição de história: antigamente as caixas de telefone eram muito diferentes de como são hoje. Dando uma rápida garimpada, achei esse imagem aqui que mostra o que vinha na caixa de um Nokia 5230, um aparelho que inclusive eu tive:
@@ -51,8 +49,6 @@ Tudo isso numa embalagem de papelão. Nesse quesito, ponto positivo pra Motorola
 
 Sendo sincero, não reclamo, pois eu estava ciente de que viria apenas o aparelho e o carregador antes da compra. O que eu realmente senti falta foi a inclusão de uma capinha. Muitos aparelhos de marcas como Xiaomi incluem uma capinha transparente na caixa, que é uma baita mão na roda.
 
----
-
 ## Primeira inicialização
 
 Já que eu entrei no assunto dos aparelhos antigos, outra coisa que era recomendado antigamente e nunca mais vi falar a respeito é a necessidade de carregar o celular por 24h antes do primeiro uso. Acredito que a última vez que eu vi falar a respeito disso foi antes dos celulares com Android começarem a se popularizar.
@@ -64,8 +60,6 @@ Após a carga completa, liguei o celular pela primeira vez. A inicialização fo
 Agora aqui um detalhe que reparei vem aparelhos diferentes e ROMs diferentes: uma das últimas etapas da configuração é os toques finais, que incluem copiar os dados de um aparelho antigo, customizar o tamanho da fonte e da exibição, cores e etc. Essas etapas podem ser puladas para serem concluídas depois, através de uma notificação persistente. Acontece que essa notificação vai aparecer independente de você ter concluído essas etapas opcionais ou não.
 
 Outro detalhe que eu noitei foi que os aplicativos "recomendados" acabam sendo instalados mesmo se você cancelar a instalação na Play Store. É bem frustrante, ainda mais considerando que os aplicativos são do nível Candy Crush, Sporting Bet, Booking.com e TikTok. Não tenho nada contra esses aplicativos, mas não vejo sentido em forçar a instalação deles apenas para que me dar a opção de excluí-los depois.
-
----
 
 ## Software da Motorola
 
@@ -123,8 +117,6 @@ src: "/images/posts/g84-primeiras-impressoes/texto-tamanho-exibicao.webp",
 alt: "Captura da tela com as opções do tamanho do texto e de exibição",
 }
 ]} />
-
----
 
 ## Concluindo
 

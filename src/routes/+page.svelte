@@ -14,7 +14,7 @@
 </svelte:head>
 
 <section>
-    <p>
+    <p class="pb-6">
         Programador full-stack de Curitiba, no Paraná, atualmente trabalhando do
         conforto do meu lar, convertendo café e requisitos em código e
         resultados.
@@ -28,27 +28,25 @@
     </p>
 </section>
 
-<section class="my-12">
+<section class="py-16">
     <nav class="grid grid-cols-1 sm:grid-cols-3 gap-8">
         <div class="text-center">
-            <a href="/agora" class="text-xl"> Agora </a>
-            <p class="text-gray-500">Objetivos a curto-prazo</p>
+            <a href="/agora" class="text-xl font-bold"> Agora </a>
+            <p class="text-gray-500 text-sm">Objetivos a curto-prazo</p>
         </div>
         <div class="text-center">
-            <a href="/sobre" class="text-xl"> Sobre </a>
-            <p class="text-gray-500">Sobre mim além da tela</p>
+            <a href="/sobre" class="text-xl font-bold"> Sobre </a>
+            <p class="text-gray-500 text-sm">Sobre mim além da tela</p>
         </div>
         <div class="text-center">
-            <a href="/um-dia" class="text-xl"> Um dia </a>
-            <p class="text-gray-500">Desejos para o futuro</p>
+            <a href="/um-dia" class="text-xl font-bold"> Um dia </a>
+            <p class="text-gray-500 text-sm">Desejos para o futuro</p>
         </div>
     </nav>
 </section>
 
-<hr />
-
-<section>
-    <h2 class="text-2xl leading-snug font-bold mb-4">Publicações</h2>
+<section class="pb-16">
+    <h2 class="text-2xl font-bold pb-8 text-gray-400">Publicações</h2>
 
     <div class="flex flex-col gap-8 mb-8">
         {#each data.posts.slice(0, 5) as post}

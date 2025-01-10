@@ -23,8 +23,6 @@ Finalmente chegou o dia onde eu me cansei da Microsoft e decidi fazer alguma coi
 
 Com isso, chega ao fim um relacionamento de mais de 20 anos com o Windows e hoje eu vou contar os motivos.
 
----
-
 ## O início do fim
 
 O último Windows realmente bom foi o Windows 7. Nada de IA, nada de recursos online que não agregam em nada na usabilidade do sistema ou de lojas de aplicativos malfeitas. Apenas um sistema com o mais básico dos recursos que o Windows pode oferecer, que é o sistema em si, um navegador meia boca pra baixar outro melhor, um player de mídia meia boca mas que dá conta de ouvir uma música ou outra e alguns vídeos que não sejam modernos demais, além de mais uns cacarecos que praticamente não ocupam espaço ou consomem recursos.
@@ -52,8 +50,6 @@ De início, muita coisa foi herdada das versões passadas. Eu consigo me lembrar
 
 Confesso que o Windows 10 funcionou muito bem por anos desde que eu comecei a usá-lo. Enquanto ainda tinha muita gente brigando pelo Windows 7, eu decidi abraçar o 10 integralmente e não me arrependo nem um pouco disso. Ele me trouxe uma experiência muito boa durante o tempo em que foi realmente cuidado pela Microsoft, chegando a um ápice onde ele superava o Windows 7 em todos os aspectos que importavam pra mim (jogos, basicamente, na época). Até que algum dia, alguém que trabalhava na Microsoft acordou e decidiu que era hora de enfiar boas ideias no 🆒 e anunciaram o Windows 11.
 
----
-
 ## O Windows que ninguém precisava ou queria
 
 Apesar de o Windows 11 contar com alguns avanços interessantes com relação ao Windows 7, especialmente na interface do usuário, de modo geral o sistema é um retrocesso em praticamente todos os aspectos. Lembra do Menu Iniciar? Estragado. Lembra daquela ideia de um sistema enxuto que só tem o básico pra você começar? Não dessa vez.
@@ -72,8 +68,6 @@ alt: "Menu com 'widgets' do Windows 11 - uma alteração que absolutamente ningu
 ]}/>
 
 Mas calma que piora - já foram <a href="https://news.microsoft.com/pt-br/trazendo-o-poder-da-ia-para-o-windows-11-desbloqueando-uma-nova-era-de-produtividade-para-clientes-e-desenvolvedores-com-o-windows-copilot-e-o-dev-home/" target="_blank">anunciados</a> diversos "recursos" de IA que chegarão (ou já chegaram) no Windows em atualizações próximas. Nem todos esses recursos necessariamente rodam localmente (algo que ainda planejo escrever sobre), mas de qualquer forma consomem recursos que poderiam ser utilizados para outras coisas mais importantes, além de são recursos potencialmente invasivos, pois alguns deles funcionam observando tudo que se passa na tela do computador para aprender mais sobre o usuário (algo que eu também planejo escrever sobre).
-
----
 
 ## É hora de mudar
 
@@ -106,8 +100,6 @@ Consegue perceber as semelhanças com as áreas de trabalho das versões do Wind
 Eu tenho todos os meus fluxos de trabalho funcionando perfeitamente nele, incluindo os aplicativos que eu preciso para trabalhar (e até alguns jogos, mas quase não tenho tempo pra isso). O sistema é, de forma geral, mais responsivo e eu tenho a impressão de que ele gerencia melhor os recursos do meu computador.
 
 Nem toda mudança desse porte ocorre sem alguma dificuldade, e com certeza eu não fui premiado com a galinha de ouro nesse ponto: durante meus testes, dentre todas as opções existentes de interfaces gráficas para o Linux, eu esbarrei em problemas com gerenciamento de energia e conectividade, dentre outros ocorridos com interfaces gráficas diferenciadas.
-
----
 
 Sem mais delongas, já estou com os dedos doendo de tanto "falar mal" do Windows - ou melhor, de apontar seus defeitos e que me fizeram cansar dele. Para a próxima, vamos "falar mal" do Linux e comentar sobre as dificuldades que eu enfrentei até chegar ao ponto onde me dei por satisfeito com o meu computador - e pude ser produtivo com ele.
 

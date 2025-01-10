@@ -1,6 +1,6 @@
 ---
 title: Migrando do Windows - nem tudo são flores
-description: Minha experiência diária mudou a minha forma de ver os sistemas de modo geral - e isso me fez questionar minha decisão. Até que ponto a falta de conveniência vale a pena pelos princípios?
+description: Inconvenientes no caminho mostraram que nem tudo é tão simples como parece ser
 published: 2024-09-12T17:55-03:00
 updated:
 category: Sistemas operacionais

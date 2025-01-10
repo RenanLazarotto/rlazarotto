@@ -14,8 +14,6 @@ category: Atualizações
 
 Depois de muito tempo e muito sofrer com inúmeras ideias que não se mostraram boas, finalmente chego numa segunda versão do meu site! Contrariando a mim mesmo, deixei de seguir o formato de portfolio que eu utilizei na primeira versão. Agora, meu site é uma mistura dos dois, com foco em ser um blog onde eu pretendo comentar sobre as mais diversas e variadas coisas que eu aprendo ou acontecem comigo no meu dia a dia.
 
----
-
 ### Novo design
 
 Eu não sou exatamente o que pode se chamar de bom em desenhar interfaces. Eu tenho algumas noções de como as coisas devem ser, mas de modo geral não é meu forte. Por conta disso, e grande parte da demora pra finalmente lançar uma versão 2.0, procurei por inspiração em vários outros sites/portfolios diferentes pra achar o que mais me agradava.
@@ -30,8 +28,6 @@ Do momento que eu comecei essa reescrita até agora, eu devo ter testado _pelo m
 -   Um site extremamente minimalista, com pouquíssimas informações detalhadas
 
 E esses são os que eu lembro. Por fim, acabei por achar um único site que me serviu de inspiração "definitiva": o site pessoal de <a href="https://alexandersandberg.com/" target="_blank">Alexander Sandberg</a>. Eu já tinha um layout praticamente pronto, mas algumas coisas ainda me incomodavam, como os links de navegação como uma barra superior, algo que eu considero comum _demais_ ao ponto de eu preferir não utilizar essa disposição por causa disso.
-
----
 
 ### Mais pessoal
 
@@ -54,8 +50,6 @@ alt="Bloco de habilidades, prontamente destacado"
  />
 
 Agora, o foco é em me apresentar como pessoa e minhas ideias. Ainda mantenho um histórico de alguns projetos em que trabalhei, destacando quais habilidades efetivamente foram utilizados em cada um, além do histórico profissional na página <a href="/pages/sobre">sobre mim</a>. Essas informações, ao meu ver, já dão uma visão geral do meu conhecimento, sem necessariamente entrar em detalhes que, muitas vezes, acabam não sendo tão relevantes.
-
----
 
 ### Finalizando
 

@@ -12,21 +12,15 @@ category: Atualizações
 
 E começa hoje uma explicação de como esse lindo e maravilhoso site que você está vendo foi criado! Sem delongas, vamos ao que interessa!
 
----
-
 ## No princípio...
 
 Conforme eu comentei no post de <a href="/posts/ola-mundo">Olá mundo... de novo?</a>, essa é a segunda versão do meu site. Criado inicialmente para ser apenas um portfolio, eu decidi que queria algo mais pessoal, e que principalmente tivesse mais a minha cara do que algo que pareça ter saído de um modelo qualquer que você encontra por aí.
-
----
 
 ### Passo 1: o que reaproveitar?
 
 Da primeira versão do meu site, eu sabia que poderia reaproveitar alguma coisa - principalmente conteúdo. Eu já tinha em mente que eu não iria querer o mesmo formato de página única separada em blocos, com páginas separadas apenas para currículo e publicações (que eu nunca cheguei a efetivamente fazer).
 
 Sendo assim, logo no começo da reescrita ficou evidente que eu iria reaproveitar apenas o conteúdo do site - e ainda assim, boa parte dele sofreu alterações, principalmente com o objetivo de simplificar os conteúdos. A ideia geral era algo que fosse mais minimalista.
-
----
 
 ### Passo 2: criando os componentes
 
@@ -40,8 +34,6 @@ alt="Componentes que existem atualmente no site"
 />
 
 Tem alguns outros componentes para listas, ícones, a minha foto na página <a href="/pages/sobre">sobre</a> e para um alerta/banner, que até o momento eu usei mais para colocar informações que não precisam necessariamente fazer parte do conteúdo dos poucos posts que escrevi.
-
----
 
 ### Passo 3: definindo layout
 
@@ -58,8 +50,6 @@ alt="Introdução com a navegação das principais páginas do site logo após"
 
 Em um primeiro momento, eu ia incluir os projetos que eu trabalhei também na página inicial, após a navegação, mas preferi agrupar essas informações a meu respeito dentro da página <a href="/pages/sobre">sobre</a>, afinal a ideia é destacar a minha introdução e os conteúdos que eu vou escrever.
 
----
-
 ### Passo 4: as páginas
 
 Agora, veio a dúvida: _quais_ páginas criar? Será que eu deixo os projetos e as experiências profissionais separadas da página sobre mim?
@@ -67,8 +57,6 @@ Agora, veio a dúvida: _quais_ páginas criar? Será que eu deixo os projetos e 
 Acabei por deixar apenas 3 páginas principais: a página <a href="/pages/agora">Agora</a>, baseada no movimento <a href="https://nownownow.com/about" target="_blank">nownownow</a>, a página <a href="/pages/sobre">Sobre</a>, onde eu efetivamente falo sobre mim, meu histórico profissional e os projetos que eu destaquei, e a página <a href="/pages/um-dia">Um dia</a>, baseada no movimento <a href="https://someday.page/" target="_blank">someday</a>, onde eu comento um pouco sobre meus planos a longo prazo. Essa divisão faz bastante sentido pra mim, uma vez que o site tem um intuito mais pessoal.
 
 Ainda falta pelo menos uma página, que vai ficar no rodapé do site: uma página <a href="https://indieweb.org/colophon" target="_blank">_"colophon"_</a>, onde eu vou comentar um pouco mais sobre o que foi utilizado no desenvolvimento do site - mas de uma forma difente do que vou comentar na parte 2 do processo de desenvolvimento - pense em algo mais próximo a uma lista do que um detalhamento.
-
----
 
 E agora eu chego ao fim da parte 1. Espero que esse pequeno esboço da tarefa herculéa que foi o desenvolvimento dessa versão. Mas ao menos ela saiu do papel!
 

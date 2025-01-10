@@ -10,18 +10,6 @@ a.with-background {
     @apply py-1 px-2 rounded-md bg-mint-700/20 hover:bg-purple-700/20;
 }
 
-hr:not(:where([class~="not-prose"], [class~="not-prose"] *)) {
-    @apply w-1/4 mx-auto border-dashed border-t pb-8 border-gray-700;
-}
-
-section p:not(:where([class~="not-prose"], [class~="not-prose"] *)) {
-    @apply mb-6;
-}
-
 .title {
     @apply font-bold text-3xl mt-8 mb-12 text-gray-100;
-}
-
-article.prose section {
-    @apply mb-16;
 }
