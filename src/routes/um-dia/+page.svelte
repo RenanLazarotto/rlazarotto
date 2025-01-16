@@ -37,8 +37,6 @@
         equilíbrio entre vida pessoal e trabalho.
     </p>
 
-    <hr />
-
     <h2>Um computador pra chamar de meu</h2>
 
     <p>
@@ -59,8 +57,6 @@
         pessoas que não gostam do padrão preto-ou-branco.
     </p>
 
-    <hr />
-
     <h2>Hora de me motorizar</h2>
 
     <p>
@@ -71,8 +67,6 @@
         estabilidade financeira que me permita fazer aquele project car
         maroto...
     </p>
-
-    <hr />
 
     <h2>Minha casa, minha vida</h2>
 

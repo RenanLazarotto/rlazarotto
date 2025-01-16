@@ -28,8 +28,6 @@
     </p>
 </section>
 
-<hr />
-
 <section class="prose prose-invert mb-16 prose-hr:border-dashed max-w-none">
     <h2>Aprendendo coisas novas</h2>
 
@@ -73,8 +71,6 @@
     </p>
 </section>
 
-<hr />
-
 <section class="prose prose-invert mb-16 prose-hr:border-dashed max-w-none">
     <h2>Iniciando uma nova saga</h2>
 
@@ -94,8 +90,6 @@
         quem puder fazer isso que o faça.
     </p>
 </section>
-
-<hr />
 
 <section class="prose prose-invert mb-16 prose-hr:border-dashed max-w-none">
     <h2>Diversão - eu não sou de ferro, afinal...</h2>

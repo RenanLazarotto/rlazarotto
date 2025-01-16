@@ -127,8 +127,6 @@
         </p>
     </section>
 
-    <hr />
-
     <section>
         <h2>Experiência profissional</h2>
 
@@ -142,7 +140,6 @@
                             <p>{experience.company}</p>
                         {/if}
                     </div>
-                    <hr class="flex-1 border-dashed border-gray-800" />
                     <div class="flex text-sm text-gray-500">
                         <p>{experience.position}</p>
                         <span class="mx-2">•</span>
@@ -209,8 +206,6 @@
             {/each}
         </div>
     </section>
-
-    <hr />
 
     <section>
         <h2>Contato</h2>
