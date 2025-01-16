@@ -1,5 +1,4 @@
 import { json } from "@sveltejs/kit";
-import { stripHtml } from "string-strip-html";
 
 /** @type {import('./$types').RequestHandler} */
 export async function GET() {
