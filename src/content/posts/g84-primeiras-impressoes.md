@@ -7,19 +7,16 @@ category: Reviews
 ---
 
 <script lang="ts">
-    import Banner from "$lib/components/Banner.svelte";
-    import Link from "$lib/components/Link.svelte";
     import Gallery from "$lib/components/Gallery.svelte";
+    import Slide from "$lib/components/Slide.svelte";
     import Image from "$lib/components/Image.svelte";
 </script>
 
-<Banner icon="info">
+<blockquote>
 Peço desculpas pela falta de imagens do celular em si - eu só tenho ele e não tive como tirar fotos da caixa, ou fazer um unboxing - que era minha ideia inicial. O unboxing fica pra próxima!
-</Banner>
+</blockquote>
 
 Ontem, depois de alguns dias de espera, finalmente chegou meu celular novo - um Motorola Moto G84 5G. É o meu primeiro celular da Motorola depois de **_muito_** tempo, sendo meu último um Moto X, da primeira geração. Como a vida adulta cobra da gente, acabei deixando pra abrir o celular hoje e só então começar todo o tedioso processo de configurar o telefone.
-
----
 
 ## Conteúdo da caixa
 
@@ -53,8 +50,6 @@ Tudo isso numa embalagem de papelão. Nesse quesito, ponto positivo pra Motorola
 
 Sendo sincero, não reclamo, pois eu estava ciente de que viria apenas o aparelho e o carregador antes da compra. O que eu realmente senti falta foi a inclusão de uma capinha. Muitos aparelhos de marcas como Xiaomi incluem uma capinha transparente na caixa, que é uma baita mão na roda.
 
----
-
 ## Primeira inicialização
 
 Já que eu entrei no assunto dos aparelhos antigos, outra coisa que era recomendado antigamente e nunca mais vi falar a respeito é a necessidade de carregar o celular por 24h antes do primeiro uso. Acredito que a última vez que eu vi falar a respeito disso foi antes dos celulares com Android começarem a se popularizar.
@@ -67,8 +62,6 @@ Agora aqui um detalhe que reparei vem aparelhos diferentes e ROMs diferentes: um
 
 Outro detalhe que eu noitei foi que os aplicativos "recomendados" acabam sendo instalados mesmo se você cancelar a instalação na Play Store. É bem frustrante, ainda mais considerando que os aplicativos são do nível Candy Crush, Sporting Bet, Booking.com e TikTok. Não tenho nada contra esses aplicativos, mas não vejo sentido em forçar a instalação deles apenas para que me dar a opção de excluí-los depois.
 
----
-
 ## Software da Motorola
 
 Uma vez que meu perrengue com a configuração inicial foi resolvido, fui começar a instalação dos meus aplicativos. Configurei os acessos, baixei meus passa-tempos preferidos e, antes de finalizar, procurei por atualizações de software do telefone. Eu já sabia que a Motorola já tinha lançado o Android 14 para o aparelho, mas imaginei que o mesmo não viria com ele.
@@ -79,54 +72,85 @@ Já com o software atualizado, era hora de começar a explorar o Android da Moto
 
 Falando em customização, o aparelho conta com várias opções de customização. Acredito que boa parte delas já sejam do próprio Android e não sejam adições da Motorola, mas não tenho certeza. Uma coisa é certa - as opções são bem diferentes das oferecidas pela One UI, da Samsung, pelo menos até a versão 5.1, que foi a última que eu testei.
 
-<Gallery images={[
-{
-src: "/images/posts/g84-primeiras-impressoes/aplicativo-moto.webp",
-alt: "Captura de tela representando o aplicativo Moto",
-},
-{
-src: "/images/posts/g84-primeiras-impressoes/cores.webp",
-alt: "Captura de tela representando a tela de opções de cores",
-},
-{
-src: "/images/posts/g84-primeiras-impressoes/fontes.webp",
-alt: "Captura de tela representando as opções de fontes do sistema",
-},
-{
-src: "/images/posts/g84-primeiras-impressoes/icones.webp",
-alt: "Captura de tela representando as opções de personalizações de icones",
-},
-{
-src: "/images/posts/g84-primeiras-impressoes/layout.webp",
-alt: "Captura de tela representando as opções de layout para tela inicial e gaveta de aplicativos",
-},
-{
-src: "/images/posts/g84-primeiras-impressoes/modo-escuro.webp",
-alt: "Captura de tela representando as opções para utilizacao do Modo Escuro",
-},
-{
-src: "/images/posts/g84-primeiras-impressoes/personalizacao.webp",
-alt: "Captura da tela de personalização",
-},
-{
-src: "/images/posts/g84-primeiras-impressoes/plano-de-fundo.webp",
-alt: "Captura da tela de personalização dos planos de fundo",
-},
-{
-src: "/images/posts/g84-primeiras-impressoes/sons.webp",
-alt: "Captura de tela das configuracoes de sons",
-},
-{
-src: "/images/posts/g84-primeiras-impressoes/temas.webp",
-alt: "Captura de tela com os temas pré-definidos",
-},
-{
-src: "/images/posts/g84-primeiras-impressoes/texto-tamanho-exibicao.webp",
-alt: "Captura da tela com as opções do tamanho do texto e de exibição",
-}
-]} />
+<Gallery>
+    <Slide>
+        <img
+            src="/images/posts/g84-primeiras-impressoes/aplicativo-moto.webp"
+            alt="Captura de tela representando o aplicativo Moto"
+        />
+    </Slide>
 
----
+    <Slide>
+        <img
+            src="/images/posts/g84-primeiras-impressoes/cores.webp"
+            alt="Captura de tela representando a tela de opções de cores"
+        />
+    </Slide>
+
+    <Slide>
+        <img
+            src="/images/posts/g84-primeiras-impressoes/fontes.webp"
+            alt="Captura de tela representando as opções de fontes do sistema"
+        />
+    </Slide>
+
+    <Slide>
+        <img
+            src="/images/posts/g84-primeiras-impressoes/icones.webp"
+            alt="Captura de tela representando as opções de personalizações de icones"
+        />
+    </Slide>
+
+    <Slide>
+        <img
+            src="/images/posts/g84-primeiras-impressoes/layout.webp"
+            alt="Captura de tela representando as opções de layout para tela inicial e gaveta de aplicativos"
+        />
+    </Slide>
+
+    <Slide>
+        <img
+            src="/images/posts/g84-primeiras-impressoes/modo-escuro.webp"
+            alt="Captura de tela representando as opções para utilizacao do Modo Escuro"
+        />
+    </Slide>
+
+    <Slide>
+        <img
+            src="/images/posts/g84-primeiras-impressoes/personalizacao.webp"
+            alt="Captura da tela de personalização"
+        />
+    </Slide>
+
+    <Slide>
+        <img
+            src="/images/posts/g84-primeiras-impressoes/plano-de-fundo.webp"
+            alt="Captura da tela de personalização dos planos de fundo"
+        />
+    </Slide>
+
+    <Slide>
+        <img
+            src="/images/posts/g84-primeiras-impressoes/sons.webp"
+            alt="Captura de tela das configuracoes de sons"
+        />
+    </Slide>
+
+    <Slide>
+        <img
+            src="/images/posts/g84-primeiras-impressoes/temas.webp"
+            alt="Captura de tela com os temas pré-definidos"
+        />
+    </Slide>
+
+    <Slide>
+        <img
+            src="/images/posts/g84-primeiras-impressoes/texto-tamanho-exibicao.webp"
+            alt="Captura da tela com as opções do tamanho do texto e de exibição"
+        />
+    </Slide>
+
+</Gallery>
 
 ## Concluindo
 

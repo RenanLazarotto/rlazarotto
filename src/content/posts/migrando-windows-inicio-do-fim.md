@@ -8,23 +8,21 @@ category: Sistemas operacionais
 
 <script lang="ts">
     import Image from "$lib/components/Image.svelte";
-    import Link from "$lib/components/Link.svelte";
     import Gallery from "$lib/components/Gallery.svelte";
+    import Slide from "$lib/components/Slide.svelte";
 </script>
 
 <Image src="/images/posts/migrando-windows-inicio-do-fim/hero.webp"
 alt="Imagem do post">
-Fonte: <Link href="https://arstechnica.com/information-technology/2012/07/how-to-move-from-windows-to-linux/" target="_blank">
+Fonte: <a href="https://arstechnica.com/information-technology/2012/07/how-to-move-from-windows-to-linux/" target="_blank">
 Ars Technica
 
-</Link>
+</a>
 </Image>
 
 Finalmente chegou o dia onde eu me cansei da Microsoft e decidi fazer alguma coisa. Depois de muitos anos preso e atrelado ao Windows, eu tomei minha dose de coragem e me aventurei por algumas distribuições do Linux até achar uma que me fizesse sentir o mesmo quentinho de "estar em casa".
 
 Com isso, chega ao fim um relacionamento de mais de 20 anos com o Windows e hoje eu vou contar os motivos.
-
----
 
 ## O início do fim
 
@@ -53,28 +51,26 @@ De início, muita coisa foi herdada das versões passadas. Eu consigo me lembrar
 
 Confesso que o Windows 10 funcionou muito bem por anos desde que eu comecei a usá-lo. Enquanto ainda tinha muita gente brigando pelo Windows 7, eu decidi abraçar o 10 integralmente e não me arrependo nem um pouco disso. Ele me trouxe uma experiência muito boa durante o tempo em que foi realmente cuidado pela Microsoft, chegando a um ápice onde ele superava o Windows 7 em todos os aspectos que importavam pra mim (jogos, basicamente, na época). Até que algum dia, alguém que trabalhava na Microsoft acordou e decidiu que era hora de enfiar boas ideias no 🆒 e anunciaram o Windows 11.
 
----
-
 ## O Windows que ninguém precisava ou queria
 
 Apesar de o Windows 11 contar com alguns avanços interessantes com relação ao Windows 7, especialmente na interface do usuário, de modo geral o sistema é um retrocesso em praticamente todos os aspectos. Lembra do Menu Iniciar? Estragado. Lembra daquela ideia de um sistema enxuto que só tem o básico pra você começar? Não dessa vez.
 
 O 11 carrega uma quantidade absurda de funcionalidades que são totalmente dispensáveis. Que tal um botão dedicado à "widgets", que precisam de internet e uma conta da Microsoft pra funcionar? Ou talvez um Menu Iniciar que não presta pra essencialmente nada, com as funcionalidades básicas do que consagraram o Menu Iniciar deixadas em segundo plano para favorecer recomendações e sugestões? E talvez uma loja de aplicativos mal otimizada e recheada de aplicativos no mínimo duvidosos? Você encontra tudo isso na nova versão do Windows.
 
-<Gallery images={[
-{
-src: "/images/posts/migrando-windows-inicio-do-fim/w11.webp",
-alt: "A área de trabalho do Windows 11.",
-},
-{
-src: "/images/posts/migrando-windows-inicio-do-fim/w11-widgets.webp",
-alt: "Menu com 'widgets' do Windows 11 - uma alteração que absolutamente ninguém pediu.",
-}
-]}/>
+<Gallery>
+    <Slide>
+        <img
+            src="/images/posts/migrando-windows-inicio-do-fim/w11.webp"
+            alt="A área de trabalho do Windows 11." />
+    </Slide>
+    <Slide>
+        <img
+            src="/images/posts/migrando-windows-inicio-do-fim/w11-widgets.webp"
+            alt="Menu com 'widgets' do Windows 11 - uma alteração que absolutamente ninguém pediu."/>
+    </Slide>
+</Gallery>
 
-Mas calma que piora - já foram <Link href="https://news.microsoft.com/pt-br/trazendo-o-poder-da-ia-para-o-windows-11-desbloqueando-uma-nova-era-de-produtividade-para-clientes-e-desenvolvedores-com-o-windows-copilot-e-o-dev-home/" target="_blank">anunciados</Link> diversos "recursos" de IA que chegarão (ou já chegaram) no Windows em atualizações próximas. Nem todos esses recursos necessariamente rodam localmente (algo que ainda planejo escrever sobre), mas de qualquer forma consomem recursos que poderiam ser utilizados para outras coisas mais importantes, além de são recursos potencialmente invasivos, pois alguns deles funcionam observando tudo que se passa na tela do computador para aprender mais sobre o usuário (algo que eu também planejo escrever sobre).
-
----
+Mas calma que piora - já foram <a href="https://news.microsoft.com/pt-br/trazendo-o-poder-da-ia-para-o-windows-11-desbloqueando-uma-nova-era-de-produtividade-para-clientes-e-desenvolvedores-com-o-windows-copilot-e-o-dev-home/" target="_blank">anunciados</a> diversos "recursos" de IA que chegarão (ou já chegaram) no Windows em atualizações próximas. Nem todos esses recursos necessariamente rodam localmente (algo que ainda planejo escrever sobre), mas de qualquer forma consomem recursos que poderiam ser utilizados para outras coisas mais importantes, além de são recursos potencialmente invasivos, pois alguns deles funcionam observando tudo que se passa na tela do computador para aprender mais sobre o usuário (algo que eu também planejo escrever sobre).
 
 ## É hora de mudar
 
@@ -84,7 +80,7 @@ Vamos por partes. Saber que o sistema que roda no meu computador vai deixar de r
 
 Outro fator a se considerar é o aumento artificial nos requisitos de sistema entre o Windows 10 e o Windows 11. Basta procurar na internet maneiras de burlar os requisitos do Windows 11 e veja como ele roda perfeitamente nos mesmos hardwares que rodavam o Windows 10 - incluindo meu notebook, um HP Pavilion 17 com um processador AMD A8-6410, 16GB de memória RAM DDR3 e um SSD SATA3 de 240GB. Pros padrões atuais é uma configuração bem básica, mas dá conta do recado pra praticamente tudo que eu preciso.
 
-Apesar de eu conseguir instalar e rodar de forma bastante satisfatória o Windows 11 (graças ao <Link href="https://atlasos.net/" target="_blank">AtlasOS</Link>, que faz o Windows ser minimamente usável sem o amontoado de inutilidades que ele instala por padrão), o Windows consome mais recursos do que o necessário para fazer o que um sistema operacional foi desenvolvido pra fazer. Com o futuro coberto por IA, algo que provavelmente vai ser "obrigatório" em algum momento, ter uma alternativa para ter um computador usável (sem precisar ter tudo que eu faço nele analisado por uma inteligencia artifical que provavelmente foi treinada especificamente para aprender meus interesses afim de vender coisas pra mim) deixa de ser uma opção para ser uma necessidade.
+Apesar de eu conseguir instalar e rodar de forma bastante satisfatória o Windows 11 (graças ao <a href="https://atlasos.net/" target="_blank">AtlasOS</a>, que faz o Windows ser minimamente usável sem o amontoado de inutilidades que ele instala por padrão), o Windows consome mais recursos do que o necessário para fazer o que um sistema operacional foi desenvolvido pra fazer. Com o futuro coberto por IA, algo que provavelmente vai ser "obrigatório" em algum momento, ter uma alternativa para ter um computador usável (sem precisar ter tudo que eu faço nele analisado por uma inteligencia artifical que provavelmente foi treinada especificamente para aprender meus interesses afim de vender coisas pra mim) deixa de ser uma opção para ser uma necessidade.
 
 As duas alternativas, atualmente, são: gastar rios de dinheiro em um Mac, que tem os mesmos problemas com uma cara diferente, ou usar o Linux, que tem problemas e caras diferentes. Como eu ainda não descobri uma forma de fazer dinheiro de forma honesta, legal e/ou sem esforço, migrar para o Linux é a única opção.
 
@@ -107,8 +103,6 @@ Consegue perceber as semelhanças com as áreas de trabalho das versões do Wind
 Eu tenho todos os meus fluxos de trabalho funcionando perfeitamente nele, incluindo os aplicativos que eu preciso para trabalhar (e até alguns jogos, mas quase não tenho tempo pra isso). O sistema é, de forma geral, mais responsivo e eu tenho a impressão de que ele gerencia melhor os recursos do meu computador.
 
 Nem toda mudança desse porte ocorre sem alguma dificuldade, e com certeza eu não fui premiado com a galinha de ouro nesse ponto: durante meus testes, dentre todas as opções existentes de interfaces gráficas para o Linux, eu esbarrei em problemas com gerenciamento de energia e conectividade, dentre outros ocorridos com interfaces gráficas diferenciadas.
-
----
 
 Sem mais delongas, já estou com os dedos doendo de tanto "falar mal" do Windows - ou melhor, de apontar seus defeitos e que me fizeram cansar dele. Para a próxima, vamos "falar mal" do Linux e comentar sobre as dificuldades que eu enfrentei até chegar ao ponto onde me dei por satisfeito com o meu computador - e pude ser produtivo com ele.
 

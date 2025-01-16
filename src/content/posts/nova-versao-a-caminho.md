@@ -6,17 +6,11 @@ updated:
 category: Atualizações
 ---
 
-<script lang="ts">
-    import Link from "$lib/components/Link.svelte";
-</script>
-
 Olá mundo novamente!
 
 Como nada na vida são flores, algumas coisas do lado pessoal mudaram um pouco e eu acabei precisando focar mais em trabalho e sem querer o blog ficou um pouco de lado, algo que eu definitivamente não queria.
 
 Eu tinha inclusive começado a escrever um review do meu fone novo, um Fuxi H3 (que eu ainda pretendo terminar em algum momento), mas apareceu uma nova prioridade pra antes disso: uma atualização da "plataforma" do meu blog.
-
----
 
 ## Atualização de plataforma
 
@@ -28,9 +22,7 @@ Não apenas isso, alguns conceitos que eu apliquei no desenvolvimento do site j�
 
 Por isso, estou estudando essas mudanças pra ver como elas me afetam e como eu posso tirar proveito delas. Estou finalmente conseguindo alguns minutos de folga aqui e ali, que vou fazer valer aqui. Não vai ser uma grande reestilização, não quero perder mais tempo com isso, mas alguma coisa visual ainda vai mudar, com bastante foco em consistência visual, algo que ainda me incomoda apesar de o design do meu site ser extremamente simples e minimalista, algo deliberadamente proposital pra facilidar a manutenção.
 
----
-
-Espero conseguir realizar essa transição logo, pois quero criar uma certa frequência de postagens. Enquanto isso não acontece, dá pra acompanhar o que eu vou eventualmente fazer no <Link href="https://github.com/RenanLazarotto/rlazarotto" target="_blank">repositório do blog</Link>, mais especificamente no branch <Link href="https://github.com/RenanLazarotto/rlazarotto/tree/next" target="_blank">next</Link> (que, no momento em que estou escrevendo esse post, ainda não existe).
+Espero conseguir realizar essa transição logo, pois quero criar uma certa frequência de postagens. Enquanto isso não acontece, dá pra acompanhar o que eu vou eventualmente fazer no <a href="https://github.com/RenanLazarotto/rlazarotto" target="_blank">repositório do blog</a>, mais especificamente no branch <a href="https://github.com/RenanLazarotto/rlazarotto/tree/next" target="_blank">next</a> (que, no momento em que estou escrevendo esse post, ainda não existe).
 
 Esse branch servirá como uma prévia do que virá, e já garanto que vai ter muita coisa que não funciona nele até estar tudo pronto.
 

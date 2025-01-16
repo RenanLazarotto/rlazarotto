@@ -1,13 +1,9 @@
 import { error } from "@sveltejs/kit";
 
 /** @type {import('./$types').PageLoad} */
-export async function load({ fetch, params }) {
+export async function load({ params }) {
     try {
         const file = await import(`@content/posts/${params.slug}.md`);
-        const rtResponse = await fetch(
-            `/api/posts/reading-time/${params.slug}`
-        );
-        const readingTime = await rtResponse.json();
         const metadata = file.metadata as Omit<Types.Post, "slug">;
 
         if (metadata.published) {
@@ -21,7 +17,6 @@ export async function load({ fetch, params }) {
         const post = {
             ...metadata,
             slug: params.slug,
-            ...readingTime,
         } satisfies Types.Post;
 
         return {

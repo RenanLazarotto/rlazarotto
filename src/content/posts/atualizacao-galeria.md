@@ -7,7 +7,6 @@ category: Atualizações
 ---
 
 <script lang="ts">
-    import Link from "$lib/components/Link.svelte";
     import Image from "$lib/components/Image.svelte";
 </script>
 
@@ -17,11 +16,9 @@ Sistemas de gerenciamento de conteúdo normalmente já tem algum tipo de galeria
 
 Infelizmente, nem tudo são rosas e eu cheguei à conclusão de que eu poderia melhorar muito minha galeria usando alguma coisa que já existia.
 
----
-
 ## A minha visão/versão da galeria
 
-Inicialmente, a galeria era para ser algo simples que surgiu como necessidade quando eu comentei sobre as minhas <Link href="/posts/g84-primeiras-impressoes" target="_blank">primeiras experiências com o Moto G84</Link>. Ficou claro que jogar um monte de imagens perdidas durante o artigo poderia não ser a melhor solução pro que eu queria naquele momento, e nascia ali a primeira iteração da galeria, totalmente feita por mim utilizando como base milhares de artigos e tutoriais.
+Inicialmente, a galeria era para ser algo simples que surgiu como necessidade quando eu comentei sobre as minhas <a href="/posts/g84-primeiras-impressoes" target="_blank">primeiras experiências com o Moto G84</a>. Ficou claro que jogar um monte de imagens perdidas durante o artigo poderia não ser a melhor solução pro que eu queria naquele momento, e nascia ali a primeira iteração da galeria, totalmente feita por mim utilizando como base milhares de artigos e tutoriais.
 
 <Image 
     src="/images/posts/atualizacao-galeria/minha-galeria.webp"
@@ -32,9 +29,7 @@ Logo de início ficou claro algumas coisas. Primeiro, embora a ideia geral seja 
 
 Mas aí eu caio na mesma coisa que me impediu de lançar uma segunda versão pro site: estudo e pesquisa demandam _tempo_, que por sua vez pode ser o minador de qualquer motivação se não houver tempo o suficiente disponível ou dedicado, e já havia indicadores de que era pra esse caminho que eu estava indo quando o primeiro commit da refatoração foi no dia 08 de agosto e até ontem, dia 13 de agosto, não havia nenhum progresso significativo além de reinventar a roda do que já havia sido feito.
 
-Como meu tempo é escasso, por hora a solução foi adotar uma dependência externa que cobrisse os pontos que eu considerei cruciais no começo e é aí que entra o <Link href="https://splidejs.com/" target="_blank">SplideJS</Link>.
-
----
+Como meu tempo é escasso, por hora a solução foi adotar uma dependência externa que cobrisse os pontos que eu considerei cruciais no começo e é aí que entra o <a href="https://splidejs.com/" target="_blank">SplideJS</a>.
 
 ## Acessibilidade
 
@@ -45,8 +40,6 @@ Quando eu pensava em acessiblidade, o que vinha na minha mente era _quantas pess
 Infelizmente, esse é um campo muito vasto que demanda muito estudo, porém ele não é um impeditivo para o progresso no desenvolvimento. Durante o desenvolvimento da galeria, levei em conta algumas questões que aparentemente são inerentes ao padrão de design de uma galeria, somados ao fato que junto da galeria eu também fiz a implementação de um diálogo de visualização das imagens em maior tamanho.
 
 Aos poucos, eu fui implementando mais opções de acessibilidade conforme eu estudava e encontrava mais a respeito, mas uma coisa ficou clara: será que eu ia ser capaz de cuidar de todos os pontos de interesse quanto à acessibilidade? Será que alguma coisa iria mudar conforme eu incrementasse mais a galeria, incluindo a responsividade para dispositivos móveis?
-
----
 
 ## Pedindo ajuda aos universitários
 
@@ -63,10 +56,8 @@ Foi então que eu esbarrei no SplideJS, um script de galeria que eu já havia vi
 
 De imediato, a transição resolveu todos os problemas funcionais que eu tinha. Apesar de que já era possível navegar de forma basica na galeria através de toques, ainda não havia suporte pra gestos, algo que o plugin trás com algumas poucas configurações. Também foi resolvido a questão de responsividade, uma vez que agora a galeria funciona conforme eu esperava que funcionasse no celular.
 
-Sobre a questão de acessiblidade, existe uma <Link href="https://splidejs.com/guides/accessibility/" target="_blank">seção na documentação</Link> do Splide dedicada à acessibilidade. Eu não li todos os pormenores, mas foi muito melhor deixar que o trabalho de alguém, que já conhece mais sobre o assunto, tomasse lugar do que eu havia feito.
+Sobre a questão de acessiblidade, existe uma <a href="https://splidejs.com/guides/accessibility/" target="_blank">seção na documentação</a> do Splide dedicada à acessibilidade. Eu não li todos os pormenores, mas foi muito melhor deixar que o trabalho de alguém, que já conhece mais sobre o assunto, tomasse lugar do que eu havia feito.
 
 Com um pouco de alterações aqui e ali, eu consegui aplicar um pouco da identidade visual que eu coloquei no meu site para não ficar tão deslocado e o resultado final fala por si só. Ainda precisa de alguns ajustes que vão ser feitos em algum momento entre hoje e o fim do mundo, mas o funcional está pronto e atende as minhas necessidades, que por ventura vão ser as mesmas necessidades de quem visitar meu site. 😁
-
----
 
 E essa foi a primeira grande mudança no meu site. Em breve, vou começar o desenvolvimento de algumas pequenas ferramentas que devem me ajudar com pequenas coisas no meu dia a dia, então vejo vocês em breve com utilitários pra apresentar!
