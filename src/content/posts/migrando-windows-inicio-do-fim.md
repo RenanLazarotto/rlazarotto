@@ -9,6 +9,7 @@ category: Sistemas operacionais
 <script lang="ts">
     import Image from "$lib/components/Image.svelte";
     import Gallery from "$lib/components/Gallery.svelte";
+    import Slide from "$lib/components/Slide.svelte";
 </script>
 
 <Image src="/images/posts/migrando-windows-inicio-do-fim/hero.webp"
@@ -56,16 +57,18 @@ Apesar de o Windows 11 contar com alguns avanços interessantes com relação ao
 
 O 11 carrega uma quantidade absurda de funcionalidades que são totalmente dispensáveis. Que tal um botão dedicado à "widgets", que precisam de internet e uma conta da Microsoft pra funcionar? Ou talvez um Menu Iniciar que não presta pra essencialmente nada, com as funcionalidades básicas do que consagraram o Menu Iniciar deixadas em segundo plano para favorecer recomendações e sugestões? E talvez uma loja de aplicativos mal otimizada e recheada de aplicativos no mínimo duvidosos? Você encontra tudo isso na nova versão do Windows.
 
-<Gallery images={[
-{
-src: "/images/posts/migrando-windows-inicio-do-fim/w11.webp",
-alt: "A área de trabalho do Windows 11.",
-},
-{
-src: "/images/posts/migrando-windows-inicio-do-fim/w11-widgets.webp",
-alt: "Menu com 'widgets' do Windows 11 - uma alteração que absolutamente ninguém pediu.",
-}
-]}/>
+<Gallery>
+    <Slide>
+        <img
+            src="/images/posts/migrando-windows-inicio-do-fim/w11.webp"
+            alt="A área de trabalho do Windows 11." />
+    </Slide>
+    <Slide>
+        <img
+            src="/images/posts/migrando-windows-inicio-do-fim/w11-widgets.webp"
+            alt="Menu com 'widgets' do Windows 11 - uma alteração que absolutamente ninguém pediu."/>
+    </Slide>
+</Gallery>
 
 Mas calma que piora - já foram <a href="https://news.microsoft.com/pt-br/trazendo-o-poder-da-ia-para-o-windows-11-desbloqueando-uma-nova-era-de-produtividade-para-clientes-e-desenvolvedores-com-o-windows-copilot-e-o-dev-home/" target="_blank">anunciados</a> diversos "recursos" de IA que chegarão (ou já chegaram) no Windows em atualizações próximas. Nem todos esses recursos necessariamente rodam localmente (algo que ainda planejo escrever sobre), mas de qualquer forma consomem recursos que poderiam ser utilizados para outras coisas mais importantes, além de são recursos potencialmente invasivos, pois alguns deles funcionam observando tudo que se passa na tela do computador para aprender mais sobre o usuário (algo que eu também planejo escrever sobre).
 

@@ -1,9 +1,8 @@
 <script lang="ts">
     import "@fontsource-variable/inter";
-
     import "../app.css";
-    import SVG from "$lib/components/SVG.svelte";
-    import Icon from "$lib/components/Icon.svelte";
+
+    import { ArrowLeft, Coffee } from "lucide-svelte";
     import type { LayoutData } from "./$types";
 
     interface Props {
@@ -14,7 +13,6 @@
     let { data, children }: Props = $props();
 </script>
 
-<SVG />
 <div class="max-w-5xl mx-auto flex flex-col min-h-screen px-8 md:px-4 lg:px-0">
     <header
         class:mb-12={data.url == "/"}
@@ -22,7 +20,7 @@
     >
         {#if data.url != "/"}
             <a href="/" class="flex items-center gap-2 mb-12">
-                <Icon id="back" width={16} height={16} />
+                <ArrowLeft size={16} />
                 Home
             </a>
         {:else}
@@ -36,8 +34,7 @@
 
     <footer class="pb-16 text-gray-600 text-center">
         <p class="inline-flex items-center gap-1 mb-2">
-            Criado com <Icon id="coffee" width={16} height={16} /> por Renan "Firehawk"
-            Lazarotto.
+            Criado com <Coffee size={16} /> por Renan "Firehawk" Lazarotto.
         </p>
 
         <p class="text-sm">

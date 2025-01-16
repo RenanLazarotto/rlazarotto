@@ -8,6 +8,7 @@ category: Reviews
 
 <script lang="ts">
     import Gallery from "$lib/components/Gallery.svelte";
+    import Slide from "$lib/components/Slide.svelte";
     import Image from "$lib/components/Image.svelte";
 </script>
 
@@ -71,52 +72,85 @@ Já com o software atualizado, era hora de começar a explorar o Android da Moto
 
 Falando em customização, o aparelho conta com várias opções de customização. Acredito que boa parte delas já sejam do próprio Android e não sejam adições da Motorola, mas não tenho certeza. Uma coisa é certa - as opções são bem diferentes das oferecidas pela One UI, da Samsung, pelo menos até a versão 5.1, que foi a última que eu testei.
 
-<Gallery images={[
-{
-src: "/images/posts/g84-primeiras-impressoes/aplicativo-moto.webp",
-alt: "Captura de tela representando o aplicativo Moto",
-},
-{
-src: "/images/posts/g84-primeiras-impressoes/cores.webp",
-alt: "Captura de tela representando a tela de opções de cores",
-},
-{
-src: "/images/posts/g84-primeiras-impressoes/fontes.webp",
-alt: "Captura de tela representando as opções de fontes do sistema",
-},
-{
-src: "/images/posts/g84-primeiras-impressoes/icones.webp",
-alt: "Captura de tela representando as opções de personalizações de icones",
-},
-{
-src: "/images/posts/g84-primeiras-impressoes/layout.webp",
-alt: "Captura de tela representando as opções de layout para tela inicial e gaveta de aplicativos",
-},
-{
-src: "/images/posts/g84-primeiras-impressoes/modo-escuro.webp",
-alt: "Captura de tela representando as opções para utilizacao do Modo Escuro",
-},
-{
-src: "/images/posts/g84-primeiras-impressoes/personalizacao.webp",
-alt: "Captura da tela de personalização",
-},
-{
-src: "/images/posts/g84-primeiras-impressoes/plano-de-fundo.webp",
-alt: "Captura da tela de personalização dos planos de fundo",
-},
-{
-src: "/images/posts/g84-primeiras-impressoes/sons.webp",
-alt: "Captura de tela das configuracoes de sons",
-},
-{
-src: "/images/posts/g84-primeiras-impressoes/temas.webp",
-alt: "Captura de tela com os temas pré-definidos",
-},
-{
-src: "/images/posts/g84-primeiras-impressoes/texto-tamanho-exibicao.webp",
-alt: "Captura da tela com as opções do tamanho do texto e de exibição",
-}
-]} />
+<Gallery>
+    <Slide>
+        <img
+            src="/images/posts/g84-primeiras-impressoes/aplicativo-moto.webp"
+            alt="Captura de tela representando o aplicativo Moto"
+        />
+    </Slide>
+
+    <Slide>
+        <img
+            src="/images/posts/g84-primeiras-impressoes/cores.webp"
+            alt="Captura de tela representando a tela de opções de cores"
+        />
+    </Slide>
+
+    <Slide>
+        <img
+            src="/images/posts/g84-primeiras-impressoes/fontes.webp"
+            alt="Captura de tela representando as opções de fontes do sistema"
+        />
+    </Slide>
+
+    <Slide>
+        <img
+            src="/images/posts/g84-primeiras-impressoes/icones.webp"
+            alt="Captura de tela representando as opções de personalizações de icones"
+        />
+    </Slide>
+
+    <Slide>
+        <img
+            src="/images/posts/g84-primeiras-impressoes/layout.webp"
+            alt="Captura de tela representando as opções de layout para tela inicial e gaveta de aplicativos"
+        />
+    </Slide>
+
+    <Slide>
+        <img
+            src="/images/posts/g84-primeiras-impressoes/modo-escuro.webp"
+            alt="Captura de tela representando as opções para utilizacao do Modo Escuro"
+        />
+    </Slide>
+
+    <Slide>
+        <img
+            src="/images/posts/g84-primeiras-impressoes/personalizacao.webp"
+            alt="Captura da tela de personalização"
+        />
+    </Slide>
+
+    <Slide>
+        <img
+            src="/images/posts/g84-primeiras-impressoes/plano-de-fundo.webp"
+            alt="Captura da tela de personalização dos planos de fundo"
+        />
+    </Slide>
+
+    <Slide>
+        <img
+            src="/images/posts/g84-primeiras-impressoes/sons.webp"
+            alt="Captura de tela das configuracoes de sons"
+        />
+    </Slide>
+
+    <Slide>
+        <img
+            src="/images/posts/g84-primeiras-impressoes/temas.webp"
+            alt="Captura de tela com os temas pré-definidos"
+        />
+    </Slide>
+
+    <Slide>
+        <img
+            src="/images/posts/g84-primeiras-impressoes/texto-tamanho-exibicao.webp"
+            alt="Captura da tela com as opções do tamanho do texto e de exibição"
+        />
+    </Slide>
+
+</Gallery>
 
 ## Concluindo
 

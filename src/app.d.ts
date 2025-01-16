@@ -50,6 +50,12 @@ declare global {
             width: number;
             height: number;
         };
+
+        type Image = {
+            src: string;
+            alt: string;
+            children?: Snippet;
+        };
     }
 }
 
