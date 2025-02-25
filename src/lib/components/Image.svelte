@@ -34,7 +34,7 @@
             <img
                 {src}
                 {alt}
-                class="max-h-[500px] h-full object-contain rounded cursor-pointer mx-auto"
+                class="max-h-[500px] h-full object-contain rounded-sm cursor-pointer mx-auto"
             />
         </button>
         {#if children}
@@ -59,7 +59,7 @@
     <button
         onclick={close}
         onkeydown={disableTab}
-        class="absolute top-4 right-4 sm:left-4 sm:bottom-4 sm:top-auto sm:right-auto cursor-pointer px-3 py-2 text-white font-bold select-none transition-all ease-in-out rounded-lg bg-mint-950/75 hover:bg-mint-800 flex items-center backdrop-blur"
+        class="absolute top-4 right-4 sm:left-4 sm:bottom-4 sm:top-auto sm:right-auto cursor-pointer px-3 py-2 text-white font-bold select-none transition-all ease-in-out rounded-lg bg-mint-950/75 hover:bg-mint-800 flex items-center backdrop-blur-sm"
     >
         <X size={24} />
         <p class="hidden sm:contents">Fechar</p>

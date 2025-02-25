@@ -13,7 +13,7 @@
 >
     <div class="flex flex-col items-center">
         <!-- svelte-ignore a11y_media_has_caption -->
-        <video class="max-h-[400px] w-full object-contain rounded" controls>
+        <video class="max-h-[400px] w-full object-contain rounded-sm" controls>
             <source {src} {type} />
         </video>
         {#if children}
