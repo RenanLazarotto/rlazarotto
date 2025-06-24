@@ -3,7 +3,6 @@ title: Apresentando a nova galeria!
 description: A primeira "grande" atualização chegou e é um componente que eu vou usar muito
 published: 2024-08-14T09:26-03:00
 updated:
-category: Atualizações
 ---
 
 <script lang="ts">

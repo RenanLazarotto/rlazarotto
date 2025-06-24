@@ -3,12 +3,11 @@ title: Moto G84 5G - Primeiras impressões
 description: As primeiras impressões do meu novo celular - o Moto G84 5G!
 published: 2024-04-24T15:00-03:00
 updated: 2024-08-13T18:20-03:00
-category: Reviews
 ---
 
 <script lang="ts">
-    import Gallery from "$lib/components/Gallery.svelte";
-    import Slide from "$lib/components/Slide.svelte";
+    import Carousel from "$lib/components/Carousel/Carousel.svelte";
+    import CarouselImage from "$lib/components/Carousel/CarouselImage.svelte";
     import Image from "$lib/components/Image.svelte";
 </script>
 
@@ -29,22 +28,22 @@ Por algum motivo infeliz que eu não consigo entender, as fabricantes de aparelh
 
 Na imagem, o que vinha dentro da caixa de um celular típico de 2010:
 
--   Celular
--   Bateria, que eram eram removíveis e o próprio usuário podia trocá-las em questão de segundos
--   Carregador comum
--   Carregador veicular
--   Duas tampas traseiras nas cores vermelho e azul
--   Manual - um manual de verdade, ao contrário dos informativos que vem nas caixas atualmente
--   Fone de ouvido
--   Caneta Stylus resistiva
+- Celular
+- Bateria, que eram eram removíveis e o próprio usuário podia trocá-las em questão de segundos
+- Carregador comum
+- Carregador veicular
+- Duas tampas traseiras nas cores vermelho e azul
+- Manual - um manual de verdade, ao contrário dos informativos que vem nas caixas atualmente
+- Fone de ouvido
+- Caneta Stylus resistiva
 
 Na caixa do Moto G84, veio:
 
--   Celular
--   Carregador turbo de 33W
--   Cabo USB
--   Alguns informativos sobre informações regulamentárias
--   Ejetor da bandeja do chip e cartão de memória
+- Celular
+- Carregador turbo de 33W
+- Cabo USB
+- Alguns informativos sobre informações regulamentárias
+- Ejetor da bandeja do chip e cartão de memória
 
 Tudo isso numa embalagem de papelão. Nesse quesito, ponto positivo pra Motorola - embalagens de papel são mais sustentáveis e se decompôe mais rapidamente do que plástico. O que decepciona mesmo é o conteúdo, já que não vem nem mesmo um fone de ouvido. Pra mim acaba não sendo um problema, pois eu uso um fone Bluetooth, mas pra muita gente esse é um item essencial, que se torna um gasto a mais logo após já ter arcado com o preço de um celular.
 
@@ -72,85 +71,74 @@ Já com o software atualizado, era hora de começar a explorar o Android da Moto
 
 Falando em customização, o aparelho conta com várias opções de customização. Acredito que boa parte delas já sejam do próprio Android e não sejam adições da Motorola, mas não tenho certeza. Uma coisa é certa - as opções são bem diferentes das oferecidas pela One UI, da Samsung, pelo menos até a versão 5.1, que foi a última que eu testei.
 
-<Gallery>
-    <Slide>
-        <img
+<Carousel>
+    <CarouselImage
             src="/images/posts/g84-primeiras-impressoes/aplicativo-moto.webp"
             alt="Captura de tela representando o aplicativo Moto"
-        />
-    </Slide>
+        >
+    </CarouselImage>
 
-    <Slide>
-        <img
+    <CarouselImage
             src="/images/posts/g84-primeiras-impressoes/cores.webp"
             alt="Captura de tela representando a tela de opções de cores"
-        />
-    </Slide>
+        >
+    </CarouselImage>
 
-    <Slide>
-        <img
+    <CarouselImage
             src="/images/posts/g84-primeiras-impressoes/fontes.webp"
             alt="Captura de tela representando as opções de fontes do sistema"
-        />
-    </Slide>
+        >
+    </CarouselImage>
 
-    <Slide>
-        <img
+    <CarouselImage
             src="/images/posts/g84-primeiras-impressoes/icones.webp"
             alt="Captura de tela representando as opções de personalizações de icones"
-        />
-    </Slide>
+        >
+    </CarouselImage>
 
-    <Slide>
-        <img
+    <CarouselImage
             src="/images/posts/g84-primeiras-impressoes/layout.webp"
             alt="Captura de tela representando as opções de layout para tela inicial e gaveta de aplicativos"
-        />
-    </Slide>
+        >
+    </CarouselImage>
 
-    <Slide>
-        <img
+    <CarouselImage
             src="/images/posts/g84-primeiras-impressoes/modo-escuro.webp"
             alt="Captura de tela representando as opções para utilizacao do Modo Escuro"
-        />
-    </Slide>
+        >
+    </CarouselImage>
 
-    <Slide>
-        <img
+    <CarouselImage
             src="/images/posts/g84-primeiras-impressoes/personalizacao.webp"
             alt="Captura da tela de personalização"
-        />
-    </Slide>
+        >
+    </CarouselImage>
 
-    <Slide>
-        <img
+    <CarouselImage
             src="/images/posts/g84-primeiras-impressoes/plano-de-fundo.webp"
             alt="Captura da tela de personalização dos planos de fundo"
-        />
-    </Slide>
+        >
+    </CarouselImage>
 
-    <Slide>
-        <img
+    <CarouselImage
             src="/images/posts/g84-primeiras-impressoes/sons.webp"
             alt="Captura de tela das configuracoes de sons"
-        />
-    </Slide>
+        >
+    </CarouselImage>
 
-    <Slide>
-        <img
+    <CarouselImage
             src="/images/posts/g84-primeiras-impressoes/temas.webp"
             alt="Captura de tela com os temas pré-definidos"
-        />
-    </Slide>
+        >
+    </CarouselImage>
 
-    <Slide>
-        <img
+    <CarouselImage
             src="/images/posts/g84-primeiras-impressoes/texto-tamanho-exibicao.webp"
             alt="Captura da tela com as opções do tamanho do texto e de exibição"
-        />
-    </Slide>
+        >
+    </CarouselImage>
 
-</Gallery>
+</Carousel>
 
 ## Concluindo
 

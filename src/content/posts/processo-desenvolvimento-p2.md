@@ -3,7 +3,6 @@ title: O processo de desenvolvimento do site - parte 2
 description: Da necessidade à realidade
 published: 2024-07-01T08:25-03:00
 updated: 2024-08-13T18:20-03:00
-category: Atualizações
 ---
 
 <script lang="ts">

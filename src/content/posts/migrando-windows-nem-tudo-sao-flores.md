@@ -3,7 +3,6 @@ title: Migrando do Windows - nem tudo são flores
 description: Inconvenientes no caminho mostraram que nem tudo é tão simples como parece ser
 published: 2024-09-12T17:55-03:00
 updated:
-category: Sistemas operacionais
 ---
 
 <script lang="ts">

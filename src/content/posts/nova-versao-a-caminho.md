@@ -3,7 +3,6 @@ title: Nova versão a caminho!
 description: Nova versão do Svelte = nova versão do blog
 published: 2024-11-11T12:28-03:00
 updated:
-category: Atualizações
 ---
 
 Olá mundo novamente!

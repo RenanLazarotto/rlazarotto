@@ -18,6 +18,8 @@
         "@types/jsdom": "^21.1.7",
         "mdsvex": "^0.12.6",
         "postcss": "^8.5.6",
+        "prettier": "^3.5.3",
+        "prettier-plugin-tailwindcss": "^0.6.13",
         "svelte": "^5.34.7",
         "svelte-check": "^4.2.2",
         "tailwindcss": "^4.1.10",
@@ -29,9 +31,10 @@
     "dependencies": {
         "@fontsource-variable/inter": "^5.2.6",
         "@glidejs/glide": "^3.7.1",
+        "@lucide/svelte": "^0.523.0",
         "@tailwindcss/vite": "^4.1.10",
         "@types/glidejs__glide": "^3.6.6",
-        "date-fns": "^4.1.0",
-        "lucide-svelte": "^0.518.0"
+        "daisyui": "^5.0.43",
+        "date-fns": "^4.1.0"
     }
 }
