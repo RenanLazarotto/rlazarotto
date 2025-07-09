@@ -1,32 +1,36 @@
 <script lang="ts">
-  import { Calendar, Pin } from "@lucide/svelte";
-  import type { PageData } from "./$types";
-  import { links } from "$lib/links";
-  import CardLink from "$lib/components/CardLink.svelte";
-  import CardPost from "$lib/components/CardPost.svelte";
-  import Title from "$lib/components/Title.svelte";
-
-  interface Props {
-    data: PageData;
-  }
-
-  let { data }: Props = $props();
+	let { data } = $props();
 </script>
 
 <svelte:head>
-  <title>Renan Lazarotto</title>
+	<title>Renan Lazarotto</title>
 </svelte:head>
 
-<Title Icon={Pin}>Fixos</Title>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
-  {#each links as link}
-    <CardLink {link} />
-  {/each}
-</div>
+<div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
+	{#each data.posts as post}
+		<a
+			class="group rounded-lg border-2 border-purple-500/20 bg-purple-950/50 px-3 py-2 shadow-lg transition-colors duration-200 hover:border-cyan-300/50 hover:bg-gradient-to-b hover:from-purple-800/25 hover:to-cyan-600/50"
+			href={`/posts/${post.slug}`}
+		>
+			<h2
+				class="text-2xl font-bold text-cyan-500 transition-colors duration-200 group-hover:text-cyan-300"
+			>
+				{post.title}
+			</h2>
 
-<Title Icon={Calendar}>Posts</Title>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-  {#each data.posts as post}
-    <CardPost {post} />
-  {/each}
+			<time
+				datetime={post.published.toISOString()}
+				class="mb-2 text-xs text-white/50 transition-colors duration-200 group-hover:text-white/75"
+			>
+				{post.published.toLocaleString('pt-BR', {
+					dateStyle: 'short',
+					timeZone: 'America/Sao_Paulo'
+				})}
+			</time>
+
+			<p class="leading-relaxed text-white/75">
+				{post.description}
+			</p>
+		</a>
+	{/each}
 </div>

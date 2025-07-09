@@ -1,12 +1,12 @@
 ---
 title: Olá, mundo... de novo?
-description: "Saindo de um portfolio para um site pessoal, reescrito do zero e sobre uma nova perspectiva."
+description: 'Saindo de um portfolio para um site pessoal, reescrito do zero e sobre uma nova perspectiva.'
 published: 2024-03-07T20:00-03:00
 updated: 2024-08-13T18:20-03:00
 ---
 
 <script lang="ts">
-    import Image from "$lib/components/Image.svelte";
+    import { Image } from "$lib/components";
 </script>
 
 ## Olá, mundo outra vez!
@@ -21,10 +21,10 @@ Por conta disso, implementei muitas coisas que sozinhas eram incríveis, mas jun
 
 Do momento que eu comecei essa reescrita até agora, eu devo ter testado _pelo menos_ seis layouts completamente diferentes - dentre eles:
 
--   Um design que lembrava um painel administrativo (dashboard)
--   Um blog onde todas as páginas do site eram publicações
--   Um site similar ao antigo, porém redesenhado para não parecer tanto quanto um portfolio "genérico"
--   Um site extremamente minimalista, com pouquíssimas informações detalhadas
+- Um design que lembrava um painel administrativo (dashboard)
+- Um blog onde todas as páginas do site eram publicações
+- Um site similar ao antigo, porém redesenhado para não parecer tanto quanto um portfolio "genérico"
+- Um site extremamente minimalista, com pouquíssimas informações detalhadas
 
 E esses são os que eu lembro. Por fim, acabei por achar um único site que me serviu de inspiração "definitiva": o site pessoal de <a href="https://alexandersandberg.com/" target="_blank">Alexander Sandberg</a>. Eu já tinha um layout praticamente pronto, mas algumas coisas ainda me incomodavam, como os links de navegação como uma barra superior, algo que eu considero comum _demais_ ao ponto de eu preferir não utilizar essa disposição por causa disso.
 

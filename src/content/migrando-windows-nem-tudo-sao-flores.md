@@ -6,7 +6,7 @@ updated:
 ---
 
 <script lang="ts">
-    import Image from "$lib/components/Image.svelte";
+    import { Image } from "$lib/components";
 </script>
 
 Algum tempo atrás eu comecei a minha migração do Windows para Linux, que se deu em partes por uma questão de necessidade - meu computador quando eu escrevi sobre a migração não se dava muito bem com o Windows e isso impactava diretamente a minha produtividade (e a minha sanidade mental).

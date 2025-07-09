@@ -1,22 +1,23 @@
-/** @type {import('./$types').PageLoad} */
-export async function load({ fetch }) {
-    const postsResponse = await fetch("/api/posts");
+import type { PageLoad } from './$types';
 
-    let posts: Types.Post[] = await postsResponse.json();
+export const load: PageLoad = async ({ fetch }) => {
+	const postsResponse = await fetch('/posts');
 
-    posts.forEach((post, index) => {
-        if (post.published) {
-            post.published = new Date(post.published);
-        }
+	let posts: Post[] = await postsResponse.json();
 
-        if (post.updated) {
-            post.updated = new Date(post.updated);
-        }
+	posts.forEach((post, index) => {
+		if (post.published) {
+			post.published = new Date(post.published);
+		}
 
-        posts[index] = post;
-    });
+		if (post.updated) {
+			post.updated = new Date(post.updated);
+		}
 
-    return {
-        posts,
-    };
-}
+		posts[index] = post;
+	});
+
+	return {
+		posts
+	};
+};

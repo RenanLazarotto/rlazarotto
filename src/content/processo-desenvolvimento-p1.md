@@ -6,7 +6,7 @@ updated: 2024-08-13T18:20-03:00
 ---
 
 <script lang="ts">
-    import Image from "$lib/components/Image.svelte";
+    import { Image } from "$lib/components";
 </script>
 
 E começa hoje uma explicação de como esse lindo e maravilhoso site que você está vendo foi criado! Sem delongas, vamos ao que interessa!

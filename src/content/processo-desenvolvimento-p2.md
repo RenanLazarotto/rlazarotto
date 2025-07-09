@@ -6,7 +6,7 @@ updated: 2024-08-13T18:20-03:00
 ---
 
 <script lang="ts">
-    import Image from "$lib/components/Image.svelte";
+    import { Image } from "$lib/components";
 </script>
 
 Já se passou quase 1 mês desde meu <a href="/posts/processo-desenvolvimento-p1">último post</a> a respeito do processo de desenvolvimento da nova versão do meu site, e eu comecei a sentir aquele incomodozinho no fundo da mente me cobrando continuar o que eu comecei, especialmente quando eu demorei tanto tempo pra reescrever o site _justamente_ com o intuito de fazer um blog, então vamos lá!

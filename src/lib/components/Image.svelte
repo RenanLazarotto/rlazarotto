@@ -1,80 +1,83 @@
 <script lang="ts">
-  import { X } from "@lucide/svelte";
+	import type { Snippet } from 'svelte';
+	import { X } from '@lucide/svelte';
 
-  let { src, alt, children }: Props.Image = $props();
+	interface Props {
+		src: string;
+		alt: string;
+		children?: Snippet;
+	}
 
-  let isOpen: boolean = $state(false);
+	let { src, alt, children }: Props = $props();
 
-  const keyboardClose = (e: KeyboardEvent) => {
-    if (e.code == "Escape" || e.key == "Escape") {
-      close();
-    }
-  };
+	let isOpen: boolean = $state(false);
 
-  const disableTab = (e: KeyboardEvent) => {
-    if (e.code == "Tab") {
-      e.preventDefault();
-    }
-  };
+	const keyboardClose = (e: KeyboardEvent) => {
+		if (e.code == 'Escape' || e.key == 'Escape') {
+			close();
+		}
+	};
 
-  const open = () => {
-    isOpen = true;
-    document.addEventListener("keydown", keyboardClose);
-  };
+	const disableTab = (e: KeyboardEvent) => {
+		if (e.code == 'Tab') {
+			e.preventDefault();
+		}
+	};
 
-  const close = () => {
-    isOpen = false;
-    document.removeEventListener("keydown", keyboardClose);
-  };
+	const open = () => {
+		isOpen = true;
+		document.addEventListener('keydown', keyboardClose);
+	};
+
+	const close = () => {
+		isOpen = false;
+		document.removeEventListener('keydown', keyboardClose);
+	};
 </script>
 
-<div class="my-6 not-prose">
-  <div class="flex flex-col justify-center">
-    <button onclick={open} class="max-h-[500px]">
-      <img
-        {src}
-        {alt}
-        class="max-h-[500px] h-full object-contain rounded-sm cursor-pointer mx-auto"
-      />
-    </button>
-    {#if children}
-      <p class="mt-2 text-center text-sm text-neutral-400">
-        {@render children?.()}
-      </p>
-    {/if}
-  </div>
+<div class="not-prose my-6">
+	<div class="flex flex-col justify-center">
+		<button onclick={open} class="max-h-[500px]">
+			<img
+				{src}
+				{alt}
+				class="mx-auto h-full max-h-[500px] cursor-pointer rounded-sm object-contain"
+			/>
+		</button>
+		{#if children}
+			<p class="mt-2 text-center text-sm text-neutral-400">
+				{@render children?.()}
+			</p>
+		{/if}
+	</div>
 </div>
 
 <div
-  role="dialog"
-  class:hidden={!isOpen}
-  aria-label={alt}
-  class="fixed z-50 left-0 top-0 right-0 bottom-0 w-screen h-screen bg-black/60 backdrop-blur-md not-prose p-4 flex justify-center items-center overscroll-contain"
+	role="dialog"
+	class:hidden={!isOpen}
+	aria-label={alt}
+	class="not-prose fixed top-0 right-0 bottom-0 left-0 z-50 flex h-screen w-screen items-center justify-center overscroll-contain bg-black/60 p-4 backdrop-blur-md"
 >
-  <img
-    {src}
-    {alt}
-    class="rounded-lg max-w-full max-h-full h-auto self-center"
-  />
-  <button
-    onclick={close}
-    onkeydown={disableTab}
-    class="absolute top-4 right-4 sm:left-4 sm:bottom-4 sm:top-auto sm:right-auto cursor-pointer px-3 py-2 text-white font-bold select-none transition-all ease-in-out rounded-lg bg-mint-950/75 hover:bg-mint-800 flex items-center backdrop-blur-sm"
-  >
-    <X size={24} />
-    <p class="hidden sm:contents">Fechar</p>
-  </button>
+	<img {src} {alt} class="h-auto max-h-full max-w-full self-center rounded-lg" />
+	<button
+		onclick={close}
+		onkeydown={disableTab}
+		class="bg-mint-950/75 hover:bg-mint-800 absolute top-4 right-4 flex cursor-pointer items-center rounded-lg px-3 py-2 font-bold text-white backdrop-blur-sm transition-all ease-in-out select-none sm:top-auto sm:right-auto sm:bottom-4 sm:left-4"
+	>
+		<X size={24} />
+		<p class="hidden sm:contents">Fechar</p>
+	</button>
 </div>
 
 <style>
-  div[role="dialog"].hidden {
-    transition:
-      display 300ms allow-discrete,
-      overlay 300ms allow-discrete;
-    animation: close 300ms forwards;
-  }
+	div[role='dialog'].hidden {
+		transition:
+			display 300ms allow-discrete,
+			overlay 300ms allow-discrete;
+		animation: close 300ms forwards;
+	}
 
-  div[role="dialog"] {
-    animation: open 300ms forwards;
-  }
+	div[role='dialog'] {
+		animation: open 300ms forwards;
+	}
 </style>

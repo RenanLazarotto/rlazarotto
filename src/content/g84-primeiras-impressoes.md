@@ -6,9 +6,7 @@ updated: 2024-08-13T18:20-03:00
 ---
 
 <script lang="ts">
-    import Carousel from "$lib/components/Carousel/Carousel.svelte";
-    import CarouselImage from "$lib/components/Carousel/CarouselImage.svelte";
-    import Image from "$lib/components/Image.svelte";
+    import { Carousel, CarouselImage, Image } from "$lib/components";
 </script>
 
 <blockquote>

@@ -6,16 +6,13 @@ updated: 2024-08-13T18:20-03:00
 ---
 
 <script lang="ts">
-    import Image from "$lib/components/Image.svelte";
-    import Carousel from "$lib/components/Carousel/Carousel.svelte";
-    import CarouselImage from "$lib/components/Carousel/CarouselImage.svelte";
+    import { Carousel, CarouselImage, Image } from "$lib/components";
 </script>
 
 <Image src="/images/posts/migrando-windows-inicio-do-fim/hero.webp"
 alt="Imagem do post">
 Fonte: <a href="https://arstechnica.com/information-technology/2012/07/how-to-move-from-windows-to-linux/" target="_blank">
 Ars Technica
-
 </a>
 </Image>
 
