@@ -23,8 +23,9 @@
 
 body::before {
 	@apply h-lvh w-screen;
-	@apply bg-cover bg-scroll mix-blend-multiply brightness-75 contrast-150;
-	@apply fixed inset-0 -z-[1];
+	@apply bg-cover mix-blend-multiply brightness-75 contrast-150;
+	@apply fixed inset-0 -z-10;
+	@apply pointer-events-none;
 	content: '';
 	background-image:
 		radial-gradient(circle at 50% 40%, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35)),

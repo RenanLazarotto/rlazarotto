@@ -1,37 +1,38 @@
 <script>
-	import { Home, User, Activity, Goal, Menu } from '@lucide/svelte';
+	import { Menu } from '@lucide/svelte';
+	import { links } from '$lib/links';
+	import LinkCard from './LinkCard.svelte';
 
 	let open = false;
-
-	const links = [
-		{ href: '/', label: 'Início', icon: Home },
-		{ href: '/sobre', label: 'Sobre', icon: User },
-		{ href: '/agora', label: 'Agora', icon: Activity },
-		{ href: '/um-dia', label: 'Um dia', icon: Goal }
-	];
 
 	function toggle() {
 		open = !open;
 	}
 </script>
 
-<div class="fab-container fixed right-8 bottom-8 z-50">
+<div class="fab-container fixed right-8 bottom-6 z-50 md:hidden">
 	<div class="relative">
 		<!-- Dropup menu -->
 		{#if open}
 			<ul
-				class="animate-fade-in absolute right-0 bottom-16 space-y-2 rounded-lg bg-white p-2 whitespace-nowrap shadow-lg transition-opacity duration-200 dark:bg-zinc-800"
+				class="animate-fade-in absolute right-0 bottom-16 w-96 space-y-2 rounded-lg border-2 border-purple-500/20 bg-purple-950/50 px-4 py-6 shadow-lg backdrop-blur-xs transition-opacity duration-200"
 			>
-				{#each links as { href, label, icon: Icon }}
+				{#each links as link}
 					<li>
-						<a
-							{href}
-							class="flex items-center gap-2 rounded px-4 py-2 text-sm font-medium text-zinc-800 hover:bg-zinc-100 dark:text-zinc-100 dark:hover:bg-zinc-700"
-							on:click={() => (open = false)}
-						>
-							<Icon size={16} />
-							{label}
-						</a>
+						<LinkCard href={link.href} classes="flex flex-col gap-1">
+							<div
+								class="font-bold text-cyan-500 transition-colors duration-200 group-hover:text-cyan-300"
+							>
+								{link.title}
+							</div>
+							{#if link.desc}
+								<p
+									class="text-xs text-white/50 transition-colors duration-200 group-hover:text-white/75"
+								>
+									{link?.desc}
+								</p>
+							{/if}
+						</LinkCard>
 					</li>
 				{/each}
 			</ul>
