@@ -17,7 +17,6 @@
 	}
 
 	let { children }: Props = $props();
-	console.log(page);
 </script>
 
 <div class="flex h-full max-h-full flex-1 gap-8 p-8">
