@@ -20,14 +20,3 @@
 @utility scrollbar-* {
 	scrollbar-width: --value('auto', 'thin', 'none');
 }
-
-body::before {
-	@apply h-lvh w-screen;
-	@apply bg-cover mix-blend-multiply brightness-75 contrast-150;
-	@apply fixed inset-0 -z-10;
-	@apply pointer-events-none;
-	content: '';
-	background-image:
-		radial-gradient(circle at 50% 40%, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35)),
-		url("data:image/svg+xml,%3Csvg viewBox='0 0 10000 10000' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-}

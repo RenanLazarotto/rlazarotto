@@ -41,10 +41,10 @@
 		<!-- FAB button -->
 		<button
 			on:click={toggle}
-			class="flex h-14 w-14 cursor-pointer items-center justify-center rounded-full border-2 border-purple-500/20 bg-purple-950/50 text-cyan-500 shadow-md transition-colors duration-200 hover:border-cyan-300/50 hover:bg-gradient-to-b hover:from-purple-800/25 hover:to-cyan-600/50 hover:text-cyan-300 hover:shadow-lg"
+			class="flex h-20 w-20 cursor-pointer items-center justify-center rounded-full border-2 border-purple-500/20 bg-purple-950/50 text-cyan-500 shadow-md transition-colors duration-200 hover:border-cyan-300/50 hover:bg-gradient-to-b hover:from-purple-800/25 hover:to-cyan-600/50 hover:text-cyan-300 hover:shadow-lg"
 			aria-label="Abrir menu"
 		>
-			<Menu size={24} />
+			<Menu size={48} />
 		</button>
 	</div>
 </div>
