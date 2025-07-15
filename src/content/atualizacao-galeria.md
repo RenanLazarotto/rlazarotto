@@ -6,7 +6,7 @@ updated:
 ---
 
 <script lang="ts">
-    import Image from "$lib/components";
+    import { Image } from "$lib/components";
 </script>
 
 Com a criação da nova versão do meu site (que já não tem nada de nova), uma das coisas que eu notei que seria extremamente necessário seria uma forma inteligente e componentizada de exibir imagens individuais e em coletivo, popularmente chamado de galeria.
